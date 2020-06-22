@@ -23,8 +23,6 @@
     "\n",
     "Il est possible d'insérer une vidéo POD (rajouter https) :\n",
     "\n",
-    "<iframe src=\"https://pod.unistra.fr/video/28491-tutoriel-conception-de-circuits-imprime-avec-easyeda-partie-6-creation-dune-nouvelle-empreinte/?is_iframe=true\" size=\"240\" width=\"640\" height=\"360\" style=\"padding: 0; margin: 0; border:0\" allowfullscreen ></iframe>\n",
-    "\n",
     "...mais on laissera ça pour le Moodle qui contiendra les infos suivantes.\n",
     "\n",
     "### objectifs\n",
