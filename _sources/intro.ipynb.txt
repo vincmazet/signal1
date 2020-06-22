@@ -9,7 +9,10 @@
     "Page d'introduction du manuel + définition d'un signal\n",
     "\n",
     "\n",
-    "miv.u-strasbg.fr/mazet/signal1 ou vincmazet.github.io/signal1 ?"
+    "miv.u-strasbg.fr/mazet/signal1 ou vincmazet.github.io/signal1 ?\n",
+    "\n",
+    "\n",
+    "COUCOUCOUCOU"
    ]
   },
   {
