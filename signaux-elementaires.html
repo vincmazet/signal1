@@ -124,6 +124,12 @@
   <li class="">
     <a href="quantification.html">Quantification</a>
   </li>
+<li class="navbar-special">
+<p class="margin-caption">Annexes</p>
+</li>
+  <li class="">
+    <a href="biblio.html">Bibliographie</a>
+  </li>
 </ul>
 </nav>
 
@@ -226,10 +232,6 @@
             <a href="#peigne-de-dirac" class="nav-link">Peigne de Dirac</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#exercices" class="nav-link">Exercices</a>
-        </li>
-    
     </ul>
 </nav>
 
@@ -264,9 +266,7 @@ La plupart peuvent être définis à temps continu ou à temps discret.</p>
 <li><p>si <span class="math notranslate nohighlight">\(\varphi=\pi/2\)</span>, alors <span class="math notranslate nohighlight">\(x(t)\)</span> est un cosinus.</p></li>
 </ul>
 <p>La sinusoïde en temps continu est une <a class="reference external" href="https://fr.wikipedia.org/wiki/Fonction_p%C3%A9riodique">fonction périodique</a> de période <span class="math notranslate nohighlight">\(1/f\)</span> ou, de manière équivalente, de fréquence <span class="math notranslate nohighlight">\(f\)</span>.</p>
-<p>En temps discret, la sinusoïde a la même expression
-(sauf que les parenthèses autour de la variable de temps
-sont remplacées par des crochets) :</p>
+<p>En temps discret, la sinusoïde a la même expression (par convention, on entoure la variable de temps par des crochets dans le cas d’un signal échantillonné) :</p>
 <div class="math notranslate nohighlight">
 \[
   x[n] = A \sin(2 \pi f n + \varphi)
@@ -286,49 +286,164 @@ sont remplacées par des crochets) :</p>
   x(t) = \exp(j 2 \pi f t + \varphi)
        = \cos(2 \pi f t + \varphi) + j \sin(2 \pi f t + \varphi)
 \]</div>
-<p>L’exponentielle est créée en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.exp.html"><code class="docutils literal notranslate"><span class="pre">numpy.exp</span></code></a>,
+<p>En temps discret, c’est la même expression (en remplaçant les parenthèses dans <span class="math notranslate nohighlight">\(x(t)\)</span> par des crochets). L’exponentielle est créée en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.exp.html"><code class="docutils literal notranslate"><span class="pre">numpy.exp</span></code></a>,
 et le nombre complexe <span class="math notranslate nohighlight">\(j\)</span> est obtenu avec <code class="docutils literal notranslate"><span class="pre">1j</span></code>.</p>
+<p>À cause du nombre complexe <span class="math notranslate nohighlight">\(j\)</span>, le signal est à valeurs complexes. Pour le représenter, il faut être dans un espace à trois dimensions (la variable, la partie réelle et la partie imaginaire). De cette manière, l’exponetielle complexe ressemble à une queue de cochon, ou un tire-bouchon. Remarquez que la fréquence peut tout à fait être négative : dans ce cas, l’exponentielle complexe tourne dans le sens inverse.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/signaux-elementaires_4_0.png" src="_images/signaux-elementaires_4_0.png" />
+<img alt="_images/signaux-elementaires_4_1.png" src="_images/signaux-elementaires_4_1.png" />
+<img alt="_images/signaux-elementaires_4_2.png" src="_images/signaux-elementaires_4_2.png" />
+</div>
+</div>
 </div>
 <div class="section" id="sinus-cardinal">
 <h2>Sinus cardinal<a class="headerlink" href="#sinus-cardinal" title="Permalink to this headline">¶</a></h2>
+<p>Le sinus cardinal, noté <span class="math notranslate nohighlight">\(\mathrm{sinc}\)</span>, a pour définition :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \mathrm{sinc}(t) =
+  \begin{cases}
+    \displaystyle \frac{\sin(\pi t)}{\pi t} &amp;\text{si}\quad t \neq 0 \\
+    1 &amp;\text{si}\quad t = 0
+  \end{cases}
+\end{split}\]</div>
+<p>Un sinus cardinal ressemble à un cosinus donc l’amplitude décroît lorsqu’on s’éloigne de <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
+<p>Le cas où <span class="math notranslate nohighlight">\(t=0\)</span> est à considérer à part puisque la division par <span class="math notranslate nohighlight">\(t=0\)</span> n’est pas possible.
+Encore une fois, le sinus cardinal à temps discret a la même expression (avec des crochets à la place des parenthèses).
+Le sinus cardinal est obtenu en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sinc.html"><code class="docutils literal notranslate"><span class="pre">numpy.sinc</span></code></a>.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_5_0.png" src="_images/signaux-elementaires_5_0.png" />
+<img alt="_images/signaux-elementaires_6_0.png" src="_images/signaux-elementaires_6_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="echelon">
 <h2>Échelon<a class="headerlink" href="#echelon" title="Permalink to this headline">¶</a></h2>
-<p>L’échelon est également appelé fonction de Heaviside.</p>
+<p>L’échelon a pour définition :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  u(t) =
+  \begin{cases}
+    0 &amp;\text{si}\quad t &lt; 0 \\
+    1 &amp;\text{si}\quad t \geq 0
+  \end{cases}
+\end{split}\]</div>
+<p>L’échelon est donc nul pour <span class="math notranslate nohighlight">\(t&lt;0\)</span> et égal à un sinon.
+Vuos l’aurez compris, il existe aussi une version à temps discret.
+Il est également appelé fonction de Heaviside.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_7_0.png" src="_images/signaux-elementaires_7_0.png" />
+<img alt="_images/signaux-elementaires_8_0.png" src="_images/signaux-elementaires_8_0.png" />
+</div>
+</div>
+<p>Il n’existe pas de fonction permettant de générer un échelon en Python : il faut passer par des instructions spécifiques, comme par exemple dans le code suivant :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tout d&#39;abord, générer la liste des instants d&#39;échantillonnage</span>
+<span class="c1"># Par exemple ici : 11 échantillons répartis entre -5 et 5</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># L&#39;échelon est obtenu avec la fonction numpy.where</span>
+<span class="c1"># qui affecte la valeur 1 ou 0 suivant la condition</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Affichage (les échantillons sont représentés par des points</span>
+<span class="c1"># et ne sont pas reliés)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/signaux-elementaires_10_0.png" src="_images/signaux-elementaires_10_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="porte">
 <h2>Porte<a class="headerlink" href="#porte" title="Permalink to this headline">¶</a></h2>
+<p>La porte a pour définition :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \mathrm{rect}(t) =
+  \begin{cases}
+    0 &amp;\text{si}\quad |t| &gt; \frac{1}{2} \\
+    1 &amp;\text{si}\quad |t| \leq \frac{1}{2}
+  \end{cases}
+\end{split}\]</div>
 <p>La porte est également appelée fonction rectangle.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_9_0.png" src="_images/signaux-elementaires_9_0.png" />
+<img alt="_images/signaux-elementaires_12_0.png" src="_images/signaux-elementaires_12_0.png" />
+</div>
+</div>
+<p>Comme pour l’échelon, la porte peut être définie en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.where.html"><code class="docutils literal notranslate"><span class="pre">numpy.where</span></code></a> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Porte définie entre -5 et 10</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;=-</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/signaux-elementaires_14_0.png" src="_images/signaux-elementaires_14_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="impulsion-de-dirac">
 <h2>Impulsion de Dirac<a class="headerlink" href="#impulsion-de-dirac" title="Permalink to this headline">¶</a></h2>
+<p>L’impulsion de Dirac est telle que :</p>
+<div class="math notranslate nohighlight">
+\[
+  \delta(t) = 0 \;\text{si}\; t \neq 0
+  \qquad\text{et}\qquad
+  \int \delta(t) dt = 1
+\]</div>
+<p>L’impulsion de Dirac n’est pas une fonction, au sens mathématique, car <span class="math notranslate nohighlight">\(\delta(0)\)</span> n’est pas défini : c’est en fait une distribution. Pour cette raison, on représente ce signal par une flèche, qui signifie que en 0, la valeur n’est pas définie.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_11_0.png" src="_images/signaux-elementaires_11_0.png" />
+<img alt="_images/signaux-elementaires_16_0.png" src="_images/signaux-elementaires_16_0.png" />
 </div>
 </div>
+<p>C’est un signal non représentable physiquement : il n’existe pas dans la nature, mais c’est une conceptualisation mathématique bien utile en traitement du signal. Un exemple réaliste qui s’en approcherait serait le son produit lorsqu’on tape d’un coup bref dans ses mains. On peut l’approcher par une porte dont la largeur tend vers 0 et l’amplitude vers l’infini.</p>
+<p>L’impulsion de Dirac a des propriétés particulières, notamment :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(t) \delta(t) = f(0) \delta(t)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(t) \delta(t-\tau) = f(\tau) \delta(t-\tau)\)</span></p></li>
+</ul>
+<p>À l’inverse des signaux précédent, l’impulsion de Dirac ne peut pas s’écrire en temps discret. Il existe cependant un signal qui s’en approche : l’impulsion discrète.</p>
 </div>
 <div class="section" id="impulsion-discrete">
 <h2>Impulsion discrète<a class="headerlink" href="#impulsion-discrete" title="Permalink to this headline">¶</a></h2>
+<p>L’impulsion discrète est l’équivalent à temps discret de l’impulsion de Dirac. C’est une fonction mathématique classique car elle est définie en tout point :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \delta[n] =
+  \begin{cases}
+      0 \;\text{si}\; n \neq 0 \\
+      1 \;\text{si}\; n = 0
+  \end{cases}
+\end{split}\]</div>
 <p>L’impulsion discrète est également appelée impulsion de Kronecker.</p>
-<div class="cell tag_remove-input docutils container">
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">numpy.where</span></code> peut encore être utilisée pour définir une impulsion discrète en Python :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$n$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;δ[n]$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_13_0.png" src="_images/signaux-elementaires_13_0.png" />
+<img alt="_images/signaux-elementaires_19_0.png" src="_images/signaux-elementaires_19_0.png" />
 </div>
 </div>
 </div>
@@ -340,25 +455,21 @@ et le nombre complexe <span class="math notranslate nohighlight">\(j\)</span> es
   Ш_T(t) = \sum_{k=-\infty}^{+\infty} \delta(t-kT)
 \]</div>
 <p>Le peigne de Dirac est également appelé train d’impulsion, fonction d’échantillonnage ou distribution Cha (en raison de sa ressemblance avec la lettre cyrillique Ш).</p>
-<p><strong>ne pas représenter le sigal : le laisser en exercice</strong></p>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_16_0.png" src="_images/signaux-elementaires_16_0.png" />
 </div>
-</div>
-</div>
-<div class="section" id="exercices">
-<h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">¶</a></h2>
-<p><strong>TODO</strong></p>
-<ul class="simple">
-<li><p>tracer sur papier un signal dont je donne l’équation</p></li>
-<li><p>donner l’équation ou les paramètres d’un signal dont je donne le graphe</p></li>
-<li><p>tracer avec Python un signal dont je donne l’équation (signal élémentaire ou combinaison, comme une sinusoïde amortie)</p></li>
-</ul>
-<ul class="simple">
-<li><p>…</p></li>
-</ul>
-</div>
+<font color="#c0c0c0">
+<p><strong>Devoirs</strong></p>
+<p>Un signal échantillonné est un signal à temps discret : vrai*/faux</p>
+<p>Le signal noté <span class="math notranslate nohighlight">\(x[n]\)</span> est :
+à temps discret*/à temps continu/on ne peut pas savoir</p>
+<p>Compléter votre glossaire Python en ajoutant les fonctions et instructions permettant de calculer un sinus, une exponentielle, un sinus cardinal, un échelon, une porte, une impulsione discrète.</p>
+<p>Représentez sin(…)</p>
+<p>Tracer sur papier un signal dont je donne l’équation</p>
+<p>Représentez rect((t-tau)/T)</p>
+<p>Représenter un peigne de Dirac</p>
+<p>Donner l’équation ou les paramètres d’un signal dont je donne le graphe</p>
+<p>Tracer avec Python un signal dont je donne l’équation (signal élémentaire ou combinaison, comme une sinusoïde amortie) &gt; TP</p>
+</font></div>
 </div>
 
 

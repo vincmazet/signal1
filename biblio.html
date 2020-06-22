@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Introduction &#8212; Traitement du signal</title>
+    <title>Bibliographie &#8212; Traitement du signal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -33,7 +33,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Classification des signaux" href="classification.html" />
+    <link rel="prev" title="Quantification" href="quantification.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -66,8 +66,8 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   
   <ul class="nav sidenav_l1">
-  <li class="active">
-    <a href="#">Introduction</a>
+  <li class="">
+    <a href="intro.html">Introduction</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Notions élémentaires</p>
@@ -126,8 +126,8 @@
 <li class="navbar-special">
 <p class="margin-caption">Annexes</p>
 </li>
-  <li class="">
-    <a href="biblio.html">Bibliographie</a>
+  <li class="active">
+    <a href="">Bibliographie</a>
   </li>
 </ul>
 </nav>
@@ -166,7 +166,7 @@
                 <!-- ipynb file if we had a myst markdown file -->
                 
                 <!-- Download raw file -->
-                <a class="dropdown-buttons" href="_sources/intro.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <a class="dropdown-buttons" href="_sources/biblio.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
                 <!-- Download PDF via print -->
                 <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
             </div>
@@ -179,7 +179,7 @@
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
             <div class="dropdown-buttons sourcebuttons">
                 <a class="repository-button" href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
-                <a class="issues-button" href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="issues-button" href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbiblio.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
                 
             </div>
         </div>
@@ -192,20 +192,9 @@
         
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#moodle" class="nav-link">Moodle</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#tests" class="nav-link">Tests</a>
-        </li>
     
     </ul>
 </nav>
@@ -218,52 +207,15 @@
         
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p><font color="red"><b>Ce manuel est en cours de construction !</b></font></p>
-<ul class="simple">
-<li><p>Page d’introduction du manuel + définition d’un signal</p></li>
-<li><p>Python + Anaconda, Notebook, Jupter Notebook/Lab, markdown…</p></li>
-</ul>
-<div class="section" id="moodle">
-<h2>Moodle<a class="headerlink" href="#moodle" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Moodle : mindmap + MECC (coefficients + dates des évals + évals formatives et certificatives)</p></li>
-</ul>
-</div>
-<div class="section" id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
-<p>Animation :</p>
-<iframe src="http://miv.u-strasbg.fr/mazet/animations/sinus.html" size="240" width="640" height="360" style="padding: 0; margin: 0; border:0" allowfullscreen ></iframe>
-<hr class="docutils" />
-<p>Pour faire des graphiques animés :</p>
-<ul class="simple">
-<li><p>plotly : mais ça marche pas sous mon Jupyter Lab, et parfois dans le book. En plu il enregistre toutes les valeurs et ne fait pas vraiment de calcul</p></li>
-<li><p>iframe d’une animation en JS : mais je dois développer en JS si l’animation n’existe pas</p></li>
-<li><p>Notebooks online : intérêt de pouvoir faire tous les calculs que je veux + c’est cohérent par rapport au fait que je veux les faire coder en Python + mais les données sont sur un serveur distant + il en faut un hyper rapide à produire un résultat !</p>
-<ul>
-<li><p>https://colab.research.google.com/</p></li>
-<li><p>https://mybinder.org/</p></li>
-<li><p>https://codeocean.com/</p></li>
-<li><p>https://notebooks.azure.com/vincent-mazet/projects/signal1</p></li>
-</ul>
-</li>
-</ul>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</div>
+  <div class="section" id="bibliographie">
+<span id="c-biblio"></span><h1>Bibliographie<a class="headerlink" href="#bibliographie" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary simple">
+<dt id="term-prandoni-2008">[Prandoni 2008]</dt><dd><p>P. Prandoni, M. Vetterli.
+<em>Signal Processing for Communications</em>.
+EPFL Press, 2008.
+<a class="reference external" href="https://www.sp4comm.org/download.html">Téléchargeable librement</a>.</p>
+</dd>
+</dl>
 </div>
 
 
@@ -275,7 +227,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="classification.html" title="next page">Classification des signaux</a>
+    <a class='left-prev' id="prev-link" href="quantification.html" title="previous page">Quantification</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -6,36 +6,53 @@
    "source": [
     "# Classification des signaux\n",
     "\n",
-    "La plupart des signaux physiques que l'on mesure sont _analogiques_, c'est-à-dire qu'ils dépendent d'une variable qui prend des valeurs [_continues_](http://www.educatim.fr/tq/co/Module_TQ_web/co/variable_continue.html) (par exemple, le temps) et peuvent prendre des valeurs elle-mêmes _continues_.\n",
+    "La plupart des signaux physiques que l'on mesure sont _analogiques_, c'est-à-dire qu'ils dépendent d'une variable qui prend des valeurs [continues](http://www.educatim.fr/tq/co/Module_TQ_web/co/variable_continue.html) (par exemple, le temps) et qu'eux-mêmes peuvent prendre des valeurs _continues_.\n",
     "On peut citer comme exemple la tension électrique dans un circuit, un son, une mesure de température, etc.\n",
     "\n",
-    "On effectue donc la classification suivante :\n",
+    "À l'inverse, les signaux traités par un ordinateur sont un ensemble de valeurs qui dépendent donc d'une variable [discrète](http://www.educatim.fr/tq/co/Module_TQ_web/co/variable_discrete.html), et de plus les amplitudes du signal sont également discrètes. Ces signaux sont _numériques_. On peut citer comme exemple une photographie numérique qui est constituée de pixels dont les intensités ne peuvent prendre que 255<sup>8</sup> = 16&nbsp;581&nbsp;375 valeurs.\n",
     "\n",
-    "**TODO** _TABLEAU_\n",
+    "Un signal numérique est à la fois _échantillonné_ (c'est-à-dire qu'il dépend d'une variable discrète) et _quantifié_ (ses amplitudes sont discrètes).\n",
+    "\n",
+    "Ainsi, l'_échantillonnage_ consiste à transformer un signal non échantillonné à un signal échantillonné.\n",
+    "De même, la _quantification_ consiste à transformer un signal à valeurs continues en un signal à valeurs discrètes.\n",
+    "La combinaison de ces deux opérations est appelée _numérisation_. Nous étudierons dans les pages correspondantes ({ref}`C:echantillonnage` et {ref}`C:quantification`) quelles sont les conditions qui permettent de ne pas trop dégrader le signal et quelles sont les conséquences sur le signal numérique.\n",
     "\n",
     "Quelques remarques :\n",
-    "* sur un ordinateur, on ne peut donc traiter que des signaux numériques car la mémoire de l'ordinateur ne permet d'enregistrer qu'un nombre fini de valeurs avec une précision limitée.\n",
-    "* un signal peut également être à valeurs complexes, quelle que soit sa classification. La représentation complexe est une représentation mathématique bien pratique car, même si les signaux physiques peuvent être exprimés avec des valeurs réelles, les nombres complexes permettent de manipuler plus simplement les signaux {cite}`Prandoni08` (p. 20). C'est le cas par exemple des champs électromagnétiques."
+    "* sur un ordinateur, on ne peut donc traiter que des signaux numériques car la précision des valeurs du signal est limitée et que l'acquisition du signal se fait à une fréquence définir. En plus, ces signaux sont de durée limitée car la mémoire de l'ordinateur ne permet d'enregistrer qu'un nombre fini de valeurs.\n",
+    "* un signal peut également être à valeurs complexes, quelle que soit sa classification. La représentation complexe est une représentation mathématique bien pratique car, même si les signaux physiques peuvent être exprimés avec des valeurs réelles, les nombres complexes permettent parfois de manipuler plus simplement les signaux {ref}`[Prandoni 2008, p. 20] <C:biblio>`. C'est le cas par exemple des champs électromagnétiques."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Exercices\n",
+    "<font color=\"#c0c0c0\">\n",
+    "    \n",
+    "**Devoirs**\n",
     "\n",
-    "- Donner des exemples de signaux et leur demander de les placer dans le tableau\n",
-    "- exercice de synthèse leur demander de compléter le tableau dans lequel j'ai enlevé tout le vocabulaire (que je devrais intégrer au texte). En plus, ça me fait gagner du temps car je n'ai pas à faire ce tableau !"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Références\n",
+    "Un signal qui peut prendre n'importe quelle amplitude est-il :\n",
+    "  analogique : oui/non/ça dépend*\n",
+    "  numérique : oui/non*/ça dépend\n",
+    "  échantillonné : oui/non/ça dépend*\n",
+    "  quantifié : oui/non*/ça dépend\n",
     "\n",
-    "```{bibliography} references.bib\n",
-    "```"
+    "Un signal qui dépend d'une variable x \\in \\R est-il :\n",
+    "  analogique : oui/non/ça dépend*\n",
+    "  numérique : oui/non*/ça dépend\n",
+    "  échantillonné : oui/non*/ça dépend\n",
+    "  quantifié : oui/non/ça dépend*\n",
+    "  \n",
+    "Un signal électrique qui est acquis toutes les secondes et dont les amplitudes s'étendent entre 0 et 5 V est-il :\n",
+    "  analogique : oui/non*/ça dépend\n",
+    "  numérique : oui/non*/ça dépend\n",
+    "  échantillonné : oui*/non/ça dépend\n",
+    "  quantifié : oui/non*/ça dépend\n",
+    "  \n",
+    "Compléter le tableau\n",
+    "    \n",
+    "Donner des exemples de signaux et leur demander de les placer dans le tableau\n",
+    "    \n",
+    "</font>"
    ]
   }
  ],

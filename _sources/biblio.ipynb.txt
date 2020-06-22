@@ -4,10 +4,23 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "(C:quantification)=\n",
-    "# Quantification\n",
+    "(C:biblio)=\n",
+    "# Bibliographie"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```{glossary}\n",
     "\n",
-    "Quantification"
+    "[Prandoni 2008]\n",
+    "  P. Prandoni, M. Vetterli.\n",
+    "  _Signal Processing for Communications_.\n",
+    "  EPFL Press, 2008.\n",
+    "  [Téléchargeable librement](https://www.sp4comm.org/download.html).\n",
+    "  \n",
+    "```"
    ]
   }
  ],
@@ -28,13 +41,6 @@
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
    "version": "3.7.3"
-  },
-  "widgets": {
-   "application/vnd.jupyter.widget-state+json": {
-    "state": {},
-    "version_major": 2,
-    "version_minor": 0
-   }
   }
  },
  "nbformat": 4,
