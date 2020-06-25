@@ -33,8 +33,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Propriétés des signaux" href="props-signaux.html" />
-    <link rel="prev" title="Signaux élémentaires" href="signaux-elementaires.html" />
+    <link rel="next" title="Produit de convolution" href="convolution.html" />
+    <link rel="prev" title="Propriétés des signaux" href="props-signaux.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -79,11 +79,11 @@
   <li class="">
     <a href="signaux-elementaires.html">Signaux élémentaires</a>
   </li>
-  <li class="active">
-    <a href="">Énergie et puissance</a>
-  </li>
   <li class="">
     <a href="props-signaux.html">Propriétés des signaux</a>
+  </li>
+  <li class="active">
+    <a href="">Énergie et puissance</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Convolution</p>
@@ -125,10 +125,22 @@
     <a href="quantification.html">Quantification</a>
   </li>
 <li class="navbar-special">
+<p class="margin-caption">Travail en classe</p>
+</li>
+  <li class="">
+    <a href="td1.html">📝 Séance du 14/10/2020</a>
+  </li>
+  <li class="">
+    <a href="tp1.html">💻 Séance du 22/10/2020</a>
+  </li>
+<li class="navbar-special">
 <p class="margin-caption">Annexes</p>
 </li>
   <li class="">
-    <a href="biblio.html">Bibliographie</a>
+    <a href="biblio.html">Références</a>
+  </li>
+  <li class="">
+    <a href="licence.html">Licence</a>
   </li>
 </ul>
 </nav>
@@ -179,8 +191,8 @@
         <div class="dropdown-buttons-trigger">
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
             <div class="dropdown-buttons sourcebuttons">
-                <a class="repository-button" href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
-                <a class="issues-button" href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fenergie-puissance.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="repository-button" href="https://github.com/vincmazet/signal1"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/vincmazet/signal1/issues/new?title=Issue%20on%20page%20%2Fenergie-puissance.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
                 
             </div>
         </div>
@@ -193,9 +205,20 @@
         
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#energie-d-un-signal" class="nav-link">Énergie d’un signal</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#puissance-d-un-signal" class="nav-link">Puissance d’un signal</a>
+        </li>
     
     </ul>
 </nav>
@@ -210,7 +233,31 @@
                 
   <div class="section" id="energie-et-puissance">
 <h1>Énergie et puissance<a class="headerlink" href="#energie-et-puissance" title="Permalink to this headline">¶</a></h1>
-<p>Énergie et puissance</p>
+<p>Par analogie avec l’énergie et la puissance d’un système physique (moteur électronique, mobile en déplacement…), on définit l’énergie et la puissance d’un signal. Dans le cas — très général — où les amplitudes du signal sont sans unité, alors l’énergie et la puissance sont également sans unité.</p>
+<div class="section" id="energie-d-un-signal">
+<h2>Énergie d’un signal<a class="headerlink" href="#energie-d-un-signal" title="Permalink to this headline">¶</a></h2>
+<p>L’énergie d’un signal <span class="math notranslate nohighlight">\(x\)</span> est définie par :</p>
+<ul class="simple">
+<li><p>pour un signal à temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle E = \int_{-\infty}^{+\infty} |x(t)|^2 \, dt\)</span></p></li>
+<li><p>pour un signal à temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle E = \sum_{n=-\infty}^{+\infty} |x[n]|^2\)</span></p></li>
+</ul>
+<p>Ces formules sont équivalentes, heureusement ! L’énergie est en fait l’aire sous la courbe du carré du signal, l’aire sous la courbe étant une intégrale ou une somme. Remarquez également que la notation <span class="math notranslate nohighlight">\(\mid\cdot\mid\)</span> correspond au module (le signal pouvant être complexe).</p>
+</div>
+<div class="section" id="puissance-d-un-signal">
+<h2>Puissance d’un signal<a class="headerlink" href="#puissance-d-un-signal" title="Permalink to this headline">¶</a></h2>
+<p>La puissance d’un signal <span class="math notranslate nohighlight">\(x\)</span> <strong>périodique</strong> est définie par :</p>
+<ul class="simple">
+<li><p>pour un signal à temps continu de période <span class="math notranslate nohighlight">\(T\)</span> :  <span class="math notranslate nohighlight">\(\quad\displaystyle P = \frac{1}{T} \int_T |x(t)|^2 \, dt\)</span></p></li>
+<li><p>pour un signal à temps discret de période <span class="math notranslate nohighlight">\(N\)</span> :  <span class="math notranslate nohighlight">\(\quad\displaystyle P = \frac{1}{N}\sum_{n=0}^{N} |x[n]|^2\)</span></p></li>
+</ul>
+<p>Dans le cas d’un signal périodique, la puissance est donc l’énergie sur une période divisée par la durée de cette période.</p>
+<p>Dans le cas d’un signal <strong>apériodique</strong>, la puissance est définie par :</p>
+<ul class="simple">
+<li><p>pour un signal apériodique à temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle P = \lim_{T\rightarrow+\infty} \frac{1}{2T} \int_{-T}^{+T} |x(t)|^2 \, dt\)</span></p></li>
+<li><p>pour un signal apériodique à temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle P = \lim_{N\rightarrow+\infty} \frac{1}{2N+1} \sum_{n=-N}^{+N} |x[n]|^2\)</span></p></li>
+</ul>
+<p>On peut en fait supposer qu’un signal apériodique est un signal périodique de période infinie. En reprenant les formules de la puissance d’un signal périodique, et en faisant tendre cette période vers l’infini, on obtient les formules de la puissance d’un signal apériodique.</p>
+</div>
 </div>
 
 
@@ -222,8 +269,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="signaux-elementaires.html" title="previous page">Signaux élémentaires</a>
-    <a class='right-next' id="next-link" href="props-signaux.html" title="next page">Propriétés des signaux</a>
+    <a class='left-prev' id="prev-link" href="props-signaux.html" title="previous page">Propriétés des signaux</a>
+    <a class='right-next' id="next-link" href="convolution.html" title="next page">Produit de convolution</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -233,6 +280,9 @@
           By Vincent Mazet (Université de Strasbourg)<br/>
         
             &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            Traitement du signal &mdash; Vincent Mazet (Université de Strasbourg), 2020 &mdash; <a href="licence.html">CC BY-NC 4.0</a>.
+          </div>
       </p>
     </div>
   </footer>

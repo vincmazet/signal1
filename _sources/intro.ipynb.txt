@@ -16,9 +16,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Moodle\n",
-    "\n",
-    "* Moodle : mindmap + MECC (coefficients + dates des évals + évals formatives et certificatives)"
+    "## Mindmap ?"
    ]
   },
   {

@@ -1,5 +1,8 @@
 /* Feuille de style perso VM */
 
+
+/* Style général */
+
 @font-face {
   font-family: "Source Sans Pro SemiBold";
   src: url("fonts/SourceSansPro-SemiBold.ttf");
@@ -14,3 +17,19 @@ body {font-family: "Source Sans Pro"}
 h1, h2, h3, h4, h5, h6 {font-family: "Source Sans Pro SemiBold"}
 h1 {font-size: 2.5em}
 h2 {font-size: 1.7em}
+
+
+/* Hack pour faire disparaître le footer (et mettre le mien à la place) */
+
+.footer p {
+    display: none;
+}
+
+/* Style pour l'impression */
+
+@media print {
+  body {
+    font-family: Times;
+    margin: 2cm
+  }
+}

@@ -80,10 +80,10 @@
     <a href="signaux-elementaires.html">Signaux élémentaires</a>
   </li>
   <li class="">
-    <a href="energie-puissance.html">Énergie et puissance</a>
+    <a href="props-signaux.html">Propriétés des signaux</a>
   </li>
   <li class="">
-    <a href="props-signaux.html">Propriétés des signaux</a>
+    <a href="energie-puissance.html">Énergie et puissance</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Convolution</p>
@@ -125,10 +125,22 @@
     <a href="quantification.html">Quantification</a>
   </li>
 <li class="navbar-special">
+<p class="margin-caption">Travail en classe</p>
+</li>
+  <li class="">
+    <a href="td1.html">📝 Séance du 14/10/2020</a>
+  </li>
+  <li class="">
+    <a href="tp1.html">💻 Séance du 22/10/2020</a>
+  </li>
+<li class="navbar-special">
 <p class="margin-caption">Annexes</p>
 </li>
   <li class="">
-    <a href="biblio.html">Bibliographie</a>
+    <a href="biblio.html">Références</a>
+  </li>
+  <li class="">
+    <a href="licence.html">Licence</a>
   </li>
 </ul>
 </nav>
@@ -179,8 +191,8 @@
         <div class="dropdown-buttons-trigger">
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
             <div class="dropdown-buttons sourcebuttons">
-                <a class="repository-button" href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
-                <a class="issues-button" href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fclassification.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="repository-button" href="https://github.com/vincmazet/signal1"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/vincmazet/signal1/issues/new?title=Issue%20on%20page%20%2Fclassification.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
                 
             </div>
         </div>
@@ -222,26 +234,7 @@ La combinaison de ces deux opérations est appelée <em>numérisation</em>. Nous
 <li><p>sur un ordinateur, on ne peut donc traiter que des signaux numériques car la précision des valeurs du signal est limitée et que l’acquisition du signal se fait à une fréquence définir. En plus, ces signaux sont de durée limitée car la mémoire de l’ordinateur ne permet d’enregistrer qu’un nombre fini de valeurs.</p></li>
 <li><p>un signal peut également être à valeurs complexes, quelle que soit sa classification. La représentation complexe est une représentation mathématique bien pratique car, même si les signaux physiques peuvent être exprimés avec des valeurs réelles, les nombres complexes permettent parfois de manipuler plus simplement les signaux <a class="reference internal" href="biblio.html#c-biblio"><span class="std std-ref">[Prandoni 2008, p. 20]</span></a>. C’est le cas par exemple des champs électromagnétiques.</p></li>
 </ul>
-<font color="#c0c0c0">
-<p><strong>Devoirs</strong></p>
-<p>Un signal qui peut prendre n’importe quelle amplitude est-il :
-analogique : oui/non/ça dépend*
-numérique : oui/non*/ça dépend
-échantillonné : oui/non/ça dépend*
-quantifié : oui/non*/ça dépend</p>
-<p>Un signal qui dépend d’une variable x \in \R est-il :
-analogique : oui/non/ça dépend*
-numérique : oui/non*/ça dépend
-échantillonné : oui/non*/ça dépend
-quantifié : oui/non/ça dépend*</p>
-<p>Un signal électrique qui est acquis toutes les secondes et dont les amplitudes s’étendent entre 0 et 5 V est-il :
-analogique : oui/non*/ça dépend
-numérique : oui/non*/ça dépend
-échantillonné : oui*/non/ça dépend
-quantifié : oui/non*/ça dépend</p>
-<p>Compléter le tableau</p>
-<p>Donner des exemples de signaux et leur demander de les placer dans le tableau</p>
-</font></div>
+</div>
 
 
               </div>
@@ -263,6 +256,9 @@ quantifié : oui/non*/ça dépend</p>
           By Vincent Mazet (Université de Strasbourg)<br/>
         
             &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            Traitement du signal &mdash; Vincent Mazet (Université de Strasbourg), 2020 &mdash; <a href="licence.html">CC BY-NC 4.0</a>.
+          </div>
       </p>
     </div>
   </footer>

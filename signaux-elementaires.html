@@ -33,7 +33,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Énergie et puissance" href="energie-puissance.html" />
+    <link rel="next" title="Propriétés des signaux" href="props-signaux.html" />
     <link rel="prev" title="Classification des signaux" href="classification.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,10 +80,10 @@
     <a href="">Signaux élémentaires</a>
   </li>
   <li class="">
-    <a href="energie-puissance.html">Énergie et puissance</a>
+    <a href="props-signaux.html">Propriétés des signaux</a>
   </li>
   <li class="">
-    <a href="props-signaux.html">Propriétés des signaux</a>
+    <a href="energie-puissance.html">Énergie et puissance</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Convolution</p>
@@ -125,10 +125,22 @@
     <a href="quantification.html">Quantification</a>
   </li>
 <li class="navbar-special">
+<p class="margin-caption">Travail en classe</p>
+</li>
+  <li class="">
+    <a href="td1.html">📝 Séance du 14/10/2020</a>
+  </li>
+  <li class="">
+    <a href="tp1.html">💻 Séance du 22/10/2020</a>
+  </li>
+<li class="navbar-special">
 <p class="margin-caption">Annexes</p>
 </li>
   <li class="">
-    <a href="biblio.html">Bibliographie</a>
+    <a href="biblio.html">Références</a>
+  </li>
+  <li class="">
+    <a href="licence.html">Licence</a>
   </li>
 </ul>
 </nav>
@@ -179,8 +191,8 @@
         <div class="dropdown-buttons-trigger">
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
             <div class="dropdown-buttons sourcebuttons">
-                <a class="repository-button" href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
-                <a class="issues-button" href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsignaux-elementaires.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="repository-button" href="https://github.com/vincmazet/signal1"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/vincmazet/signal1/issues/new?title=Issue%20on%20page%20%2Fsignaux-elementaires.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
                 
             </div>
         </div>
@@ -457,19 +469,7 @@ Il est également appelé fonction de Heaviside.</p>
 <p>Le peigne de Dirac est également appelé train d’impulsion, fonction d’échantillonnage ou distribution Cha (en raison de sa ressemblance avec la lettre cyrillique Ш).</p>
 <div class="cell tag_remove-input docutils container">
 </div>
-<font color="#c0c0c0">
-<p><strong>Devoirs</strong></p>
-<p>Un signal échantillonné est un signal à temps discret : vrai*/faux</p>
-<p>Le signal noté <span class="math notranslate nohighlight">\(x[n]\)</span> est :
-à temps discret*/à temps continu/on ne peut pas savoir</p>
-<p>Compléter votre glossaire Python en ajoutant les fonctions et instructions permettant de calculer un sinus, une exponentielle, un sinus cardinal, un échelon, une porte, une impulsione discrète.</p>
-<p>Représentez sin(…)</p>
-<p>Tracer sur papier un signal dont je donne l’équation</p>
-<p>Représentez rect((t-tau)/T)</p>
-<p>Représenter un peigne de Dirac</p>
-<p>Donner l’équation ou les paramètres d’un signal dont je donne le graphe</p>
-<p>Tracer avec Python un signal dont je donne l’équation (signal élémentaire ou combinaison, comme une sinusoïde amortie) &gt; TP</p>
-</font></div>
+</div>
 </div>
 
 
@@ -482,7 +482,7 @@ Il est également appelé fonction de Heaviside.</p>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="classification.html" title="previous page">Classification des signaux</a>
-    <a class='right-next' id="next-link" href="energie-puissance.html" title="next page">Énergie et puissance</a>
+    <a class='right-next' id="next-link" href="props-signaux.html" title="next page">Propriétés des signaux</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -492,6 +492,9 @@ Il est également appelé fonction de Heaviside.</p>
           By Vincent Mazet (Université de Strasbourg)<br/>
         
             &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            Traitement du signal &mdash; Vincent Mazet (Université de Strasbourg), 2020 &mdash; <a href="licence.html">CC BY-NC 4.0</a>.
+          </div>
       </p>
     </div>
   </footer>

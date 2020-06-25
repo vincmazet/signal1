@@ -21,39 +21,6 @@
     "* sur un ordinateur, on ne peut donc traiter que des signaux numériques car la précision des valeurs du signal est limitée et que l'acquisition du signal se fait à une fréquence définir. En plus, ces signaux sont de durée limitée car la mémoire de l'ordinateur ne permet d'enregistrer qu'un nombre fini de valeurs.\n",
     "* un signal peut également être à valeurs complexes, quelle que soit sa classification. La représentation complexe est une représentation mathématique bien pratique car, même si les signaux physiques peuvent être exprimés avec des valeurs réelles, les nombres complexes permettent parfois de manipuler plus simplement les signaux {ref}`[Prandoni 2008, p. 20] <C:biblio>`. C'est le cas par exemple des champs électromagnétiques."
    ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "<font color=\"#c0c0c0\">\n",
-    "    \n",
-    "**Devoirs**\n",
-    "\n",
-    "Un signal qui peut prendre n'importe quelle amplitude est-il :\n",
-    "  analogique : oui/non/ça dépend*\n",
-    "  numérique : oui/non*/ça dépend\n",
-    "  échantillonné : oui/non/ça dépend*\n",
-    "  quantifié : oui/non*/ça dépend\n",
-    "\n",
-    "Un signal qui dépend d'une variable x \\in \\R est-il :\n",
-    "  analogique : oui/non/ça dépend*\n",
-    "  numérique : oui/non*/ça dépend\n",
-    "  échantillonné : oui/non*/ça dépend\n",
-    "  quantifié : oui/non/ça dépend*\n",
-    "  \n",
-    "Un signal électrique qui est acquis toutes les secondes et dont les amplitudes s'étendent entre 0 et 5 V est-il :\n",
-    "  analogique : oui/non*/ça dépend\n",
-    "  numérique : oui/non*/ça dépend\n",
-    "  échantillonné : oui*/non/ça dépend\n",
-    "  quantifié : oui/non*/ça dépend\n",
-    "  \n",
-    "Compléter le tableau\n",
-    "    \n",
-    "Donner des exemples de signaux et leur demander de les placer dans le tableau\n",
-    "    \n",
-    "</font>"
-   ]
   }
  ],
  "metadata": {

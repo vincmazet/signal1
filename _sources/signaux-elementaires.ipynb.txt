@@ -591,36 +591,6 @@
     "# plt.title(\"Peigne de période 3\")\n",
     "# plt.show()"
    ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "<font color=\"#c0c0c0\">\n",
-    "    \n",
-    "**Devoirs**\n",
-    "    \n",
-    "Un signal échantillonné est un signal à temps discret : vrai*/faux\n",
-    "\n",
-    "Le signal noté $x[n]$ est :\n",
-    "  à temps discret*/à temps continu/on ne peut pas savoir\n",
-    "    \n",
-    "Compléter votre glossaire Python en ajoutant les fonctions et instructions permettant de calculer un sinus, une exponentielle, un sinus cardinal, un échelon, une porte, une impulsione discrète.\n",
-    "\n",
-    "Représentez sin(...)\n",
-    "    \n",
-    "Tracer sur papier un signal dont je donne l'équation\n",
-    "\n",
-    "Représentez rect((t-tau)/T)\n",
-    "    \n",
-    "Représenter un peigne de Dirac\n",
-    "    \n",
-    "Donner l'équation ou les paramètres d'un signal dont je donne le graphe\n",
-    "    \n",
-    "Tracer avec Python un signal dont je donne l'équation (signal élémentaire ou combinaison, comme une sinusoïde amortie) > TP\n",
-    "    \n",
-    "</font>"
-   ]
   }
  ],
  "metadata": {

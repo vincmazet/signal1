@@ -6,6 +6,42 @@
    "source": [
     "# Propriétés des signaux"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Transformation de la variable indépendante\n",
+    "\n",
+    "<font color=\"red\">TODO</font>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Périodicité\n",
+    "\n",
+    "Un signal $x$ est périodique s'il est constitué d'une infinité de morceaux tous identiques, appelés _période_.\n",
+    "Par extension, la période désigne aussi la longueur de cette période.\n",
+    "Un signal non périodique est dit _apériodique_.\n",
+    "Ainsi :\n",
+    "* un signal à temps continu de période $T$ est tel que~: $\\quad \\forall t \\quad x(t+T) = x(t)$\n",
+    "* un signal à temps discret de période $N$ est tel que~: $\\quad \\forall n \\quad x[n+N] = x[n]$\n",
+    "\n",
+    "La _fréquence_ d'un signal est l'inverse de sa période."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Causalité\n",
+    "\n",
+    "Un signal $x$ _causal_ est nul pour les temps négatifs,\n",
+    "* donc pour un signal à temps continu : $\\quad \\forall t<0 \\quad x(t) = 0$\n",
+    "* et pour un signal à temps discret : $\\quad \\forall n<0 \\quad x[n] = 0$"
+   ]
   }
  ],
  "metadata": {
@@ -24,7 +60,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.2"
+   "version": "3.7.3"
   },
   "widgets": {
    "application/vnd.jupyter.widget-state+json": {

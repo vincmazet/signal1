@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Quantification &#8212; Traitement du signal</title>
+    <title>📝 Séance du 14/10/2020 &#8212; Traitement du signal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -33,8 +33,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="📝 Séance du 14/10/2020" href="td1.html" />
-    <link rel="prev" title="Échantillonnage" href="echantillonnage.html" />
+    <link rel="next" title="💻 Séance du 22/10/2020" href="tp1.html" />
+    <link rel="prev" title="Quantification" href="quantification.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -121,14 +121,14 @@
   <li class="">
     <a href="echantillonnage.html">Échantillonnage</a>
   </li>
-  <li class="active">
-    <a href="">Quantification</a>
+  <li class="">
+    <a href="quantification.html">Quantification</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Travail en classe</p>
 </li>
-  <li class="">
-    <a href="td1.html">📝 Séance du 14/10/2020</a>
+  <li class="active">
+    <a href="">📝 Séance du 14/10/2020</a>
   </li>
   <li class="">
     <a href="tp1.html">💻 Séance du 22/10/2020</a>
@@ -179,7 +179,7 @@
                 <!-- ipynb file if we had a myst markdown file -->
                 
                 <!-- Download raw file -->
-                <a class="dropdown-buttons" href="_sources/quantification.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <a class="dropdown-buttons" href="_sources/td1.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
                 <!-- Download PDF via print -->
                 <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
             </div>
@@ -192,7 +192,7 @@
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
             <div class="dropdown-buttons sourcebuttons">
                 <a class="repository-button" href="https://github.com/vincmazet/signal1"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
-                <a class="issues-button" href="https://github.com/vincmazet/signal1/issues/new?title=Issue%20on%20page%20%2Fquantification.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="issues-button" href="https://github.com/vincmazet/signal1/issues/new?title=Issue%20on%20page%20%2Ftd1.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
                 
             </div>
         </div>
@@ -205,9 +205,32 @@
         
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#python" class="nav-link">Python</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#classification-des-signaux" class="nav-link">Classification des signaux</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#signaux-elementaires" class="nav-link">Signaux élémentaires</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#proprietes-des-signaux" class="nav-link">Propriétés des signaux</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#energie-et-puissance" class="nav-link">Énergie et puissance</a>
+        </li>
     
     </ul>
 </nav>
@@ -220,9 +243,59 @@
         
               <div>
                 
-  <div class="section" id="quantification">
-<span id="c-quantification"></span><h1>Quantification<a class="headerlink" href="#quantification" title="Permalink to this headline">¶</a></h1>
-<p>Quantification</p>
+  <div class="section" id="seance-du-14-10-2020">
+<h1>📝 Séance du 14/10/2020<a class="headerlink" href="#seance-du-14-10-2020" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Retour sur les devoirs : avez-vous réussi à installer et utiliser Python ?</p></li>
+</ul>
+</div>
+<div class="section" id="classification-des-signaux">
+<h2>Classification des signaux<a class="headerlink" href="#classification-des-signaux" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Retour sur les devoirs : échanges autour des résultats de l’auto-évaluation et du tableau à compléter.</p></li>
+<li><p>Placez dans le tableau les signaux suivants :</p>
+<ul>
+<li><p>un signal acoustique dans l’air, en fonction du temps</p></li>
+<li><p>l’enregistrement du nombre de personnes atteintes d’une maladie en fonction du temps</p></li>
+<li><p>le nombre d’étudiants dans une classe en fonction du temps</p></li>
+<li><p>l’heure du lever de soleil tous les jours</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="signaux-elementaires">
+<h2>Signaux élémentaires<a class="headerlink" href="#signaux-elementaires" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Retour sur les devoirs : échanges autour des résultats de l’auto-évaluation.</p></li>
+<li><p>Tracez à la main les signaux suivants :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+  \frac{1}{2} \mathrm{sinc}\left(\frac{t}{2}\right),\qquad
+  \sin(\pi n),\qquad
+  \mathrm{rect}\left(\frac{n}{4}-\frac{1}{2}\right) - \delta[n-2]
+\]</div>
+</div>
+<div class="section" id="proprietes-des-signaux">
+<h2>Propriétés des signaux<a class="headerlink" href="#proprietes-des-signaux" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Retour sur les devoirs : échanges autour des résultats de l’auto-évaluation.</p></li>
+</ul>
+</div>
+<div class="section" id="energie-et-puissance">
+<h2>Énergie et puissance<a class="headerlink" href="#energie-et-puissance" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Retour sur les devoirs : échanges autour des résultats de l’auto-évaluation.</p></li>
+<li><p>Calculez la puissance et l’énergie des signaux suivants :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+  x(t) = e^{-2t} u(t),\qquad
+  y[n] = \frac{1}{2^n} u[n].
+\]</div>
+</div>
 </div>
 
 
@@ -234,8 +307,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="echantillonnage.html" title="previous page">Échantillonnage</a>
-    <a class='right-next' id="next-link" href="td1.html" title="next page">📝 Séance du 14/10/2020</a>
+    <a class='left-prev' id="prev-link" href="quantification.html" title="previous page">Quantification</a>
+    <a class='right-next' id="next-link" href="tp1.html" title="next page">💻 Séance du 22/10/2020</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
