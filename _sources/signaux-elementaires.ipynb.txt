@@ -260,7 +260,7 @@
     "$$\n",
     "\n",
     "L'échelon est donc nul pour $t<0$ et égal à un sinon.\n",
-    "Vuos l'aurez compris, il existe aussi une version à temps discret.\n",
+    "Vous l'aurez compris, il existe aussi une version à temps discret.\n",
     "Il est également appelé fonction de Heaviside."
    ]
   },
@@ -609,7 +609,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.3"
+   "version": "3.7.2"
   },
   "widgets": {
    "application/vnd.jupyter.widget-state+json": {

@@ -18,6 +18,16 @@ h1, h2, h3, h4, h5, h6 {font-family: "Source Sans Pro SemiBold"}
 h1 {font-size: 2.5em}
 h2 {font-size: 1.7em}
 
+span.pre {
+  background-color: #eee;
+  padding: 1px 5px;
+  border: 0;
+  color: #000;
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: inherit;
+  line-height: 1.3077
+}
+
 
 /* Hack pour faire disparaître le footer (et mettre le mien à la place) */
 
@@ -32,4 +42,15 @@ h2 {font-size: 1.7em}
     font-family: Times;
     margin: 2cm
   }
+}
+
+/* Animations */
+
+.spetsi {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }

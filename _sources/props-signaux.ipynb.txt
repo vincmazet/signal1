@@ -26,8 +26,8 @@
     "Par extension, la période désigne aussi la longueur de cette période.\n",
     "Un signal non périodique est dit _apériodique_.\n",
     "Ainsi :\n",
-    "* un signal à temps continu de période $T$ est tel que~: $\\quad \\forall t \\quad x(t+T) = x(t)$\n",
-    "* un signal à temps discret de période $N$ est tel que~: $\\quad \\forall n \\quad x[n+N] = x[n]$\n",
+    "* un signal à temps continu de période $T$ est tel que : $\\quad \\forall t \\quad x(t+T) = x(t)$\n",
+    "* un signal à temps discret de période $N$ est tel que : $\\quad \\forall n \\quad x[n+N] = x[n]$\n",
     "\n",
     "La _fréquence_ d'un signal est l'inverse de sa période."
    ]

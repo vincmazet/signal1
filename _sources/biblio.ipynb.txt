@@ -42,7 +42,12 @@
     "\n",
     "* [Wikipedia]\n",
     "  Wikipedia : commencez par l'article [Traitement du signal](https://fr.wikipedia.org/wiki/Traitement_du_signal) puis continuez à explorer !\n",
-    "  N'hésitez pas également à lire la [version en anglais](https://en.wikipedia.org/wiki/Signal_processing), souvent plus complète."
+    "  N'hésitez pas également à lire la [version en anglais](https://en.wikipedia.org/wiki/Signal_processing), souvent plus complète.\n",
+    "  \n",
+    "\n",
+    "<font color=\"red\">Vérifier :</font>\n",
+    "http://ressources.unisciel.fr/TraitementDuSignal/Introduction/co/module_Introduction_1.html\n",
+    "http://culturesciencesphysique.ens-lyon.fr/ressource/signal-images-Borgnat.xml"
    ]
   },
   {
@@ -77,7 +82,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.3"
+   "version": "3.7.2"
   }
  },
  "nbformat": 4,

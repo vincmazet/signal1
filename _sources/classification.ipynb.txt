@@ -18,7 +18,7 @@
     "La combinaison de ces deux opérations est appelée _numérisation_. Nous étudierons dans les pages correspondantes ({ref}`C:echantillonnage` et {ref}`C:quantification`) quelles sont les conditions qui permettent de ne pas trop dégrader le signal et quelles sont les conséquences sur le signal numérique.\n",
     "\n",
     "Quelques remarques :\n",
-    "* sur un ordinateur, on ne peut donc traiter que des signaux numériques car la précision des valeurs du signal est limitée et que l'acquisition du signal se fait à une fréquence définir. En plus, ces signaux sont de durée limitée car la mémoire de l'ordinateur ne permet d'enregistrer qu'un nombre fini de valeurs.\n",
+    "* sur un ordinateur, on ne peut donc traiter que des signaux numériques car la précision des valeurs du signal est limitée et que l'acquisition du signal se fait à une fréquence définie. En plus, ces signaux sont de durée limitée car la mémoire de l'ordinateur ne permet d'enregistrer qu'un nombre fini de valeurs.\n",
     "* un signal peut également être à valeurs complexes, quelle que soit sa classification. La représentation complexe est une représentation mathématique bien pratique car, même si les signaux physiques peuvent être exprimés avec des valeurs réelles, les nombres complexes permettent parfois de manipuler plus simplement les signaux {ref}`[Prandoni 2008, p. 20] <C:biblio>`. C'est le cas par exemple des champs électromagnétiques."
    ]
   }

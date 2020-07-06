@@ -26,10 +26,16 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/mystnb.js"></script>
+    <script src="_static/js/expo.js"></script>
+    <script src="_static/js/spetsi.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/three.js"></script>
+    <script src="_static/js/.ipynb_checkpoints/expo-checkpoint.js"></script>
+    <script src="_static/js/.ipynb_checkpoints/spetsi-checkpoint.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0-alpha.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -242,7 +248,17 @@
   <div class="section" id="seance-du-22-10-2020">
 <h1>💻 Séance du 22/10/2020<a class="headerlink" href="#seance-du-22-10-2020" title="Permalink to this headline">¶</a></h1>
 <p>En plus d’appliquer les notions essentielles du traitement du signal,
-ce TP est également une initiation à la programmation en Python.</p>
+ce TP est également une initiation à la programmation scientifique en Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chemin pour les fichiers</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span> <span class="o">==</span> <span class="s2">&quot;book&quot;</span> <span class="k">else</span> <span class="s2">&quot;book/&quot;</span>
+<span class="n">path</span> <span class="o">+=</span> <span class="s2">&quot;_static/tp/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="representation-de-signaux">
 <h2>Représentation de signaux<a class="headerlink" href="#representation-de-signaux" title="Permalink to this headline">¶</a></h2>
 <p>Pour représenter la sinusoïde de fréquence <span class="math notranslate nohighlight">\(f=0,3\)</span> Hz</p>
@@ -282,11 +298,11 @@ ce TP est également une initiation à la programmation en Python.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/tp1_2_0.png" src="_images/tp1_2_0.png" />
+<img alt="_images/tp1_3_0.png" src="_images/tp1_3_0.png" />
 </div>
 </div>
 <ul class="simple">
-<li><p>(Re)copier le code ci-avant pour vérifier que le signal s’affiche de la même manière.</p></li>
+<li><p>(Re)copier le code ci-avant dans votre notebook pour vérifier que le signal s’affiche de la même manière.</p></li>
 </ul>
 <ul>
 <li><p>Modifier le code pour représentez le signal sinusoïdal</p>
@@ -316,48 +332,60 @@ ce TP est également une initiation à la programmation en Python.</p>
     z[n] = A\,\mathrm{rect}\left(\frac{n-m}{N}\right)
   \]</div>
 <p>avec <span class="math notranslate nohighlight">\(A = 3\)</span>, <span class="math notranslate nohighlight">\(m = 4\)</span> et <span class="math notranslate nohighlight">\(N = 5\)</span>.</p>
-<p>Comme le signal est à temps discret, vous pouvez utiliser la syntaxe</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>pour afficher les points individuellement sans les relier.</p>
+<p>Comme le signal est à temps discret, vous pouvez utiliser la syntaxe <code class="docutils literal notranslate"><span class="pre">plt.plot(...,&quot;.&quot;)</span></code> pour afficher les points individuellement sans les relier.</p>
 </li>
 </ul>
 <ul class="simple">
-<li><p>Le fichier tp11.dat contient un signal sonore sous forme d’une matrice dont la première colonne correspond aux échantillons temporels et les deux colonnes suivantes aux canaux gauche et droite. Affichez le signal sonore issu du canal gauche.</p></li>
+<li><p>Le fichier <a class="reference external" href="http://vincmazet.github.io/signal1/_static/tp/hello.csv">hello.csv</a> contient un signal sonore sous forme d’une matrice dont la première colonne correspond aux échantillons temporels et les deux colonnes suivantes aux canaux gauche et droite. Affichez le signal sonore issu du canal gauche.</p></li>
 </ul>
 </div>
 <div class="section" id="produit-de-convolution">
 <h2>Produit de convolution<a class="headerlink" href="#produit-de-convolution" title="Permalink to this headline">¶</a></h2>
-<p><font color="red">TODO</font></p>
-<p>Pour chacun des couples de signaux suivants, représentez <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> et le produit de convolution~<span class="math notranslate nohighlight">\(x*y\)</span>.
-Attention à utiliser l’argument \syntax{‘same’} dans la fonction \syntax{‘conv’}.
-\begin{align*}</p>
-<p>1.\quad &amp;x[n] = \sin(2\pi n/10) &amp;
-&amp;\text{et};&amp;
-&amp;y[n] =
-\begin{cases}
-3 \quad\text{si <span class="math notranslate nohighlight">\(n=5\)</span>} \ 0 \quad\text{sinon}
-\end{cases} &amp;
-&amp;\text{et};n \in {-10,\dots,10}&amp; \</p>
-<p>2.\quad &amp;x[n] =
-\begin{cases}
-1 \quad\text{si <span class="math notranslate nohighlight">\(n\in\{-1,1\}\)</span>} \ 2 \quad\text{si <span class="math notranslate nohighlight">\(n=0\)</span>} \ 0 \quad\text{sinon}
-\end{cases} &amp;
-&amp;\text{et};&amp;
-&amp;y[n] =
-\begin{cases}
--1 \quad\text{si <span class="math notranslate nohighlight">\(n=-1\)</span>} \ 1 \quad\text{si <span class="math notranslate nohighlight">\(n=1\)</span>} \ 0 \quad\text{sinon}
-\end{cases} &amp;
-&amp;\text{et};n \in {-10,\dots,10}&amp;  \</p>
-<p>3.\quad &amp;\parbox{4.5cm}{<span class="math notranslate nohighlight">\(x[n]\)</span> est le signal enregistré \ dans le fichier tp12.dat} &amp;
-&amp;\text{et};&amp;
-&amp;y[n] =
-\begin{cases}
-1/10 \quad\text{si <span class="math notranslate nohighlight">\(n\in\{0,\dots,9\}\)</span>} \ 0 \quad\text{sinon}
-\end{cases} &amp;
-&amp;\text{et};n \in {-200,\dots,200}&amp;  \</p>
-<p>\end{align*}</p>
+<p>Pour chacun des couples de signaux suivants, représentez <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> et le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span>.
+Attention à spécifier l’argument <code class="docutils literal notranslate"><span class="pre">mode=&quot;same&quot;</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.convolve</span></code>.</p>
+<ul>
+<li><p>Représentez sur l’intervalle <span class="math notranslate nohighlight">\(n \in \{-10,\dots,10\}\)</span> les signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>, et le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    x[n] = \sin(2\pi n/10)
+    \quad\text{et}\quad
+    y[n] =
+    \begin{cases}
+      3 \quad\text{si}\quad n=5 \\
+      0 \quad\text{sinon}
+    \end{cases}
+   \end{split}\]</div>
+</li>
+<li><p>Représentez sur l’intervalle <span class="math notranslate nohighlight">\(n \in \{-10,\dots,10\}\)</span> les signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>, et le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span> :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    x[n] =
+    \begin{cases}
+      1 \quad\text{si}\quad n\in\{-1,1\} \\
+      2 \quad\text{si}\quad n=0 \\
+      0 \quad\text{sinon}
+    \end{cases}
+    \quad\text{et}\quad
+    y[n] =
+    \begin{cases}
+      -1 \quad\text{si}\quad n=-1 \\
+      1 \quad\text{si}\quad n=1 \\
+      0 \quad\text{sinon}
+    \end{cases}
+ \end{split}\]</div>
+<ul>
+<li><p>Représentez sur l’intervalle <span class="math notranslate nohighlight">\(n \in \{-200,\dots,200\}\)</span> le signal enregistré dans le fichier <a class="reference external" href="http://vincmazet.github.io/signal1/_static/tp/signal2.csv">signal2.csv</a> et <span class="math notranslate nohighlight">\(y\)</span> définié ci-dessous, ainsi que leur produit de convolution.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y[n] =
+    \begin{cases}
+      1/10 \quad\text{si}\quad n\in\{0,\dots,9\} \\
+      0 \quad\text{sinon}
+    \end{cases}
+  \end{split}\]</div>
+</li>
+</ul>
 </div>
 <div class="section" id="intercorrelation">
 <h2>Intercorrélation<a class="headerlink" href="#intercorrelation" title="Permalink to this headline">¶</a></h2>

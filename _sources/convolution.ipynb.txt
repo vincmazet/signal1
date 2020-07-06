@@ -8,6 +8,17 @@
     "\n",
     "Produit de convolution"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "L'animation ci-dessous illustre l'effet du produit de convolution ($y$) entre les signaux $x$ et $h$.\n",
+    "\n",
+    "<div id='conv1c' class='spetsi'></div>\n",
+    "<script src=\"_static/js/spetsi.js\" type=\"text/javascript\"></script>\n",
+    "<script src=\"_static/js/conv1c.js\" type=\"text/javascript\"></script>"
+   ]
   }
  ],
  "metadata": {
