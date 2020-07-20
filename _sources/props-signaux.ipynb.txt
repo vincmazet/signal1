@@ -13,7 +13,26 @@
    "source": [
     "## Transformation de la variable indépendante\n",
     "\n",
-    "<font color=\"red\">TODO</font>"
+    "Le signal $x(t)$ dépend de la variable $t$, appelée _variable indépendante_.\n",
+    "\n",
+    "* Un changement de signe sur $t$ revient à un retournement de l'axe temporel, donc à une symétrie par rapport à l'origine.\n",
+    "* Un changement d'échelle consiste à multiplier $t$ par une variable $a \\in \\mathbb{R}^{+*}$.\n",
+    "* Une translation (ou décalage) consiste à ajouter une variable $T\\in\\mathbb{R}$ à la variable indépendante.\n",
+    "\n",
+    "L'animation ci-dessous permet de visualiser ces transformations sur $t$, dans l'exemple d'un signal $x$ tel que\n",
+    "\n",
+    "$$\n",
+    "  x(t) =\n",
+    "  \\begin{cases}\n",
+    "    t &\\text{si}\\quad 0 \\leq t < 1 \\\\\n",
+    "    1 &\\text{si}\\quad 1 \\leq t < 2 \\\\\n",
+    "    0 &\\text{sinon}\n",
+    "  \\end{cases}\n",
+    "$$\n",
+    "\n",
+    "<div id='dilatation' class='spetsi'></div>\n",
+    "<script src=\"_static/js/spetsi.js\" type=\"text/javascript\"></script>\n",
+    "<script src=\"_static/js/dilatation.js\" type=\"text/javascript\"></script>"
    ]
   },
   {

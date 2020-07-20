@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Représentation vectorielle des signaux &#8212; Traitement du signal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/spetsi.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transformations de Fourier" href="fourier.html" />
+    <link rel="prev" title="Intercorrélation" href="intercorrelation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Traitement du signal</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="intro.html">Introduction</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Notions élémentaires</p>
+</li>
+  <li class="">
+    <a href="classification.html">Classification des signaux</a>
+  </li>
+  <li class="">
+    <a href="signaux-elementaires.html">Signaux élémentaires</a>
+  </li>
+  <li class="">
+    <a href="props-signaux.html">Propriétés des signaux</a>
+  </li>
+  <li class="">
+    <a href="energie-puissance.html">Énergie et puissance</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Convolution</p>
+</li>
+  <li class="">
+    <a href="convolution.html">Produit de convolution</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Intercorrélation</p>
+</li>
+  <li class="">
+    <a href="intercorrelation.html">Intercorrélation</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Représentation vectorielle</p>
+</li>
+  <li class="active">
+    <a href="">Représentation vectorielle des signaux</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Analyse de Fourier</p>
+</li>
+  <li class="">
+    <a href="fourier.html">Transformations de Fourier</a>
+  </li>
+  <li class="">
+    <a href="props-fourier.html">Propriétés des transformations de Fourier</a>
+  </li>
+  <li class="">
+    <a href="temps-frequence.html">Représentation temps-fréquence</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Numérisation</p>
+</li>
+  <li class="">
+    <a href="echantillonnage.html">Échantillonnage</a>
+  </li>
+  <li class="">
+    <a href="quantification.html">Quantification</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Travail en classe</p>
+</li>
+  <li class="">
+    <a href="td1.html">📝 Séance du 14/10/2020</a>
+  </li>
+  <li class="">
+    <a href="td2.html">📝 Séance du 20/10/2020</a>
+  </li>
+  <li class="">
+    <a href="tp1.html">💻 Séance du 22/10/2020</a>
+  </li>
+  <li class="">
+    <a href="td3.html">📝 Séance du 10/11/2020</a>
+  </li>
+  <li class="">
+    <a href="tp2.html">💻 Séance du 13/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td4.html">📝 Séance du 17/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td5.html">📝 Séance du 08/12/2020</a>
+  </li>
+  <li class="">
+    <a href="tp3.html">💻 Séance du 10/12/2020</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Annexes</p>
+</li>
+  <li class="">
+    <a href="biblio.html">Références</a>
+  </li>
+  <li class="">
+    <a href="licence.html">Licence</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="_sources/vect.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+            <div class="dropdown-buttons sourcebuttons">
+                <a class="repository-button" href="https://github.com/vincmazet/signal1"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/vincmazet/signal1/issues/new?title=Issue%20on%20page%20%2Fvect.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                
+            </div>
+        </div>
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#quelques-definitions" class="nav-link">Quelques définitions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#produit-scalaire" class="nav-link">Produit scalaire</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#orthogonalite" class="nav-link">Orthogonalité</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#norme" class="nav-link">Norme</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#energie" class="nav-link">Énergie</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#distance" class="nav-link">Distance</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#erreur-quadratique-moyenne" class="nav-link">Erreur quadratique moyenne</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#base" class="nav-link">Base</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#decomposition-sur-une-base" class="nav-link">Décomposition sur une base</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="representation-vectorielle-des-signaux">
+<h1>Représentation vectorielle des signaux<a class="headerlink" href="#representation-vectorielle-des-signaux" title="Permalink to this headline">¶</a></h1>
+<p>Un signal qui est échantillonné et à temps limité (c’est-à-dire nul ou non défini en dehors d’un intervalle) peut tout simplement se représenter par une séquence finie de valeurs numériques. Dans le cas d’un signal <span class="math notranslate nohighlight">\(x\)</span> défini sur <span class="math notranslate nohighlight">\(N\)</span> échantillons, le signal est équivalent à un vecteur :</p>
+<div class="math notranslate nohighlight">
+\[
+  x = [ x_0 \, x_1 \, \dots \, x_{N-1} ]
+\]</div>
+<p>où les <span class="math notranslate nohighlight">\(x_n\)</span> sont les échantillons du signal.
+On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span> pour signifier que <span class="math notranslate nohighlight">\(x\)</span> est un signal échantillonné à temps limité de <span class="math notranslate nohighlight">\(N\)</span> échantillons à valeurs réelles.</p>
+<p>Notez que, par convention, le premier échantillon est indexé par 0.</p>
+<p>L’équivalence entre signal échantillonné à temps limité et vecteur a plusieurs intérêts :</p>
+<ul class="simple">
+<li><p>on peut utiliser des outils de l’algèbre linéaire pour faire du traitement du signal ;</p></li>
+<li><p>on peut faire des interprétations géométriques ;</p></li>
+<li><p>c’est l’interprétation qui est faite dans les logiciels et les langages de calcul numérique, comme en Python.</p></li>
+</ul>
+<div class="example">
+<p>L’échelon <span class="math notranslate nohighlight">\(u\)</span> et l’impulsion <span class="math notranslate nohighlight">\(\delta\)</span> s’écrivent dont dans <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+  u = [ 1 \, 1]
+  \qquad\text{et}\qquad
+  \delta = [1 \, 0].
+\]</div>
+<p>Leur représentation est donnée <a class="reference internal" href="#f-vect-ex-graphe"><span class="std std-numref">Fig. 7</span></a>. Il s’agit simplement de deux signaux de deux échantillons. Les axes de cette représentation sont : les échantillons en abscisse, et les amplitude du signal en ordonnée.</p>
+<div class="figure align-default" id="f-vect-ex-graphe">
+<div class="cell_output docutils container">
+<img alt="_images/vect_4_1.png" src="_images/vect_4_1.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de signaux.</span><a class="headerlink" href="#f-vect-ex-graphe" title="Permalink to this image">¶</a></p>
+</div>
+<p>Par ailleurs, comme ces deux signaux peuvent s’interpréter comme des vecteurs, alors on peut les représenter comme tel, dans un espace à deux dimensions, comme dans la <a class="reference internal" href="#f-vect-ex-espace"><span class="std std-numref">Fig. 8</span></a>. Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.</p>
+<div class="figure align-default" id="f-vect-ex-espace">
+<div class="cell_output docutils container">
+<img alt="_images/vect_4_3.png" src="_images/vect_4_3.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de vecteurs.</span><a class="headerlink" href="#f-vect-ex-espace" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="section" id="quelques-definitions">
+<h2>Quelques définitions<a class="headerlink" href="#quelques-definitions" title="Permalink to this headline">¶</a></h2>
+<p>On peut définir les mêmes outils que ceux de la géométrie euclidienne pour les signaux échantillonnés à temps limité.</p>
+<div class="section" id="produit-scalaire">
+<h3>Produit scalaire<a class="headerlink" href="#produit-scalaire" title="Permalink to this headline">¶</a></h3>
+<p>Le <em>produit scalaire</em> entre deux signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> de taille <span class="math notranslate nohighlight">\(N\)</span> est (la notation <span class="math notranslate nohighlight">\(\cdot^*\)</span> signifie conjugué) :</p>
+<div class="math notranslate nohighlight">
+\[
+  \langle x,y \rangle = \sum_{n=0}^{N-1} x_n y_n^*.
+\]</div>
+</div>
+<div class="section" id="orthogonalite">
+<h3>Orthogonalité<a class="headerlink" href="#orthogonalite" title="Permalink to this headline">¶</a></h3>
+<p>Deux signaux sont <em>orthogonaux</em> si et seulement si leur produit scalaire est nul.</p>
+</div>
+<div class="section" id="norme">
+<h3>Norme<a class="headerlink" href="#norme" title="Permalink to this headline">¶</a></h3>
+<p>La <em>norme</em> d’un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N\)</span> est :</p>
+<div class="math notranslate nohighlight">
+\[
+  \|x\| = \sqrt{\langle x,x \rangle} = \sqrt{ \sum_{n=0}^{N-1} |x_n|^2 }.
+\]</div>
+</div>
+<div class="section" id="energie">
+<h3>Énergie<a class="headerlink" href="#energie" title="Permalink to this headline">¶</a></h3>
+<p>L’<em>énergie</em> d’un signal de taille <span class="math notranslate nohighlight">\(N\)</span> est le carré de sa norme :</p>
+<div class="math notranslate nohighlight">
+\[
+  \|x\|^2 = \sum_{n=0}^{N-1} |x_n|^2.
+\]</div>
+</div>
+<div class="section" id="distance">
+<h3>Distance<a class="headerlink" href="#distance" title="Permalink to this headline">¶</a></h3>
+<p>La <em>distance</em> entre deux signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> de taille <span class="math notranslate nohighlight">\(N\)</span> est la norme de la différence :</p>
+<div class="math notranslate nohighlight">
+\[
+  \|x-y\| = \sqrt{ \sum_{n=0}^{N-1} |x_n-y_n|^2 }.
+\]</div>
+</div>
+<div class="section" id="erreur-quadratique-moyenne">
+<h3>Erreur quadratique moyenne<a class="headerlink" href="#erreur-quadratique-moyenne" title="Permalink to this headline">¶</a></h3>
+<p>L’<em>erreur quadratique moyenne</em> (EQM) entre deux signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> de taille <span class="math notranslate nohighlight">\(N\)</span> est :</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathrm{EQM} = \frac{1}{N}\|x-y\|^2.
+\]</div>
+</div>
+<div class="section" id="base">
+<h3>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h3>
+<p>Une <em>base</em> est un ensemble de <span class="math notranslate nohighlight">\(N\)</span> signaux tels que tout signal échantillonné de taille <span class="math notranslate nohighlight">\(N\)</span> peut s’écrire comme une combinaison linéaire unique de signaux de cette base. Ainsi, si <span class="math notranslate nohighlight">\(\{\varphi_0 \, \varphi_1 \, \dots \, \varphi_{N-1}\}\)</span> est un ensemble de <span class="math notranslate nohighlight">\(N\)</span> signaux formant une base, alors tout signal <span class="math notranslate nohighlight">\(x\in\mathbb{C}^N\)</span> s’écrira</p>
+<div class="math notranslate nohighlight">
+\[
+  x = \sum_{k=0}^{N-1} \alpha_k \varphi_k
+\]</div>
+<p>où les <span class="math notranslate nohighlight">\(\alpha_k\)</span> sont des coefficients uniques (il ne peut pas y avoir plusieurs jeux différents de coefficients <span class="math notranslate nohighlight">\(\{\alpha_k\}\)</span>).</p>
+<p>Si en plus les vecteurs <span class="math notranslate nohighlight">\(\{\varphi_k\}\)</span> de cette base sont orthogonaux deux à deux et de norme 1, alors la base est <em>orthonormée</em>.</p>
+<div class="example">
+<p>Pour <span class="math notranslate nohighlight">\(N=4\)</span>, les signaux <span class="math notranslate nohighlight">\(\delta[n-k]\)</span> avec <span class="math notranslate nohighlight">\(k\in\{0,\dots,3\}\)</span> forment une base, qui plus est orthonormée.</p>
+<div class="figure align-default" id="f-vect-base-canonique">
+<div class="cell_output docutils container">
+<img alt="_images/vect_6_0.png" src="_images/vect_6_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Base canonique dans <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</span><a class="headerlink" href="#f-vect-base-canonique" title="Permalink to this image">¶</a></p>
+</div>
+<p>Nous ne représentons pas ces quatre signaux sous forme de vecteur, car cela nécessite de les représenter dans un espace à quatre dimensions (or, votre écran n’en a que deux).</p>
+<p>Cette base est d’ailleurs appelée <em>base canonique</em> car c’est la base naturelle pour représenter les signaux. En effet, les échantillons de tout signal de taille <span class="math notranslate nohighlight">\(N\)</span> correspondent aux coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span>.</p>
+</div></div>
+</div>
+<div class="section" id="decomposition-sur-une-base">
+<h2>Décomposition sur une base<a class="headerlink" href="#decomposition-sur-une-base" title="Permalink to this headline">¶</a></h2>
+<p>Parfois, il est intéressant de représenter les signaux dans une autre base que la base canonique : on parle alors de <em>décomposition</em> ou de <em>projection</em> d’un signal <span class="math notranslate nohighlight">\(x\)</span> sur une base.
+La transformée de Fourier peut être vue comme la décomposition de signaux dans une autre base.
+De même, les techniques de compression (audio, image ou vidéo) utilisent adtucieusement une décomposition dans une base particulière pour réduire le poids des données.
+Les coefficients du signal dans cette nouvelle base vont donc être différent des coefficients de la base canonique.</p>
+<p>La décomposition d’un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N\)</span> dans une base orthonormée <span class="math notranslate nohighlight">\(\{\varphi_k\}\)</span>, et donc le calcul des nouveaux coefficients <span class="math notranslate nohighlight">\(\alpha'_k\)</span>, s’obtient en calculant le produit scalaire de <span class="math notranslate nohighlight">\(x\)</span> avec chaque élément <span class="math notranslate nohighlight">\(\varphi_k\)</span> de la base :</p>
+<div class="math notranslate nohighlight">
+\[
+  \forall k \in \{0,\dots,N-1\},\quad
+  \alpha'_k = \langle x, \varphi_k \rangle.
+\]</div>
+<p>La <em>reconstruction</em> du signal <span class="math notranslate nohighlight">\(x\)</span> consiste à réécrire le signal dans la base canonique depuis la base <span class="math notranslate nohighlight">\(\{\varphi_k\}\)</span>. Pour cela, le signal <span class="math notranslate nohighlight">\(x\)</span> s’obtient par la somme des éléments de la base <span class="math notranslate nohighlight">\(\varphi_k\)</span> pondérés par les coefficients <span class="math notranslate nohighlight">\(\alpha'_k\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+  x = \sum_{k=0}^{N-1} \alpha'_k \varphi_k.
+\]</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intercorrelation.html" title="previous page">Intercorrélation</a>
+    <a class='right-next' id="next-link" href="fourier.html" title="next page">Transformations de Fourier</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Mazet (Université de Strasbourg)<br/>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            Traitement du signal &mdash; Vincent Mazet (Université de Strasbourg), 2020 &mdash; <a href="licence.html">CC BY-NC 4.0</a>.
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

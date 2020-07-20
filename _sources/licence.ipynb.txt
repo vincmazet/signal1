@@ -14,7 +14,11 @@
     "\n",
     "</a>Cette œuvre est mise à disposition selon les termes de la <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.\n",
     "\n",
-    "Pour me contacter : <a href=\"mailto:vincent.mazet@unistra.fr\">vincent.mazet@unistra.fr</a>."
+    "Pour me contacter : <a href=\"mailto:vincent.mazet@unistra.fr\">vincent.mazet@unistra.fr</a>.\n",
+    "\n",
+    "\n",
+    "\n",
+    "**Codes JS en CeCILL B**"
    ]
   }
  ],

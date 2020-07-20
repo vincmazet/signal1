@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
@@ -26,16 +25,11 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/mystnb.js"></script>
-    <script src="_static/js/expo.js"></script>
-    <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/conv1c.js"></script>
-    <script src="_static/js/three.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/expo-checkpoint.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/spetsi-checkpoint.js"></script>
+    <script src="_static/spetsi.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0-alpha.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -107,7 +101,7 @@
 <p class="margin-caption">Représentation vectorielle</p>
 </li>
   <li class="">
-    <a href="representation-vectorielle.html">Représentation vectorielle des signaux</a>
+    <a href="vect.html">Représentation vectorielle des signaux</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Analyse de Fourier</p>
@@ -137,7 +131,25 @@
     <a href="td1.html">📝 Séance du 14/10/2020</a>
   </li>
   <li class="">
+    <a href="td2.html">📝 Séance du 20/10/2020</a>
+  </li>
+  <li class="">
     <a href="tp1.html">💻 Séance du 22/10/2020</a>
+  </li>
+  <li class="">
+    <a href="td3.html">📝 Séance du 10/11/2020</a>
+  </li>
+  <li class="">
+    <a href="tp2.html">💻 Séance du 13/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td4.html">📝 Séance du 17/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td5.html">📝 Séance du 08/12/2020</a>
+  </li>
+  <li class="">
+    <a href="tp3.html">💻 Séance du 10/12/2020</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Annexes</p>
@@ -245,8 +257,25 @@
 <h1>Propriétés des signaux<a class="headerlink" href="#proprietes-des-signaux" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="transformation-de-la-variable-independante">
 <h2>Transformation de la variable indépendante<a class="headerlink" href="#transformation-de-la-variable-independante" title="Permalink to this headline">¶</a></h2>
-<p><font color="red">TODO</font></p>
-</div>
+<p>Le signal <span class="math notranslate nohighlight">\(x(t)\)</span> dépend de la variable <span class="math notranslate nohighlight">\(t\)</span>, appelée <em>variable indépendante</em>.</p>
+<ul class="simple">
+<li><p>Un changement de signe sur <span class="math notranslate nohighlight">\(t\)</span> revient à un retournement de l’axe temporel, donc à une symétrie par rapport à l’origine.</p></li>
+<li><p>Un changement d’échelle consiste à multiplier <span class="math notranslate nohighlight">\(t\)</span> par une variable <span class="math notranslate nohighlight">\(a \in \mathbb{R}^{+*}\)</span>.</p></li>
+<li><p>Une translation (ou décalage) consiste à ajouter une variable <span class="math notranslate nohighlight">\(T\in\mathbb{R}\)</span> à la variable indépendante.</p></li>
+</ul>
+<p>L’animation ci-dessous permet de visualiser ces transformations sur <span class="math notranslate nohighlight">\(t\)</span>, dans l’exemple d’un signal <span class="math notranslate nohighlight">\(x\)</span> tel que</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  x(t) =
+  \begin{cases}
+    t &amp;\text{si}\quad 0 \leq t &lt; 1 \\
+    1 &amp;\text{si}\quad 1 \leq t &lt; 2 \\
+    0 &amp;\text{sinon}
+  \end{cases}
+\end{split}\]</div>
+<div id='dilatation' class='spetsi'></div>
+<script src="_static/js/spetsi.js" type="text/javascript"></script>
+<script src="_static/js/dilatation.js" type="text/javascript"></script></div>
 <div class="section" id="periodicite">
 <h2>Périodicité<a class="headerlink" href="#periodicite" title="Permalink to this headline">¶</a></h2>
 <p>Un signal <span class="math notranslate nohighlight">\(x\)</span> est périodique s’il est constitué d’une infinité de morceaux tous identiques, appelés <em>période</em>.

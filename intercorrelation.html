@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
@@ -26,20 +25,15 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/mystnb.js"></script>
-    <script src="_static/js/expo.js"></script>
-    <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/conv1c.js"></script>
-    <script src="_static/js/three.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/expo-checkpoint.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/spetsi-checkpoint.js"></script>
+    <script src="_static/spetsi.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0-alpha.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Représentation vectorielle des signaux" href="representation-vectorielle.html" />
+    <link rel="next" title="Représentation vectorielle des signaux" href="vect.html" />
     <link rel="prev" title="Produit de convolution" href="convolution.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -107,7 +101,7 @@
 <p class="margin-caption">Représentation vectorielle</p>
 </li>
   <li class="">
-    <a href="representation-vectorielle.html">Représentation vectorielle des signaux</a>
+    <a href="vect.html">Représentation vectorielle des signaux</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Analyse de Fourier</p>
@@ -137,7 +131,25 @@
     <a href="td1.html">📝 Séance du 14/10/2020</a>
   </li>
   <li class="">
+    <a href="td2.html">📝 Séance du 20/10/2020</a>
+  </li>
+  <li class="">
     <a href="tp1.html">💻 Séance du 22/10/2020</a>
+  </li>
+  <li class="">
+    <a href="td3.html">📝 Séance du 10/11/2020</a>
+  </li>
+  <li class="">
+    <a href="tp2.html">💻 Séance du 13/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td4.html">📝 Séance du 17/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td5.html">📝 Séance du 08/12/2020</a>
+  </li>
+  <li class="">
+    <a href="tp3.html">💻 Séance du 10/12/2020</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Annexes</p>
@@ -211,9 +223,24 @@
         
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#definition" class="nav-link">Définition</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exemples" class="nav-link">Exemples</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#autocorrelation" class="nav-link">Autocorrélation</a>
+        </li>
     
     </ul>
 </nav>
@@ -228,7 +255,51 @@
                 
   <div class="section" id="intercorrelation">
 <h1>Intercorrélation<a class="headerlink" href="#intercorrelation" title="Permalink to this headline">¶</a></h1>
-<p>Intercorrélation</p>
+<div class="section" id="definition">
+<h2>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>L’intercorrélation de deux signaux <span class="math notranslate nohighlight">\(x(t)\)</span> et <span class="math notranslate nohighlight">\(y(t)\)</span> est un signal <span class="math notranslate nohighlight">\(R_{xy}(\tau)\)</span> qui mesure la ressemblance du signal <span class="math notranslate nohighlight">\(x\)</span> décalé de <span class="math notranslate nohighlight">\(\tau\)</span> <span class="math notranslate nohighlight">\(x(t+\tau)\)</span> avec <span class="math notranslate nohighlight">\(y(t)\)</span>. Elle est définie par :</p>
+<ul class="simple">
+<li><p>en temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{xy}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) y(t) dt\)</span></p></li>
+<li><p>en temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{xy}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] y[n]\)</span></p></li>
+</ul>
+<p>Attention, la formule de l’intercorrélation est très proche de celle de la convolution puisque seul un signe change ! Malgré cela, l’intercorrélation et la convolution sont deux outils très différents et dont l’interprétation n’est pas du tout la même.</p>
+</div>
+<div class="section" id="exemples">
+<h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">¶</a></h2>
+<p>En communications numériques, il n’est pas rare que le récepteur du sytème de communication reçoive un signal de l’émetteur qui soit très brouillé (on dit qu’il est <em>bruité</em>). Par exemple, si le récepteur reçoit le signal <span class="math notranslate nohighlight">\(x\)</span> représenté <a class="reference internal" href="#f-intercorrelation-communications"><span class="std std-numref">Fig. 5</span></a>, et qu’il sait qu’il devrait être une suite d’échelon d’amplitude −1 (représentant le bit 0) ou +1 (représentant le bit 1), alors l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec un échelon <span class="math notranslate nohighlight">\(y\)</span> permet de détecter à chaque instant si le signal reçu ressemble à <span class="math notranslate nohighlight">\(y\)</span> (dans ce cas, on a reçu un 1) ou pas (on a reçu un 0).</p>
+<div class="figure align-default" id="f-intercorrelation-communications">
+<div class="cell_output docutils container">
+<img alt="_images/intercorrelation_4_2.png" src="_images/intercorrelation_4_2.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> véhicule le message 10011010 codé en NRZ avec le motif y.</span><a class="headerlink" href="#f-intercorrelation-communications" title="Permalink to this image">¶</a></p>
+</div>
+<p>Un autre exemple d’utilisation de l’intecorrélation est la mesure de la fréquence d’un signal. Si on dispose d’un signal sinusoïdal <span class="math notranslate nohighlight">\(x\)</span>, mais qu’il est très bruité et que l’on cherche sa fréquence inconnue, alors on peut représenter l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec plusieurs sinusoïdes <span class="math notranslate nohighlight">\(y\)</span> dont on connaît la fréquence. La sinusoïde qui permet d’obtenir la plus grande intercorrélation sera la plus ressemblante : on pourra alor en déduire la valeur de la fréquence inconnue. Ce principe est illustré <a class="reference internal" href="#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 6</span></a>.</p>
+<div class="figure align-default" id="f-intercorrelation-sinusoide">
+<div class="cell_output docutils container">
+<img alt="_images/intercorrelation_5_1.png" src="_images/intercorrelation_5_1.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> est une sinusoïde bruitée de fréquence 0,5 Hz.</span><a class="headerlink" href="#f-intercorrelation-sinusoide" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="autocorrelation">
+<h2>Autocorrélation<a class="headerlink" href="#autocorrelation" title="Permalink to this headline">¶</a></h2>
+<p>L’autocorrélation est l’intercorrélation d’un signal avec lui-même :</p>
+<ul class="simple">
+<li><p>en temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{x}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) x(t) dt\)</span></p></li>
+<li><p>en temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{x}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] x[n]\)</span></p></li>
+</ul>
+<p>L’autocorrélation possède quelques propriétés remarquables :</p>
+<ul>
+<li><p>l’autocorrélation est symétrique car <span class="math notranslate nohighlight">\(R_{x}(\tau) = R_{x}(-\tau)\)</span> (reprendre la définition en effectuant un changement de variable)</p></li>
+<li><p>l’autocorrélation en 0 est la valeur maximale de l’autocorrélation (puisque c’est pour un décalage nul <span class="math notranslate nohighlight">\(T=0\)</span> que le signal se ressemble le plus à lui-même. C’est par ailleurs l’énergie du signal :</p>
+<div class="math notranslate nohighlight">
+\[
+    R_{x}(0) = \int_{-\infty}^{+\infty} x(t)^2 dt
+  \]</div>
+</li>
+<li><p>L’autocorrélation d’un signal périodique de période <span class="math notranslate nohighlight">\(T\)</span> est également périodique de période <span class="math notranslate nohighlight">\(T\)</span> (puisqu’en décalant le signal de <span class="math notranslate nohighlight">\(T\)</span>, il ressemble à nouveau avec lui-même)</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -241,7 +312,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="convolution.html" title="previous page">Produit de convolution</a>
-    <a class='right-next' id="next-link" href="representation-vectorielle.html" title="next page">Représentation vectorielle des signaux</a>
+    <a class='right-next' id="next-link" href="vect.html" title="next page">Représentation vectorielle des signaux</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

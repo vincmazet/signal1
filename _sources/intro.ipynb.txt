@@ -10,37 +10,15 @@
     "\n",
     "* Page d'introduction du manuel + définition d'un signal\n",
     "* Python + Anaconda, Notebook, Jupter Notebook/Lab, markdown...\n",
-    "* police pour les dyslexiques : https://www.dafont.com/open-dyslexic.font"
+    "* Mindmap ?\n",
+    "* [Page Moodle](https://moodle3.unistra.fr/course/view.php?id=13717)"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Mindmap ?"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Publications\n",
-    "\n",
-    "<iframe frameborder='0' width='100%' height='1000' frameborder='0'  marginheight='0' marginwidth='0' src='http://icube-publis.unistra.fr/?author=mazet&allaut=or&title=&team=&platform=&national=&project=&tagmed=&year1=&year2=&=#hideMenu'></iframe>"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Autre"
+    "---"
    ]
   },
   {
@@ -49,7 +27,6 @@
    "source": [
     "Pour faire des graphiques animés :\n",
     "- plotly : mais ça marche pas sous mon Jupyter Lab, et parfois dans le book. En plu il enregistre toutes les valeurs et ne fait pas vraiment de calcul\n",
-    "- iframe d'une animation en JS : mais je dois développer en JS si l'animation n'existe pas\n",
     "- Notebooks online : intérêt de pouvoir faire tous les calculs que je veux + c'est cohérent par rapport au fait que je veux les faire coder en Python + mais les données sont sur un serveur distant + il en faut un hyper rapide à produire un résultat !\n",
     "  - https://colab.research.google.com/\n",
     "  - https://mybinder.org/\n",
@@ -74,7 +51,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.2"
+   "version": "3.7.3"
   },
   "widgets": {
    "application/vnd.jupyter.widget-state+json": {

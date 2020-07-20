@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
@@ -26,21 +25,16 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/mystnb.js"></script>
-    <script src="_static/js/expo.js"></script>
-    <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/conv1c.js"></script>
-    <script src="_static/js/three.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/expo-checkpoint.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/spetsi-checkpoint.js"></script>
+    <script src="_static/spetsi.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0-alpha.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Références" href="biblio.html" />
-    <link rel="prev" title="📝 Séance du 14/10/2020" href="td1.html" />
+    <link rel="next" title="📝 Séance du 10/11/2020" href="td3.html" />
+    <link rel="prev" title="📝 Séance du 20/10/2020" href="td2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -107,7 +101,7 @@
 <p class="margin-caption">Représentation vectorielle</p>
 </li>
   <li class="">
-    <a href="representation-vectorielle.html">Représentation vectorielle des signaux</a>
+    <a href="vect.html">Représentation vectorielle des signaux</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Analyse de Fourier</p>
@@ -136,8 +130,26 @@
   <li class="">
     <a href="td1.html">📝 Séance du 14/10/2020</a>
   </li>
+  <li class="">
+    <a href="td2.html">📝 Séance du 20/10/2020</a>
+  </li>
   <li class="active">
     <a href="">💻 Séance du 22/10/2020</a>
+  </li>
+  <li class="">
+    <a href="td3.html">📝 Séance du 10/11/2020</a>
+  </li>
+  <li class="">
+    <a href="tp2.html">💻 Séance du 13/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td4.html">📝 Séance du 17/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td5.html">📝 Séance du 08/12/2020</a>
+  </li>
+  <li class="">
+    <a href="tp3.html">💻 Séance du 10/12/2020</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Annexes</p>
@@ -249,16 +261,6 @@
 <h1>💻 Séance du 22/10/2020<a class="headerlink" href="#seance-du-22-10-2020" title="Permalink to this headline">¶</a></h1>
 <p>En plus d’appliquer les notions essentielles du traitement du signal,
 ce TP est également une initiation à la programmation scientifique en Python.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chemin pour les fichiers</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span> <span class="o">==</span> <span class="s2">&quot;book&quot;</span> <span class="k">else</span> <span class="s2">&quot;book/&quot;</span>
-<span class="n">path</span> <span class="o">+=</span> <span class="s2">&quot;_static/tp/&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="section" id="representation-de-signaux">
 <h2>Représentation de signaux<a class="headerlink" href="#representation-de-signaux" title="Permalink to this headline">¶</a></h2>
 <p>Pour représenter la sinusoïde de fréquence <span class="math notranslate nohighlight">\(f=0,3\)</span> Hz</p>
@@ -389,63 +391,76 @@ Attention à spécifier l’argument <code class="docutils literal notranslate">
 </div>
 <div class="section" id="intercorrelation">
 <h2>Intercorrélation<a class="headerlink" href="#intercorrelation" title="Permalink to this headline">¶</a></h2>
-<p><font color="red">TODO</font></p>
-<p>L’objectif est de détecter un signal particulier (un \og{}motif\fg{})
-dans un signal perturbé par de forts parasites (on parle de \og{}bruit\fg{}).
+<p>L’objectif est, comme dans l’exemple <a class="reference internal" href="intercorrelation.html#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 6</span></a>, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
 Le motif en question sera ici une exponentielle décroissante.</p>
-<p>\begin{questions}</p>
-<p>\item Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de <span class="math notranslate nohighlight">\(N=1000\)</span> échantillons correspondant à une exponentielle décroissante~:
-\begin{equation*}
-x[n] =
-\begin{cases}
-\exp\left(-\frac{n-k}{100}\right)    &amp;\text{si <span class="math notranslate nohighlight">\(n \geq k\)</span>}, \
-0                                    &amp;\text{sinon}, \
-\end{cases}
-\end{equation*}
-en choisissant vous-même une valeur (positive) pour <span class="math notranslate nohighlight">\(k\)</span>.</p>
-<p>\item Créez une deuxième exponentielle décroissante débutant en <span class="math notranslate nohighlight">\(k=0\)</span>~: ce signal sera le motif <span class="math notranslate nohighlight">\(m\)</span>.</p>
-<p>\item Représentez l’intercorrélation <span class="math notranslate nohighlight">\(R_{xm}\)</span> entre <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(m\)</span>.
-Que se passe-t-il lorsque <span class="math notranslate nohighlight">\(k\)</span> varie~?</p>
-<p>\item \label{Q:xcorr:1}
-Chargez le signal~tp13.dat et affichez-le.
+<ul>
+<li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de <span class="math notranslate nohighlight">\(N=1000\)</span> échantillons correspondant à une exponentielle décroissante :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    x[n] =
+    \begin{cases}
+      \exp\left(-\frac{n-k}{100}\right)    &amp;\text{si} n \geq k, \\
+      0                                    &amp;\text{sinon},
+    \end{cases}
+  \end{split}\]</div>
+<p>en choisissant vous-même une valeur (positive) pour <span class="math notranslate nohighlight">\(k\)</span>.</p>
+</li>
+<li><p>Créez une deuxième exponentielle décroissante débutant en <span class="math notranslate nohighlight">\(k=0\)</span> : ce signal sera le motif <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
+<li><p>Représentez l’intercorrélation <span class="math notranslate nohighlight">\(R_{xm}\)</span> entre <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(m\)</span>.
+Que se passe-t-il lorsque <span class="math notranslate nohighlight">\(k\)</span> varie ?</p></li>
+<li><p>Chargez le fichier signal3.csv et affichez le signal correspondant.
 Ce signal est une exponentielle décroissante très bruitée.
-Êtes-vous capable de détecter à quel instant <span class="math notranslate nohighlight">\(k\)</span> débute l’exponentielle décroissante~?</p>
-<p>\item Représentez l’intercorrélation entre le signal de la question~\ref{Q:xcorr:1} et <span class="math notranslate nohighlight">\(m\)</span>
-pour en déduire l’instant auquel commence le motif.</p>
-<p>\end{questions}</p>
+Êtes-vous capable de détecter à l’œil à quel instant <span class="math notranslate nohighlight">\(k\)</span> débute l’exponentielle décroissante ?</p></li>
+<li><p>Représentez l’intercorrélation entre le signal signal3.csv et <span class="math notranslate nohighlight">\(m\)</span>
+pour en déduire l’instant auquel commence le motif.</p></li>
+</ul>
 </div>
 <div class="section" id="decomposition-dans-la-base-de-haar">
 <h2>Décomposition dans la base de Haar<a class="headerlink" href="#decomposition-dans-la-base-de-haar" title="Permalink to this headline">¶</a></h2>
-<p><font color="red">TODO</font></p>
-<p>\begin{questions}</p>
-<p>\item Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N=16\)</span> contenant des valeurs aléatoires (\syntax{rand}).</p>
-<p>\item Créez puis représentez les <span class="math notranslate nohighlight">\(N\)</span> signaux de la base de Haar avec la fonction \syntax{haar}.</p>
-<p>\item On rappelle que la projection d’un signal dans une base
-correspond à calculer les produits scalaires du signal avec tous les signaux de la base.
-Décomposez le signal <span class="math notranslate nohighlight">\(x\)</span> dans la base de Haar pour obtenir ses <span class="math notranslate nohighlight">\(N\)</span> coefficients <span class="math notranslate nohighlight">\(c_n\)</span> (<span class="math notranslate nohighlight">\(n\in\{1,\dots,N\}\)</span>).</p>
-<p>\item Reconstruisez le signal <span class="math notranslate nohighlight">\(x\)</span> à partir de ses coefficients <span class="math notranslate nohighlight">\(c_n\)</span> et vérifiez que vous retrouvez bien le signal initial.</p>
-<p>\end{questions}</p>
-<p>La suite de l’exercice a pour objectif d’illustrer l’intérêt de représenter un signal dans une base spécifique
-afin d’effectuer une compression de données sans trop perdre en qualité.
-Pour un taux de compression égal à 50~%, la moitié des valeurs de <span class="math notranslate nohighlight">\(x\)</span> sont perdues et considérées nulles.
+<ul class="simple">
+<li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N=16\)</span> contenant des valeurs aléatoires (<code class="docutils literal notranslate"><span class="pre">numpy.random.random</span></code>).</p></li>
+<li><p>Créez puis représentez les <span class="math notranslate nohighlight">\(N\)</span> signaux de la base de Haar avec la fonction <code class="docutils literal notranslate"><span class="pre">haar</span></code> dans le module <code class="xref any docutils literal notranslate"><span class="pre">signal1</span></code>.</p></li>
+<li><p>Décomposez le signal <span class="math notranslate nohighlight">\(x\)</span> dans la base de Haar pour obtenir ses <span class="math notranslate nohighlight">\(N\)</span> coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> (<span class="math notranslate nohighlight">\(k\in\{0,\dots,N-1\}\)</span>).</p></li>
+<li><p>Reconstruisez le signal <span class="math notranslate nohighlight">\(x\)</span> à partir de ses coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> et vérifiez que vous retrouvez bien le signal initial.</p></li>
+</ul>
+<p>La suite de l’exercice a pour objectif d’illustrer l’intérêt de représenter un signal dans une base spécifique afin d’effectuer une compression de données sans trop perdre en qualité.
+Pour un taux de compression égal à 50 %, la moitié des valeurs de <span class="math notranslate nohighlight">\(x\)</span> sont perdues et considérées nulles.
 Bien entendu, il est préférable de supprimer les valeurs les plus faibles pour éviter de trop modifier le signal.</p>
-<p>\begin{questions}</p>
-<p>\item Supprimez les <span class="math notranslate nohighlight">\(N/2\)</span> échantillons les plus faibles du signal <span class="math notranslate nohighlight">\(x\)</span> pour obtenir un premier signal compressé <span class="math notranslate nohighlight">\(x_1\)</span>.
-Vous pouvez vous inspirer du code ci-dessous.
-\begin{code}
-x1 = x;                   % Crée une copie x1 de x
-[~,idx] = sort(abs(x1));  % Ordonne les échantillons de x1
-% (en valeur absolue)
-x1(idx(1:N/2)) = 0;       % Supprime les N/2 premiers
-% échantillons du signal ordonné
-\end{code}</p>
-<p>\item Une autre façon de compresser le signal <span class="math notranslate nohighlight">\(x\)</span> est de supprimer les plus petits coefficients <span class="math notranslate nohighlight">\(c_n\)</span>
-de sa décomposition de Haar.
-Aussi, après avoir calculé ces coefficients, supprimez la moitié des coefficients les plus faibles
-puis reconstruisez-le signal qu’on appellera <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
-<p>\item Calculez les EQM entre les signaux compressés <span class="math notranslate nohighlight">\(x_1\)</span> ou <span class="math notranslate nohighlight">\(x_2\)</span> et le signal initial <span class="math notranslate nohighlight">\(x\)</span>.
-Qu’en concluez-vous~?</p>
-<p>\end{questions}</p>
+<ul class="simple">
+<li><p>Supprimez les <span class="math notranslate nohighlight">\(N/2\)</span> échantillons les plus faibles du signal <span class="math notranslate nohighlight">\(x\)</span> pour obtenir un premier signal compressé <span class="math notranslate nohighlight">\(x_1\)</span>.
+Vous pouvez vous inspirer du code ci-dessous.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Exemple de signal</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># Copie du vecteur</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Nombre d&#39;échantillons</span>
+<span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+
+<span class="c1"># Indices des échantillons ordonnés</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+
+<span class="c1"># Conserve uniquement les N/2 premiers indices</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
+
+<span class="c1"># Annule les échantillons indexés par idx</span>
+<span class="n">x1</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Une autre façon de compresser le signal <span class="math notranslate nohighlight">\(x\)</span> est de supprimer les plus petits coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> de sa décomposition de Haar.
+Aussi, après avoir calculé ces coefficients, supprimez la moitié des coefficients les plus faibles puis reconstruisez-le signal qu’on appellera <span class="math notranslate nohighlight">\(x_2\)</span>.</p></li>
+<li><p>Calculez les EQM entre les signaux compressés <span class="math notranslate nohighlight">\(x_1\)</span> ou <span class="math notranslate nohighlight">\(x_2\)</span> et le signal initial <span class="math notranslate nohighlight">\(x\)</span>.
+Qu’en concluez-vous~?</p></li>
+</ul>
 </div>
 </div>
 
@@ -458,8 +473,8 @@ Qu’en concluez-vous~?</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="td1.html" title="previous page">📝 Séance du 14/10/2020</a>
-    <a class='right-next' id="next-link" href="biblio.html" title="next page">Références</a>
+    <a class='left-prev' id="prev-link" href="td2.html" title="previous page">📝 Séance du 20/10/2020</a>
+    <a class='right-next' id="next-link" href="td3.html" title="next page">📝 Séance du 10/11/2020</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
@@ -26,21 +25,16 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/mystnb.js"></script>
-    <script src="_static/js/expo.js"></script>
-    <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/conv1c.js"></script>
-    <script src="_static/js/three.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/expo-checkpoint.js"></script>
-    <script src="_static/js/.ipynb_checkpoints/spetsi-checkpoint.js"></script>
+    <script src="_static/spetsi.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0-alpha.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Licence" href="licence.html" />
-    <link rel="prev" title="💻 Séance du 22/10/2020" href="tp1.html" />
+    <link rel="prev" title="💻 Séance du 10/12/2020" href="tp3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -107,7 +101,7 @@
 <p class="margin-caption">Représentation vectorielle</p>
 </li>
   <li class="">
-    <a href="representation-vectorielle.html">Représentation vectorielle des signaux</a>
+    <a href="vect.html">Représentation vectorielle des signaux</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Analyse de Fourier</p>
@@ -137,7 +131,25 @@
     <a href="td1.html">📝 Séance du 14/10/2020</a>
   </li>
   <li class="">
+    <a href="td2.html">📝 Séance du 20/10/2020</a>
+  </li>
+  <li class="">
     <a href="tp1.html">💻 Séance du 22/10/2020</a>
+  </li>
+  <li class="">
+    <a href="td3.html">📝 Séance du 10/11/2020</a>
+  </li>
+  <li class="">
+    <a href="tp2.html">💻 Séance du 13/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td4.html">📝 Séance du 17/11/2020</a>
+  </li>
+  <li class="">
+    <a href="td5.html">📝 Séance du 08/12/2020</a>
+  </li>
+  <li class="">
+    <a href="tp3.html">💻 Séance du 10/12/2020</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Annexes</p>
@@ -268,14 +280,12 @@ Cote : 621.382 2 PRA.
 Wikipedia : commencez par l’article <a class="reference external" href="https://fr.wikipedia.org/wiki/Traitement_du_signal">Traitement du signal</a> puis continuez à explorer !
 N’hésitez pas également à lire la <a class="reference external" href="https://en.wikipedia.org/wiki/Signal_processing">version en anglais</a>, souvent plus complète.</p></li>
 </ul>
-<p><font color="red">Vérifier :</font>
-http://ressources.unisciel.fr/TraitementDuSignal/Introduction/co/module_Introduction_1.html
-http://culturesciencesphysique.ens-lyon.fr/ressource/signal-images-Borgnat.xml</p>
 </div>
 <div class="section" id="culture-generale">
 <h2>Culture générale<a class="headerlink" href="#culture-generale" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>I. Bellin. <a class="reference external" href="https://interstices.info/histoire-du-traitement-dimages/">Histoire du traitement d’images</a>. Interstices, 2004.</p></li>
+<li><p><a class="reference external" href="http://culturesciencesphysique.ens-lyon.fr/dossiersthematiques/traitement-du-signal/">Traitement du signal</a>. Culture Sciences physique, ENS Lyon.</p></li>
 <li><p>Doc Sciences : entre les hommes et les machines, automatique et traitement du signal, n<sup>o</sup> 15, 2013. Disponible en demandant gentiment à votre professeur préféré.</p></li>
 <li><p><a class="reference external" href="http://www.gretsi.fr/">Gretsi</a>. Groupe de recherche en traitement du signal et des images.</p></li>
 <li><p><a class="reference external" href="https://signalprocessingsociety.org/">Signal Processing Society</a>. Société savante, éditrice notamment de la revue Signal Processing Magazine.</p></li>
@@ -292,7 +302,7 @@ http://culturesciencesphysique.ens-lyon.fr/ressource/signal-images-Borgnat.xml</
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="tp1.html" title="previous page">💻 Séance du 22/10/2020</a>
+    <a class='left-prev' id="prev-link" href="tp3.html" title="previous page">💻 Séance du 10/12/2020</a>
     <a class='right-next' id="next-link" href="licence.html" title="next page">Licence</a>
 
     </div>

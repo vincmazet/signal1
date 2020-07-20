@@ -109,7 +109,6 @@ function init()
     g3.lineWidth = 2;
     g3.fillStyle = color[5];
     g3.strokeStyle = color[5];
-    console.log('yyy');
 
     // Déplacements avec la souris
     g[0].mouseDrag(deplacement);
@@ -159,11 +158,11 @@ function deplacement(x, tmp)
     var p = g1.pt2px([d, 0]);
     dpx = Math.round(p[0]);
     odpx = odpx || dpx;
-    
+
     // Détermine la plage de calcul
     var k1 = Math.min( dpx, odpx );
     var k2 = Math.max( dpx, odpx );
-    
+
     // Calcule les valeurs du signal
     for (var k=k1; k<=k2; k++)
     {
@@ -180,7 +179,7 @@ function deplacement(x, tmp)
         else if (myd-b > a)
             z[k] = 0;
     }
-    
+
     odpx = dpx;
     draw();
 }
@@ -226,11 +225,11 @@ function draw()
     g2.plot(xa, ya);
     g2.fill();
     g2.plot(xa, ya);
-    
+
     // Résultat
     g3.stem([d], [z[dpx]]);
     g3.plot(t, z);
-    
+
     // DEBUG : bug dans Safari
     //console.log("d = " + d);
     //console.log("t[0] = " + t[0] + ",  t[1] = " + t[1] + ",  t[gw] = " + t[gw]);

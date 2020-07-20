@@ -17,6 +17,7 @@ body {font-family: "Source Sans Pro"}
 h1, h2, h3, h4, h5, h6 {font-family: "Source Sans Pro SemiBold"}
 h1 {font-size: 2.5em}
 h2 {font-size: 1.7em}
+h3 {font-size: 1.1em}
 
 span.pre {
   background-color: #eee;
@@ -29,11 +30,34 @@ span.pre {
 }
 
 
+/* Cadre exemple */
+
+.example {
+  background-color: #f2f6fa;
+  padding: 1em;
+  border-left: 2px #c6c9cc solid;
+  margin: 1em 0;
+}
+
+.example::before {
+  content: "Exemple";
+  font-weight: bold;
+  color: #9c9ea1;
+}
+
+/* Hack pour faire disparaître les boutons GitHub et Download */
+
+div.dropdown-buttons-trigger {
+    display: none;
+}
+
+
 /* Hack pour faire disparaître le footer (et mettre le mien à la place) */
 
 .footer p {
     display: none;
 }
+
 
 /* Style pour l'impression */
 
