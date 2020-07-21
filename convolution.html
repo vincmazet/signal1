@@ -70,6 +70,9 @@
   <li class="">
     <a href="intro.html">Introduction</a>
   </li>
+  <li class="">
+    <a href="python.html">Installer et utiliser Python</a>
+  </li>
 <li class="navbar-special">
 <p class="margin-caption">Notions élémentaires</p>
 </li>
@@ -260,7 +263,7 @@
 <p>Le produit de convolution est une opération mathématique entre deux signaux qui calcule un troisième signal. Il est noté <span class="math notranslate nohighlight">\(*\)</span>. Il décrit l’effet que produit un instrument de mesure ou un système sur une mesure, caractérisé par sa <em>réponse impulsionnelle</em> <span class="math notranslate nohighlight">\(h\)</span>.</p>
 <div class="figure align-default" id="f-convolution-intro">
 <a class="reference internal image-reference" href="_images/convolution.svg"><img alt="_images/convolution.svg" src="_images/convolution.svg" width="60%" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Illustration de l’intérêt du produit de convolution.</span><a class="headerlink" href="#f-convolution-intro" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Illustration de l’intérêt du produit de convolution.</span><a class="headerlink" href="#f-convolution-intro" title="Permalink to this image">¶</a></p>
 </div>
 <p>Le produit de convolution entre deux signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(h\)</span> produit un troisième signal <span class="math notranslate nohighlight">\(y\)</span> défini par :</p>
 <ul class="simple">
@@ -276,30 +279,30 @@ Ensuite, les signaux <font color="#0060A9"><span class="math notranslate nohighl
 <script src="_static/js/conv1c.js"></script>
 <div id='conv1c' class='spetsi'></div>
 <div class="example">
-<p>La <a class="reference internal" href="#f-convolution-suspension"><span class="std std-numref">figure 2</span></a> représente les signaux <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(h\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans le cas d’une simulation réaliste : le système de suspension d’un véhicule. Si <span class="math notranslate nohighlight">\(x\)</span> représente le profil de la route (ici, avec deux bosses) et que <span class="math notranslate nohighlight">\(h\)</span> est le signal qui caractérise le système de suspension, alors le véhicule va osciller suivant le signal <span class="math notranslate nohighlight">\(y\)</span>. Dans ce cas, les passagers vont être pas mal secoués, un peu comme dans une <a class="reference external" href="https://youtu.be/MwaoX7Rb7Ag">2CV</a>…</p>
+<p>La <a class="reference internal" href="#f-convolution-suspension"><span class="std std-numref">figure 3</span></a> représente les signaux <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(h\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans le cas d’une simulation réaliste : le système de suspension d’un véhicule. Si <span class="math notranslate nohighlight">\(x\)</span> représente le profil de la route (ici, avec deux bosses) et que <span class="math notranslate nohighlight">\(h\)</span> est le signal qui caractérise le système de suspension, alors le véhicule va osciller suivant le signal <span class="math notranslate nohighlight">\(y\)</span>. Dans ce cas, les passagers vont être pas mal secoués, un peu comme dans une <a class="reference external" href="https://youtu.be/MwaoX7Rb7Ag">2CV</a>…</p>
 <div class="figure align-default" id="f-convolution-suspension">
 <div class="cell_output docutils container">
 <img alt="_images/convolution_4_1.png" src="_images/convolution_4_1.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Simulation d’une suspension (désagréable) de véhicule.</span><a class="headerlink" href="#f-convolution-suspension" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Simulation d’une suspension (désagréable) de véhicule.</span><a class="headerlink" href="#f-convolution-suspension" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="example">
-<p>En physique, un spectre représente la quantité de lumière émise ou transmise par un objet. Il est mesuré par un spectromètre. Or, un spectromètre n’est jamais parfait, comme tous les instruments de mesure. Malgré la qualité de sa conception, il reste toujours un peu de « flou ». Ce principe est représent <a class="reference internal" href="#f-convolution-spectre"><span class="std std-numref">Fig. 3</span></a> : <span class="math notranslate nohighlight">\(x\)</span> est le spectre réel de l’objet, tel qu’on voudrait le voir, mais à cause du flou introduit par le spectromètre (signal <span class="math notranslate nohighlight">\(h\)</span>), l’observation n’est pas aussi précise (signal <span class="math notranslate nohighlight">\(y\)</span>). En particulier sur cet exemple, la première raie, très petite, n’est plus visible.</p>
+<p>En physique, un spectre représente la quantité de lumière émise ou transmise par un objet. Il est mesuré par un spectromètre. Or, un spectromètre n’est jamais parfait, comme tous les instruments de mesure. Malgré la qualité de sa conception, il reste toujours un peu de « flou ». Ce principe est représent <a class="reference internal" href="#f-convolution-spectre"><span class="std std-numref">Fig. 4</span></a> : <span class="math notranslate nohighlight">\(x\)</span> est le spectre réel de l’objet, tel qu’on voudrait le voir, mais à cause du flou introduit par le spectromètre (signal <span class="math notranslate nohighlight">\(h\)</span>), l’observation n’est pas aussi précise (signal <span class="math notranslate nohighlight">\(y\)</span>). En particulier sur cet exemple, la première raie, très petite, n’est plus visible.</p>
 <div class="figure align-default" id="f-convolution-spectre">
 <div class="cell_output docutils container">
 <img alt="_images/convolution_5_1.png" src="_images/convolution_5_1.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Simulation d’un spectre de lumière observé avec un spectromètre.</span><a class="headerlink" href="#f-convolution-spectre" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Simulation d’un spectre de lumière observé avec un spectromètre.</span><a class="headerlink" href="#f-convolution-spectre" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="example">
-<p>Le produit de convolution, modélise également l’effet du filtrage d’un signal, comme on le verra en deuxième année. Dans l’exemple représenté <a class="reference internal" href="#f-convolution-son"><span class="std std-numref">Fig. 4</span></a>, un effet sonore est appliqué sur le signal audio <span class="math notranslate nohighlight">\(x\)</span> par l’intermédiaire du filtre <span class="math notranslate nohighlight">\(h\)</span> (qui est appelé passe-bas), et cela résulte en le signal <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Le produit de convolution, modélise également l’effet du filtrage d’un signal, comme on le verra en deuxième année. Dans l’exemple représenté <a class="reference internal" href="#f-convolution-son"><span class="std std-numref">Fig. 5</span></a>, un effet sonore est appliqué sur le signal audio <span class="math notranslate nohighlight">\(x\)</span> par l’intermédiaire du filtre <span class="math notranslate nohighlight">\(h\)</span> (qui est appelé passe-bas), et cela résulte en le signal <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <div class="figure align-default" id="f-convolution-son">
 <div class="cell_output docutils container">
 <img alt="_images/convolution_6_1.png" src="_images/convolution_6_1.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Simulation d’un spectre de lumière observé avec un spectromètre.</span><a class="headerlink" href="#f-convolution-son" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Simulation d’un spectre de lumière observé avec un spectromètre.</span><a class="headerlink" href="#f-convolution-son" title="Permalink to this image">¶</a></p>
 </div>
 <p>Vous pouvez constater l’effet du filtrage en écoutant le signal audio original :</p>
 <div class="cell tag_remove-input docutils container">

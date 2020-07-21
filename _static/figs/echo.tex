@@ -1,0 +1,28 @@
+% !TEX program = latex
+\documentclass[border=1]{standalone}
+% L'option `convert` de standalone ne fonctionne pas, et je ne sais pas pourquoi
+% convert -density 150 file.pdf file.png
+\usepackage{pstricks}
+\begin{document}
+
+\psset{unit=10mm}
+\begin{pspicture*}(0.6,0.3)(7.2,1.7)
+
+% Haut-parleur + microphone
+\psset{dotsize=5pt}
+\psdots(3,1.5)
+\psdots(5,1.5)
+\rput[r](3,1.5){Haut-parleur\quad}
+\rput[l](5,1.5){\quad Microphone}
+
+% Mur
+\psline{-}(2.5,.5)(5.5,.5)
+\psframe[fillstyle=hlines,linestyle=none](2.5,.3)(5.5,.5)
+
+% Ondes (flèches)
+\psline{->}(3.2,1.5)(4.8,1.5)
+\psline{->}(3.15,1.35)(4,.5)(4.9,1.4)
+
+\end{pspicture*}
+
+\end{document}

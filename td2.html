@@ -70,6 +70,9 @@
   <li class="">
     <a href="intro.html">Introduction</a>
   </li>
+  <li class="">
+    <a href="python.html">Installer et utiliser Python</a>
+  </li>
 <li class="navbar-special">
 <p class="margin-caption">Notions élémentaires</p>
 </li>
@@ -223,9 +226,24 @@
         
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#convolution" class="nav-link">Convolution</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#intercorrelation" class="nav-link">Intercorrélation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#representation-vectorielle" class="nav-link">Représentation vectorielle</a>
+        </li>
     
     </ul>
 </nav>
@@ -240,6 +258,138 @@
                 
   <div class="section" id="seance-du-20-10-2020">
 <h1>📝 Séance du 20/10/2020<a class="headerlink" href="#seance-du-20-10-2020" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="convolution">
+<h2>Convolution<a class="headerlink" href="#convolution" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Représentez les signaux suivants :</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathrm{rect}(t) * \delta(t),     \qquad
+  \mathrm{rect}(t) * \delta(t-1),   \qquad
+  \mathrm{rect}(t) * Ш_2(t).
+  \]</div>
+</li>
+<li><p>Calculez le produit de convolution pour les couples de signaux discrets suivants.
+Indiquez également quel est l’effet de la convolution sur le signal <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  x[n] =
+  \begin{cases}
+    n \quad\text{pour}\, n\in\{0,\dots,5\} \\
+    0 \quad\text{ailleurs}
+  \end{cases}
+  \quad\text{et}\quad
+  y[n] =
+  \begin{cases}
+    3 \quad\text{pour}\, n=5 \\
+    0 \quad\text{ailleurs}
+  \end{cases}
+  \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  x[n] =
+  \begin{cases}
+    1 \quad\text{pour } n=-1 \text{ ou } n=1 \\
+    2 \quad\text{pour } n=0 \\
+    0 \quad\text{ailleurs}
+  \end{cases}
+  \quad\text{et}\quad
+  y[n] =
+  \begin{cases}
+    -1 \quad\text{pour } n=-1 \\
+    1 \quad\text{pour } n=1 \\
+    0 \quad\text{ailleurs}
+  \end{cases}
+  \end{split}\]</div>
+</li>
+<li><p>Calculez le produit de convolution <span class="math notranslate nohighlight">\(x*x\)</span> où <span class="math notranslate nohighlight">\(x(t) = A\)</span> sur <span class="math notranslate nohighlight">\([-T;T]\)</span> et <span class="math notranslate nohighlight">\(0\)</span> ailleurs.</p></li>
+</ul>
+</div>
+<div class="section" id="intercorrelation">
+<h2>Intercorrélation<a class="headerlink" href="#intercorrelation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Montrez que l’autocorrélation d’un signal périodique est également périodique et de même période.</p></li>
+<li><p>Démontrez que le maximum de l’autocorrélation est en 0.</p></li>
+<li><p>Calculez l’autocorrélation du signal ci-dessous, puis représentez-la pour <span class="math notranslate nohighlight">\(N=2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  x[n] =
+  \begin{cases}
+    1 \quad&amp;\text{si } -N \leq n \leq N \\
+    0 \quad&amp;\text{sinon} \\
+  \end{cases}
+  \quad\text{où}\, N\in\mathbb{N}.
+  \end{split}\]</div>
+</li>
+</ul>
+<ul>
+<li><p>Un signal audio <span class="math notranslate nohighlight">\(s(t)\)</span> est émis par un haut-parleur et un microphone enregistre le signal reçu <span class="math notranslate nohighlight">\(x(t)\)</span>.
+Ce signal <span class="math notranslate nohighlight">\(x(t)\)</span> est la somme du son provenant directement du haut-parleur ainsi que du son réfléchi par un mur :</p>
+<div class="math notranslate nohighlight">
+\[
+  x(t) = s(t) + a\,s(t-d)
+  \]</div>
+<p>où <span class="math notranslate nohighlight">\(a\)</span> est l’atténuation et <span class="math notranslate nohighlight">\(d\)</span> le retard dus à la réflexion sur le mur.</p>
+<div class="figure align-default" id="f-td2-echo">
+<a class="reference internal image-reference" href="_images/echo.png"><img alt="_images/echo.png" src="_images/echo.png" style="height: 60px;" /></a>
+</div>
+<ol class="simple">
+<li><p>Déterminez l’autocorrélation de <span class="math notranslate nohighlight">\(x(t)\)</span> en fonction de l’autocorrélation de <span class="math notranslate nohighlight">\(s(t)\)</span>.</p></li>
+<li><p>Comment peut-on obtenir <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(d\)</span> à partir de l’autocorrélation ?</p></li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="representation-vectorielle">
+<h2>Représentation vectorielle<a class="headerlink" href="#representation-vectorielle" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Représenter les signaux ci-dessous dans <span class="math notranslate nohighlight">\(\mathbb{R}^5\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+    \delta[n], \qquad u[n], \qquad \mathrm{rect}\left(\frac{n-2}{3}\right), \qquad \cos\left(\frac{\pi n}{2}\right).
+  \]</div>
+</li>
+<li><p>On considère les signaux suivants :</p>
+<div class="math notranslate nohighlight">
+\[
+    x = \begin{bmatrix}  1 &amp;  3 &amp;  5 &amp;  2 &amp; -4 &amp; -4 \end{bmatrix},\qquad
+    y = \begin{bmatrix}  2 &amp; -2 &amp;  2 &amp; -1 &amp;  5 &amp;  5 \end{bmatrix},\qquad
+    z = \begin{bmatrix}  5 &amp; -2 &amp; -1 &amp;  3 &amp;  1 &amp; -1 \end{bmatrix}.
+  \]</div>
+<ol class="simple">
+<li><p>Calculez l’énergie de ces signaux.</p></li>
+<li><p>Quels signaux sont orthogonaux ?</p></li>
+</ol>
+</li>
+<li><p>Le signal <span class="math notranslate nohighlight">\(x = \begin{bmatrix} 4 &amp; -2 &amp; 10 &amp; 7 \end{bmatrix}\)</span> est une version modifiée d’un des deux signaux ci-dessous.
+Calculez les distances adéquates pour trouver de quel signal <span class="math notranslate nohighlight">\(x\)</span> est le plus proche.</p>
+<div class="math notranslate nohighlight">
+\[
+    u_1 = \begin{bmatrix}  0 &amp; 0 &amp; 10 &amp; 10 \end{bmatrix},\qquad
+    u_2 = \begin{bmatrix} 10 &amp; 0 &amp; 10 &amp;  0 \end{bmatrix}.
+  \]</div>
+</li>
+<li><p>On considère le signal <span class="math notranslate nohighlight">\(x = \begin{bmatrix} 3 &amp; 4 &amp; 5 \end{bmatrix}\)</span> de taille <span class="math notranslate nohighlight">\(N=3\)</span>.</p>
+<ol>
+<li><p>Calculez l’énergie de <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>Les signaux <span class="math notranslate nohighlight">\(w_i\)</span> tels que</p>
+<div class="math notranslate nohighlight">
+\[
+       \forall\,i\in\{0,\dots,N-1\}, \qquad
+       w_i = \begin{bmatrix}
+         \frac{1}{\sqrt{N}} &amp;
+         \frac{1}{\sqrt{N}} e^{-j\frac{2\pi}{N}i} &amp;
+         \frac{1}{\sqrt{N}} e^{-j\frac{2\pi}{N}2i}
+       \end{bmatrix}
+    \]</div>
+<p>forment une base orthonormée qu’on appellera <span class="math notranslate nohighlight">\(W\)</span>.
+Écrivez tous les vecteurs de la base <span class="math notranslate nohighlight">\(W\)</span>.</p>
+</li>
+<li><p>Déterminez la projection <span class="math notranslate nohighlight">\(x'\)</span> de <span class="math notranslate nohighlight">\(x\)</span> dans la base <span class="math notranslate nohighlight">\(W\)</span> et calculez son énergie. Que remarquez-vous ?</p></li>
+</ol>
+</li>
+</ul>
+</div>
 </div>
 
 
