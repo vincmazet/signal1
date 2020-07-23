@@ -51,6 +51,8 @@ var symbClear = "&#10005;";
 // Initialise le <div> de la simulation
 function inidiv(id, w, h)
 {
+  console.log("Init")
+  console.log(id)
     // id :   ID du div
     // w, h : largeur et hauteur de la simulation
     var o = document.getElementById(id);
@@ -241,11 +243,11 @@ function Graph(div, x, y, w, h)
     // Ou alors il faut forcer la propriété z-index
     // div :        div contenant la simulation (obtenu grâce à inidiv)
     // x, y, w, h : position et taille du graphe
-        
+
     // Création d'un canvas et de son contexte
     var cnv = document.createElement('canvas');
     var ctx = cnv.getContext('2d');
-    
+
     // Position et taille
     cnv.style.position = 'absolute';
     cnv.style.left   = x.toString() + 'px';
@@ -254,7 +256,7 @@ function Graph(div, x, y, w, h)
     cnv.style.height = h.toString() + 'px';
     cnv.width = w;// * window.devicePixelRatio;
     cnv.height = h;// * window.devicePixelRatio;
-    
+
     div.appendChild(cnv);
 
     // Propriétés du graphe (et valeurs par défaut)
@@ -378,9 +380,9 @@ function Graph(div, x, y, w, h)
     ctx.plot = function(xx,yy)
     {
         var n, p = new Array(2), op = new Array(2);
-        
+
         op[1] = NaN; // Il n'y a pas de point avant le tout premier : on le fixe à NaN
-        
+
         for (n=0; n<xx.length; n++)
         {
             // Point à représenter
@@ -394,25 +396,25 @@ function Graph(div, x, y, w, h)
                 ctx.beginPath();
                 ctx.moveTo(p[0], p[1]);
             }
-        
+
             if (!isNaN(p[1]) && isNaN(op[1]))
             {
                 ctx.beginPath();
                 ctx.moveTo(p[0], p[1]);
             }
-            
+
             if (!isNaN(p[1]) && !isNaN(op[1]))
             {
                 ctx.lineTo(p[0], p[1]);
             }
-            
+
             if (isNaN (p[1]) && !isNaN(op[1]))
             {
                 ctx.lineTo(p[0], p[1]);
                 ctx.stroke();
                 ctx.closePath();
             }
-            
+
             // Dernier point
             if (n==xx.length-1 && !isNaN(p[1]))
             {
@@ -420,10 +422,10 @@ function Graph(div, x, y, w, h)
                 ctx.stroke();
                 ctx.closePath();
             }
-            
+
             op[1] = p[1];
         }
-        
+
     };
 
     // ***************************************************************************************** //
@@ -432,7 +434,7 @@ function Graph(div, x, y, w, h)
     ctx.dirac = function(xx,yy)
     {
         var n, p, z, s;
-        
+
         // Ligne horizontale
         ctx.beginPath();
         ctx.moveTo(0, cnv.height/2);
@@ -448,7 +450,7 @@ function Graph(div, x, y, w, h)
         {
             // Signe des ordonnées (pour connaître l'orientation de la flèche)
             s = Math.sign(yy[n]);
-            
+
             // Point à représenter
             p = ctx.pt2px([xx[n],yy[n]]);
             p[0] = Math.round(p[0])+0.5;
@@ -572,7 +574,7 @@ function Graph(div, x, y, w, h)
         {
             if (evt.buttons==0)
                 return;
-                
+
             cnv.style.cursor = 'default';
             var rect = cnv.getBoundingClientRect();
             var x = Math.round(evt.clientX - rect.left);

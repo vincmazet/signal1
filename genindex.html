@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
@@ -26,9 +26,14 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/mystnb.js"></script>
-    <script src="_static/spetsi.js"></script>
+    <script src="_static/js/three.js"></script>
+    <script src="_static/js/dilatation.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/convolution.js"></script>
+    <script src="_static/js/spetsi.js"></script>
+    <script src="_static/js/expo.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -64,105 +69,187 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
   <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="intro.html">Introduction</a>
-  </li>
-  <li class="">
-    <a href="python.html">Installer et utiliser Python</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Notions élémentaires</p>
-</li>
-  <li class="">
-    <a href="classification.html">Classification des signaux</a>
-  </li>
-  <li class="">
-    <a href="signaux-elementaires.html">Signaux élémentaires</a>
-  </li>
-  <li class="">
-    <a href="props-signaux.html">Propriétés des signaux</a>
-  </li>
-  <li class="">
-    <a href="energie-puissance.html">Énergie et puissance</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Convolution</p>
-</li>
-  <li class="">
-    <a href="convolution.html">Produit de convolution</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Intercorrélation</p>
-</li>
-  <li class="">
-    <a href="intercorrelation.html">Intercorrélation</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Représentation vectorielle</p>
-</li>
-  <li class="">
-    <a href="vect.html">Représentation vectorielle des signaux</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Analyse de Fourier</p>
-</li>
-  <li class="">
-    <a href="fourier.html">Transformations de Fourier</a>
-  </li>
-  <li class="">
-    <a href="props-fourier.html">Propriétés des transformations de Fourier</a>
-  </li>
-  <li class="">
-    <a href="temps-frequence.html">Représentation temps-fréquence</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Numérisation</p>
-</li>
-  <li class="">
-    <a href="echantillonnage.html">Échantillonnage</a>
-  </li>
-  <li class="">
-    <a href="quantification.html">Quantification</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Travail en classe</p>
-</li>
-  <li class="">
-    <a href="td1.html">📝 Séance du 14/10/2020</a>
-  </li>
-  <li class="">
-    <a href="td2.html">📝 Séance du 20/10/2020</a>
-  </li>
-  <li class="">
-    <a href="tp1.html">💻 Séance du 22/10/2020</a>
-  </li>
-  <li class="">
-    <a href="td3.html">📝 Séance du 10/11/2020</a>
-  </li>
-  <li class="">
-    <a href="tp2.html">💻 Séance du 13/11/2020</a>
-  </li>
-  <li class="">
-    <a href="td4.html">📝 Séance du 17/11/2020</a>
-  </li>
-  <li class="">
-    <a href="td5.html">📝 Séance du 08/12/2020</a>
-  </li>
-  <li class="">
-    <a href="tp3.html">💻 Séance du 10/12/2020</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Annexes</p>
-</li>
-  <li class="">
-    <a href="biblio.html">Références</a>
-  </li>
-  <li class="">
-    <a href="licence.html">Licence</a>
-  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
 </ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Installer et utiliser Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Notions élémentaires
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="classification.html">
+   Classification des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="signaux-elementaires.html">
+   Signaux élémentaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="props-signaux.html">
+   Propriétés des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energie-puissance.html">
+   Énergie et puissance
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Convolution
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution.html">
+   Produit de convolution
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Intercorrélation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intercorrelation.html">
+   Intercorrélation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Représentation vectorielle
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vect.html">
+   Représentation vectorielle des signaux
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Analyse de Fourier
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fourier.html">
+   Transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="props-fourier.html">
+   Propriétés des transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="temps-frequence.html">
+   Représentation temps-fréquence
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numérisation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="echantillonnage.html">
+   Échantillonnage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quantification.html">
+   Quantification
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Travail en classe
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="td1.html">
+   📝 Séance du 14/10/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td2.html">
+   📝 Séance du 20/10/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tp1.html">
+   💻 Séance du 22/10/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td3.html">
+   📝 Séance du 10/11/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tp2.html">
+   💻 Séance du 13/11/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td4.html">
+   📝 Séance du 17/11/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td5.html">
+   📝 Séance du 08/12/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tp3.html">
+   💻 Séance du 10/12/2020
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Annexes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="biblio.html">
+   Références
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="licence.html">
+   Licence
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -185,45 +272,38 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-            
-        </div>
-
+    
+</div>
         <!-- Source interaction buttons -->
-        
-        <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-            <div class="dropdown-buttons sourcebuttons">
-                <a class="repository-button" href="https://github.com/vincmazet/signal1"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
-                <a class="issues-button" href="https://github.com/vincmazet/signal1/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-                
-            </div>
-        </div>
-        
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-        
+
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-    </ul>
-</nav>
-
-
+        <nav id="bd-toc-nav">
+            
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
