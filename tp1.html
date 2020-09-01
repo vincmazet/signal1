@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>💻 Séance du 22/10/2020 &#8212; Traitement du signal</title>
+    <title>TP du 22/10/2020 &#8212; Traitement du signal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -36,10 +37,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="📝 Séance du 10/11/2020" href="td3.html" />
-    <link rel="prev" title="📝 Séance du 20/10/2020" href="td2.html" />
+    <link rel="prev" title="TD du 20/10/2020" href="td2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,13 +82,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
    Introduction
-  </a>
- </li>
-</ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
-   Installer et utiliser Python
   </a>
  </li>
 </ul>
@@ -188,23 +189,23 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Travail en classe
+  Activités
  </span>
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="td1.html">
-   📝 Séance du 14/10/2020
+   TD du 14/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="td2.html">
-   📝 Séance du 20/10/2020
+   TD du 20/10/2020
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   💻 Séance du 22/10/2020
+   TP du 22/10/2020
   </a>
  </li>
  <li class="toctree-l1">
@@ -240,6 +241,11 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Installer et utiliser Python
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="biblio.html">
    Références
   </a>
@@ -254,10 +260,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -315,7 +317,7 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -349,8 +351,8 @@
         
               <div>
                 
-  <div class="section" id="seance-du-22-10-2020">
-<h1>💻 Séance du 22/10/2020<a class="headerlink" href="#seance-du-22-10-2020" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="tp-du-22-10-2020">
+<h1>TP du 22/10/2020<a class="headerlink" href="#tp-du-22-10-2020" title="Permalink to this headline">¶</a></h1>
 <p>En plus d’appliquer les notions essentielles du traitement du signal,
 ce TP est également une initiation à la programmation scientifique en Python.</p>
 <div class="section" id="representation-de-signaux">
@@ -392,13 +394,11 @@ ce TP est également une initiation à la programmation scientifique en Python.<
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/tp1_3_0.png" src="_images/tp1_3_0.png" />
+<img alt="_images/tp1_2_0.png" src="_images/tp1_2_0.png" />
 </div>
 </div>
-<ul class="simple">
-<li><p>(Re)copier le code ci-avant dans votre notebook pour vérifier que le signal s’affiche de la même manière.</p></li>
-</ul>
 <ul>
+<li><p>(Re)copier le code ci-avant dans votre notebook pour vérifier que le signal s’affiche de la même manière.</p></li>
 <li><p>Modifier le code pour représentez le signal sinusoïdal</p>
 <div class="math notranslate nohighlight">
 \[
@@ -407,19 +407,14 @@ ce TP est également une initiation à la programmation scientifique en Python.<
 <p>sur 1 seconde et avec <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(f=5\)</span> Hz et <span class="math notranslate nohighlight">\(\varphi=\pi/3\)</span>.</p>
 <p>Choisissez en particulier un pas de temps correct pour obtenir une courbe lisse.</p>
 </li>
-</ul>
-<ul>
 <li><p>Représentez la sinusoïde amortie</p>
 <div class="math notranslate nohighlight">
 \[
     y(t) = A e^{-at} \sin(2 \pi f t)
   \]</div>
 <p>entre 0 et 10 s avec <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(a=0,5\)</span> et <span class="math notranslate nohighlight">\(f = 2\)</span> Hz.</p>
-<p>Utilisez <code class="docutils literal notranslate"><span class="pre">numpy.multiply</span></code> pour effectuer la multiplication des deux signaux (l’exponentielle et le sinus).
-Étudiez l’influence des paramètres sur la forme du signal.</p>
+<p>Étudiez l’influence des paramètres sur la forme du signal.</p>
 </li>
-</ul>
-<ul>
 <li><p>Représentez le signal porte</p>
 <div class="math notranslate nohighlight">
 \[
@@ -428,9 +423,7 @@ ce TP est également une initiation à la programmation scientifique en Python.<
 <p>avec <span class="math notranslate nohighlight">\(A = 3\)</span>, <span class="math notranslate nohighlight">\(m = 4\)</span> et <span class="math notranslate nohighlight">\(N = 5\)</span>.</p>
 <p>Comme le signal est à temps discret, vous pouvez utiliser la syntaxe <code class="docutils literal notranslate"><span class="pre">plt.plot(...,&quot;.&quot;)</span></code> pour afficher les points individuellement sans les relier.</p>
 </li>
-</ul>
-<ul class="simple">
-<li><p>Le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/hello.csv">hello.csv</a> contient un signal sonore sous forme d’une matrice dont la première colonne correspond aux échantillons temporels et les deux colonnes suivantes aux canaux gauche et droite. Affichez le signal sonore issu du canal gauche.</p></li>
+<li><p>Le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/hello.wav">hello.wav</a> contient un signal sonore sous forme d’une matrice dont la première colonne correspond aux échantillons temporels et les deux colonnes suivantes aux canaux gauche et droite. Affichez le signal sonore issu du canal gauche.</p></li>
 </ul>
 </div>
 <div class="section" id="produit-de-convolution">
@@ -469,21 +462,23 @@ Attention à spécifier l’argument <code class="docutils literal notranslate">
     \end{cases}
  \end{split}\]</div>
 <ul>
-<li><p>Représentez sur l’intervalle <span class="math notranslate nohighlight">\(n \in \{-200,\dots,200\}\)</span> le signal enregistré dans le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/signal2.csv">signal2.csv</a> et <span class="math notranslate nohighlight">\(y\)</span> définié ci-dessous, ainsi que leur produit de convolution.</p>
+<li><p>Représentez le signal <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/AEP-2005.csv">AEP-2005.csv</a>
+(consommation électrique de l’est des États-Unis, heure par heure sur un an) et <span class="math notranslate nohighlight">\(y\)</span> définie ci-dessous, ainsi que leur produit de convolution.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     y[n] =
     \begin{cases}
-      1/10 \quad\text{si}\quad n\in\{0,\dots,9\} \\
+      1/D \quad\text{si}\quad n\in\{0,\dots,D-1\} \\
       0 \quad\text{sinon}
     \end{cases}
   \end{split}\]</div>
+<p>où <span class="math notranslate nohighlight">\(D=24 \times 7\)</span> correspond au nombre d’heures dans une semaine.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="intercorrelation">
 <h2>Intercorrélation<a class="headerlink" href="#intercorrelation" title="Permalink to this headline">¶</a></h2>
-<p>L’objectif est, comme dans l’exemple <a class="reference internal" href="intercorrelation.html#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 7</span></a>, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
+<p>L’objectif est, comme dans l’exemple <a class="reference internal" href="intercorrelation.html#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 6</span></a>, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
 Le motif en question sera ici une exponentielle décroissante.</p>
 <ul>
 <li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de <span class="math notranslate nohighlight">\(N=1000\)</span> échantillons correspondant à une exponentielle décroissante :</p>
@@ -500,7 +495,7 @@ Le motif en question sera ici une exponentielle décroissante.</p>
 <li><p>Créez une deuxième exponentielle décroissante débutant en <span class="math notranslate nohighlight">\(k=0\)</span> : ce signal sera le motif <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
 <li><p>Représentez l’intercorrélation <span class="math notranslate nohighlight">\(R_{xm}\)</span> entre <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(m\)</span>.
 Que se passe-t-il lorsque <span class="math notranslate nohighlight">\(k\)</span> varie ?</p></li>
-<li><p>Chargez le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/signal3.csv">signal3.csv</a> et affichez le signal correspondant.
+<li><p>Chargez le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/tp13.csv">tp13.csv</a> et affichez le signal correspondant.
 Ce signal est une exponentielle décroissante très bruitée.
 Êtes-vous capable de détecter à l’œil à quel instant <span class="math notranslate nohighlight">\(k\)</span> débute l’exponentielle décroissante ?</p></li>
 <li><p>Représentez l’intercorrélation entre le signal signal3.csv et <span class="math notranslate nohighlight">\(m\)</span>
@@ -511,38 +506,31 @@ pour en déduire l’instant auquel commence le motif.</p></li>
 <h2>Décomposition dans la base de Haar<a class="headerlink" href="#decomposition-dans-la-base-de-haar" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N=16\)</span> contenant des valeurs aléatoires (<code class="docutils literal notranslate"><span class="pre">numpy.random.random</span></code>).</p></li>
-<li><p>Créez puis représentez les <span class="math notranslate nohighlight">\(N\)</span> signaux de la base de Haar avec la fonction <code class="docutils literal notranslate"><span class="pre">haar</span></code> dans le module <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/signal1.py">signal1</a>.</p></li>
+<li><p>Créez puis représentez les <span class="math notranslate nohighlight">\(N\)</span> signaux de la base de Haar avec la fonction <code class="docutils literal notranslate"><span class="pre">haar</span></code> dans le module <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/signalfip.py">signalfip</a>.</p></li>
 <li><p>Décomposez le signal <span class="math notranslate nohighlight">\(x\)</span> dans la base de Haar pour obtenir ses <span class="math notranslate nohighlight">\(N\)</span> coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> (<span class="math notranslate nohighlight">\(k\in\{0,\dots,N-1\}\)</span>).</p></li>
 <li><p>Reconstruisez le signal <span class="math notranslate nohighlight">\(x\)</span> à partir de ses coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> et vérifiez que vous retrouvez bien le signal initial.</p></li>
 </ul>
 <p>La suite de l’exercice a pour objectif d’illustrer l’intérêt de représenter un signal dans une base spécifique afin d’effectuer une compression de données sans trop perdre en qualité.
-Pour un taux de compression égal à 50 %, la moitié des valeurs de <span class="math notranslate nohighlight">\(x\)</span> sont perdues et considérées nulles.
-Bien entendu, il est préférable de supprimer les valeurs les plus faibles pour éviter de trop modifier le signal.</p>
+Pour un taux de compression égal à 50 %, la moitié des valeurs de <span class="math notranslate nohighlight">\(x\)</span> sont perdues et considérées nulles.</p>
 <ul class="simple">
-<li><p>Supprimez les <span class="math notranslate nohighlight">\(N/2\)</span> échantillons les plus faibles du signal <span class="math notranslate nohighlight">\(x\)</span> pour obtenir un premier signal compressé <span class="math notranslate nohighlight">\(x_1\)</span>.
+<li><p>Supprimez les <span class="math notranslate nohighlight">\(N/2\)</span> derniers échantillons du signal <span class="math notranslate nohighlight">\(x\)</span> pour obtenir un premier signal compressé <span class="math notranslate nohighlight">\(x_1\)</span>.
 Vous pouvez vous inspirer du code ci-dessous.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># Exemple de signal</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="c1"># Nombre d&#39;échantillons</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Signal à traiter</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
 
 <span class="c1"># Copie du vecteur</span>
 <span class="n">x1</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-<span class="c1"># Nombre d&#39;échantillons</span>
-<span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-
-<span class="c1"># Indices des échantillons ordonnés</span>
-<span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-
-<span class="c1"># Conserve uniquement les N/2 premiers indices</span>
-<span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
-
-<span class="c1"># Annule les échantillons indexés par idx</span>
-<span class="n">x1</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Annule les N/2 derniers échantillons</span>
+<span class="n">x1</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </div>
@@ -551,11 +539,30 @@ Vous pouvez vous inspirer du code ci-dessous.</p></li>
 <li><p>Une autre façon de compresser le signal <span class="math notranslate nohighlight">\(x\)</span> est de supprimer les plus petits coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> de sa décomposition de Haar.
 Aussi, après avoir calculé ces coefficients, supprimez la moitié des coefficients les plus faibles puis reconstruisez-le signal qu’on appellera <span class="math notranslate nohighlight">\(x_2\)</span>.</p></li>
 <li><p>Calculez les EQM entre les signaux compressés <span class="math notranslate nohighlight">\(x_1\)</span> ou <span class="math notranslate nohighlight">\(x_2\)</span> et le signal initial <span class="math notranslate nohighlight">\(x\)</span>.
-Qu’en concluez-vous~?</p></li>
+Qu’en concluez-vous ?</p></li>
 </ul>
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -565,7 +572,7 @@ Qu’en concluez-vous~?</p></li>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="td2.html" title="previous page">📝 Séance du 20/10/2020</a>
+    <a class='left-prev' id="prev-link" href="td2.html" title="previous page">TD du 20/10/2020</a>
     <a class='right-next' id="next-link" href="td3.html" title="next page">📝 Séance du 10/11/2020</a>
 
     </div>

@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -36,6 +37,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Transformations de Fourier" href="fourier.html" />
@@ -74,13 +82,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
    Introduction
-  </a>
- </li>
-</ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
-   Installer et utiliser Python
   </a>
  </li>
 </ul>
@@ -188,23 +189,23 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Travail en classe
+  Activités
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="td1.html">
-   📝 Séance du 14/10/2020
+   Séance du 14/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="td2.html">
-   📝 Séance du 20/10/2020
+   Séance du 20/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tp1.html">
-   💻 Séance du 22/10/2020
+   Séance du 22/10/2020
   </a>
  </li>
  <li class="toctree-l1">
@@ -240,6 +241,11 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Installer et utiliser Python
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="biblio.html">
    Références
   </a>
@@ -254,10 +260,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -315,7 +317,7 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -400,19 +402,19 @@ On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span>
   \qquad\text{et}\qquad
   \delta = [1 \, 0].
 \]</div>
-<p>Leur représentation est donnée <a class="reference internal" href="#f-vect-ex-graphe"><span class="std std-numref">Fig. 8</span></a>. Il s’agit simplement de deux signaux de deux échantillons. Les axes de cette représentation sont : les échantillons en abscisse, et les amplitude du signal en ordonnée.</p>
+<p>Leur représentation est donnée <a class="reference internal" href="#f-vect-ex-graphe"><span class="std std-numref">Fig. 7</span></a>. Il s’agit simplement de deux signaux de deux échantillons. Les axes de cette représentation sont : les échantillons en abscisse, et les amplitude du signal en ordonnée.</p>
 <div class="figure align-default" id="f-vect-ex-graphe">
 <div class="cell_output docutils container">
 <img alt="_images/vect_4_1.png" src="_images/vect_4_1.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de signaux.</span><a class="headerlink" href="#f-vect-ex-graphe" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de signaux.</span><a class="headerlink" href="#f-vect-ex-graphe" title="Permalink to this image">¶</a></p>
 </div>
-<p>Par ailleurs, comme ces deux signaux peuvent s’interpréter comme des vecteurs, alors on peut les représenter comme tel, dans un espace à deux dimensions, comme dans la <a class="reference internal" href="#f-vect-ex-espace"><span class="std std-numref">Fig. 9</span></a>. Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.</p>
+<p>Par ailleurs, comme ces deux signaux peuvent s’interpréter comme des vecteurs, alors on peut les représenter comme tel, dans un espace à deux dimensions, comme dans la <a class="reference internal" href="#f-vect-ex-espace"><span class="std std-numref">Fig. 8</span></a>. Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.</p>
 <div class="figure align-default" id="f-vect-ex-espace">
 <div class="cell_output docutils container">
 <img alt="_images/vect_4_3.png" src="_images/vect_4_3.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de vecteurs.</span><a class="headerlink" href="#f-vect-ex-espace" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de vecteurs.</span><a class="headerlink" href="#f-vect-ex-espace" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="section" id="quelques-definitions">
 <h2>Quelques définitions<a class="headerlink" href="#quelques-definitions" title="Permalink to this headline">¶</a></h2>
@@ -476,7 +478,7 @@ On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span>
 <div class="cell_output docutils container">
 <img alt="_images/vect_6_0.png" src="_images/vect_6_0.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Base canonique dans <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</span><a class="headerlink" href="#f-vect-base-canonique" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Base canonique dans <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</span><a class="headerlink" href="#f-vect-base-canonique" title="Permalink to this image">¶</a></p>
 </div>
 <p>Nous ne représentons pas ces quatre signaux sous forme de vecteur, car cela nécessite de les représenter dans un espace à quatre dimensions (or, votre écran n’en a que deux).</p>
 <p>Cette base est d’ailleurs appelée <em>base canonique</em> car c’est la base naturelle pour représenter les signaux. En effet, les échantillons de tout signal de taille <span class="math notranslate nohighlight">\(N\)</span> correspondent aux coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span>.</p>
@@ -502,6 +504,25 @@ Les coefficients du signal dans cette nouvelle base vont donc être différent d
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               

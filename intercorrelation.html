@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -36,6 +37,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Représentation vectorielle des signaux" href="vect.html" />
@@ -74,13 +82,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
    Introduction
-  </a>
- </li>
-</ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
-   Installer et utiliser Python
   </a>
  </li>
 </ul>
@@ -188,23 +189,23 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Travail en classe
+  Activités
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="td1.html">
-   📝 Séance du 14/10/2020
+   Séance du 14/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="td2.html">
-   📝 Séance du 20/10/2020
+   Séance du 20/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tp1.html">
-   💻 Séance du 22/10/2020
+   Séance du 22/10/2020
   </a>
  </li>
  <li class="toctree-l1">
@@ -240,6 +241,11 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Installer et utiliser Python
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="biblio.html">
    Références
   </a>
@@ -254,10 +260,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -315,7 +317,7 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -358,21 +360,21 @@
 <div class="section" id="exemples">
 <h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">¶</a></h2>
 <div class="example">
-<p>En communications numériques, il n’est pas rare que le récepteur du sytème de communication reçoive un signal de l’émetteur qui soit très brouillé (on dit qu’il est <em>bruité</em>). Par exemple, si le récepteur reçoit le signal <span class="math notranslate nohighlight">\(x\)</span> représenté <a class="reference internal" href="#f-intercorrelation-communications"><span class="std std-numref">Fig. 6</span></a>, et qu’il sait qu’il devrait être une suite d’échelon d’amplitude −1 (représentant le bit 0) ou +1 (représentant le bit 1), alors l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec un échelon <span class="math notranslate nohighlight">\(y\)</span> permet de détecter à chaque instant si le signal reçu ressemble à <span class="math notranslate nohighlight">\(y\)</span> (dans ce cas, on a reçu un 1) ou pas (on a reçu un 0).</p>
+<p>En communications numériques, il n’est pas rare que le récepteur du sytème de communication reçoive un signal de l’émetteur qui soit très brouillé (on dit qu’il est <em>bruité</em>). Par exemple, si le récepteur reçoit le signal <span class="math notranslate nohighlight">\(x\)</span> représenté <a class="reference internal" href="#f-intercorrelation-communications"><span class="std std-numref">Fig. 5</span></a>, et qu’il sait qu’il devrait être une suite d’échelon d’amplitude −1 (représentant le bit 0) ou +1 (représentant le bit 1), alors l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec un échelon <span class="math notranslate nohighlight">\(y\)</span> permet de détecter à chaque instant si le signal reçu ressemble à <span class="math notranslate nohighlight">\(y\)</span> (dans ce cas, on a reçu un 1) ou pas (on a reçu un 0).</p>
 <div class="figure align-default" id="f-intercorrelation-communications">
 <div class="cell_output docutils container">
 <img alt="_images/intercorrelation_4_2.png" src="_images/intercorrelation_4_2.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> véhicule le message 10011010 codé en NRZ avec le motif y.</span><a class="headerlink" href="#f-intercorrelation-communications" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> véhicule le message 10011010 codé en NRZ avec le motif y.</span><a class="headerlink" href="#f-intercorrelation-communications" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="example">
-<p>Un autre exemple d’utilisation de l’intecorrélation est la mesure de la fréquence d’un signal. Si on dispose d’un signal sinusoïdal <span class="math notranslate nohighlight">\(x\)</span>, mais qu’il est très bruité et que l’on cherche sa fréquence inconnue, alors on peut représenter l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec plusieurs sinusoïdes <span class="math notranslate nohighlight">\(y\)</span> dont on connaît la fréquence. La sinusoïde qui permet d’obtenir la plus grande intercorrélation sera la plus ressemblante : on pourra alor en déduire la valeur de la fréquence inconnue. Ce principe est illustré <a class="reference internal" href="#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 7</span></a>.</p>
+<p>Un autre exemple d’utilisation de l’intecorrélation est la mesure de la fréquence d’un signal. Si on dispose d’un signal sinusoïdal <span class="math notranslate nohighlight">\(x\)</span>, mais qu’il est très bruité et que l’on cherche sa fréquence inconnue, alors on peut représenter l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec plusieurs sinusoïdes <span class="math notranslate nohighlight">\(y\)</span> dont on connaît la fréquence. La sinusoïde qui permet d’obtenir la plus grande intercorrélation sera la plus ressemblante : on pourra alor en déduire la valeur de la fréquence inconnue. Ce principe est illustré <a class="reference internal" href="#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 6</span></a>.</p>
 <div class="figure align-default" id="f-intercorrelation-sinusoide">
 <div class="cell_output docutils container">
 <img alt="_images/intercorrelation_5_1.png" src="_images/intercorrelation_5_1.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> est une sinusoïde bruitée de fréquence 0,5 Hz.</span><a class="headerlink" href="#f-intercorrelation-sinusoide" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> est une sinusoïde bruitée de fréquence 0,5 Hz.</span><a class="headerlink" href="#f-intercorrelation-sinusoide" title="Permalink to this image">¶</a></p>
 </div>
 </div></div>
 <div class="section" id="autocorrelation">
@@ -396,6 +398,25 @@
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               

@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -36,10 +37,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Classification des signaux" href="classification.html" />
-    <link rel="prev" title="Introduction" href="intro.html" />
+    <link rel="next" title="Références" href="biblio.html" />
+    <link rel="prev" title="💻 Séance du 10/12/2020" href="tp3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,13 +82,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
    Introduction
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Installer et utiliser Python
   </a>
  </li>
 </ul>
@@ -188,23 +189,23 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Travail en classe
+  Activités
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="td1.html">
-   📝 Séance du 14/10/2020
+   Séance du 14/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="td2.html">
-   📝 Séance du 20/10/2020
+   Séance du 20/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tp1.html">
-   💻 Séance du 22/10/2020
+   Séance du 22/10/2020
   </a>
  </li>
  <li class="toctree-l1">
@@ -238,7 +239,12 @@
   Annexes
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Installer et utiliser Python
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="biblio.html">
    Références
@@ -254,10 +260,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -315,7 +317,7 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -404,7 +406,7 @@ Une description de ce logiciel est donné plus bas.</p>
 </div>
 <div class="section" id="cellules-markdown">
 <h3>Cellules Markdown<a class="headerlink" href="#cellules-markdown" title="Permalink to this headline">¶</a></h3>
-<p>Il est possible de canger une cellule de « code » en cellule « markdown » en sélectionnant <em>Markdown</em> dans la liste déroulante de la barre d’outils.
+<p>Il est possible de changer une cellule de « code » en cellule « markdown » en sélectionnant <em>Markdown</em> dans la liste déroulante de la barre d’outils.
 Le <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> est aussi un langage informatique, mais il sert à mettre en forme du texte (par exemple en écrivant des titres, des listes, des équations…).
 Cela peut être utile pour ajouter des notes et commenter votre code et ses résultats.</p>
 <p>Ainsi :</p>
@@ -435,17 +437,18 @@ où :
 <li><p><span class="math notranslate nohighlight">\(\varphi\)</span> est le <em>déphasage</em></p></li>
 </ul>
 </div>
+<hr class="docutils" />
 <p>Vous trouverez le résumé de la syntaxe Markdown sur <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown#Example">cette page</a>.</p>
 </div>
 <div class="section" id="jupyter-lab">
 <h3>Jupyter Lab<a class="headerlink" href="#jupyter-lab" title="Permalink to this headline">¶</a></h3>
 <p>Pour le développement de programme en Python dans un but scientifique, il est recommandé d’utiliser <a class="reference external" href="https://jupyterlab.readthedocs.io/en/latest/index.html">Jupyter Lab</a>.
 C’est un logiciel moderne et libre pour écrire de notebooks (cf. <a class="reference internal" href="#c-python-notebook"><span class="std std-ref">Notebooks Python</span></a>).</p>
-<p>La <a class="reference internal" href="#f-python-jupyterlab"><span class="std std-numref">figure 1</span></a> montre l’interface de Jupyter Lab :
+<p>La <a class="reference internal" href="#f-python-jupyterlab"><span class="std std-numref">figure 11</span></a> montre l’interface de Jupyter Lab :
 elle est suffisamment intuitive pour se débrouiller sans aide, mais vous pouvez toujours consulter <a class="reference external" href="https://jupyterlab.readthedocs.io/en/latest/user/interface.html">cette page</a> pour en savoir plus.</p>
 <div class="figure align-default" id="f-python-jupyterlab">
 <img alt="https://jupyterlab.readthedocs.io/en/latest/_images/interface_jupyterlab.png" src="https://jupyterlab.readthedocs.io/en/latest/_images/interface_jupyterlab.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Jupyter Lab.</span><a class="headerlink" href="#f-python-jupyterlab" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Jupyter Lab.</span><a class="headerlink" href="#f-python-jupyterlab" title="Permalink to this image">¶</a></p>
 </div>
 <p>Normalement, Jupyter Lab est inclus dans l’installation d’Anaconda.
 Mais si ce n’est pas le cas, vous trouverez les instructions pour installer Jupyter Lab <a class="reference external" href="https://jupyter.org/install.html">ici</a>.</p>
@@ -507,6 +510,25 @@ En général, nous n’utiliserons que deux modules :</p>
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -516,8 +538,8 @@ En général, nous n’utiliserons que deux modules :</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Introduction</a>
-    <a class='right-next' id="next-link" href="classification.html" title="next page">Classification des signaux</a>
+    <a class='left-prev' id="prev-link" href="tp3.html" title="previous page">💻 Séance du 10/12/2020</a>
+    <a class='right-next' id="next-link" href="biblio.html" title="next page">Références</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

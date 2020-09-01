@@ -1,17 +1,22 @@
 /* Feuille de style perso VM */
 
 
-/* Style général */
+/* Polices */
 
-@font-face {
-  font-family: "Source Sans Pro SemiBold";
-  src: url("fonts/SourceSansPro-SemiBold.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=auto');
 
+/*
 @font-face {
   font-family: "Source Sans Pro";
   src: url("fonts/SourceSansPro-Regular.ttf");
 }
+@font-face {
+  font-family: "Source Sans Pro SemiBold";
+  src: url("fonts/SourceSansPro-SemiBold.ttf");
+}*/
+
+
+/* Style général */
 
 body {font-family: "Source Sans Pro"}
 h1, h2, h3, h4, h5, h6 {font-family: "Source Sans Pro SemiBold"}
