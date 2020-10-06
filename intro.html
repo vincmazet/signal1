@@ -2,10 +2,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Introduction &#8212; Traitement du signal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; Traitement du signal 1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -15,9 +16,8 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -25,18 +25,16 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/js/three.js"></script>
     <script src="_static/js/dilatation.js"></script>
     <script src="_static/js/conv1c.js"></script>
     <script src="_static/js/convolution.js"></script>
     <script src="_static/js/spetsi.js"></script>
     <script src="_static/js/expo.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -66,7 +64,7 @@
 <a class="navbar-brand text-wrap" href="index.html">
   
   
-  <h1 class="site-logo" id="site-title">Traitement du signal</h1>
+  <h1 class="site-logo" id="site-title">Traitement du signal 1</h1>
   
 </a>
 </div>
@@ -110,6 +108,11 @@
    Énergie et puissance
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-elementaire.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -120,6 +123,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="convolution.html">
    Produit de convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-convolution.html">
+   Exercices
   </a>
  </li>
 </ul>
@@ -134,6 +142,11 @@
    Intercorrélation
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-intercorrelation.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -144,6 +157,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="vect.html">
    Représentation vectorielle des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-vect.html">
+   Exercices
   </a>
  </li>
 </ul>
@@ -168,6 +186,11 @@
    Représentation temps-fréquence
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-fourier.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -185,51 +208,31 @@
    Quantification
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-numerisation.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Activités
+  Travaux pratiques
  </span>
 </p>
 <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="td1.html">
-   TD du 14/10/2020
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td2.html">
-   TD du 20/10/2020
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tp1.html">
    TP du 22/10/2020
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="td3.html">
-   📝 Séance du 10/11/2020
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="tp2.html">
-   💻 Séance du 13/11/2020
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td4.html">
-   📝 Séance du 17/11/2020
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td5.html">
-   📝 Séance du 08/12/2020
+   TP du 13/11/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tp3.html">
-   💻 Séance du 10/12/2020
+   TP du 10/12/2020
   </a>
  </li>
 </ul>
@@ -239,6 +242,13 @@
  </span>
 </p>
 <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://moodle3.unistra.fr/course/view.php?id=13717">
+   Moodle
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python.html">
    Installer et utiliser Python
@@ -310,6 +320,22 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/vincmazet/signal1/blob/master/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
     </div>
 

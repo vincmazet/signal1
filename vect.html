@@ -2,10 +2,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Représentation vectorielle des signaux &#8212; Traitement du signal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Représentation vectorielle des signaux &#8212; Traitement du signal 1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -15,9 +16,8 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -25,18 +25,16 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/js/three.js"></script>
     <script src="_static/js/dilatation.js"></script>
     <script src="_static/js/conv1c.js"></script>
     <script src="_static/js/convolution.js"></script>
     <script src="_static/js/spetsi.js"></script>
     <script src="_static/js/expo.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -46,8 +44,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Transformations de Fourier" href="fourier.html" />
-    <link rel="prev" title="Intercorrélation" href="intercorrelation.html" />
+    <link rel="next" title="Exercices (Représentation vectorielle)" href="td-vect.html" />
+    <link rel="prev" title="Exercice (intercorrélation)" href="td-intercorrelation.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -67,7 +65,7 @@
 <a class="navbar-brand text-wrap" href="index.html">
   
   
-  <h1 class="site-logo" id="site-title">Traitement du signal</h1>
+  <h1 class="site-logo" id="site-title">Traitement du signal 1</h1>
   
 </a>
 </div>
@@ -111,6 +109,11 @@
    Énergie et puissance
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-elementaire.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -121,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="convolution.html">
    Produit de convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-convolution.html">
+   Exercices
   </a>
  </li>
 </ul>
@@ -135,6 +143,11 @@
    Intercorrélation
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-intercorrelation.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -145,6 +158,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Représentation vectorielle des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-vect.html">
+   Exercices
   </a>
  </li>
 </ul>
@@ -169,6 +187,11 @@
    Représentation temps-fréquence
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-fourier.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -186,51 +209,31 @@
    Quantification
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-numerisation.html">
+   Exercices
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Activités
+  Travaux pratiques
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="td1.html">
-   Séance du 14/10/2020
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td2.html">
-   Séance du 20/10/2020
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="tp1.html">
-   Séance du 22/10/2020
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td3.html">
-   📝 Séance du 10/11/2020
+   TP du 22/10/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tp2.html">
-   💻 Séance du 13/11/2020
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td4.html">
-   📝 Séance du 17/11/2020
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="td5.html">
-   📝 Séance du 08/12/2020
+   TP du 13/11/2020
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tp3.html">
-   💻 Séance du 10/12/2020
+   TP du 10/12/2020
   </a>
  </li>
 </ul>
@@ -240,6 +243,13 @@
  </span>
 </p>
 <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://moodle3.unistra.fr/course/view.php?id=13717">
+   Moodle
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python.html">
    Installer et utiliser Python
@@ -311,6 +321,22 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/vincmazet/signal1/blob/master/vect.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -402,19 +428,19 @@ On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span>
   \qquad\text{et}\qquad
   \delta = [1 \, 0].
 \]</div>
-<p>Leur représentation est donnée <a class="reference internal" href="#f-vect-ex-graphe"><span class="std std-numref">Fig. 7</span></a>. Il s’agit simplement de deux signaux de deux échantillons. Les axes de cette représentation sont : les échantillons en abscisse, et les amplitude du signal en ordonnée.</p>
+<p>Leur représentation est donnée <a class="reference internal" href="#f-vect-ex-graphe"><span class="std std-numref">Fig. 8</span></a>. Il s’agit simplement de deux signaux de deux échantillons. Les axes de cette représentation sont : les échantillons en abscisse, et les amplitude du signal en ordonnée.</p>
 <div class="figure align-default" id="f-vect-ex-graphe">
 <div class="cell_output docutils container">
 <img alt="_images/vect_4_1.png" src="_images/vect_4_1.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de signaux.</span><a class="headerlink" href="#f-vect-ex-graphe" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de signaux.</span><a class="headerlink" href="#f-vect-ex-graphe" title="Permalink to this image">¶</a></p>
 </div>
-<p>Par ailleurs, comme ces deux signaux peuvent s’interpréter comme des vecteurs, alors on peut les représenter comme tel, dans un espace à deux dimensions, comme dans la <a class="reference internal" href="#f-vect-ex-espace"><span class="std std-numref">Fig. 8</span></a>. Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.</p>
+<p>Par ailleurs, comme ces deux signaux peuvent s’interpréter comme des vecteurs, alors on peut les représenter comme tel, dans un espace à deux dimensions, comme dans la <a class="reference internal" href="#f-vect-ex-espace"><span class="std std-numref">Fig. 9</span></a>. Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.</p>
 <div class="figure align-default" id="f-vect-ex-espace">
 <div class="cell_output docutils container">
 <img alt="_images/vect_4_3.png" src="_images/vect_4_3.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de vecteurs.</span><a class="headerlink" href="#f-vect-ex-espace" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de vecteurs.</span><a class="headerlink" href="#f-vect-ex-espace" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="section" id="quelques-definitions">
 <h2>Quelques définitions<a class="headerlink" href="#quelques-definitions" title="Permalink to this headline">¶</a></h2>
@@ -478,7 +504,7 @@ On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span>
 <div class="cell_output docutils container">
 <img alt="_images/vect_6_0.png" src="_images/vect_6_0.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Base canonique dans <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</span><a class="headerlink" href="#f-vect-base-canonique" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Base canonique dans <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</span><a class="headerlink" href="#f-vect-base-canonique" title="Permalink to this image">¶</a></p>
 </div>
 <p>Nous ne représentons pas ces quatre signaux sous forme de vecteur, car cela nécessite de les représenter dans un espace à quatre dimensions (or, votre écran n’en a que deux).</p>
 <p>Cette base est d’ailleurs appelée <em>base canonique</em> car c’est la base naturelle pour représenter les signaux. En effet, les échantillons de tout signal de taille <span class="math notranslate nohighlight">\(N\)</span> correspondent aux coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span>.</p>
@@ -488,18 +514,18 @@ On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span>
 <h2>Décomposition sur une base<a class="headerlink" href="#decomposition-sur-une-base" title="Permalink to this headline">¶</a></h2>
 <p>Parfois, il est intéressant de représenter les signaux dans une autre base que la base canonique : on parle alors de <em>décomposition</em> ou de <em>projection</em> d’un signal <span class="math notranslate nohighlight">\(x\)</span> sur une base.
 La transformée de Fourier peut être vue comme la décomposition de signaux dans une autre base.
-De même, les techniques de compression (audio, image ou vidéo) utilisent adtucieusement une décomposition dans une base particulière pour réduire le poids des données.
+De même, les techniques de compression (audio, image ou vidéo) utilisent astucieusement une décomposition dans une base particulière pour réduire le poids des données.
 Les coefficients du signal dans cette nouvelle base vont donc être différent des coefficients de la base canonique.</p>
-<p>La décomposition d’un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N\)</span> dans une base orthonormée <span class="math notranslate nohighlight">\(\{\varphi_k\}\)</span>, et donc le calcul des nouveaux coefficients <span class="math notranslate nohighlight">\(\alpha'_k\)</span>, s’obtient en calculant le produit scalaire de <span class="math notranslate nohighlight">\(x\)</span> avec chaque élément <span class="math notranslate nohighlight">\(\varphi_k\)</span> de la base :</p>
+<p>La décomposition d’un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N\)</span> dans une base orthonormée <span class="math notranslate nohighlight">\(\{\varphi_k\}\)</span>, et donc le calcul des nouveaux coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span>, s’obtient en calculant le produit scalaire de <span class="math notranslate nohighlight">\(x\)</span> avec chaque élément <span class="math notranslate nohighlight">\(\varphi_k\)</span> de la base :</p>
 <div class="math notranslate nohighlight">
 \[
   \forall k \in \{0,\dots,N-1\},\quad
-  \alpha'_k = \langle x, \varphi_k \rangle.
+  \alpha_k = \langle x, \varphi_k \rangle.
 \]</div>
-<p>La <em>reconstruction</em> du signal <span class="math notranslate nohighlight">\(x\)</span> consiste à réécrire le signal dans la base canonique depuis la base <span class="math notranslate nohighlight">\(\{\varphi_k\}\)</span>. Pour cela, le signal <span class="math notranslate nohighlight">\(x\)</span> s’obtient par la somme des éléments de la base <span class="math notranslate nohighlight">\(\varphi_k\)</span> pondérés par les coefficients <span class="math notranslate nohighlight">\(\alpha'_k\)</span> :</p>
+<p>La <em>reconstruction</em> du signal <span class="math notranslate nohighlight">\(x\)</span> consiste à réécrire le signal dans la base canonique depuis la base <span class="math notranslate nohighlight">\(\{\varphi_k\}\)</span>. Pour cela, le signal <span class="math notranslate nohighlight">\(x\)</span> s’obtient par la somme des éléments de la base <span class="math notranslate nohighlight">\(\varphi_k\)</span> pondérés par les coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> :</p>
 <div class="math notranslate nohighlight">
 \[
-  x = \sum_{k=0}^{N-1} \alpha'_k \varphi_k.
+  x = \sum_{k=0}^{N-1} \alpha_k \varphi_k.
 \]</div>
 </div>
 </div>
@@ -532,8 +558,8 @@ Les coefficients du signal dans cette nouvelle base vont donc être différent d
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intercorrelation.html" title="previous page">Intercorrélation</a>
-    <a class='right-next' id="next-link" href="fourier.html" title="next page">Transformations de Fourier</a>
+    <a class='left-prev' id="prev-link" href="td-intercorrelation.html" title="previous page">Exercice (intercorrélation)</a>
+    <a class='right-next' id="next-link" href="td-vect.html" title="next page">Exercices (Représentation vectorielle)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
