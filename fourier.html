@@ -348,9 +348,16 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#serie-de-fourier">
+   Série de Fourier
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulation-alternative">
+     Formulation alternative
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#transformee-de-fourier">
@@ -358,23 +365,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transformee-de-fourier-a-temps-discret">
-   Transformée de Fourier à temps discret
+  <a class="reference internal nav-link" href="#serie-de-fourier-discrete">
+   Série de Fourier discrète
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#serie-de-fourier">
-   Série de Fourier
+  <a class="reference internal nav-link" href="#representation">
+   Représentation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transformee-de-fourier-discrete">
-   Transformée de Fourier discrète
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fft">
-   FFT
+  <a class="reference internal nav-link" href="#recapitulatif">
+   Récapitulatif
   </a>
  </li>
 </ul>
@@ -389,26 +391,210 @@
                 
   <div class="section" id="transformations-de-fourier">
 <h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>vidéo de présentation de J. Fourier.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cYRUlU4Rpu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sJ7j81Nqw6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Joseph Fourier (1768–1830) a été professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
+et préfet de l’Isère.
+Il a aussi été membre de l’Académie des sciences et de l’Académie française.</p>
+<p>En travaillant sur le phénomène de propagation de la chaleur,
+il s’aperçut qu’il était utile de représenter la distribution de température dans les matériaux comme une somme de sinusoïdes :
+c’est ce qu’on appelle maintenant une décomposition en <em>série de Fourier</em>.
+La série de Fourier, et les autres transformations qui en découlent,
+jouent un rôle capital en traitement du signal
+car elles permettent de mettre en évidence les fréquences contenues dans un signal.</p>
+<p>La vidéo ci-dessous raconte la vie de Joseph Fourier.</p>
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/cYRUlU4Rpu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Cette autre vidéo  se concentre sur les applications actuelles des transformations de Fourier.</p>
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/sJ7j81Nqw6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Il existe quatre transformations de Fourier, chacune adaptée au type de signal considéré :</p>
+<ul class="simple">
+<li><p>la « série de Fourier » (SF) s’applique aux signaux à temps continu et périodiques,</p></li>
+<li><p>la « transformée de Fourier » (TF) s’applique aux signaux à temps continu et apériodiques,</p></li>
+<li><p>la « série de Fourier discrète » (SFD) s’applique aux signaux à temps discret et périodiques,</p></li>
+<li><p>et la « transformée de Fourier à temps discret » (TFTD) s’applique aux signaux à temps discret et apériodiques.</p></li>
+</ul>
+<div class="section" id="serie-de-fourier">
+<h2>Série de Fourier<a class="headerlink" href="#serie-de-fourier" title="Permalink to this headline">¶</a></h2>
+<p>Tout signal <span class="math notranslate nohighlight">\(x(t)\)</span> à temps continu et périodique de période <span class="math notranslate nohighlight">\(T\)</span> peut s’écrire comme une combinaison linéaire
+de fonctions <span class="math notranslate nohighlight">\(\exp\left(j\frac{2\pi k t}{T}\right)\)</span>, qui sont elles-mêmes périodiques de période <span class="math notranslate nohighlight">\(T\)</span> :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier inverse.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+x(t) = \sum_{k=-\infty}^{+\infty} X[k] e^{+j 2 \pi k t / T}
+\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Vous remarquerez que le signal temporel <span class="math notranslate nohighlight">\(x\)</span> est noté en minuscule,
+alors que le signal fréquentiel <span class="math notranslate nohighlight">\(X\)</span> est en majuscule.</p>
+</div>
+<p>où <span class="math notranslate nohighlight">\(k \in \mathbb{Z}\)</span> est la « fréquence » et <span class="math notranslate nohighlight">\(X[k]\)</span> sont des coefficients.
+L’ensemble de ces coefficients, noté simplement <span class="math notranslate nohighlight">\(X\)</span>, est la série de Fourier de <span class="math notranslate nohighlight">\(x\)</span> ; et c’est aussi un signal.
+On montre que les coefficients de la série de Fourier sont définis par :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+X[k] = \frac{1}{T} \int_T x(t) e^{-j 2 \pi k t / T } dt.
+\]</div>
+<p>Le terme <span class="math notranslate nohighlight">\(k\)</span> est appelé la <span class="math notranslate nohighlight">\(k\)</span><sup>e</sup> harmonique.
+En particulier, le terme pour <span class="math notranslate nohighlight">\(X[1]\)</span> est la première harmonique, que l’on appelle aussi la « composante fondamentale ».
+Par ailleurs, le terme pour <span class="math notranslate nohighlight">\(k=0\)</span> correspond à la moyenne du signal :</p>
+<div class="math notranslate nohighlight">
+\[
+X[0] = \frac{1}{T} \int_T x(t) dt.
+\]</div>
+<div class="section" id="formulation-alternative">
+<h3>Formulation alternative<a class="headerlink" href="#formulation-alternative" title="Permalink to this headline">¶</a></h3>
+<p>Parfois, la série de Fourier de signaux réels est définie comme l’ensemble des coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> tels que :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+                                a_0 &amp;= \frac{1}{T} \int_0^T x(t) dt \\
+\forall k \in\mathbb{N}, \qquad a_k &amp;= \frac{2}{T} \int_0^T x(t) \cos(2 \pi k t / T) dt \\
+\forall k \in\mathbb{N}, \qquad b_k &amp;= \frac{2}{T} \int_0^T x(t) \sin(2 \pi k t / T) dt
+\end{split}\]</div>
+<p>La relation entre ces coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> avec l’expression précédente de la série de Fourier est :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{si}\, k&lt;0\,:\qquad X[k] &amp;= \frac{a_{-k}+jb_{-k}}{2} \\
+\text{si}\, k=0\,:\qquad X[0] = a_0 \\
+\text{si}\, k&gt;0\,:\qquad X[k] = \frac{a_k-jb_k}{2}
+\end{split}\]</div>
+<p>et la formule de la série de Fourier inverse devient :</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = a_0 + \sum_{k=1}^{+\infty} \left( a_k \cos(2 \pi k t / T) + b_k \sin(2 \pi k t / T) \right).
+\]</div>
+<p>Dans le cadre de ce module, nous n’utiliserons pas les formules faisant intervenir <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span>
+car elles obligent à effectuer deux fois plus de calcul qu’avec les formules précédentes utilisant <span class="math notranslate nohighlight">\(X[k]\)</span>.
+En effet, la formulation avec l’exponentielle complexe regroupe les termes en cosinus et en sinus.
+C’est donc plus simple en complexe !</p>
+</div>
 </div>
 <div class="section" id="transformee-de-fourier">
 <h2>Transformée de Fourier<a class="headerlink" href="#transformee-de-fourier" title="Permalink to this headline">¶</a></h2>
+<p>On peut considérer qu’un signal apériodique est le cas limite d’un signal périodique de période infinie.
+Dans ce cas, la série de Fourier tend vers la transformée de Fourier :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la transformée de Fourier.</p>
 </div>
-<div class="section" id="transformee-de-fourier-a-temps-discret">
-<h2>Transformée de Fourier à temps discret<a class="headerlink" href="#transformee-de-fourier-a-temps-discret" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+X(f) = \int_{-\infty}^{+\infty} x(t) e^{-j 2 \pi f t} dt
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(f\in\mathbb{R}\)</span> est la fréquence.
+De même qu’avec la série de Fourier, le signal temporel <span class="math notranslate nohighlight">\(x\)</span> peut être reconstruit à partir de <span class="math notranslate nohighlight">\(X\)</span> :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la transformée de Fourier inverse.</p>
 </div>
-<div class="section" id="serie-de-fourier">
-<h2>Série de Fourier<a class="headerlink" href="#serie-de-fourier" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+x(t) = \int_{-\infty}^{+\infty} X(f) e^{+j 2 \pi f t} df.
+\]</div>
 </div>
-<div class="section" id="transformee-de-fourier-discrete">
-<h2>Transformée de Fourier discrète<a class="headerlink" href="#transformee-de-fourier-discrete" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="serie-de-fourier-discrete">
+<h2>Série de Fourier discrète<a class="headerlink" href="#serie-de-fourier-discrete" title="Permalink to this headline">¶</a></h2>
+<p>De même que pour la série de Fourier, un signal à temps discret et périodique de période <span class="math notranslate nohighlight">\(N\)</span>
+peut s’écrire comme la combinaison linéaire de fonctions <span class="math notranslate nohighlight">\(\exp\left(j\frac{2\pi k n}{N}\right)\)</span>,
+qui sont également périodiques de période <span class="math notranslate nohighlight">\(N\)</span> :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier discrète inverse.</p>
 </div>
-<div class="section" id="fft">
-<h2>FFT<a class="headerlink" href="#fft" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+x[n] = \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / T}
+\]</div>
+<p>et :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier discrète.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+X[k] = \sum_{k=0}^{N-1} x[n] e^{-j 2 \pi k n / T}.
+\]</div>
+<p><strong>Remarque</strong>   Un signal <span class="math notranslate nohighlight">\(x[n]\)</span> à durée limité (donc non défini en dehors de l’intervalle <span class="math notranslate nohighlight">\(\{0,\dots,N-1\}\)</span>)
+peut être vu comme un signal périodique de période <span class="math notranslate nohighlight">\(N\)</span>.
+Il possède donc une série de Fourier discrète qui s’appelle dans ce cas « transformée de Fourier discrète » (TFD).
+Comme les signaux que l’on traite sur ordinateur sont toujours à durée limitée,
+alors ce sera cette transformée de Fourier discrète qui sera calculée.
+Il existe un algorithme très rapide pour la calculer : l’algorithme FFT (implémenté en Python dans la fonction <code class="docutils literal notranslate"><span class="pre">scipy.fft.fft</span></code>).</p>
+</div>
+<div class="section" id="representation">
+<h2>Représentation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h2>
+<p>On l’a vu, les transformations de Fourier <span class="math notranslate nohighlight">\(X\)</span> du signal <span class="math notranslate nohighlight">\(x\)</span> sont des signaux.
+En raison de l’exponentielle complexe dans les formules ci-dessus, <span class="math notranslate nohighlight">\(X\)</span> est souvent complexe.
+Pour représenter <span class="math notranslate nohighlight">\(X\)</span>, il faudrait donc se placer dans un espace en trois dimensions dont les axes seraient
+la fréquence (<span class="math notranslate nohighlight">\(f\)</span> ou <span class="math notranslate nohighlight">\(k\)</span>), la partie réelle de <span class="math notranslate nohighlight">\(X\)</span> et la partie imaginaire de <span class="math notranslate nohighlight">\(X\)</span>.
+Vous conviendrez que ce n’est pas commode de représenter un signal à valeurs complexes sur une feuille ou un écran…</p>
+<p>Pour cette raison, les transformations de Fourier sont représentées à l’aide de deux graphiques :</p>
+<ul class="simple">
+<li><p>le premier représente le module de <span class="math notranslate nohighlight">\(X\)</span> en fonction de la fréquence,</p></li>
+<li><p>le second représente l’argument de <span class="math notranslate nohighlight">\(X\)</span> en fonction de la fréquence.</p></li>
+</ul>
+<p>L’ensemble de ces deux graphiques s’appelle le « spectre ».</p>
+<p>On peut être surpris que le spectre présente des fréquences « négatives » (à gauche de l’axe des ordonnées).
+En fait, il ne s’agit pas de fréquences négatives (cela n’a pas de sens),
+mais d’exponentielles complexes tournant en sens opposé aux exponentielles complexes de la partie à droite de l’axe des ordonnées.</p>
+</div>
+<div class="section" id="recapitulatif">
+<h2>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Permalink to this headline">¶</a></h2>
+<p>Quelle que soit la transformation, on peut donc résumer ainsi les différentes notations utilisées :</p>
+<table>
+<thead>
+  <tr>
+    <td>&emsp;•&ensp;Domaine</td>
+    <td>temporel</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>fréquentiel</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&emsp;•&ensp;Signal :</td>
+    <td>\(x\)</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>\(X\)</td>
+  </tr>
+  <tr>
+    <td>&emsp;•&ensp;Variable :</td>
+    <td>\(t\) ou \(n\)</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>\(f\) ou \(k\)</td>
+  </tr>
+  <tr>
+    <td>&emsp;•&ensp;Exemple d'unité&emsp;</td>
+    <td>seconde (s)</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>s<sup>–1</sup> = hertz (Hz)</td>
+  </tr>
+</tbody>
+</table>
+<br>
+<p>Par ailleurs, on remarque que le passage du domaine temporel au domaine fréquentiel utilise une exponentielle du type <span class="math notranslate nohighlight">\(e^{-\theta}\)</span>
+alors que l’inverse utilise <span class="math notranslate nohighlight">\(e^{+\theta}\)</span>, où :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi k t / T\)</span> pour la SF,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi f t    \)</span> pour la TF,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi k n / N\)</span> pour la SFD (ou TFD).</p></li>
+</ul>
+<p>On retrouve donc toujours le même schéma pour <span class="math notranslate nohighlight">\(\theta\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+\theta = j 2 \pi \times \text{fréquence} \times \text{temps} \times \text{période éventuelle}
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><span class="math notranslate nohighlight">\(t\)</span> et <span class="math notranslate nohighlight">\(f\)</span> sont les <em>variables</em> de temps et de fréquence, respectivement.
+En revanche, <span class="math notranslate nohighlight">\(T\)</span> et son inverse <span class="math notranslate nohighlight">\(F=1/T\)</span> sont des <em>constantes</em> représentant la période et la fréquence d’un signal, respectivement.
+Ne confondez pas la fréquence <span class="math notranslate nohighlight">\(f\)</span> qui est une variable dont dépend <span class="math notranslate nohighlight">\(X\)</span>
+et la fréquence <span class="math notranslate nohighlight">\(F\)</span> qui est une constante représentant la fréquence d’un signal périodique <span class="math notranslate nohighlight">\(x\)</span> !</p>
+</div>
 </div>
 </div>
 
