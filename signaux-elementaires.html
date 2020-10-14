@@ -428,7 +428,7 @@ La plupart peuvent être définis à temps continu ou à temps discret.</p>
 <p>Le sinus est créé en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sin.html"><code class="docutils literal notranslate"><span class="pre">numpy.sin</span></code></a>.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_2_0.png" src="_images/signaux-elementaires_2_0.png" />
+<img alt="_images/signaux-elementaires_3_0.png" src="_images/signaux-elementaires_3_0.png" />
 </div>
 </div>
 </div>
@@ -445,9 +445,9 @@ et le nombre complexe <span class="math notranslate nohighlight">\(j\)</span> es
 <p>À cause du nombre complexe <span class="math notranslate nohighlight">\(j\)</span>, le signal est à valeurs complexes. Pour le représenter, il faut être dans un espace à trois dimensions (la variable, la partie réelle et la partie imaginaire). De cette manière, l’exponetielle complexe ressemble à une queue de cochon, ou un tire-bouchon. Remarquez que la fréquence peut tout à fait être négative : dans ce cas, l’exponentielle complexe tourne dans le sens inverse.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_4_0.png" src="_images/signaux-elementaires_4_0.png" />
-<img alt="_images/signaux-elementaires_4_1.png" src="_images/signaux-elementaires_4_1.png" />
-<img alt="_images/signaux-elementaires_4_2.png" src="_images/signaux-elementaires_4_2.png" />
+<img alt="_images/signaux-elementaires_5_0.png" src="_images/signaux-elementaires_5_0.png" />
+<img alt="_images/signaux-elementaires_5_1.png" src="_images/signaux-elementaires_5_1.png" />
+<img alt="_images/signaux-elementaires_5_2.png" src="_images/signaux-elementaires_5_2.png" />
 </div>
 </div>
 </div>
@@ -468,7 +468,7 @@ Encore une fois, le sinus cardinal à temps discret a la même expression (avec 
 Le sinus cardinal est obtenu en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sinc.html"><code class="docutils literal notranslate"><span class="pre">numpy.sinc</span></code></a>.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_6_0.png" src="_images/signaux-elementaires_6_0.png" />
+<img alt="_images/signaux-elementaires_7_0.png" src="_images/signaux-elementaires_7_0.png" />
 </div>
 </div>
 </div>
@@ -488,19 +488,23 @@ Vous l’aurez compris, il existe aussi une version à temps discret.
 Il est également appelé fonction de Heaviside.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_8_0.png" src="_images/signaux-elementaires_8_0.png" />
+<img alt="_images/signaux-elementaires_9_0.png" src="_images/signaux-elementaires_9_0.png" />
 </div>
 </div>
 <p>Il n’existe pas de fonction permettant de générer un échelon en Python : il faut passer par des instructions spécifiques, comme par exemple dans le code suivant :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tout d&#39;abord, générer la liste des instants d&#39;échantillonnage</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modules à importer</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Tout d&#39;abord, générer la liste des instants d&#39;échantillonnage</span>
 <span class="c1"># Par exemple ici : 11 échantillons répartis entre -5 et 5</span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># L&#39;échelon est obtenu avec la fonction numpy.where</span>
 <span class="c1"># qui affecte la valeur 1 ou 0 suivant la condition</span>
-<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># Affichage (les échantillons sont représentés par des points</span>
 <span class="c1"># et ne sont pas reliés)</span>
@@ -510,7 +514,7 @@ Il est également appelé fonction de Heaviside.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_10_0.png" src="_images/signaux-elementaires_10_0.png" />
+<img alt="_images/signaux-elementaires_11_0.png" src="_images/signaux-elementaires_11_0.png" />
 </div>
 </div>
 </div>
@@ -528,7 +532,7 @@ Il est également appelé fonction de Heaviside.</p>
 <p>La porte est également appelée fonction rectangle.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_12_0.png" src="_images/signaux-elementaires_12_0.png" />
+<img alt="_images/signaux-elementaires_13_0.png" src="_images/signaux-elementaires_13_0.png" />
 </div>
 </div>
 <p>Comme pour l’échelon, la porte peut être définie en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.where.html"><code class="docutils literal notranslate"><span class="pre">numpy.where</span></code></a> :</p>
@@ -543,7 +547,7 @@ Il est également appelé fonction de Heaviside.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_14_0.png" src="_images/signaux-elementaires_14_0.png" />
+<img alt="_images/signaux-elementaires_15_0.png" src="_images/signaux-elementaires_15_0.png" />
 </div>
 </div>
 </div>
@@ -559,7 +563,7 @@ Il est également appelé fonction de Heaviside.</p>
 <p>L’impulsion de Dirac n’est pas une fonction, au sens mathématique, car <span class="math notranslate nohighlight">\(\delta(0)\)</span> n’est pas défini : c’est en fait une distribution. Pour cette raison, on représente ce signal par une flèche, qui signifie que en 0, la valeur n’est pas définie.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_16_0.png" src="_images/signaux-elementaires_16_0.png" />
+<img alt="_images/signaux-elementaires_17_0.png" src="_images/signaux-elementaires_17_0.png" />
 </div>
 </div>
 <p>C’est un signal non représentable physiquement : il n’existe pas dans la nature, mais c’est une conceptualisation mathématique bien utile en traitement du signal. Un exemple réaliste qui s’en approcherait serait le son produit lorsqu’on tape d’un coup bref dans ses mains. On peut l’approcher par une porte dont la largeur tend vers 0 et l’amplitude vers l’infini.</p>
@@ -597,13 +601,13 @@ Il est également appelé fonction de Heaviside.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/signaux-elementaires_19_0.png" src="_images/signaux-elementaires_19_0.png" />
+<img alt="_images/signaux-elementaires_20_0.png" src="_images/signaux-elementaires_20_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="peigne-de-dirac">
 <h2>Peigne de Dirac<a class="headerlink" href="#peigne-de-dirac" title="Permalink to this headline">¶</a></h2>
-<p>Le peigne de Dirac est défini par :</p>
+<p>Le peigne de Dirac est défini par (<span class="math notranslate nohighlight">\(T &gt; 0\)</span>) :</p>
 <div class="math notranslate nohighlight">
 \[
   Ш_T(t) = \sum_{k=-\infty}^{+\infty} \delta(t-kT)
