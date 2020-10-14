@@ -414,7 +414,7 @@ car elles permettent de mettre en évidence les fréquences contenues dans un si
 <div class="section" id="serie-de-fourier">
 <h2>Série de Fourier<a class="headerlink" href="#serie-de-fourier" title="Permalink to this headline">¶</a></h2>
 <p>Tout signal <span class="math notranslate nohighlight">\(x(t)\)</span> à temps continu et périodique de période <span class="math notranslate nohighlight">\(T\)</span> peut s’écrire comme une combinaison linéaire
-de fonctions <span class="math notranslate nohighlight">\(\exp\left(j\frac{2\pi k t}{T}\right)\)</span>, qui sont elles-mêmes périodiques de période <span class="math notranslate nohighlight">\(T\)</span> :</p>
+de fonctions <span class="math notranslate nohighlight">\(\exp\left(j 2\pi k t/T\right)\)</span>, qui sont elles-mêmes périodiques de période <span class="math notranslate nohighlight">\(T\)</span> :</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Cette formule est la série de Fourier inverse.</p>
@@ -459,8 +459,8 @@ X[0] = \frac{1}{T} \int_T x(t) dt.
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \text{si}\, k&lt;0\,:\qquad X[k] &amp;= \frac{a_{-k}+jb_{-k}}{2} \\
-\text{si}\, k=0\,:\qquad X[0] = a_0 \\
-\text{si}\, k&gt;0\,:\qquad X[k] = \frac{a_k-jb_k}{2}
+\text{si}\, k=0\,:\qquad X[0] &amp;= a_0 \\
+\text{si}\, k&gt;0\,:\qquad X[k] &amp;= \frac{a_k-jb_k}{2}
 \end{split}\]</div>
 <p>et la formule de la série de Fourier inverse devient :</p>
 <div class="math notranslate nohighlight">
@@ -470,7 +470,7 @@ x(t) = a_0 + \sum_{k=1}^{+\infty} \left( a_k \cos(2 \pi k t / T) + b_k \sin(2 \p
 <p>Dans le cadre de ce module, nous n’utiliserons pas les formules faisant intervenir <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span>
 car elles obligent à effectuer deux fois plus de calcul qu’avec les formules précédentes utilisant <span class="math notranslate nohighlight">\(X[k]\)</span>.
 En effet, la formulation avec l’exponentielle complexe regroupe les termes en cosinus et en sinus.
-C’est donc plus simple en complexe !</p>
+C’est donc plus simple en complexe ! 😎</p>
 </div>
 </div>
 <div class="section" id="transformee-de-fourier">
