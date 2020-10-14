@@ -412,7 +412,7 @@ La plupart peuvent être définis à temps continu ou à temps discret.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(A\)</span> est l’<em>amplitude</em></p></li>
 <li><p><span class="math notranslate nohighlight">\(f\)</span> est la <em>fréquence</em></p></li>
-<li><p><span class="math notranslate nohighlight">\(\varphi\)</span> est le <em>déphasage</em></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi\)</span> est la <em>phase</em></p></li>
 </ul>
 <p>Remarquez que :</p>
 <ul class="simple">
@@ -420,7 +420,7 @@ La plupart peuvent être définis à temps continu ou à temps discret.</p>
 <li><p>si <span class="math notranslate nohighlight">\(\varphi=\pi/2\)</span>, alors <span class="math notranslate nohighlight">\(x(t)\)</span> est un cosinus.</p></li>
 </ul>
 <p>La sinusoïde en temps continu est une <a class="reference external" href="https://fr.wikipedia.org/wiki/Fonction_p%C3%A9riodique">fonction périodique</a> de période <span class="math notranslate nohighlight">\(1/f\)</span> ou, de manière équivalente, de fréquence <span class="math notranslate nohighlight">\(f\)</span>.</p>
-<p>En temps discret, la sinusoïde a la même expression (par convention, on entoure la variable de temps par des crochets dans le cas d’un signal échantillonné) :</p>
+<p>En temps discret, la sinusoïde a la même expression :</p>
 <div class="math notranslate nohighlight">
 \[
   x[n] = A \sin(2 \pi f n + \varphi)
@@ -509,6 +509,7 @@ Il est également appelé fonction de Heaviside.</p>
 <span class="c1"># Affichage (les échantillons sont représentés par des points</span>
 <span class="c1"># et ne sont pas reliés)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -542,6 +543,7 @@ Il est également appelé fonction de Heaviside.</p>
 <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;=-</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -596,6 +598,7 @@ Il est également appelé fonction de Heaviside.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$n$&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;δ[n]$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>

@@ -359,7 +359,7 @@
 <h1>Classification des signaux<a class="headerlink" href="#classification-des-signaux" title="Permalink to this headline">¶</a></h1>
 <p>La plupart des signaux physiques que l’on mesure sont <em>analogiques</em>, c’est-à-dire qu’ils dépendent d’une variable qui prend des valeurs <a class="reference external" href="http://www.educatim.fr/tq/co/Module_TQ_web/co/variable_continue.html">continues</a> (par exemple, le temps) et qu’eux-mêmes peuvent prendre des valeurs <em>continues</em>.
 On peut citer comme exemple la tension électrique dans un circuit, un son, une mesure de température, etc.</p>
-<p>À l’inverse, les signaux traités par un ordinateur sont un ensemble de valeurs qui dépendent donc d’une variable <a class="reference external" href="http://www.educatim.fr/tq/co/Module_TQ_web/co/variable_discrete.html">discrète</a>, et de plus les amplitudes du signal sont également discrètes. Ces signaux sont <em>numériques</em>. On peut citer comme exemple une photographie numérique qui est constituée de pixels dont les intensités ne peuvent prendre que 255<sup>8</sup> = 16 581 375 valeurs.</p>
+<p>À l’inverse, les signaux traités par un ordinateur sont un ensemble de valeurs qui dépendent donc d’une variable <a class="reference external" href="http://www.educatim.fr/tq/co/Module_TQ_web/co/variable_discrete.html">discrète</a>, et de plus les amplitudes du signal sont également discrètes. Ces signaux sont <em>numériques</em>. On peut citer comme exemple une photographie numérique qui est constituée de pixels dont les intensités ne peuvent prendre que 255<sup>3</sup> = 16 581 375 valeurs.</p>
 <p>Un signal numérique est à la fois <em>échantillonné</em> (c’est-à-dire qu’il dépend d’une variable discrète) et <em>quantifié</em> (ses amplitudes sont discrètes).</p>
 <p>Ainsi, l’<em>échantillonnage</em> consiste à transformer un signal non échantillonné à un signal échantillonné.
 De même, la <em>quantification</em> consiste à transformer un signal à valeurs continues en un signal à valeurs discrètes.
@@ -368,6 +368,13 @@ La combinaison de ces deux opérations est appelée <em>numérisation</em>. Nous
 <ul class="simple">
 <li><p>sur un ordinateur, on ne peut donc traiter que des signaux numériques car la précision des valeurs du signal est limitée et que l’acquisition du signal se fait à une fréquence définie. En plus, ces signaux sont de durée limitée car la mémoire de l’ordinateur ne permet d’enregistrer qu’un nombre fini de valeurs.</p></li>
 <li><p>un signal peut également être à valeurs complexes, quelle que soit sa classification. La représentation complexe est une représentation mathématique bien pratique car, même si les signaux physiques peuvent être exprimés avec des valeurs réelles, les nombres complexes permettent parfois de manipuler plus simplement les signaux <a class="reference internal" href="biblio.html#c-biblio"><span class="std std-ref">[Prandoni 2008, p. 20]</span></a>. C’est le cas par exemple des champs électromagnétiques.</p></li>
+</ul>
+<p>En traitement du signal, on adopte les conventions suivantes :</p>
+<ul class="simple">
+<li><p>les signaux à temps continu sont notés avec des parenthèses et, généralement, la variable <span class="math notranslate nohighlight">\(t\)</span>, par exemple : <span class="math notranslate nohighlight">\(x(t)\)</span>.</p></li>
+<li><p>les signaux à temps discret (échantillonnés) sont notés avec des crochets et, généralement, la variable <span class="math notranslate nohighlight">\(n\)</span>,
+par exemple : <span class="math notranslate nohighlight">\(x[n]\)</span>.
+En plus, la variable <span class="math notranslate nohighlight">\(n\)</span> ne prend que des valeurs entières (<span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>).</p></li>
 </ul>
 </div>
 
