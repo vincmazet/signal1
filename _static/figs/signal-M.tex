@@ -1,0 +1,30 @@
+% !TEX program = latex
+\documentclass[convert={density=800},border=1]{standalone}
+\usepackage{pstricks, pst-plot}
+\begin{document}
+
+\psset{unit=8mm}
+\begin{pspicture*}(-4.5,-1.1)(5.2,3.2)
+
+  % Axes
+  % \psaxes[labels=all,ticks=all,arrowsize=5pt,linewidth=.5pt]{->}(0,0)(-2.999,0)(4.9999,2.9999)
+  \psaxes[xlabelsep=3pt, ylabelsep=3pt, labels=all,
+  linewidth=.5pt, axesstyle=frame,
+  ticklinestyle=dotted, tickcolor=gray,
+  xticksize=0 3, yticksize=-3 5](0,0)(-3,0)(5,3)
+  \uput[-90](1,-.5){$t$}
+  \uput[-180](-3.5,1.5){$x(t)$}
+  % \rput[tr](5,-1ex){$t$}
+  % \rput[tr](-1ex,3){$x(t)$}
+
+  % Signal M
+  \psset{plotstyle=line,linewidth=1pt,linestyle=solid,linecolor=black}
+  \savedata{\mydata}[{ {-2.9,0}{-1,0}{-1,2}{0,2}{0,1}{2,1}{2,2}{3,2}{3,0}{4.9,0} }]
+  \dataplot{\mydata}
+
+  % Réécrit le label 2
+  % \rput[r](-.3,2){\psframebox*{2}}
+
+\end{pspicture*}
+
+\end{document}
