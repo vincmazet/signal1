@@ -16,7 +16,8 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" type="text/css" href="_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -26,12 +27,12 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
-    <script src="_static/js/three.js"></script>
-    <script src="_static/js/dilatation.js"></script>
-    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/expo.js"></script>
     <script src="_static/js/convolution.js"></script>
     <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/expo.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/three.js"></script>
+    <script src="_static/js/dilatation.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
@@ -451,9 +452,9 @@ X[0] = \frac{1}{T} \int_T x(t) dt.
 <p>Parfois, la série de Fourier de signaux réels est définie comme l’ensemble des coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> tels que :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-                                a_0 &amp;= \frac{1}{T} \int_0^T x(t) dt \\
-\forall k \in\mathbb{N}, \qquad a_k &amp;= \frac{2}{T} \int_0^T x(t) \cos(2 \pi k t / T) dt \\
-\forall k \in\mathbb{N}, \qquad b_k &amp;= \frac{2}{T} \int_0^T x(t) \sin(2 \pi k t / T) dt
+                                  a_0 &amp;= \frac{1}{T} \int_0^T x(t) dt \\
+\forall k \in\mathbb{N}^*, \qquad a_k &amp;= \frac{2}{T} \int_0^T x(t) \cos(2 \pi k t / T) dt \\
+\forall k \in\mathbb{N}^*, \qquad b_k &amp;= \frac{2}{T} \int_0^T x(t) \sin(2 \pi k t / T) dt
 \end{split}\]</div>
 <p>La relation entre ces coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> avec l’expression précédente de la série de Fourier est :</p>
 <div class="math notranslate nohighlight">
