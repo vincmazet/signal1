@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,16 +6,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Représentation temps-fréquence &#8212; Traitement du signal 1</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" type="text/css" href="_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -25,14 +45,14 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
-    <script src="_static/js/three.js"></script>
-    <script src="_static/js/dilatation.js"></script>
-    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/expo.js"></script>
     <script src="_static/js/convolution.js"></script>
     <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/expo.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/three.js"></script>
+    <script src="_static/js/dilatation.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -47,8 +67,8 @@
     <link rel="next" title="Exercice (analyse de Fourier)" href="td-fourier.html" />
     <link rel="prev" title="Propriétés des transformations de Fourier" href="props-fourier.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -317,7 +337,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -342,12 +363,7 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -357,7 +373,286 @@
                 
   <div class="section" id="representation-temps-frequence">
 <h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Permalink to this headline">¶</a></h1>
-<p>Représentation temps-fréquence</p>
+<p>Les transformations de Fourier font ressortir le contenu fréquentiel
+mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
+comme des changements brusques ou des modification de fréquence.</p>
+<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 13</span></a> représente deux signaux et leur spectres respectifs.
+Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 100 Hz,
+la différence étant l’ordre des deux sinusoïdes.
+À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels.
+À partir du module seul, on comprend que les signaux temporels sont constitués de deux sinusoïdes de 50 Hz et 100 Hz,
+mais la phase n’est pas interprétable.</p>
+<div class="figure align-default" id="f-temps-frequence-deux-sinus">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_3_0.png" src="_images/temps-frequence_3_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 100 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Permalink to this image">¶</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">wavfile</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Audio</span><span class="p">,</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+
+
+<span class="k">def</span> <span class="nf">tfplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fe</span><span class="p">):</span>
+    
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">Te</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">fe</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">Te</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="n">fe</span><span class="o">/</span><span class="n">N</span>
+
+    
+    <span class="n">X</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+    <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;x(t)&quot;</span><span class="p">)</span>
+
+    <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">f</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">fe</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">1.2e3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;|X|&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;f (Hz)&quot;</span><span class="p">)</span>
+
+    <span class="n">ax3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="mf">0.15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">f</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">fe</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mf">1.2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Arg(X)&quot;</span><span class="p">)</span>
+
+    <span class="n">ax4</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">ax4</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
+    <span class="n">Pxx</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">specgram</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">NFFT</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">Fs</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">noverlap</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;t (s)&quot;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">fe</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;_static/files/duck.wav&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="mi">20000</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">10000</span><span class="p">:</span><span class="mi">100000</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">tfplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fe</span><span class="p">)</span>
+
+<span class="n">fe</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;_static/files/hello.wav&quot;</span><span class="p">)</span>
+<span class="n">tfplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_4_0.png" src="_images/temps-frequence_4_0.png" />
+<img alt="_images/temps-frequence_4_1.png" src="_images/temps-frequence_4_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># % Représentation temps-fréquence</span>
+
+<span class="c1"># clear all;</span>
+<span class="c1"># close all;</span>
+
+<span class="c1"># % Pramètres communs pour les signaux synthétiques</span>
+<span class="c1"># N = 2000;</span>
+<span class="c1"># n = 0:N-1;</span>
+<span class="c1"># fe = 1e3;</span>
+<span class="c1"># Te = 1/fe;</span>
+<span class="c1"># t = n*Te;</span>
+<span class="c1"># k = 0:N/2-1;</span>
+<span class="c1"># f = k*fe/N;</span>
+<span class="c1"># W = 256;</span>
+<span class="c1"># w = hamming(W);</span>
+<span class="c1"># clim = [];</span>
+
+<span class="c1"># % Signaux</span>
+<span class="c1"># sig = {&#39;rect&#39;, &#39;gauss&#39;, &#39;sin12&#39;, &#39;sin21&#39;, &#39;chirp&#39;, &#39;guitar&#39;, &#39;hello&#39;, &#39;duck&#39;};</span>
+
+<span class="c1"># for i = 1:length(sig);</span>
+    
+<span class="c1">#     filename = sig{i};</span>
+    
+<span class="c1">#     % Signal temporel</span>
+<span class="c1">#     switch filename</span>
+            
+<span class="c1">#         case &#39;rect&#39;</span>
+<span class="c1">#             x = (n&gt;.4*N) .* (n&lt;.6*N);</span>
+<span class="c1">#             x = x .* sin(2*pi*200*t);</span>
+            
+<span class="c1">#         case &#39;gauss&#39;</span>
+<span class="c1">#             x = exp(-(n-N/2).^2/2/1000);</span>
+<span class="c1">#             x = x .* sin(2*pi*200*t);</span>
+        
+<span class="c1">#         case &#39;sin12&#39;</span>
+<span class="c1">#             x = sin(2*pi*30*t) .* (n&lt;N/2) + sin(2*pi*100*t) .* (n&gt;=N/2);</span>
+            
+<span class="c1">#         case &#39;sin21&#39;</span>
+<span class="c1">#             x = sin(2*pi*100*t) .* (n&lt;N/2) + sin(2*pi*30*t) .* (n&gt;=N/2);</span>
+            
+<span class="c1">#         case &#39;chirp&#39;</span>
+<span class="c1">#             f0 = 0;</span>
+<span class="c1">#             f1 = 100;</span>
+<span class="c1">#             k = (f1-f0)/t(end);</span>
+<span class="c1">#             x = sin( 2*pi*f0*t + 2*pi*k*t.^2 );</span>
+            
+<span class="c1">#         case &#39;guitar&#39;</span>
+<span class="c1">#             x = audioread(&#39;guitar.wav&#39;);</span>
+<span class="c1">#             d = 80;</span>
+<span class="c1">#             x = x(1:d:end);</span>
+<span class="c1">#             fe = 192000/d;</span>
+<span class="c1">#             N = floor(length(x)/2)*2;</span>
+<span class="c1">#             x = x(1:N);</span>
+<span class="c1"># %             sound(x,fe);</span>
+<span class="c1">#             n = 0:N-1;</span>
+<span class="c1">#             Te = 1/fe;</span>
+<span class="c1">#             t = n*Te;</span>
+<span class="c1">#             k = 0:N/2-1;</span>
+<span class="c1">#             f = k*fe/N;</span>
+<span class="c1">#             clim = [0 10];</span>
+            
+<span class="c1">#         case &#39;hello&#39;</span>
+<span class="c1">#             x = audioread(&#39;hello.wav&#39;);</span>
+<span class="c1">#             d = 1;</span>
+<span class="c1">#             x = x(1:d:end,1);</span>
+<span class="c1">#             fe = 44100/d;</span>
+<span class="c1">#             N = floor(length(x)/2)*2;</span>
+<span class="c1">#             x = x(1:N);</span>
+<span class="c1"># %             sound(x,fe);</span>
+<span class="c1">#             n = 0:N-1;</span>
+<span class="c1">#             Te = 1/fe;</span>
+<span class="c1">#             t = n*Te;</span>
+<span class="c1">#             k = 0:N/2-1;</span>
+<span class="c1">#             f = k*fe/N;</span>
+<span class="c1">#             clim = [0 5];</span>
+            
+<span class="c1">#         case &#39;duck&#39;</span>
+<span class="c1">#             x = audioread(&#39;duck.wav&#39;);</span>
+<span class="c1">#             d = 1;</span>
+<span class="c1">#             x = x(10000:d:100000,1);</span>
+<span class="c1">#             fe = 44100/d;</span>
+<span class="c1">#             N = floor(length(x)/2)*2;</span>
+<span class="c1">#             x = x(1:N);</span>
+<span class="c1"># %             sound(x,fe);</span>
+<span class="c1">#             n = 0:N-1;</span>
+<span class="c1">#             Te = 1/fe;</span>
+<span class="c1">#             t = n*Te;</span>
+<span class="c1">#             k = 0:N/2-1;</span>
+<span class="c1">#             f = k*fe/N;</span>
+<span class="c1">#             clim = [0 5];</span>
+            
+<span class="c1">#     end;</span>
+    
+<span class="c1">#     % Transformée de Fourier (partie positive seulement)</span>
+<span class="c1">#     X = fftshift(fft(x));</span>
+<span class="c1">#     X = X(N/2+1:N);</span>
+    
+<span class="c1">#     % Spectrogramme</span>
+<span class="c1">#     s = spectrogram(x,w,250,W,fe);</span>
+    
+<span class="c1">#     % Affichage</span>
+<span class="c1">#     xx = 0.2;</span>
+<span class="c1">#     yy = 0.75;</span>
+<span class="c1">#     dx = 0.1;</span>
+<span class="c1">#     dy = 0.05;</span>
+<span class="c1">#     figure(&#39;Color&#39;,&#39;white&#39;);</span>
+<span class="c1">#     axes(&#39;Position&#39;,[xx+dx yy+dy 1-xx-dx-dy 1-yy-2*dy]);</span>
+<span class="c1">#         plot(t,x);</span>
+<span class="c1">#         title(&#39;Signal temporel&#39;,&#39;FontWeight&#39;,&#39;normal&#39;);</span>
+<span class="c1">#         set(gca,&#39;XTick&#39;,[]);</span>
+<span class="c1">#         xlim([0 t(end)]);</span>
+<span class="c1">#     axes(&#39;Position&#39;,[dy dx xx-dy yy-dx]);</span>
+<span class="c1">#         plot(abs(X),f);</span>
+<span class="c1">#         ylabel(&#39;Module du spectre&#39;);</span>
+<span class="c1">#         set(gca,&#39;XDir&#39;,&#39;Reverse&#39;);</span>
+<span class="c1">#         set(gca,&#39;YTick&#39;,[]);</span>
+<span class="c1">#     axes(&#39;Position&#39;,[xx+dx dx 1-xx-dx-dy yy-dx]);</span>
+<span class="c1">#         if numel(clim)==0,</span>
+<span class="c1">#             imagesc(t,(0:N/2-1)*fe/N,abs(s).^2)</span>
+<span class="c1">#         else</span>
+<span class="c1">#             imagesc(t,(0:N/2-1)*fe/N,abs(s).^2,clim)</span>
+<span class="c1">#         end;</span>
+<span class="c1">#         axis xy; colormap(jet);</span>
+<span class="c1">#         xlabel(&#39;Temps (s)&#39;);</span>
+<span class="c1">#         ylabel(&#39;Fréquence (Hz)&#39;);</span>
+        
+<span class="c1">#     % Enregistrement en PNG de l&#39;image couleur (pour la projection)</span>
+<span class="c1">#     export_fig([filename &#39;.png&#39;],&#39;-nocrop&#39;,&#39;-m2&#39;,&#39;-nofontswap&#39;);</span>
+    
+<span class="c1"># %     % Enregistrement en EPS de l&#39;image à niveaux de gris (pour le support)</span>
+<span class="c1"># %     colormap(repmat(linspace(1,0,100)&#39;,1,3));</span>
+<span class="c1"># %     export_fig([filename &#39;-eps.png&#39;],&#39;-nocrop&#39;,&#39;-m2&#39;,&#39;-nofontswap&#39;);</span>
+<span class="c1"># %     system([&#39;convert &#39; filename &#39;-eps.png &#39; filename &#39;.eps&#39;]);</span>
+<span class="c1"># %     system([&#39;rm &#39; filename &#39;-eps.png&#39;]);</span>
+    
+<span class="c1"># end;</span>
+
+
+<span class="c1"># % % Chirp</span>
+<span class="c1"># % N = 2000;</span>
+<span class="c1"># % n = 0:N-1;</span>
+<span class="c1"># % fe = 1e3;</span>
+<span class="c1"># % Te = 1/fe;</span>
+<span class="c1"># % t = n*Te;</span>
+<span class="c1"># % </span>
+<span class="c1"># % f0 = 0;</span>
+<span class="c1"># % f1 = 50;</span>
+<span class="c1"># % k = (f1-f0)/t(end);</span>
+<span class="c1"># % x = sin( 2*pi*f0*t + 2*pi*k*t.^2 );</span>
+<span class="c1"># % figure;</span>
+<span class="c1"># % plot(t,x);</span>
+<span class="c1"># % xlabel(&#39;Temps (s)&#39;);</span>
+<span class="c1"># % ylabel(&#39;x(t)&#39;);</span>
+<span class="c1"># % </span>
+<span class="c1"># % X = fftshift(fft(x));</span>
+<span class="c1"># % k = (0:N-1) - floor(N/2);</span>
+<span class="c1"># % figure;</span>
+<span class="c1"># % plot(k*fe/N,abs(X));</span>
+<span class="c1"># % xlabel(&#39;Fréquence (Hz)&#39;);</span>
+<span class="c1"># % ylabel(&#39;|X(f)|&#39;);</span>
+<span class="c1"># % </span>
+<span class="c1"># % % Fenêtre</span>
+<span class="c1"># % W = 256;</span>
+<span class="c1"># % w = hamming(W);</span>
+<span class="c1"># % [s,f,t,p] = spectrogram(x,w,250,W,fe);</span>
+<span class="c1"># % figure;</span>
+<span class="c1"># % imagesc(p)</span>
+<span class="c1"># % axis xy; axis tight; colormap(jet);</span>
+<span class="c1"># % xlabel(&#39;Temps (s)&#39;);</span>
+<span class="c1"># % ylabel(&#39;Fréquence (Hz)&#39;);</span>
+<span class="c1"># % </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">d770d3e9fec9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Audio</span><span class="p">,</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">fe</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;duck.wav&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+
+<span class="nn">~/anaconda3/lib/python3.7/site-packages/scipy/io/wavfile.py</span> in <span class="ni">read</span><span class="nt">(filename, mmap)</span>
+<span class="g g-Whitespace">    </span><span class="mi">262</span>         <span class="n">mmap</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">263</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">264</span>         <span class="n">fid</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">265</span> 
+<span class="g g-Whitespace">    </span><span class="mi">266</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;duck.wav&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -411,7 +706,10 @@
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
     
   </body>
 </html>
