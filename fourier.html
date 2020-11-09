@@ -530,7 +530,7 @@ qui sont également périodiques de période <span class="math notranslate nohig
 </div>
 <div class="math notranslate nohighlight">
 \[
-x[n] = \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / T}
+x[n] = \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / N}
 \]</div>
 <p>et :</p>
 <div class="margin sidebar">
@@ -539,14 +539,14 @@ x[n] = \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / T}
 </div>
 <div class="math notranslate nohighlight">
 \[
-X[k] = \sum_{k=0}^{N-1} x[n] e^{-j 2 \pi k n / T}.
+X[k] = \sum_{k=0}^{N-1} x[n] e^{-j 2 \pi k n / N}.
 \]</div>
 <p><strong>Remarque</strong>   Un signal <span class="math notranslate nohighlight">\(x[n]\)</span> à durée limité (donc non défini en dehors de l’intervalle <span class="math notranslate nohighlight">\(\{0,\dots,N-1\}\)</span>)
 peut être vu comme un signal périodique de période <span class="math notranslate nohighlight">\(N\)</span>.
 Il possède donc une série de Fourier discrète qui s’appelle dans ce cas « transformée de Fourier discrète » (TFD).
 Comme les signaux que l’on traite sur ordinateur sont toujours à durée limitée,
 alors ce sera cette transformée de Fourier discrète qui sera calculée.
-Il existe un algorithme très rapide pour la calculer : l’algorithme FFT (implémenté en Python dans la fonction <code class="docutils literal notranslate"><span class="pre">scipy.fft.fft</span></code>).</p>
+Il existe un algorithme très rapide pour la calculer : l’algorithme FFT (implémenté en Python dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code>).</p>
 </div>
 <div class="section" id="representation">
 <h2>Représentation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h2>
