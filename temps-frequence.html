@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html>
@@ -6,37 +7,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Représentation temps-fréquence &#8212; Traitement du signal 1</title>
-    
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
-
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    
-      
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
-
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -45,14 +26,14 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/js/expo.js"></script>
-    <script src="_static/js/convolution.js"></script>
-    <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/js/three.js"></script>
     <script src="_static/js/dilatation.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/convolution.js"></script>
+    <script src="_static/js/spetsi.js"></script>
+    <script src="_static/js/expo.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -67,8 +48,8 @@
     <link rel="next" title="Exercice (analyse de Fourier)" href="td-fourier.html" />
     <link rel="prev" title="Propriétés des transformations de Fourier" href="props-fourier.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
 
 
 
@@ -337,8 +318,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -363,7 +343,12 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -373,6 +358,77 @@
                 
   <div class="section" id="representation-temps-frequence">
 <h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Permalink to this headline">¶</a></h1>
+<p>Les transformations de Fourier font ressortir le contenu fréquentiel
+mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
+comme des changements brusques ou des modification de fréquence.</p>
+<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 13</span></a> représente deux signaux et leur spectres respectifs.
+Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
+la différence étant l’ordre d’apparition des sinusoïdes.
+À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
+d’après le module, on comprend que les signaux temporels sont constitués de deux sinusoïdes de 50 Hz et 200 Hz,
+mais la phase n’est pas interprétable.</p>
+<div class="figure align-default" id="f-temps-frequence-deux-sinus">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_3_0.png" src="_images/temps-frequence_3_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Permalink to this image">¶</a></p>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="52439eb4-c029-4bde-acbf-776ddba3ce01" name="f9fe71cf-e4d3-4771-970c-fc517c9cc43e" type="radio">
+</input><label class="tabbed-label" for="52439eb4-c029-4bde-acbf-776ddba3ce01">
+Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
+<div class="figure align-default" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_5_1.png" src="_images/temps-frequence_5_1.png" />
+</div>
+</div>
+</div>
+<input id="3a07bda7-70c2-4b11-93b3-2dd088e129aa" name="f9fe71cf-e4d3-4771-970c-fc517c9cc43e" type="radio">
+</input><label class="tabbed-label" for="3a07bda7-70c2-4b11-93b3-2dd088e129aa">
+Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
+<div class="figure align-default" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_5_2.png" src="_images/temps-frequence_5_2.png" />
+</div>
+</div>
+</div>
+<input id="c3ac55a2-e7c7-4006-9998-7055dc8692ee" name="f9fe71cf-e4d3-4771-970c-fc517c9cc43e" type="radio">
+</input><label class="tabbed-label" for="c3ac55a2-e7c7-4006-9998-7055dc8692ee">
+Gaussienne modulée</label><div class="tabbed-content docutils">
+<div class="figure align-default" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_5_0.png" src="_images/temps-frequence_5_0.png" />
+</div>
+</div>
+</div>
+<input id="09383d8c-d12a-44fe-9b17-c6e23951c038" name="f9fe71cf-e4d3-4771-970c-fc517c9cc43e" type="radio">
+</input><label class="tabbed-label" for="09383d8c-d12a-44fe-9b17-c6e23951c038">
+Chirp</label><div class="tabbed-content docutils">
+<div class="figure align-default" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_5_3.png" src="_images/temps-frequence_5_3.png" />
+</div>
+</div>
+</div>
+<input id="7285a642-ea54-4a21-b919-e636c38bacbe" name="f9fe71cf-e4d3-4771-970c-fc517c9cc43e" type="radio">
+</input><label class="tabbed-label" for="7285a642-ea54-4a21-b919-e636c38bacbe">
+Hello</label><div class="tabbed-content docutils">
+<div class="figure align-default" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_5_5.png" src="_images/temps-frequence_5_5.png" />
+</div>
+</div>
+</div>
+<input id="4e19e776-df15-4a64-84b8-6a25229dbe0c" name="f9fe71cf-e4d3-4771-970c-fc517c9cc43e" type="radio">
+</input><label class="tabbed-label" for="4e19e776-df15-4a64-84b8-6a25229dbe0c">
+Coin coin coin</label><div class="tabbed-content docutils">
+<div class="figure align-default" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="_images/temps-frequence_5_4.png" src="_images/temps-frequence_5_4.png" />
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -426,10 +482,7 @@
       </div>
     </div>
 
-    
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
+    <script src="_static/js/index.js"></script>
     
   </body>
 </html>
