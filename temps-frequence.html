@@ -343,26 +343,24 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/vincmazet/signal1/blob/master/temps-frequence.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformee-de-fourier-a-court-terme">
+   Transformée de Fourier à court terme
+  </a>
+ </li>
+</ul>
+
+        </nav>
         
     </div>
 </div>
@@ -375,7 +373,7 @@
 <h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Permalink to this headline">¶</a></h1>
 <p>Les transformations de Fourier font ressortir le contenu fréquentiel
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
-comme des changements brusques ou des modification de fréquence.</p>
+comme des changements brusques ou des modifications de fréquence.</p>
 <p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 13</span></a> représente deux signaux et leur spectres respectifs.
 Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
 la différence étant l’ordre d’apparition des sinusoïdes.
@@ -388,9 +386,30 @@ mais la phase n’est pas interprétable.</p>
 </div>
 <p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Permalink to this image">¶</a></p>
 </div>
+<p>Pour répondre à la difficulté d’analyser les localisations temporelles des fréquences, d’autres outils ont été développés.</p>
+<div class="section" id="transformee-de-fourier-a-court-terme">
+<h2>Transformée de Fourier à court terme<a class="headerlink" href="#transformee-de-fourier-a-court-terme" title="Permalink to this headline">¶</a></h2>
+<p>La transformée de Fourier à court terme (STFT : <em>short-time Fourier transform</em>)
+est une transformée de Fourier restreinte à une portion du signal délimitée par une fenêtre <span class="math notranslate nohighlight">\(w(t)\)</span>
+qu’on fait glisser le long de l’axe temporel :</p>
+<div class="math notranslate nohighlight">
+\[
+X(f,\tau) = \int_{-\infty}^{+\infty} x(t) w(t-\tau) e^{-j2\pi f t} dt
+\]</div>
+<p>Il s’agit simplement de la formule de la transformée de Fourier dans laquelle a été introduite la fenêtre,
+qui est positionnée en <span class="math notranslate nohighlight">\(\tau\)</span>.
+La transformée de Fourier à court terme est donc un signal à deux dimensions
+qui dépend d’un temps <span class="math notranslate nohighlight">\(\tau\)</span> et d’une fréquence <span class="math notranslate nohighlight">\(f\)</span>, d’où le nom de « représentation temps-fréquence ».
+L’objectif de cette transformée étant l’analyse dans le domaine temps-fréquence, et non la reconstruction du signal temporel,
+la transformée inverse n’a pas d’utilité.</p>
+<p>Lorsqu’on représente une transformée de Fourier à court terme, on utilise uniquement son module,
+et plus précisément le carré du module <span class="math notranslate nohighlight">\(|X(f,\tau)|^2\)</span> qui est appelé « spectrogramme » de <span class="math notranslate nohighlight">\(x(t)\)</span>.
+Le spectrogramme fournit une indication sur la quantité d’énergie présente dans le signal
+autour de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de l’instant <span class="math notranslate nohighlight">\(\tau\)</span>.
+Les figures représentent les spectrogrammes de quelques signaux.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d585bae2-0f73-475f-a3d1-1856a3bcccdc" name="6e06d187-6b55-47c7-a7ce-648a57b6b219" type="radio">
-</input><label class="tabbed-label" for="d585bae2-0f73-475f-a3d1-1856a3bcccdc">
+<input checked="checked" id="9093ecdb-0c74-49a0-b4fe-00e1d06a3d74" name="f79ec673-c0d9-4d58-84f3-28352ffd5c45" type="radio">
+</input><label class="tabbed-label" for="9093ecdb-0c74-49a0-b4fe-00e1d06a3d74">
 Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -398,8 +417,8 @@ Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="a34074e4-c8f6-4af9-a70a-8f326996e29f" name="6e06d187-6b55-47c7-a7ce-648a57b6b219" type="radio">
-</input><label class="tabbed-label" for="a34074e4-c8f6-4af9-a70a-8f326996e29f">
+<input id="ea537e66-158f-46e1-af61-8fa29c135125" name="f79ec673-c0d9-4d58-84f3-28352ffd5c45" type="radio">
+</input><label class="tabbed-label" for="ea537e66-158f-46e1-af61-8fa29c135125">
 Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -407,8 +426,8 @@ Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="0519f357-a41f-4598-ae92-e3e50ada4652" name="6e06d187-6b55-47c7-a7ce-648a57b6b219" type="radio">
-</input><label class="tabbed-label" for="0519f357-a41f-4598-ae92-e3e50ada4652">
+<input id="75029b51-a7df-4828-baed-c8d5c2461b87" name="f79ec673-c0d9-4d58-84f3-28352ffd5c45" type="radio">
+</input><label class="tabbed-label" for="75029b51-a7df-4828-baed-c8d5c2461b87">
 Gaussienne modulée</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -416,8 +435,8 @@ Gaussienne modulée</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="d3aa02c3-ae97-4a65-90ac-276586d97c33" name="6e06d187-6b55-47c7-a7ce-648a57b6b219" type="radio">
-</input><label class="tabbed-label" for="d3aa02c3-ae97-4a65-90ac-276586d97c33">
+<input id="53d96243-b7ff-4fed-90c5-d94f8de6d1f7" name="f79ec673-c0d9-4d58-84f3-28352ffd5c45" type="radio">
+</input><label class="tabbed-label" for="53d96243-b7ff-4fed-90c5-d94f8de6d1f7">
 Chirp</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -425,8 +444,8 @@ Chirp</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="8abfb87c-5ea5-4599-849a-deb3a30d53a7" name="6e06d187-6b55-47c7-a7ce-648a57b6b219" type="radio">
-</input><label class="tabbed-label" for="8abfb87c-5ea5-4599-849a-deb3a30d53a7">
+<input id="0a7f929e-64c2-4dee-9066-1855f7753ee7" name="f79ec673-c0d9-4d58-84f3-28352ffd5c45" type="radio">
+</input><label class="tabbed-label" for="0a7f929e-64c2-4dee-9066-1855f7753ee7">
 Hello</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -434,14 +453,46 @@ Hello</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="afe31953-8199-4a5b-afb7-64a1942c7462" name="6e06d187-6b55-47c7-a7ce-648a57b6b219" type="radio">
-</input><label class="tabbed-label" for="afe31953-8199-4a5b-afb7-64a1942c7462">
+<input id="424210ac-287c-431f-9208-0f55d8001431" name="f79ec673-c0d9-4d58-84f3-28352ffd5c45" type="radio">
+</input><label class="tabbed-label" for="424210ac-287c-431f-9208-0f55d8001431">
 Coin coin coin</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
 <img alt="_images/temps-frequence_5_4.png" src="_images/temps-frequence_5_4.png" />
 </div>
 </div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Certains artistes s’amusent également avec cette transformée, comme Aphex Twin sur <a class="reference external" href="https://youtu.be/M9xMuPWAZW8?t=305"><em>Formula</em></a>.</p>
+</div>
+<p>La représentation en spectrogramme est également intéressante en musique.
+Voyez par exemple le résultat sur
+<a class="reference external" href="https://www.youtube.com/watch?v=S2XkCfvGPXE"><em>La Lettre à Élise</em></a> de Ludwig van Beethoven
+ou la <a class="reference external" href="https://youtu.be/Txp-pHU2K6w?t=652"><em>Symphonie du Nouveau Monde</em></a> de Antonín Dvořák.</p>
+<p>En traitement du signal, une fenêtre est un signal de durée limitée.
+Par conséquent, la majeure partie de l’énergie de la fenêtre <span class="math notranslate nohighlight">\(w(t)\)</span> est contenue dans un intervalle temporel.
+De même, l’énergie de la fenêtre est également contenue dans un intervalle fréquentiel.
+Ces deux intervalles définissent une zone délimitée dans le plan temps-fréquence.
+L’idéal serait d’avoir une zone très localisée pour avoir une bonne résolution, à la fois temporelle et fréquentielle.
+Or, il est impossible d’avoir une très bonne localisation à la fois en temps et en fréquence,
+c’est-à-dire une zone qui se réduit à un point.
+Ce phénomène est le principe d’incertitude de Gabor-Heisenberg.
+C’est d’ailleurs ce qui explique la propriété de changement d’échelle des transformations de Fourier :
+la contraction dans un domaine implique une dilatation dans l’autre domaine.
+Les fenêtres qui conduisent à la meilleur location temps-fréquence sont des gaussiennes :
+on parle alors d’analyse de Gabor.</p>
+<p>La tranformée de Fourier à court terme a l’avantage d’être très simple.
+En revanche, elle considère implicitement le signal stationnaire dans la fenêtre d’observation
+(c’est-à-dire que durant la durée de la fenêtre, le signal n’est pas censé présenter de grands changements).
+Elle s’applique donc aux signaux qui sont lentement stationnaires,
+par exemple dans le domaine biomédical, en géophysique ou en traitement de la parole.</p>
+<p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes
+(utilisée par exemple dans le format de compression JPEG 2000).</p>
+<div class="figure align-default" id="f-temps-frequence-temps-frequence">
+<a class="reference internal image-reference" href="_images/temps-frequence.png"><img alt="_images/temps-frequence.png" src="_images/temps-frequence.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence-temps-frequence" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
