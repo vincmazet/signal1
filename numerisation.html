@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numérisation d’un signal &#8212; Traitement du signal 1</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" type="text/css" href="_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/expo.js"></script>
+    <script src="_static/js/convolution.js"></script>
+    <script src="_static/js/spetsi.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/three.js"></script>
+    <script src="_static/js/dilatation.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Échantillonnage" href="echantillonnage.html" />
+    <link rel="prev" title="Exercice (analyse de Fourier)" href="td-fourier.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Traitement du signal 1</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Notions élémentaires
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="classification.html">
+   Classification des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="signaux-elementaires.html">
+   Signaux élémentaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="props-signaux.html">
+   Propriétés des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energie-puissance.html">
+   Énergie et puissance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-elementaire.html">
+   Exercices
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Convolution
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="convolution.html">
+   Produit de convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-convolution.html">
+   Exercices
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Intercorrélation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intercorrelation.html">
+   Intercorrélation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-intercorrelation.html">
+   Exercices
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Représentation vectorielle
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vect.html">
+   Représentation vectorielle des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-vect.html">
+   Exercices
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Analyse de Fourier
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fourier.html">
+   Transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="props-fourier.html">
+   Propriétés des transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="temps-frequence.html">
+   Représentation temps-fréquence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-fourier.html">
+   Exercices
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numérisation
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Numérisation d’un signal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="echantillonnage.html">
+   Échantillonnage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quantification.html">
+   Quantification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td-numerisation.html">
+   Exercices
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Travaux pratiques
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tp1.html">
+   TP du 22/10/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tp2.html">
+   TP du 13/11/2020
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tp3.html">
+   TP du 10/12/2020
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Annexes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://moodle3.unistra.fr/course/view.php?id=13717">
+   Moodle
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Installer et utiliser Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="biblio.html">
+   Références
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="licence.html">
+   Licence
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/numerisation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="numerisation-d-un-signal">
+<h1>Numérisation d’un signal<a class="headerlink" href="#numerisation-d-un-signal" title="Permalink to this headline">¶</a></h1>
+<p>La plupart des signaux d’origine physique sont analogiques (amplitudes et temps continus).
+Si on veut transmettre, traiter ou stocker ces signaux sous forme numérique ou à l’aide de systèmes numériques,
+alors il faut les convertir au préalable sous forme numérique (amplitudes et temps discrets),
+donc transformer ces signaux en signaux échantillonnés et quantifiés.
+Les principaux intérêts du traitement numérique s’un signal sont
+la simplicité de réglage des paramètres, la robustesse au bruit, la réduction du coût, etc.</p>
+<p>Or, la numérisation impose une modification du signal analogique ;
+mais les contraintes imposées pour que les signaux numérisés représentent correctement les signaux analogiques sont faibles.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="td-fourier.html" title="previous page">Exercice (analyse de Fourier)</a>
+    <a class='right-next' id="next-link" href="echantillonnage.html" title="next page">Échantillonnage</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Mazet (Université de Strasbourg)<br/>
+        
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            Traitement du signal &mdash; Vincent Mazet (Université de Strasbourg), 2020 &mdash; <a href="licence.html">CC BY-NC 4.0</a>.
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

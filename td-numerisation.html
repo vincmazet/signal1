@@ -47,6 +47,7 @@
     <script src="_static/copybutton.js"></script>
     <script src="_static/js/expo.js"></script>
     <script src="_static/js/convolution.js"></script>
+    <script src="_static/js/aliasing.js"></script>
     <script src="_static/js/spetsi.js"></script>
     <script src="_static/js/conv1c.js"></script>
     <script src="_static/js/three.js"></script>
@@ -220,6 +221,11 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="numerisation.html">
+   Numérisation d’un signal
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="echantillonnage.html">
    Échantillonnage
   </a>
@@ -357,7 +363,72 @@
                 
   <div class="section" id="exercices-numerisation">
 <h1>Exercices (numérisation)<a class="headerlink" href="#exercices-numerisation" title="Permalink to this headline">¶</a></h1>
+<p><strong>Exercice 1</strong></p>
+<ul>
+<li><p>Montrez que le train d’impulsions <span class="math notranslate nohighlight">\(x^*\)</span> défini par</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  x^*(t) =
+  \begin{cases}
+  x(t) &amp;\text{si}\ t\ \text{est multiple de}\ T_e \\
+  0    &amp;\text{sinon},
+  \end{cases}
+  \end{split}\]</div>
+<p>où <span class="math notranslate nohighlight">\(x\)</span> est un signal analogique, s’écrit comme le produit d’un signal avec un train d’impulsions <span class="math notranslate nohighlight">\(Ш\)</span> dont la période est à déterminer.</p>
+</li>
+<li><p>Montrez que <span class="math notranslate nohighlight">\(x^*\)</span> a pour transformée de Fourier</p>
+<div class="math notranslate nohighlight">
+\[
+  X^*(f) = \sum_k X(f-kf_e).
+  \]</div>
+<p>La transformée de Fourier de <span class="math notranslate nohighlight">\(Ш_T(t)\)</span> est <span class="math notranslate nohighlight">\(Ш_{1/T}(f)\)</span>.</p>
+</li>
+</ul>
+<p><strong>Exercice 2</strong></p>
+<p>Rappelez les relations entre fréquence d’échantillonnage, période d’échantillonnage et fréquence de Nyquist.</p>
+<p><strong>Exercice 3</strong></p>
+<p>Proposez une fréquence d’échantillonnage pour effectuer un enregistrement numérique d’un électrocardiogramme.</p>
+<p><strong>Exercice 4</strong></p>
+<!-- Source : Prandoni, exo 9.6 -->
+<p>Une sinusoïde <span class="math notranslate nohighlight">\(x(t)\)</span> de fréquence 10 kHz est échantillonnée à une fréquence de 8 kHz.
+Quel sera le signal analogique reconstruit à partir du signal numérique ?</p>
+<p><strong>Exerice 5</strong></p>
+<p>Pour étudier l’effet du repliement spectral, on applique la chaîne de traitement ci-dessous à un signal sinusoïdal :
+le signal <span class="math notranslate nohighlight">\(x(t) = \cos(2\pi f_0 t)\)</span> est échantillonné à une fréquence <span class="math notranslate nohighlight">\(f_e=1/T_e\)</span> pour obtenir le signal <span class="math notranslate nohighlight">\(y(t)\)</span>,
+puis filtré par un filtre passe-bas idéal de fréquence de coupure <span class="math notranslate nohighlight">\(f_c = f_e/2\)</span> pour obtenir le signal <span class="math notranslate nohighlight">\(z(t)\)</span>.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="_images/aliasing.png"><img alt="_images/aliasing.png" src="_images/aliasing.png" style="width: 300px;" /></a>
 </div>
+<p>Dans un premier temps, on prend <span class="math notranslate nohighlight">\(f_0=2\)</span> kHz et <span class="math notranslate nohighlight">\(f_e=6\)</span> kHz.</p>
+<ul class="simple">
+<li><p>Représentez les modules des spectres de <span class="math notranslate nohighlight">\(x(t)\)</span>, <span class="math notranslate nohighlight">\(y(t)\)</span> et <span class="math notranslate nohighlight">\(z(t)\)</span>.</p></li>
+<li><p>Comparez le signal <span class="math notranslate nohighlight">\(z(t)\)</span> avec <span class="math notranslate nohighlight">\(x(t)\)</span>.
+Y a-t-il du repliement spectral ?</p></li>
+<li><p>Mêmes questions avec <span class="math notranslate nohighlight">\(f_e = 3\)</span> kHz.</p></li>
+</ul>
+<p><strong>Exercice 6</strong></p>
+<p>Le signal <span class="math notranslate nohighlight">\(x(t) = A \sin(2 \pi f t + \varphi)\)</span> avec <span class="math notranslate nohighlight">\(A=3\)</span>, <span class="math notranslate nohighlight">\(f=2\)</span> Hz et <span class="math notranslate nohighlight">\(\varphi=\pi/5\)</span>
+est quantifié sur 8 bits (avec un quantifieur uniforme par arrondi).
+Quel est la valeur du pas de quantification ?</p>
+<p><strong>Exercice 7</strong></p>
+<p>Un signal analogique de bande passante 20 kHz est numérisé sur 16 bits.
+Combien de bits par seconde au minimum doit traiter le convertisseur analogique-numérique ?
+En déduire la capacité de stockage d’un CD audio de 60 minutes, sachant que le son y est enregistré en stéréo.</p>
+<p><strong>Exercice 8</strong></p>
+<!-- Source : cours de C. Doignon -->
+<p>Un convertisseur numérique-analogique 5 bits produit des tensions positives (commençant à 0 mV).
+Une entrée égale à 1 0 1 0 0 (bit de poids fort à gauche) correspond à une tension de 100 mV.</p>
+<ul class="simple">
+<li><p>Calculez le pas de quantification (résolution) du convertisseur.</p></li>
+<li><p>Calculez la tension maximale (pleine échelle) du convertisseur.</p></li>
+<li><p>Quelle tension correspond à une entrée égale à 1 1 1 0 1 ?</p></li>
+</ul>
+<!-- Correction :
+  On a              & 0\,0\,0\,0\,0 & $0$  & $0$~mV \\
+  et                & 1\,0\,1\,0\,0 & $20$ & $100$~mV. \\
+  Donc              & 0\,0\,0\,0\,1 & $1$  & $100/20$ = $5$~mV. \\
+  Par conséquent    & 1\,1\,1\,0\,1 & $29$ & $29 \times 5$ = $145$~mV \\
+  et                & 1\,1\,1\,1\,1 & $31$ & $31 \times 5$ = $155$~mV. \\ --><!-- échantillonnage d'un signal pbande --><!-- sp4comm, exo 9.4 --></div>
 
     <script type="text/x-thebe-config">
     {
