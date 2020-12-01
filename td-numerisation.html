@@ -408,13 +408,35 @@ Y a-t-il du repliement spectral ?</p></li>
 </ul>
 <p><strong>Exercice 6</strong></p>
 <p>Le signal <span class="math notranslate nohighlight">\(x(t) = A \sin(2 \pi f t + \varphi)\)</span> avec <span class="math notranslate nohighlight">\(A=3\)</span>, <span class="math notranslate nohighlight">\(f=2\)</span> Hz et <span class="math notranslate nohighlight">\(\varphi=\pi/5\)</span>
-est quantifié sur 8 bits (avec un quantifieur uniforme par arrondi).
-Quel est la valeur du pas de quantification ?</p>
+est quantifié sur 8 bits avec un quantifieur uniforme par arrondi.
+Quel valeur du pas de quantification doit-on choisir pour obtenir la meilleure résolution sans saturation ?</p>
 <p><strong>Exercice 7</strong></p>
+<p>Sur un CD audio, le signal sonore est quantifié sur 16 bits.</p>
+<ul class="simple">
+<li><p>Déterminez le nombre de niveaux de quantification.</p></li>
+<li><p>En supposant le signal sonore comme une sinusoïde d’amplitude <span class="math notranslate nohighlight">\(A\)</span>, quelle est la valeur maximale de l’erreur ?</p></li>
+<li><p>Comparez la puissance de l’erreur à la puissance du signal.</p></li>
+</ul>
+<!-- => 2^16 = 65536 niveaux 
+Supposons l'amplitude max (crête à crête) de 2A :
+xmax-xmin=2A => q=2A/2^16 = 1 15 10^-6 = q A2
+
+Valeur max de lerreur : q/2 = 7,6 10^{-6} A2
+Puissance de 'erreur : q^2/12 = 1,5 10^{-11} A^2 4
+Puissance du'ne sinusoïde 'amplitude 2A :
+
+$$
+Px = \frac{A}{T}\int_T [A\sin(2\pi f t)\ dt
+=\frac{} 1^2 \int \frac{1-\cos(4\pi ft)}{2} dt
+= A^2/2T \int 1 dt - A^2/2T \int_T \©os(4\pi f t) dt
+= A^2/2 - 0 = A^2/2
+$$
+
+différence importante ! --><p><strong>Exercice 8</strong></p>
 <p>Un signal analogique de bande passante 20 kHz est numérisé sur 16 bits.
 Combien de bits par seconde au minimum doit traiter le convertisseur analogique-numérique ?
 En déduire la capacité de stockage d’un CD audio de 60 minutes, sachant que le son y est enregistré en stéréo.</p>
-<p><strong>Exercice 8</strong></p>
+<p><strong>Exercice 9</strong></p>
 <!-- Source : cours de C. Doignon -->
 <p>Un convertisseur numérique-analogique 5 bits produit des tensions positives (commençant à 0 mV).
 Une entrée égale à 1 0 1 0 0 (bit de poids fort à gauche) correspond à une tension de 100 mV.</p>
