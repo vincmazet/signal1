@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html>
@@ -6,37 +7,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Représentation temps-fréquence &#8212; Traitement du signal 1</title>
-    
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
-
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    
-      
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
-
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -45,15 +26,15 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/js/expo.js"></script>
-    <script src="_static/js/convolution.js"></script>
-    <script src="_static/js/aliasing.js"></script>
-    <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/js/three.js"></script>
     <script src="_static/js/dilatation.js"></script>
+    <script src="_static/js/aliasing.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/convolution.js"></script>
+    <script src="_static/js/spetsi.js"></script>
+    <script src="_static/js/expo.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -68,8 +49,8 @@
     <link rel="next" title="Exercice (analyse de Fourier)" href="td-fourier.html" />
     <link rel="prev" title="Propriétés des transformations de Fourier" href="props-fourier.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
 
 
 
@@ -343,8 +324,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -353,7 +333,6 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -367,7 +346,6 @@
 </ul>
 
         </nav>
-        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -414,8 +392,8 @@ Le spectrogramme fournit une indication sur la quantité d’énergie présente 
 autour de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de l’instant <span class="math notranslate nohighlight">\(\tau\)</span>.
 Les figures représentent les spectrogrammes de quelques signaux.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="738a6be4-ed4c-4a6f-a0f7-f9d65bbcd3c4" name="c8fc5143-75a4-4a29-a799-33cf754b4d7a" type="radio">
-</input><label class="tabbed-label" for="738a6be4-ed4c-4a6f-a0f7-f9d65bbcd3c4">
+<input checked="checked" id="8047b449-b1ac-461c-9771-228118ba7086" name="1a8f503b-39e0-417e-9334-7133f9f2fe3f" type="radio">
+</input><label class="tabbed-label" for="8047b449-b1ac-461c-9771-228118ba7086">
 Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -423,8 +401,8 @@ Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="019dbc63-d368-4ae7-8779-1bc44cdaf786" name="c8fc5143-75a4-4a29-a799-33cf754b4d7a" type="radio">
-</input><label class="tabbed-label" for="019dbc63-d368-4ae7-8779-1bc44cdaf786">
+<input id="f610853a-c5ee-4269-a7f5-963e3b685e30" name="1a8f503b-39e0-417e-9334-7133f9f2fe3f" type="radio">
+</input><label class="tabbed-label" for="f610853a-c5ee-4269-a7f5-963e3b685e30">
 Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -432,8 +410,8 @@ Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="1af69c95-840e-4000-b1e3-a7f10aa009cf" name="c8fc5143-75a4-4a29-a799-33cf754b4d7a" type="radio">
-</input><label class="tabbed-label" for="1af69c95-840e-4000-b1e3-a7f10aa009cf">
+<input id="fb28efe3-8fe9-4afd-b94b-31ef16e43263" name="1a8f503b-39e0-417e-9334-7133f9f2fe3f" type="radio">
+</input><label class="tabbed-label" for="fb28efe3-8fe9-4afd-b94b-31ef16e43263">
 Gaussienne modulée</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -441,8 +419,8 @@ Gaussienne modulée</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="de6fc09e-0985-4515-b573-bcfb1f6fa65a" name="c8fc5143-75a4-4a29-a799-33cf754b4d7a" type="radio">
-</input><label class="tabbed-label" for="de6fc09e-0985-4515-b573-bcfb1f6fa65a">
+<input id="546e70bc-6178-4554-b553-44e5c6130d1b" name="1a8f503b-39e0-417e-9334-7133f9f2fe3f" type="radio">
+</input><label class="tabbed-label" for="546e70bc-6178-4554-b553-44e5c6130d1b">
 Chirp</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -450,8 +428,8 @@ Chirp</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="e18c72cb-442d-4058-bf2e-996a006f19a8" name="c8fc5143-75a4-4a29-a799-33cf754b4d7a" type="radio">
-</input><label class="tabbed-label" for="e18c72cb-442d-4058-bf2e-996a006f19a8">
+<input id="b2019401-6407-4226-9308-0ff9d1be69e1" name="1a8f503b-39e0-417e-9334-7133f9f2fe3f" type="radio">
+</input><label class="tabbed-label" for="b2019401-6407-4226-9308-0ff9d1be69e1">
 Hello</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -459,8 +437,8 @@ Hello</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="d5d6834b-2d42-44e1-9455-cc46a9d0cf0c" name="c8fc5143-75a4-4a29-a799-33cf754b4d7a" type="radio">
-</input><label class="tabbed-label" for="d5d6834b-2d42-44e1-9455-cc46a9d0cf0c">
+<input id="f73d88e6-afee-4979-a329-95c84236cbce" name="1a8f503b-39e0-417e-9334-7133f9f2fe3f" type="radio">
+</input><label class="tabbed-label" for="f73d88e6-afee-4979-a329-95c84236cbce">
 Coin coin coin</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 <div class="cell_output docutils container">
@@ -554,10 +532,7 @@ par exemple dans le domaine biomédical, en géophysique ou en traitement de la 
       </div>
     </div>
 
-    
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
+    <script src="_static/js/index.js"></script>
     
   </body>
 </html>

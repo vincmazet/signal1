@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html>
@@ -6,37 +7,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TP du 10/12/2020 &#8212; Traitement du signal 1</title>
-    
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
-
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    
-      
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jbvinc.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
-
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -45,15 +26,15 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/js/expo.js"></script>
-    <script src="_static/js/convolution.js"></script>
-    <script src="_static/js/aliasing.js"></script>
-    <script src="_static/js/spetsi.js"></script>
-    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/js/three.js"></script>
     <script src="_static/js/dilatation.js"></script>
+    <script src="_static/js/aliasing.js"></script>
+    <script src="_static/js/conv1c.js"></script>
+    <script src="_static/js/convolution.js"></script>
+    <script src="_static/js/spetsi.js"></script>
+    <script src="_static/js/expo.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -68,8 +49,8 @@
     <link rel="next" title="Installer et utiliser Python" href="python.html" />
     <link rel="prev" title="TP du 13/11/2020" href="tp2.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
 
 
 
@@ -343,8 +324,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -353,7 +333,29 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repliement-spectral">
+   Repliement spectral
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representation-temps-frequence">
+   Représentation temps-fréquence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpolation">
+   Interpolation
+  </a>
+ </li>
+</ul>
+
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -363,6 +365,78 @@
                 
   <div class="section" id="tp-du-10-12-2020">
 <h1>TP du 10/12/2020<a class="headerlink" href="#tp-du-10-12-2020" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="repliement-spectral">
+<h2>Repliement spectral<a class="headerlink" href="#repliement-spectral" title="Permalink to this headline">¶</a></h2>
+<p>En musique, la note <em>la</em> correspond à une sinusoïde de fréquence 440 Hz.</p>
+<ul class="simple">
+<li><p>Représentez la note <em>la</em> sur 100 ms en réglant le pas de temps pour obtenir une courbe qui soit jolie.
+Quelle fréquence d’échantillonnage correspond au pas de temps choisi ?
+Affichez la TFD du signal : y a-t-il repliement spectral ?</p></li>
+<li><p>Représentez la note <em>la</em> sur 100 ms avec une fréquence d’échantillonnage de 1000 Hz.
+Affichez la TFD du signal : y a-t-il repliement spectral ?</p></li>
+<li><p>Représentez la note <em>la</em> sur 100 ms avec une fréquence d’échantillonnage de 700 Hz.
+Affichez la TFD du signal : y a-t-il repliement spectral ?
+Quelle est la conséquence sur le signal sonore numérisé ?</p></li>
+</ul>
+</div>
+<div class="section" id="representation-temps-frequence">
+<h2>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Permalink to this headline">¶</a></h2>
+<!-- Le fichier bigben.wav est un enregistrement d'une partie de la sonnerie de Big Ben. -->
+<p>Le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/gamme.wav">gamme.wav</a> est un enregistrement d’une gamme musicale au piano.
+Nous allons chercher quelles sont les notes jouées.</p>
+<ul class="simple">
+<li><p>Chargez et affichez le signal.</p></li>
+<li><p>Vérifiez sur la TFD qu’il n’est pas facile de trouver la partition musicale correspondante.</p></li>
+</ul>
+<p>Afficher une représentation temps-fréquence du signal permet de retrouver très simplement la partition musicale.
+Ainsi, la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.specgram</span></code> permet d’afficher le spectrogramme d’un signal.</p>
+<ul class="simple">
+<li><p>Affichez le spectrogramme du signal en conservant les paramètres par défaut.</p></li>
+<li><p>Étudiez l’influence des paramètres principaux de la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.specgram</span></code> pour comprendre leur signification.</p></li>
+<li><p>Déterminez alors les notes jouées à partir de leur fréquence.</p></li>
+</ul>
+</div>
+<div class="section" id="interpolation">
+<h2>Interpolation<a class="headerlink" href="#interpolation" title="Permalink to this headline">¶</a></h2>
+<p>Le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/son8820.csv">son8820.csv</a> contient un court extrait sonore échantillonné à 8 820 Hz.</p>
+<ul class="simple">
+<li><p>Affichez ce signal, noté <span class="math notranslate nohighlight">\(x\)</span>, en mettant en évidence les échantillons
+(par exemple avec la commande <code class="docutils literal notranslate"><span class="pre">plot(t,x,'-*')</span></code>).</p></li>
+<li><p>Générez et affichez la transformée de Fourier discrète (TFD) de <span class="math notranslate nohighlight">\(x\)</span> en centrant l’axe des fréquences.</p></li>
+</ul>
+<p>On souhaite augmenter la fréquence d’échantillonnage de <span class="math notranslate nohighlight">\(x\)</span> d’un facteur cinq,
+ce qui implique d’ajouter quatre échantillons entre chaque échantillons existants.
+Il faut donc effectuer une <em>interpolation</em> du signal,
+c’est-à-dire calculer de nouveaux échantillons à l’intérieur du signal.</p>
+<!-- 
+% La technique de \textit{zero-filling} est utilisée dans un premier temps.
+%
+%   \item Ajoutez quatre échantillons nuls entre les échantillons de $x$ pour obtenir un nouveau signal $y$
+%   de fréquence d'échantillonnage 44\,100~Hz.
+%   Vous pouvez utiliser les instructions suivantes~:
+%       y = zeros(5*N,1);   % Création d'un signal nul
+%       y(1:5:end) = x;     % un échantillon sur 5 est affecté à la valeur du signal x à interpoler
+%   Le signal n'est pas encore interpolé, mais sa fréquence d'échantillonnage a été multipliée par cinq.
+%
+%   \item Une première méthode d'interpolation est d'utiliser un bloqueur d'ordre zéro.
+%   Elle consiste à faire suivre chaque échantillon du signal $x$ par quatre échantillons identiques.
+%   Autrement dit, cela revient à convoluer $x_0$ par $h = \big[1\;1\;1\;1\;1\big]$.
+-->
+<p>La technique de <em>zero-padding</em> consiste à ajouter des zéros de part et d’autre du spectre de Fourier
+pour obtenir un signal contenant cinq fois plus d’échantillons.</p>
+<ul>
+<li><p>En notant <span class="math notranslate nohighlight">\(X\)</span> la TFD du signal <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(N\)</span> son nombre d’échantillons,
+ajoutez <span class="math notranslate nohighlight">\(M\)</span> zéros de part et d’autre de la TFD de manière à créer un vecteur <span class="math notranslate nohighlight">\(Y\)</span> cinq fois plus long que <span class="math notranslate nohighlight">\(X\)</span> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">M</span><span class="p">),</span> <span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">M</span><span class="p">)])</span>
+</pre></div>
+</div>
+</li>
+<li><p>Affichez la TFD <span class="math notranslate nohighlight">\(Y\)</span> (après avoir défini son axe des fréquences).</p></li>
+<li><p>Affichez le signal interpolé, issu de la TFD inverse de <span class="math notranslate nohighlight">\(Y\)</span>,
+et comparez-le au signal original <span class="math notranslate nohighlight">\(x\)</span> (après avoir défini son axe des temps).</p></li>
+</ul>
+<!-- Fenêtrage -->
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -416,10 +490,7 @@
       </div>
     </div>
 
-    
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
+    <script src="_static/js/index.js"></script>
     
   </body>
 </html>
