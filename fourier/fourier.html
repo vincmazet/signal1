@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformations de Fourier &#8212; Traitement du signal 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Propriétés des transformations de Fourier" href="proprietes.html" />
+    <link rel="prev" title="Introduction" href="../vect/correc.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Traitement du signal 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Notions élémentaires
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/definition.html">
+   Traitement du signal ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/classification.html">
+   Classification des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/signaux-elementaires.html">
+   Signaux élémentaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/proprietes-des-signaux.html">
+   Propriétés des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/energie-puissance.html">
+   Énergie et puissance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notions/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Convolution
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../conv/convolution.html">
+   Produit de convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../conv/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../conv/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Intercorrélation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../xcorr/intercorrelation.html">
+   Intercorrélation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../xcorr/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../xcorr/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Représentation vectorielle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../vect/representation-vectorielle.html">
+   Représentation vectorielle des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../vect/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../vect/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Analyse de Fourier
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="proprietes.html">
+   Propriétés des transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="temps-frequence.html">
+   Représentation temps-fréquence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numérisation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/numerisation.html">
+   Numérisation d’un signal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/echantillonnage.html">
+   Échantillonnage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/quantification.html">
+   Quantification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../num/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Annexes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://moodle.unistra.fr/course/view.php?id=5505">
+   Moodle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annexes/python.html">
+   Installer et utiliser Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annexes/references.html">
+   Références
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annexes/licence.html">
+   Licence
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/fourier/fourier.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serie-de-fourier">
+   Série de Fourier
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulation-alternative">
+     Formulation alternative
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformee-de-fourier">
+   Transformée de Fourier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serie-de-fourier-discrete">
+   Série de Fourier discrète
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representation">
+   Représentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recapitulatif">
+   Récapitulatif
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="transformations-de-fourier">
+<h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Joseph Fourier (1768–1830) a été professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
+et préfet de l’Isère.
+Il a aussi été membre de l’Académie des sciences et de l’Académie française.</p>
+<p>En travaillant sur le phénomène de propagation de la chaleur,
+il s’aperçut qu’il était utile de représenter la distribution de température dans les matériaux comme une somme de sinusoïdes :
+c’est ce qu’on appelle maintenant une décomposition en <em>série de Fourier</em>.
+La série de Fourier, et les autres transformations qui en découlent,
+jouent un rôle capital en traitement du signal
+car elles permettent de mettre en évidence les fréquences contenues dans un signal.</p>
+<p>La vidéo ci-dessous raconte la vie de Joseph Fourier.</p>
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/cYRUlU4Rpu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Cette autre vidéo  se concentre sur les applications actuelles des transformations de Fourier.</p>
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/sJ7j81Nqw6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Il existe quatre transformations de Fourier, chacune adaptée au type de signal considéré :</p>
+<ul class="simple">
+<li><p>la « série de Fourier » (SF) s’applique aux signaux à temps continu et périodiques,</p></li>
+<li><p>la « transformée de Fourier » (TF) s’applique aux signaux à temps continu et apériodiques,</p></li>
+<li><p>la « série de Fourier discrète » (SFD) s’applique aux signaux à temps discret et périodiques,</p></li>
+<li><p>et la « transformée de Fourier à temps discret » (TFTD) s’applique aux signaux à temps discret et apériodiques.</p></li>
+</ul>
+<div class="section" id="serie-de-fourier">
+<h2>Série de Fourier<a class="headerlink" href="#serie-de-fourier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Tout signal <span class="math notranslate nohighlight">\(x(t)\)</span> à temps continu et périodique de période <span class="math notranslate nohighlight">\(T\)</span> peut s’écrire comme une combinaison linéaire
+de fonctions <span class="math notranslate nohighlight">\(\exp\left(j 2\pi k t/T\right)\)</span>, qui sont elles-mêmes périodiques de période <span class="math notranslate nohighlight">\(T\)</span> :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier inverse.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+x(t) = \sum_{k=-\infty}^{+\infty} X[k] e^{+j 2 \pi k t / T}
+\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Vous remarquerez que le signal temporel <span class="math notranslate nohighlight">\(x\)</span> est noté en minuscule,
+alors que le signal fréquentiel <span class="math notranslate nohighlight">\(X\)</span> est en majuscule.</p>
+</div>
+<p>où <span class="math notranslate nohighlight">\(k \in \mathbb{Z}\)</span> est la « fréquence » et <span class="math notranslate nohighlight">\(X[k]\)</span> sont des coefficients.
+L’ensemble de ces coefficients, noté simplement <span class="math notranslate nohighlight">\(X\)</span>, est la série de Fourier de <span class="math notranslate nohighlight">\(x\)</span> ; et c’est aussi un signal.
+On montre que les coefficients de la série de Fourier sont définis par :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+X[k] = \frac{1}{T} \int_T x(t) e^{-j 2 \pi k t / T } dt.
+\]</div>
+<p>Le terme <span class="math notranslate nohighlight">\(k\)</span> est appelé la <span class="math notranslate nohighlight">\(k\)</span><sup>e</sup> harmonique.
+En particulier, le terme pour <span class="math notranslate nohighlight">\(X[1]\)</span> est la première harmonique, que l’on appelle aussi la « composante fondamentale ».
+Par ailleurs, le terme pour <span class="math notranslate nohighlight">\(k=0\)</span> correspond à la moyenne du signal :</p>
+<div class="math notranslate nohighlight">
+\[
+X[0] = \frac{1}{T} \int_T x(t) dt.
+\]</div>
+<div class="section" id="formulation-alternative">
+<h3>Formulation alternative<a class="headerlink" href="#formulation-alternative" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Parfois, la série de Fourier de signaux réels est définie comme l’ensemble des coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> tels que :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+                                  a_0 &amp;= \frac{1}{T} \int_0^T x(t) dt \\
+\forall k \in\mathbb{N}^*, \qquad a_k &amp;= \frac{2}{T} \int_0^T x(t) \cos(2 \pi k t / T) dt \\
+\forall k \in\mathbb{N}^*, \qquad b_k &amp;= \frac{2}{T} \int_0^T x(t) \sin(2 \pi k t / T) dt
+\end{split}\]</div>
+<p>La relation entre ces coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> avec l’expression précédente de la série de Fourier est :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{si}\, k&lt;0\,:\qquad X[k] &amp;= \frac{a_{-k}+jb_{-k}}{2} \\
+\text{si}\, k=0\,:\qquad X[0] &amp;= a_0 \\
+\text{si}\, k&gt;0\,:\qquad X[k] &amp;= \frac{a_k-jb_k}{2}
+\end{split}\]</div>
+<p>et la formule de la série de Fourier inverse devient :</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = a_0 + \sum_{k=1}^{+\infty} \left( a_k \cos(2 \pi k t / T) + b_k \sin(2 \pi k t / T) \right).
+\]</div>
+<p>Dans le cadre de ce module, nous n’utiliserons pas les formules faisant intervenir <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span>
+car elles obligent à effectuer deux fois plus de calcul qu’avec les formules précédentes utilisant <span class="math notranslate nohighlight">\(X[k]\)</span>.
+En effet, la formulation avec l’exponentielle complexe regroupe les termes en cosinus et en sinus.
+C’est donc plus simple en complexe ! 😎</p>
+</div>
+</div>
+<div class="section" id="transformee-de-fourier">
+<h2>Transformée de Fourier<a class="headerlink" href="#transformee-de-fourier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On peut considérer qu’un signal apériodique est le cas limite d’un signal périodique de période infinie.
+Dans ce cas, la série de Fourier tend vers la transformée de Fourier :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la transformée de Fourier.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+X(f) = \int_{-\infty}^{+\infty} x(t) e^{-j 2 \pi f t} dt
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(f\in\mathbb{R}\)</span> est la fréquence.
+De même qu’avec la série de Fourier, le signal temporel <span class="math notranslate nohighlight">\(x\)</span> peut être reconstruit à partir de <span class="math notranslate nohighlight">\(X\)</span> :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la transformée de Fourier inverse.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+x(t) = \int_{-\infty}^{+\infty} X(f) e^{+j 2 \pi f t} df.
+\]</div>
+</div>
+<div class="section" id="serie-de-fourier-discrete">
+<h2>Série de Fourier discrète<a class="headerlink" href="#serie-de-fourier-discrete" title="Lien permanent vers ce titre">¶</a></h2>
+<p>De même que pour la série de Fourier, un signal à temps discret et périodique de période <span class="math notranslate nohighlight">\(N\)</span>
+peut s’écrire comme la combinaison linéaire de fonctions <span class="math notranslate nohighlight">\(\exp\left(j\frac{2\pi k n}{N}\right)\)</span>,
+qui sont également périodiques de période <span class="math notranslate nohighlight">\(N\)</span> :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier discrète inverse.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+x[n] = \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / N}
+\]</div>
+<p>et :</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cette formule est la série de Fourier discrète.</p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+X[k] = \sum_{k=0}^{N-1} x[n] e^{-j 2 \pi k n / N}.
+\]</div>
+<p><strong>Remarque</strong>   Un signal <span class="math notranslate nohighlight">\(x[n]\)</span> à durée limité (donc non défini en dehors de l’intervalle <span class="math notranslate nohighlight">\(\{0,\dots,N-1\}\)</span>)
+peut être vu comme un signal périodique de période <span class="math notranslate nohighlight">\(N\)</span>.
+Il possède donc une série de Fourier discrète qui s’appelle dans ce cas « transformée de Fourier discrète » (TFD).
+Comme les signaux que l’on traite sur ordinateur sont toujours à durée limitée,
+alors ce sera cette transformée de Fourier discrète qui sera calculée.
+Il existe un algorithme très rapide pour la calculer : l’algorithme FFT (implémenté en Python dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code>).</p>
+</div>
+<div class="section" id="representation">
+<h2>Représentation<a class="headerlink" href="#representation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On l’a vu, les transformations de Fourier <span class="math notranslate nohighlight">\(X\)</span> du signal <span class="math notranslate nohighlight">\(x\)</span> sont des signaux.
+En raison de l’exponentielle complexe dans les formules ci-dessus, <span class="math notranslate nohighlight">\(X\)</span> est souvent complexe.
+Pour représenter <span class="math notranslate nohighlight">\(X\)</span>, il faudrait donc se placer dans un espace en trois dimensions dont les axes seraient
+la fréquence (<span class="math notranslate nohighlight">\(f\)</span> ou <span class="math notranslate nohighlight">\(k\)</span>), la partie réelle de <span class="math notranslate nohighlight">\(X\)</span> et la partie imaginaire de <span class="math notranslate nohighlight">\(X\)</span>.
+Vous conviendrez que ce n’est pas commode de représenter un signal à valeurs complexes sur une feuille ou un écran…</p>
+<p>Pour cette raison, les transformations de Fourier sont représentées à l’aide de deux graphiques :</p>
+<ul class="simple">
+<li><p>le premier représente le module de <span class="math notranslate nohighlight">\(X\)</span> en fonction de la fréquence,</p></li>
+<li><p>le second représente l’argument de <span class="math notranslate nohighlight">\(X\)</span> en fonction de la fréquence.</p></li>
+</ul>
+<p>L’ensemble de ces deux graphiques s’appelle le « spectre ».</p>
+<p>On peut être surpris que le spectre présente des fréquences « négatives » (à gauche de l’axe des ordonnées).
+En fait, il ne s’agit pas de fréquences négatives (cela n’a pas de sens),
+mais d’exponentielles complexes tournant en sens opposé aux exponentielles complexes de la partie à droite de l’axe des ordonnées.</p>
+<div class="figure align-default" id="f-fourier-freqs-neg">
+<a class="reference internal image-reference" href="fourier/_static/figs/negative-freqs.png"><img alt="fourier/_static/figs/negative-freqs.png" src="fourier/_static/figs/negative-freqs.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Illustration des exponentielles complexes associées à l’axe des fréquences d’un spectre.</span><a class="headerlink" href="#f-fourier-freqs-neg" title="Lien permanent vers cette image">¶</a></p>
+</div>
+</div>
+<div class="section" id="recapitulatif">
+<h2>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Quelle que soit la transformation, on peut donc résumer ainsi les différentes notations utilisées :</p>
+<table>
+<thead>
+  <tr>
+    <td>&emsp;•&ensp;Domaine</td>
+    <td>temporel</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>fréquentiel</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&emsp;•&ensp;Signal :</td>
+    <td>\(x\)</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>\(X\)</td>
+  </tr>
+  <tr>
+    <td>&emsp;•&ensp;Variable :</td>
+    <td>\(t\) ou \(n\)</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>\(f\) ou \(k\)</td>
+  </tr>
+  <tr>
+    <td>&emsp;•&ensp;Exemple d'unité&emsp;</td>
+    <td>seconde (s)</td>
+    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td>s<sup>–1</sup> = hertz (Hz)</td>
+  </tr>
+</tbody>
+</table>
+<br>
+<p>Par ailleurs, on remarque que le passage du domaine temporel au domaine fréquentiel utilise une exponentielle du type <span class="math notranslate nohighlight">\(e^{-\theta}\)</span>
+alors que l’inverse utilise <span class="math notranslate nohighlight">\(e^{+\theta}\)</span>, où :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi k t / T\)</span> pour la SF,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi f t    \)</span> pour la TF,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi k n / N\)</span> pour la SFD (ou TFD).</p></li>
+</ul>
+<p>On retrouve donc toujours le même schéma pour <span class="math notranslate nohighlight">\(\theta\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+\theta = j 2 \pi \times \text{fréquence} \times \text{temps} \times \text{période éventuelle}
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><span class="math notranslate nohighlight">\(t\)</span> et <span class="math notranslate nohighlight">\(f\)</span> sont les <em>variables</em> de temps et de fréquence, respectivement.
+En revanche, <span class="math notranslate nohighlight">\(T\)</span> et son inverse <span class="math notranslate nohighlight">\(F=1/T\)</span> sont des <em>constantes</em> représentant la période et la fréquence d’un signal, respectivement.
+Ne confondez pas la fréquence <span class="math notranslate nohighlight">\(f\)</span> qui est une variable dont dépend <span class="math notranslate nohighlight">\(X\)</span>
+et la fréquence <span class="math notranslate nohighlight">\(F\)</span> qui est une constante représentant la fréquence d’un signal périodique <span class="math notranslate nohighlight">\(x\)</span> !</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./fourier"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../vect/correc.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="proprietes.html" title="next page">Propriétés des transformations de Fourier</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Vincent Mazet (Université de Strasbourg, France)<br/>
+        
+            &copy; droits d'auteur 2021-2022.<br/>
+          <div class="extra_footer">
+            Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2021 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

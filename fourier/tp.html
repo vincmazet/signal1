@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP : analyse de Fourier &#8212; Traitement du signal 1</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Introduction" href="correc.html" />
+    <link rel="prev" title="Exercices : analyse de Fourier" href="td.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Traitement du signal 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Notions élémentaires
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/definition.html">
+   Traitement du signal ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/classification.html">
+   Classification des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/signaux-elementaires.html">
+   Signaux élémentaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/proprietes-des-signaux.html">
+   Propriétés des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/energie-puissance.html">
+   Énergie et puissance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notions/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../notions/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Convolution
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../conv/convolution.html">
+   Produit de convolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../conv/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../conv/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Intercorrélation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../xcorr/intercorrelation.html">
+   Intercorrélation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../xcorr/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../xcorr/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Représentation vectorielle
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../vect/representation-vectorielle.html">
+   Représentation vectorielle des signaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../vect/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../vect/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Analyse de Fourier
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fourier.html">
+   Transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="proprietes.html">
+   Propriétés des transformations de Fourier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="temps-frequence.html">
+   Représentation temps-fréquence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   ✎ Exercices sur machine
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numérisation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/numerisation.html">
+   Numérisation d’un signal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/echantillonnage.html">
+   Échantillonnage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/quantification.html">
+   Quantification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../num/td.html">
+   ✎ Exercices théoriques
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../num/tp.html">
+   ✎ Exercices sur machine
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Annexes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://moodle.unistra.fr/course/view.php?id=5505">
+   Moodle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annexes/python.html">
+   Installer et utiliser Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annexes/references.html">
+   Références
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annexes/licence.html">
+   Licence
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/fourier/tp.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serie-de-fourier-d-un-creneau">
+   Série de Fourier d’un créneau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformee-de-fourier-discrete-d-un-signal-numerique">
+   Transformée de Fourier discrète d’un signal numérique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spectre-non-centre-en-fonction-des-echantillons">
+     Spectre non centré, en fonction des échantillons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spectre-centre-en-fonction-des-echantillons">
+     Spectre centré, en fonction des échantillons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spectre-centre-en-fonction-des-frequences">
+     Spectre centré, en fonction des fréquences
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application">
+     Application
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tp-analyse-de-fourier">
+<h1>TP : analyse de Fourier<a class="headerlink" href="#tp-analyse-de-fourier" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="serie-de-fourier-d-un-creneau">
+<h2>Série de Fourier d’un créneau<a class="headerlink" href="#serie-de-fourier-d-un-creneau" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On considère le signal créneau <span class="math notranslate nohighlight">\(y(t)\)</span> de période <span class="math notranslate nohighlight">\(2T\)</span> défini par :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y(t) =
+\begin{cases}
+  A  \quad  &amp;\text{si}\ -\frac{T}{2} \leq t \leq \frac{T}{2}, \\
+  0  \quad  &amp;\text{sinon}
+\end{cases}
+\end{split}\]</div>
+<p>avec <span class="math notranslate nohighlight">\(A=1\)</span> et <span class="math notranslate nohighlight">\(T = 1\)</span>.</p>
+<ul class="simple">
+<li><p>Tracez avec Python la série de Fourier de ce signal (qui a été calculée en TD),
+c’est-à-dire le spectre d’amplitude et de phase de <span class="math notranslate nohighlight">\(y\)</span>, pour <span class="math notranslate nohighlight">\(k\)</span> allant de <span class="math notranslate nohighlight">\(-10\)</span> à <span class="math notranslate nohighlight">\(10\)</span>.</p></li>
+</ul>
+<p>On souhaite maintenant reconstruire le signal temporel en ne considérant que les <span class="math notranslate nohighlight">\(K\)</span> premières harmoniques.</p>
+<ul class="simple">
+<li><p>Grâce à la formule de la série de Fourier inverse,
+tracez le signal temporel reconstruit pour une valeur de <span class="math notranslate nohighlight">\(K\)</span> fixée (c’est-à-dire pour <span class="math notranslate nohighlight">\(k\in\{-K,\dots,K\}\)</span>).
+Il peut être utile dans ce cas d’utiliser une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> sur <span class="math notranslate nohighlight">\(k\)</span>.
+Attention, il faut considérer la partie réelle du résultat car le signal obtenu contient une composante imaginaire
+due aux erreurs numériques.</p></li>
+<li><p>Quel signal obtenez-vous pour <span class="math notranslate nohighlight">\(K=0\)</span>, puis pour <span class="math notranslate nohighlight">\(K=1\)</span> ?</p></li>
+<li><p>Tracez ensuite le signal reconstruit en prenant des valeurs de <span class="math notranslate nohighlight">\(K\)</span> de plus en plus grandes.
+Que constatez-vous ?</p></li>
+</ul>
+</div>
+<div class="section" id="transformee-de-fourier-discrete-d-un-signal-numerique">
+<h2>Transformée de Fourier discrète d’un signal numérique<a class="headerlink" href="#transformee-de-fourier-discrete-d-un-signal-numerique" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On considère le signal suivant de longueur <span class="math notranslate nohighlight">\(N=100\)</span> échantillons :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z[n] =
+\begin{cases}
+  1 &amp;\quad\text{si}\ 0 \leq n &lt; 50, \\
+  0 &amp;\quad\text{sinon.}
+\end{cases}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Créez et affichez le signal <span class="math notranslate nohighlight">\(z[n]\)</span>.
+Une façon élégante de faire cela est de s’inspirer du premier exercice du TP 1.</p></li>
+</ul>
+<p>L’algorithme FFT (<em>Fast Fourier Transform</em>), qui permet de calculer rapidement une TFD (transformée de Fourier discrète),
+est implémenté dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code>.
+La TFD étant périodique de période <span class="math notranslate nohighlight">\(N\)</span>, elle n’est tracée que sur une seule période.
+Les questions suivantes ont pour objectif de représenter la TFD de trois façons différentes.</p>
+<div class="section" id="spectre-non-centre-en-fonction-des-echantillons">
+<h3>Spectre non centré, en fonction des échantillons<a class="headerlink" href="#spectre-non-centre-en-fonction-des-echantillons" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code> retourne la TFD <span class="math notranslate nohighlight">\(Z\)</span> de <span class="math notranslate nohighlight">\(z\)</span>
+en fonction des échantillons fréquentiels <span class="math notranslate nohighlight">\(k\)</span>, numérotés de <span class="math notranslate nohighlight">\(0\)</span> à <span class="math notranslate nohighlight">\(N-1\)</span>.</p>
+<ul class="simple">
+<li><p>Représentez le module et la phase de la TFD entre <span class="math notranslate nohighlight">\(0\)</span> et <span class="math notranslate nohighlight">\(N-1\)</span>.
+Prenez soin de définir le vecteur des abscisses <span class="math notranslate nohighlight">\(k\)</span>
+que l’on réutilisera par la suite
+(vous pouvez par exemple utiliser <code class="docutils literal notranslate"><span class="pre">numpy.arange</span></code>).</p></li>
+</ul>
+</div>
+<div class="section" id="spectre-centre-en-fonction-des-echantillons">
+<h3>Spectre centré, en fonction des échantillons<a class="headerlink" href="#spectre-centre-en-fonction-des-echantillons" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En général, on préfère centrer la TFD autour de 0,
+donc entre les échantillons
+<span class="math notranslate nohighlight">\(-N/2\)</span> et <span class="math notranslate nohighlight">\(N/2-1\)</span> (si <span class="math notranslate nohighlight">\(N\)</span> est pair),
+ou <span class="math notranslate nohighlight">\(-N/2\)</span> et <span class="math notranslate nohighlight">\(N/2\)</span> (si <span class="math notranslate nohighlight">\(N\)</span> est impair).</p>
+<p>Pour cela, il faut d’une part redéfinir le vecteur des abscisses
+(la fonction <code class="docutils literal notranslate"><span class="pre">numpy.floor</span></code> renvoie la partie entière qui permet de gérer la parité de <span class="math notranslate nohighlight">\(N\)</span>) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">-</span> <span class="n">floor</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>et d’autre part utiliser <code class="docutils literal notranslate"><span class="pre">numpy.fft.fftshift</span></code> qui déplace la deuxième moitié d’un vecteur au début de celui-ci :</p>
+<div class="math notranslate nohighlight">
+\[
+v = [6\,5\,4\,3\,2\,1]
+\quad\rightarrow\quad
+\mathrm{fftshift}(v) = [3\,2\,1\,6\,5\,4]
+\]</div>
+<ul class="simple">
+<li><p>Tracez le module et la phase de <span class="math notranslate nohighlight">\(Z\)</span> en les centrant autour de <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="spectre-centre-en-fonction-des-frequences">
+<h3>Spectre centré, en fonction des fréquences<a class="headerlink" href="#spectre-centre-en-fonction-des-frequences" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Chaque échantillon du spectre peut être relié à une fréquence particulière,
+à condition de connaître la « période d’échantillonnage » <span class="math notranslate nohighlight">\(T_e\)</span> entre deux échantillons du signal temporel.
+On peut montrer (cf. <span class="xref std std-ref">C:echantillonnage</span>) que la fréquence <span class="math notranslate nohighlight">\(f\)</span> correspondant à l’échantillon <span class="math notranslate nohighlight">\(k\)</span>
+est <span class="math notranslate nohighlight">\(f = k/(N \, T_e)\)</span>.</p>
+<ul class="simple">
+<li><p>Tracez le module et la phase de <span class="math notranslate nohighlight">\(Z\)</span> centrée et avec un axe des abscisses gradué en fréquences,
+dans le cas où <span class="math notranslate nohighlight">\(T_e=0,1\)</span> s.</p></li>
+</ul>
+</div>
+<div class="section" id="application">
+<h3>Application<a class="headerlink" href="#application" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Chargez le signal <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/inconnu.csv">inconnu.csv</a> (<span class="math notranslate nohighlight">\(T_e=0,1\)</span> ms) et tracez sa TFD pour déterminer quelle est la
+fréquence principale de ce signal.</p></li>
+</ul>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./fourier"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="td.html" title="previous page">Exercices : analyse de Fourier</a>
+    <a class='right-next' id="next-link" href="correc.html" title="next page">Introduction</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Vincent Mazet (Université de Strasbourg, France)<br/>
+        
+            &copy; droits d'auteur 2021-2022.<br/>
+          <div class="extra_footer">
+            Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2021 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
