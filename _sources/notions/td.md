@@ -3,7 +3,7 @@
 
 ## Exercice 1
 
-Complétez le [tableau de classification des signaux]().
+Complétez le <a href="../_static/classification.pdf">tableau de classification des signaux</a>.
 
 Placez dans le tableau les signaux suivants :
 - un signal acoustique dans l'air, en fonction du temps
