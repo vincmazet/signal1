@@ -7,7 +7,7 @@ Le signal $x(t)$ dépend de la variable $t$, appelée _variable indépendante_.
 
 * Un changement de signe sur $t$ revient à un retournement de l'axe temporel, donc à une symétrie par rapport à l'origine.
 * Un changement d'échelle consiste à multiplier $t$ par une variable $a \in \mathbb{R}^{+*}$.
-* Une translation (ou décalage) consiste à ajouter une variable $T\in\mathbb{R}$ à la variable indépendante.
+* Une translation (ou décalage) consiste à ajouter une variable $d\in\mathbb{R}$ à la variable indépendante.
 
 L'animation ci-dessous permet de visualiser ces transformations sur $t$, dans l'exemple d'un signal $x$ tel que
 

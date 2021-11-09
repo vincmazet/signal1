@@ -40,7 +40,7 @@ $$P = \frac{1}{T} \int_T |x(t)|^2 \, dt$$
 
 Signal à temps discret de période $N$
 ^^^
-$$P = \frac{1}{N}\sum_{n=0}^{N} |x[n]|^2$$
+$$P = \frac{1}{N}\sum_{n=0}^{N-1} |x[n]|^2$$
 
 ```
 
