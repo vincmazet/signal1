@@ -1,6 +1,8 @@
 # Représentation vectorielle des signaux
 
-Un signal qui est échantillonné et à temps limité (c'est-à-dire nul ou non défini en dehors d'un intervalle) peut tout simplement se représenter par une séquence finie de valeurs numériques. Dans le cas d'un signal $x$ défini sur $N$ échantillons, le signal est équivalent à un vecteur :
+Un signal qui est échantillonné et à temps limité (c'est-à-dire nul ou non défini en dehors d'un intervalle)
+peut se représenter par une séquence finie de valeurs numériques.
+Dans le cas d'un signal $x$ défini sur $N$ échantillons, le signal est équivalent à un vecteur :
 
 $$
   x = [ x_0 \, x_1 \, \dots \, x_{N-1} ]
@@ -26,19 +28,26 @@ $$
   \delta = [1 \, 0].
 $$
 
-Leur représentation est donnée {numref}`F:vect:ex-graphe`. Il s'agit simplement de deux signaux de deux échantillons. Les axes de cette représentation sont : les échantillons en abscisse, et les amplitude du signal en ordonnée.
+Leur représentation est donnée {numref}`F:vect:ex-graphe`.
+Il s'agit simplement de ux signaux de deux échantillons. 
+Les axes de cette représentation sont : les échantillons en abscisse, et les amplitudes en ordonnée.
 
-```{glue:figure} G:vect:ex-graphe
-:name: "F:vect:ex-graphe"
-
+```{figure} ex-graphe.svg
+---
+width: 600px
+name: F:vect:ex-graphe
+---
 Représentation de l'échelon et de l'impulsion de taille 2 sous forme de signaux.
 ```
 
-Par ailleurs, comme ces deux signaux peuvent s'interpréter comme des vecteurs, alors on peut les représenter comme tel, dans un espace à deux dimensions, comme dans la {numref}`F:vect:ex-espace`. Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.
+La représentation vectorelle de ces deux signaux se fait dans un espace à deux dimensions, comme dans la {numref}`F:vect:ex-espace`.
+Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.
 
-```{glue:figure} G:vect:ex-espace
-:name: "F:vect:ex-espace"
-
+```{figure} ex-espace.svg
+---
+width: 300px
+name: F:vect:ex-espace
+---
 Représentation de l'échelon et de l'impulsion de taille 2 sous forme de vecteurs.
 ```
     
@@ -109,9 +118,10 @@ Si en plus les vecteurs $\{\varphi_k\}$ de cette base sont orthogonaux deux à d
 
 Pour $N=4$, les signaux $\delta[n-k]$ avec $k\in\{0,\dots,3\}$ forment une base, qui plus est orthonormée.
 
-```{glue:figure} G:vect:base-canonique
-:name: "F:vect:base-canonique"
-
+```{figure} base-canonique.svg
+---
+name: F:vect:base-canonique
+---
 Base canonique dans $\mathbb{R}^4$.
 ```
 

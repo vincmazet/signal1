@@ -489,7 +489,9 @@
                 
   <div class="section" id="representation-vectorielle-des-signaux">
 <h1>Représentation vectorielle des signaux<a class="headerlink" href="#representation-vectorielle-des-signaux" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Un signal qui est échantillonné et à temps limité (c’est-à-dire nul ou non défini en dehors d’un intervalle) peut tout simplement se représenter par une séquence finie de valeurs numériques. Dans le cas d’un signal <span class="math notranslate nohighlight">\(x\)</span> défini sur <span class="math notranslate nohighlight">\(N\)</span> échantillons, le signal est équivalent à un vecteur :</p>
+<p>Un signal qui est échantillonné et à temps limité (c’est-à-dire nul ou non défini en dehors d’un intervalle)
+peut se représenter par une séquence finie de valeurs numériques.
+Dans le cas d’un signal <span class="math notranslate nohighlight">\(x\)</span> défini sur <span class="math notranslate nohighlight">\(N\)</span> échantillons, le signal est équivalent à un vecteur :</p>
 <div class="math notranslate nohighlight">
 \[
   x = [ x_0 \, x_1 \, \dots \, x_{N-1} ]
@@ -511,12 +513,17 @@ On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span>
   \qquad\text{et}\qquad
   \delta = [1 \, 0].
 \]</div>
-<p>Leur représentation est donnée <a class="reference internal" href="#f-vect-ex-graphe"><span class="std std-numref">Fig. 15</span></a>. Il s’agit simplement de deux signaux de deux échantillons. Les axes de cette représentation sont : les échantillons en abscisse, et les amplitude du signal en ordonnée.</p>
+<p>Leur représentation est donnée <a class="reference internal" href="#f-vect-ex-graphe"><span class="std std-numref">Fig. 15</span></a>.
+Il s’agit simplement de ux signaux de deux échantillons.
+Les axes de cette représentation sont : les échantillons en abscisse, et les amplitudes en ordonnée.</p>
 <div class="figure align-default" id="f-vect-ex-graphe">
+<a class="reference internal image-reference" href="../_images/ex-graphe.svg"><img alt="../_images/ex-graphe.svg" src="../_images/ex-graphe.svg" width="600px" /></a>
 <p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de signaux.</span><a class="headerlink" href="#f-vect-ex-graphe" title="Lien permanent vers cette image">¶</a></p>
 </div>
-<p>Par ailleurs, comme ces deux signaux peuvent s’interpréter comme des vecteurs, alors on peut les représenter comme tel, dans un espace à deux dimensions, comme dans la <a class="reference internal" href="#f-vect-ex-espace"><span class="std std-numref">Fig. 16</span></a>. Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.</p>
+<p>La représentation vectorelle de ces deux signaux se fait dans un espace à deux dimensions, comme dans la <a class="reference internal" href="#f-vect-ex-espace"><span class="std std-numref">Fig. 16</span></a>.
+Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.</p>
 <div class="figure align-default" id="f-vect-ex-espace">
+<a class="reference internal image-reference" href="../_images/ex-espace.svg"><img alt="../_images/ex-espace.svg" src="../_images/ex-espace.svg" width="300px" /></a>
 <p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Représentation de l’échelon et de l’impulsion de taille 2 sous forme de vecteurs.</span><a class="headerlink" href="#f-vect-ex-espace" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
@@ -579,7 +586,7 @@ On notera <span class="math notranslate nohighlight">\(x\in\mathbb{R}^N\)</span>
 <div class="example">
 <p>Pour <span class="math notranslate nohighlight">\(N=4\)</span>, les signaux <span class="math notranslate nohighlight">\(\delta[n-k]\)</span> avec <span class="math notranslate nohighlight">\(k\in\{0,\dots,3\}\)</span> forment une base, qui plus est orthonormée.</p>
 <div class="figure align-default" id="f-vect-base-canonique">
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Base canonique dans <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</span><a class="headerlink" href="#f-vect-base-canonique" title="Lien permanent vers cette image">¶</a></p>
+<img alt="../_images/base-canonique.svg" src="../_images/base-canonique.svg" /><p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Base canonique dans <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</span><a class="headerlink" href="#f-vect-base-canonique" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>Nous ne représentons pas ces quatre signaux sous forme de vecteur, car cela nécessite de les représenter dans un espace à quatre dimensions (or, votre écran n’en a que deux).</p>
 <p>Cette base est d’ailleurs appelée <em>base canonique</em> car c’est la base naturelle pour représenter les signaux. En effet, les échantillons de tout signal de taille <span class="math notranslate nohighlight">\(N\)</span> correspondent aux coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span>.</p>

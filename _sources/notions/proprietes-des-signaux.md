@@ -1,5 +1,6 @@
 # Propriétés des signaux
 
+
 ## Transformation de la variable indépendante
 
 Le signal $x(t)$ dépend de la variable $t$, appelée _variable indépendante_.
@@ -20,8 +21,9 @@ $$
 $$
 
 <div id='dilatation' class='spetsi'></div>
-<script src="_static/js/spetsi.js" type="text/javascript"></script>
-<script src="_static/js/dilatation.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/dilatation.js" type="text/javascript"></script>
+
 
 ## Périodicité
 
@@ -33,6 +35,7 @@ Ainsi :
 * un signal à temps discret de période $N$ est tel que : $\quad \forall n \quad x[n+N] = x[n]$.
 
 La _fréquence_ d'un signal est l'inverse de sa période.
+
 
 ## Causalité
 

@@ -38,9 +38,9 @@ $$
 
 où $a$ est l'atténuation et $d$ le retard dus à la réflexion sur le mur.
 
-```{figure} _static/figs/echo.png
+```{figure} echo.png
 ---
-height: 60px
+height: 80px
 name: F:td2:echo
 ```
 

@@ -51,3 +51,10 @@ $$
 ## Exercice 3
 
 Calculez le produit de convolution $x*x$ où $x(t) = A$ sur $[-T;T]$ et $0$ ailleurs.
+
+
+## Exercice 4
+
+On peut obtenir un écho dans une grande salle vide, une grotte ou en face d'une montagne,
+lorsque un son émis (par une personne par exemple) est réfléchi sur les parois pour revenir jusqu'à son lieu d'émission.
+Si on représente tout cela comme un système, à quoi correspond le signal d'entrée, le signal de sortie et la réponse impulsionnelle ?

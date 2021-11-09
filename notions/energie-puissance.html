@@ -457,27 +457,93 @@ on définit l’énergie et la puissance d’un signal.
 Dans le cas — très courant — où les amplitudes du signal sont sans unité, alors l’énergie et la puissance sont également sans unité.</p>
 <div class="section" id="energie-d-un-signal">
 <h2>Énergie d’un signal<a class="headerlink" href="#energie-d-un-signal" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’énergie d’un signal <span class="math notranslate nohighlight">\(x\)</span> est définie par :</p>
-<ul class="simple">
-<li><p>pour un signal à temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle E = \int_{-\infty}^{+\infty} |x(t)|^2 \, dt\)</span></p></li>
-<li><p>pour un signal à temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle E = \sum_{n=-\infty}^{+\infty} |x[n]|^2\)</span></p></li>
-</ul>
+<p>L’énergie d’un signal <span class="math notranslate nohighlight">\(x\)</span> est définie par les formules ci-dessous.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signal à temps continu</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[E = \int_{-\infty}^{+\infty} |x(t)|^2 \, dt\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signal à temps discret</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[E = \sum_{n=-\infty}^{+\infty} |x[n]|^2\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>Ces formules sont équivalentes, heureusement ! L’énergie est en fait l’aire sous la courbe du carré du signal, l’aire sous la courbe étant une intégrale ou une somme. Remarquez également que la notation <span class="math notranslate nohighlight">\(\mid\cdot\mid\)</span> correspond au module (le signal pouvant être complexe).</p>
 </div>
 <div class="section" id="puissance-d-un-signal">
 <h2>Puissance d’un signal<a class="headerlink" href="#puissance-d-un-signal" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La puissance d’un signal <span class="math notranslate nohighlight">\(x\)</span> <strong>périodique</strong> est définie par :</p>
-<ul class="simple">
-<li><p>pour un signal à temps continu de période <span class="math notranslate nohighlight">\(T\)</span> :  <span class="math notranslate nohighlight">\(\quad\displaystyle P = \frac{1}{T} \int_T |x(t)|^2 \, dt\)</span></p></li>
-<li><p>pour un signal à temps discret de période <span class="math notranslate nohighlight">\(N\)</span> :  <span class="math notranslate nohighlight">\(\quad\displaystyle P = \frac{1}{N}\sum_{n=0}^{N} |x[n]|^2\)</span></p></li>
-</ul>
-<p>Dans le cas d’un signal périodique, la puissance est donc l’énergie sur une période divisée par la durée de cette période.</p>
-<p>Dans le cas d’un signal <strong>apériodique</strong>, la puissance est définie par :</p>
-<ul class="simple">
-<li><p>pour un signal apériodique à temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle P = \lim_{T\rightarrow+\infty} \frac{1}{2T} \int_{-T}^{+T} |x(t)|^2 \, dt\)</span></p></li>
-<li><p>pour un signal apériodique à temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle P = \lim_{N\rightarrow+\infty} \frac{1}{2N+1} \sum_{n=-N}^{+N} |x[n]|^2\)</span></p></li>
-</ul>
-<p>On peut en fait supposer qu’un signal apériodique est un signal périodique de période infinie. En reprenant les formules de la puissance d’un signal périodique, et en faisant tendre cette période vers l’infini, on obtient les formules de la puissance d’un signal apériodique.</p>
+<p>La puissance d’un signal <span class="math notranslate nohighlight">\(x\)</span> périodique correspond à l’énergie sur une période divisée par la durée de cette période.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signal à temps continu de période <span class="math notranslate nohighlight">\(T\)</span></p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[P = \frac{1}{T} \int_T |x(t)|^2 \, dt\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signal à temps discret de période <span class="math notranslate nohighlight">\(N\)</span></p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[P = \frac{1}{N}\sum_{n=0}^{N} |x[n]|^2\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Pour déterminer la puissance d’un signal apériodique, on considère qu’il s’agit d’un signal périodique de période infinie.
+En reprenant les formules de la puissance d’un signal périodique, et en faisant tendre cette période vers l’infini,
+on obtient les formules de la puissance d’un signal apériodique.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signal apériodique à temps continu</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[P = \lim_{T\rightarrow+\infty} \frac{1}{2T} \int_{-T}^{+T} |x(t)|^2 \, dt\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signal apériodique à temps discret</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[P = \lim_{N\rightarrow+\infty} \frac{1}{2N+1} \sum_{n=-N}^{+N} |x[n]|^2\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

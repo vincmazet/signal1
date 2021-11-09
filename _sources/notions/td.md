@@ -17,9 +17,9 @@ Placez dans le tableau les signaux suivants :
 Tracez à la main les signaux suivants :
 
 $$
-  \frac{1}{2} \mathrm{sinc}\!\left(\frac{t}{2}\right),\qquad
-  \sin(\pi n),\qquad
-  \mathrm{rect}\!\left(\frac{n}{4}-\frac{1}{2}\right) - \delta[n-2]
+  x(t) = \frac{1}{2} \mathrm{sinc}\!\left(\frac{t}{2}\right),\qquad
+  y[n] = \sin(\pi n),\qquad
+  z[n] = \mathrm{rect}\!\left(\frac{n}{4}-\frac{1}{2}\right) - \delta[n-2]
 $$
 
 

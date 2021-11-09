@@ -461,24 +461,60 @@
 <h2>Définition<a class="headerlink" href="#definition" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le produit de convolution est une opération mathématique entre deux signaux qui calcule un troisième signal. Il est noté <span class="math notranslate nohighlight">\(*\)</span>. Il décrit l’effet que produit un instrument de mesure ou un système sur une mesure, caractérisé par sa <em>réponse impulsionnelle</em> <span class="math notranslate nohighlight">\(h\)</span>.</p>
 <div class="figure align-default" id="f-convolution-intro">
-<a class="reference internal image-reference" href="conv/_static/figs/convolution.svg"><img alt="conv/_static/figs/convolution.svg" src="conv/_static/figs/convolution.svg" width="60%" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Illustration de l’intérêt du produit de convolution.</span><a class="headerlink" href="#f-convolution-intro" title="Lien permanent vers cette image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/convolution.svg"><img alt="../_images/convolution.svg" src="../_images/convolution.svg" width="400px" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Illustration du produit de convolution.</span><a class="headerlink" href="#f-convolution-intro" title="Lien permanent vers cette image">¶</a></p>
 </div>
-<p>Le produit de convolution entre deux signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(h\)</span> produit un troisième signal <span class="math notranslate nohighlight">\(y\)</span> défini par :</p>
-<ul class="simple">
-<li><p>en temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle y(t) = (x*h)(t) = \int_{-\infty}^{+\infty} x(\tau) h(t-\tau) d\tau\)</span></p></li>
-<li><p>en temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle y[n] = (x*h)[n] = \sum_{m=-\infty}^{+\infty} x[m] h[n-m]\)</span></p></li>
-</ul>
+<p>Le produit de convolution entre deux signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(h\)</span> produit un troisième signal <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signaux à temps continu</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[y(t) = (x*h)(t) = \int_{-\infty}^{+\infty} x(\tau) h(t-\tau) d\tau\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signaux à temps discret</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[y[n] = (x*h)[n] = \sum_{m=-\infty}^{+\infty} x[m] h[n-m]\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="exemples">
 <h2>Exemples<a class="headerlink" href="#exemples" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’animation ci-dessous illustre l’effet du produit de convolution entre les signaux <font color="#0060A9"><span class="math notranslate nohighlight">\(x\)</span></font> et <font color="#BE1600"><span class="math notranslate nohighlight">\(h\)</span></font>.
-La première opération effectuée lors du calcul d’une convolution est le renversement et le décalage temporel d’un des deux signaux (ici nous avons choisi de renverser <span class="math notranslate nohighlight">\(h(t)\)</span>). La valeur du décalage <span class="math notranslate nohighlight">\(t\)</span> est modifiable à l’aide de la souris (ou du doigt).
-Ensuite, les signaux <font color="#0060A9"><span class="math notranslate nohighlight">\(x(\tau)\)</span></font> et <font color="#BE1600"><span class="math notranslate nohighlight">\(h(t-\tau)\)</span></font> sont multipliés entre eux et l’aire obtenue (représentée par la <font color="#5AE063">surface verte</font> sur le quatrième graphe) correspond à <font color="#00A90B"><span class="math notranslate nohighlight">\(y(t)\)</span></font>. En faisant glisser <span class="math notranslate nohighlight">\(t\)</span>, on obtient le signal <font color="#00A90B"><span class="math notranslate nohighlight">\(y(t)\)</span></font> en entier.</p>
-<script src="_static/js/conv1c.js"></script>
+<p>L’animation ci-dessous illustre l’effet du produit de convolution entre les signaux
+<font color="#0060A9"><span class="math notranslate nohighlight">\(x\)</span></font> et <font color="#BE1600"><span class="math notranslate nohighlight">\(h\)</span></font>.
+La première opération effectuée lors du calcul d’une convolution est le renversement et le décalage temporel d’un des deux signaux
+(ici nous avons choisi de renverser <font color="#BE1600"><span class="math notranslate nohighlight">\(h(t)\)</span></font>).
+La valeur du décalage <span class="math notranslate nohighlight">\(t\)</span> est modifiable à l’aide de la souris (ou du doigt).
+Ensuite, les signaux <font color="#0060A9"><span class="math notranslate nohighlight">\(x(\tau)\)</span></font> et <font color="#BE1600"><span class="math notranslate nohighlight">\(h(t-\tau)\)</span></font>
+sont multipliés entre eux et l’aire obtenue (représentée par la <font color="#5AE063">surface verte</font> sur le quatrième graphe) correspond à <font color="#00A90B"><span class="math notranslate nohighlight">\(y(t)\)</span></font>.
+En faisant glisser <span class="math notranslate nohighlight">\(t\)</span>, on obtient le signal <font color="#00A90B"><span class="math notranslate nohighlight">\(y(t)\)</span></font> en entier.</p>
 <div id='conv1c' class='spetsi'></div>
+<script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/conv1c.js" type="text/javascript"></script>
+<!-- Dans cette deuxième animation (ci-dessous), vous pouvez dessiner les signaux à temps discret $x$ et $h$ pour visualiser le résultat sur $y$.
+
+<div id='convolution' class='spetsi'></div>
+<script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/convolution.js" type="text/javascript"></script> -->
 <div class="example">
 <p>La <a class="reference internal" href="#f-convolution-suspension"><span class="std std-numref">figure 9</span></a> représente les signaux <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(h\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans le cas d’une simulation réaliste : le système de suspension d’un véhicule. Si <span class="math notranslate nohighlight">\(x\)</span> représente le profil de la route (ici, avec deux bosses) et que <span class="math notranslate nohighlight">\(h\)</span> est le signal qui caractérise le système de suspension, alors le véhicule va osciller suivant le signal <span class="math notranslate nohighlight">\(y\)</span>. Dans ce cas, les passagers vont être pas mal secoués, un peu comme dans une <a class="reference external" href="https://youtu.be/MwaoX7Rb7Ag">2CV</a>…</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MwaoX7Rb7Ag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 <div class="figure align-default" id="f-convolution-suspension">
 <div class="cell_output docutils container">
 <img alt="../_images/convolution_4_1.png" src="../_images/convolution_4_1.png" />
@@ -526,13 +562,55 @@ Ensuite, les signaux <font color="#0060A9"><span class="math notranslate nohighl
 </div></div>
 <div class="section" id="proprietes">
 <h2>Propriétés<a class="headerlink" href="#proprietes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Soient <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(g\)</span> et <span class="math notranslate nohighlight">\(h\)</span> des signaux (à temps continu ou discret), et <span class="math notranslate nohighlight">\(a\)</span> une constante. Le produit de convolution vérifie les propriétés suivantes :</p>
-<ul class="simple">
-<li><p>commutativité : <span class="math notranslate nohighlight">\(f*g = g*f\)</span></p></li>
-<li><p>associativité : <span class="math notranslate nohighlight">\(f*(g*h) = (f*g)*h\)</span></p></li>
-<li><p>distributivité : <span class="math notranslate nohighlight">\(f*(g+h) = f*g + f*h\)</span></p></li>
-<li><p>identité : <span class="math notranslate nohighlight">\(f*\delta = f\)</span></p></li>
-</ul>
+<p>Soient <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(g\)</span> et <span class="math notranslate nohighlight">\(h\)</span> des signaux (à temps continu ou discret), et <span class="math notranslate nohighlight">\(a\)</span> une constante. Le produit de convolution vérifie les propriétés suivantes.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Commutativité</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[f*g = g*f\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Associativité</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[f*(g*h) = (f*g)*h\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Distributivité</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[f*(g+h) = f*g + f*h\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Identité</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[f*\delta = f\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

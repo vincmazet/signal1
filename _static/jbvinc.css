@@ -72,3 +72,49 @@ table p { margin-bottom: 0 }
   font-weight: bold;
   color: #9c9ea1;
 }
+
+
+/* Styles pour les animations */
+
+.spetsi {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.anim {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.anim-button {
+  background-color:#ededed;
+  /*-moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  border-radius:50%;*/
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  cursor:pointer;
+  color:#777777;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+.anim-button:hover {
+  background-color:#dfdfdf;
+}
+.anim-button:active {
+  position:relative;
+  top:1px;
+}
+
+.spetsi {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

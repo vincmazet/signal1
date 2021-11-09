@@ -459,11 +459,34 @@
 <h1>Intercorrélation<a class="headerlink" href="#intercorrelation" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="definition">
 <h2>Définition<a class="headerlink" href="#definition" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’intercorrélation de deux signaux <span class="math notranslate nohighlight">\(x(t)\)</span> et <span class="math notranslate nohighlight">\(y(t)\)</span> est un signal <span class="math notranslate nohighlight">\(R_{xy}(\tau)\)</span> qui mesure la ressemblance du signal <span class="math notranslate nohighlight">\(x\)</span> décalé de <span class="math notranslate nohighlight">\(\tau\)</span> <span class="math notranslate nohighlight">\(x(t+\tau)\)</span> avec <span class="math notranslate nohighlight">\(y(t)\)</span>. Elle est définie par :</p>
-<ul class="simple">
-<li><p>en temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{xy}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) y(t) dt\)</span></p></li>
-<li><p>en temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{xy}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] y[n]\)</span></p></li>
-</ul>
+<p>L’intercorrélation de deux signaux <span class="math notranslate nohighlight">\(x(t)\)</span> et <span class="math notranslate nohighlight">\(y(t)\)</span> est un signal <span class="math notranslate nohighlight">\(R_{xy}(\tau)\)</span>
+qui mesure la ressemblance du signal <span class="math notranslate nohighlight">\(x(t+\tau)\)</span> avec <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signaux à temps continu</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[R_{xy}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) y(t) dt\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signaux à temps discret</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[R_{xy}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] y[n]\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>Attention, la formule de l’intercorrélation est très proche de celle de la convolution puisque seul un signe change ! Malgré cela, l’intercorrélation et la convolution sont deux outils très différents et dont l’interprétation n’est pas du tout la même.</p>
 </div>
 <div class="section" id="exemples">
@@ -471,30 +494,57 @@
 <div class="example">
 <p>En communications numériques, il n’est pas rare que le récepteur du sytème de communication reçoive un signal de l’émetteur qui soit très brouillé (on dit qu’il est <em>bruité</em>). Par exemple, si le récepteur reçoit le signal <span class="math notranslate nohighlight">\(x\)</span> représenté <a class="reference internal" href="#f-intercorrelation-communications"><span class="std std-numref">Fig. 12</span></a>, et qu’il sait qu’il devrait être une suite d’échelon d’amplitude −1 (représentant le bit 0) ou +1 (représentant le bit 1), alors l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec un échelon <span class="math notranslate nohighlight">\(y\)</span> permet de détecter à chaque instant si le signal reçu ressemble à <span class="math notranslate nohighlight">\(y\)</span> (dans ce cas, on a reçu un 1) ou pas (on a reçu un 0).</p>
 <div class="figure align-default" id="f-intercorrelation-communications">
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> véhicule le message 10011010 codé en NRZ avec le motif y.</span><a class="headerlink" href="#f-intercorrelation-communications" title="Lien permanent vers cette image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/communications.svg"><img alt="../_images/communications.svg" src="../_images/communications.svg" width="100%" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> véhicule le message 10011010 codé en NRZ avec le motif <span class="math notranslate nohighlight">\(y\)</span>.</span><a class="headerlink" href="#f-intercorrelation-communications" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
 <div class="example">
 <p>Un autre exemple d’utilisation de l’intecorrélation est la mesure de la fréquence d’un signal. Si on dispose d’un signal sinusoïdal <span class="math notranslate nohighlight">\(x\)</span>, mais qu’il est très bruité et que l’on cherche sa fréquence inconnue, alors on peut représenter l’intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec plusieurs sinusoïdes <span class="math notranslate nohighlight">\(y\)</span> dont on connaît la fréquence. La sinusoïde qui permet d’obtenir la plus grande intercorrélation sera la plus ressemblante : on pourra alors en déduire la valeur de la fréquence inconnue. Ce principe est illustré <a class="reference internal" href="#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 13</span></a>.</p>
 <div class="figure align-default" id="f-intercorrelation-sinusoide">
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> avec <span class="math notranslate nohighlight">\(y\)</span>. Le signal <span class="math notranslate nohighlight">\(x\)</span> est une sinusoïde bruitée de fréquence 0,5 Hz.</span><a class="headerlink" href="#f-intercorrelation-sinusoide" title="Lien permanent vers cette image">¶</a></p>
+<img alt="../_images/sinusoide1.svg" src="../_images/sinusoide1.svg" /><p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Intercorrélation de <span class="math notranslate nohighlight">\(x\)</span> ( une sinusoïde bruitée de fréquence 1 Hz) avec un sinusoïde de fréquence variable.
+La corrélation la plus forte est obtenue pour une sinusoïde de 1 Hz.</span><a class="headerlink" href="#f-intercorrelation-sinusoide" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="autocorrelation">
 <h2>Autocorrélation<a class="headerlink" href="#autocorrelation" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’autocorrélation est l’intercorrélation d’un signal avec lui-même :</p>
-<ul class="simple">
-<li><p>en temps continu : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{x}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) x(t) dt\)</span></p></li>
-<li><p>en temps discret : <span class="math notranslate nohighlight">\(\quad\displaystyle R_{x}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] x[n]\)</span></p></li>
-</ul>
+<p>L’autocorrélation est l’intercorrélation d’un signal avec lui-même.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signaux à temps continu</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[R_{x}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) x(t) dt\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Signaux à temps discret</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[R_{x}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] x[n]\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>L’autocorrélation possède quelques propriétés remarquables :</p>
 <ul>
-<li><p>l’autocorrélation est symétrique car <span class="math notranslate nohighlight">\(R_{x}(\tau) = R_{x}(-\tau)\)</span> (reprendre la définition en effectuant un changement de variable)</p></li>
-<li><p>l’autocorrélation en 0 est la valeur maximale de l’autocorrélation (puisque c’est pour un décalage nul <span class="math notranslate nohighlight">\(T=0\)</span> que le signal se ressemble le plus à lui-même. C’est par ailleurs l’énergie du signal :</p>
+<li><p>l’autocorrélation est symétrique car <span class="math notranslate nohighlight">\(R_{x}(\tau) = R_{x}(-\tau)\)</span>
+(pour le vérifier, reprendre la définition en effectuant un changement de variable)</p></li>
+<li><p>l’autocorrélation en 0 est la valeur maximale de l’autocorrélation
+(puisque c’est pour un décalage nul <span class="math notranslate nohighlight">\(\tau=0\)</span> que le signal se ressemble le plus à lui-même).
+C’est par ailleurs l’énergie du signal :</p>
 <div class="math notranslate nohighlight">
 \[
-    R_{x}(0) = \int_{-\infty}^{+\infty} x(t)^2 dt
+    R_{x}(0) = \int_{-\infty}^{+\infty} x(t)^2 dt.
   \]</div>
 </li>
 <li><p>L’autocorrélation d’un signal périodique de période <span class="math notranslate nohighlight">\(T\)</span> est également périodique de période <span class="math notranslate nohighlight">\(T\)</span> (puisqu’en décalant le signal de <span class="math notranslate nohighlight">\(T\)</span>, il ressemble à nouveau avec lui-même)</p></li>
