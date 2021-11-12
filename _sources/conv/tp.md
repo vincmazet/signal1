@@ -33,8 +33,9 @@ $$
     \end{cases}
  $$
 
-* Représentez le signal [AEP-2005.csv](https://vincmazet.github.io/signal1/_static/files/AEP-2005.csv)
-  (consommation électrique de l'est des États-Unis, heure par heure sur un an) et $y$ définie ci-dessous, ainsi que leur produit de convolution.
+* Représentez le signal $x$ <a href="../_static/AEP-2005.csv">AEP-2005.csv</a> (à charger avec `numpy.loadtxt`)
+  qui correspond à la consommation électrique de l'est des États-Unis, heure par heure sur un an.
+  Représentez également le signal $y$ défini ci-dessous, ainsi que le produit de convolution $x*y$.
 
   $$
     y[n] =
@@ -45,3 +46,5 @@ $$
   $$
   
   où $D=24 \times 7$ correspond au nombre d'heures dans une semaine.
+  
+<!-- commentaire de 2019-2020 : l'utilisation de "same" et d'un axe temporel comme il faut est toujours un problème. Peut être faut-il y aller franco et leur demander "full", sans axe dans un premier temps. Peut être aussi rajouter dans la correc une illustration avec le résultat de full et same superposés, et différents axes des temps. -->

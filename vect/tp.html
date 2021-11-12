@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP : représentation vectorielle &#8212; Traitement du signal 1</title>
+    <title>TP : décomposition dans la base de Haar &#8212; Traitement du signal 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Introduction" href="correc.html" />
+    <link rel="next" title="Transformations de Fourier" href="../fourier/fourier.html" />
     <link rel="prev" title="Exercices : représentation vectorielle" href="td.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -128,22 +128,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notions/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -162,22 +150,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../conv/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -196,22 +172,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xcorr/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -230,22 +194,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    ✎ Exercices sur machine
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -274,22 +226,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../fourier/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -318,22 +258,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../num/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../num/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -432,12 +360,13 @@
         
               <div>
                 
-  <div class="section" id="tp-representation-vectorielle">
-<h1>TP : représentation vectorielle<a class="headerlink" href="#tp-representation-vectorielle" title="Lien permanent vers ce titre">¶</a></h1>
-<p>(Décomposition dans la base de Haar)</p>
+  <div class="section" id="tp-decomposition-dans-la-base-de-haar">
+<h1>TP : décomposition dans la base de Haar<a class="headerlink" href="#tp-decomposition-dans-la-base-de-haar" title="Lien permanent vers ce titre">¶</a></h1>
 <ul class="simple">
-<li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N=16\)</span> contenant des valeurs aléatoires (<code class="docutils literal notranslate"><span class="pre">numpy.random.random</span></code>).</p></li>
-<li><p>Créez puis représentez les <span class="math notranslate nohighlight">\(N\)</span> signaux de la base de Haar avec la fonction <code class="docutils literal notranslate"><span class="pre">haar</span></code> dans le module <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/signalfip.py">signalfip</a>.</p></li>
+<li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de taille <span class="math notranslate nohighlight">\(N=16\)</span>.
+Vous pouvez par exemple générer un signal contenant des valeurs aléatoires (<code class="docutils literal notranslate"><span class="pre">numpy.random.random</span></code>).</p></li>
+<li><p>Créez puis représentez les <span class="math notranslate nohighlight">\(N\)</span> signaux de la base de Haar avec la fonction <code class="docutils literal notranslate"><span class="pre">haar</span></code>
+disponible dans le fichier <a href="../_static/haar.py">haar.py</a>.</p></li>
 <li><p>Décomposez le signal <span class="math notranslate nohighlight">\(x\)</span> dans la base de Haar pour obtenir ses <span class="math notranslate nohighlight">\(N\)</span> coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> (<span class="math notranslate nohighlight">\(k\in\{0,\dots,N-1\}\)</span>).</p></li>
 <li><p>Reconstruisez le signal <span class="math notranslate nohighlight">\(x\)</span> à partir de ses coefficients <span class="math notranslate nohighlight">\(\alpha_k\)</span> et vérifiez que vous retrouvez bien le signal initial.</p></li>
 </ul>
@@ -468,8 +397,6 @@ Aussi, après avoir calculé ces coefficients, supprimez la moitié des coeffici
 <li><p>Calculez les EQM entre les signaux compressés <span class="math notranslate nohighlight">\(x_1\)</span> ou <span class="math notranslate nohighlight">\(x_2\)</span> et le signal initial <span class="math notranslate nohighlight">\(x\)</span>.
 Qu’en concluez-vous ?</p></li>
 </ul>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -498,7 +425,7 @@ Qu’en concluez-vous ?</p></li>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="td.html" title="previous page">Exercices : représentation vectorielle</a>
-    <a class='right-next' id="next-link" href="correc.html" title="next page">Introduction</a>
+    <a class='right-next' id="next-link" href="../fourier/fourier.html" title="next page">Transformations de Fourier</a>
 
         </div>
         

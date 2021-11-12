@@ -56,7 +56,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Introduction" href="correc.html" />
+    <link rel="next" title="Intercorrélation" href="../xcorr/intercorrelation.html" />
     <link rel="prev" title="Exercices : produit de convolution" href="td.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -128,22 +128,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notions/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -162,22 +150,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    ✎ Exercices sur machine
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -196,22 +172,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xcorr/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -230,22 +194,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../vect/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -274,22 +226,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../fourier/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -318,22 +258,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../num/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../num/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -468,8 +396,9 @@ Attention à spécifier l’argument <code class="docutils literal notranslate">
     \end{cases}
  \end{split}\]</div>
 <ul>
-<li><p>Représentez le signal <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/AEP-2005.csv">AEP-2005.csv</a>
-(consommation électrique de l’est des États-Unis, heure par heure sur un an) et <span class="math notranslate nohighlight">\(y\)</span> définie ci-dessous, ainsi que leur produit de convolution.</p>
+<li><p>Représentez le signal <span class="math notranslate nohighlight">\(x\)</span> <a href="../_static/AEP-2005.csv">AEP-2005.csv</a> (à charger avec <code class="docutils literal notranslate"><span class="pre">numpy.loadtxt</span></code>)
+qui correspond à la consommation électrique de l’est des États-Unis, heure par heure sur un an.
+Représentez également le signal <span class="math notranslate nohighlight">\(y\)</span> défini ci-dessous, ainsi que le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     y[n] =
@@ -481,9 +410,7 @@ Attention à spécifier l’argument <code class="docutils literal notranslate">
 <p>où <span class="math notranslate nohighlight">\(D=24 \times 7\)</span> correspond au nombre d’heures dans une semaine.</p>
 </li>
 </ul>
-<div class="toctree-wrapper compound">
-</div>
-</div>
+<!-- commentaire de 2019-2020 : l'utilisation de "same" et d'un axe temporel comme il faut est toujours un problème. Peut être faut-il y aller franco et leur demander "full", sans axe dans un premier temps. Peut être aussi rajouter dans la correc une illustration avec le résultat de full et same superposés, et différents axes des temps. --></div>
 
     <script type="text/x-thebe-config">
     {
@@ -511,7 +438,7 @@ Attention à spécifier l’argument <code class="docutils literal notranslate">
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="td.html" title="previous page">Exercices : produit de convolution</a>
-    <a class='right-next' id="next-link" href="correc.html" title="next page">Introduction</a>
+    <a class='right-next' id="next-link" href="../xcorr/intercorrelation.html" title="next page">Intercorrélation</a>
 
         </div>
         

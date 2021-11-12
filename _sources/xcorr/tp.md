@@ -1,28 +1,37 @@
 # TP : intercorrélation
 
-L'objectif est, comme dans l'exemple {numref}`F:intercorrelation:sinusoide`, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
-Le motif en question sera ici une exponentielle décroissante.
+L'objectif est, comme dans l'exemple {numref}`F:intercorrelation:communications`, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
 
-* Créez un signal $x$ de $N=1000$ échantillons correspondant à une exponentielle décroissante :
+Dans cet exercice, les signaux sont de taille $N=100$ échantillons.
+
+* Créez le motif $m$ comme une porte non nulle entre 0 et 9 :
 
   $$
-    x[n] =
+    \forall n\in\{0,\dots,N-1\},\qquad
+    m[n] =
     \begin{cases}
-      \exp\left(-\frac{n-k}{100}\right)    &\text{si} n \geq k, \\
-      0                                    &\text{sinon},
+      0 &\text{si } n \in \{0,\dots,9\} \\
+      1 &\text{sinon}
     \end{cases}
   $$
-  
-  en choisissant vous-même une valeur (positive) pour $k$.
 
-* Créez une deuxième exponentielle décroissante débutant en $k=0$ : ce signal sera le motif $m$.
+* Créez un signal $x$ avec une porte située en $k$ (en choisissant vous-même une valeur positive pour $k$) :
+
+  $$
+    \forall n\in\{0,\dots,N-1\},\qquad
+    x[n] =
+    \begin{cases}
+      0 &\text{si } n \in \{k,\dots,k+9\} \\
+      1 &\text{sinon}
+    \end{cases}
+  $$
 
 * Représentez l'intercorrélation $R_{xm}$ entre $x$ et $m$.
   Que se passe-t-il lorsque $k$ varie ?
 
-* Chargez le fichier [tp13.csv](https://vincmazet.github.io/signal1/_static/files/tp13.csv) et affichez le signal correspondant.
-  Ce signal est une exponentielle décroissante très bruitée.
-  Êtes-vous capable de détecter à l'œil à quel instant $k$ débute l'exponentielle décroissante ?
-
-* Représentez l'intercorrélation entre le signal signal3.csv et $m$
-  pour en déduire l'instant auquel commence le motif.
+* Chargez le fichier <a href="../_static/message1.csv">message1.csv</a> et affichez le signal correspondant.
+  Ce signal est un message codant un message binaire de 10 bits,
+  où les 0 sont codés par une porte d'amplitude négative et les 1 par une porte d'amplitude positive.
+  Représentez l'intercorrélation entre ce signal et le motif pour en déduire le message codé.
+  
+* Même question pour le fichier <a href="../_static/message2.csv">message2.csv</a>.

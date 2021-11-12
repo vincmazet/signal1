@@ -1,10 +1,10 @@
-# TP : représentation vectorielle
+# TP : décomposition dans la base de Haar
 
-(Décomposition dans la base de Haar)
+* Créez un signal $x$ de taille $N=16$.
+  Vous pouvez par exemple générer un signal contenant des valeurs aléatoires (`numpy.random.random`).
 
-* Créez un signal $x$ de taille $N=16$ contenant des valeurs aléatoires (`numpy.random.random`).
-
-* Créez puis représentez les $N$ signaux de la base de Haar avec la fonction `haar` dans le module [signalfip](https://vincmazet.github.io/signal1/_static/files/signalfip.py).
+* Créez puis représentez les $N$ signaux de la base de Haar avec la fonction `haar`
+  disponible dans le fichier <a href="../_static/haar.py">haar.py</a>.
 
 * Décomposez le signal $x$ dans la base de Haar pour obtenir ses $N$ coefficients $\alpha_k$ ($k\in\{0,\dots,N-1\}$).
 

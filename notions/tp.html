@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP : notions élémentaires &#8212; Traitement du signal 1</title>
+    <title>TP : représentation de signaux &#8212; Traitement du signal 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Introduction" href="correc.html" />
+    <link rel="next" title="Produit de convolution" href="../conv/convolution.html" />
     <link rel="prev" title="Exercices : notions élémentaires" href="td.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -128,22 +128,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    ✎ Exercices sur machine
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -162,22 +150,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../conv/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -196,22 +172,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../xcorr/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -230,22 +194,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../vect/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -274,22 +226,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../fourier/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -318,22 +258,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../num/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../num/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -399,9 +327,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notions/tp.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notions/tp.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -424,19 +352,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenu
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#representation-de-signaux">
-   Représentation de signaux
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -445,34 +360,58 @@
         
               <div>
                 
-  <div class="section" id="tp-notions-elementaires">
-<h1>TP : notions élémentaires<a class="headerlink" href="#tp-notions-elementaires" title="Lien permanent vers ce titre">¶</a></h1>
-<p>En plus d’appliquer les notions essentielles du traitement du signal,
-ce TP est également une initiation à la programmation scientifique en Python.</p>
-<div class="section" id="representation-de-signaux">
-<h2>Représentation de signaux<a class="headerlink" href="#representation-de-signaux" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour représenter la sinusoïde de fréquence <span class="math notranslate nohighlight">\(f=0,3\)</span> Hz</p>
-<div class="math notranslate nohighlight">
-\[
-  w(t) = \sin(2\pi f t),
-\]</div>
-<p>on peut utiliser le code ci-dessous :</p>
+  <div class="section" id="tp-representation-de-signaux">
+<h1>TP : représentation de signaux<a class="headerlink" href="#tp-representation-de-signaux" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Pour représenter la sinusoïde <span class="math notranslate nohighlight">\(w(t) = \sin(2\pi f t)\)</span> de fréquence <span class="math notranslate nohighlight">\(f=0,3\)</span> Hz, on peut utiliser le code ci-dessous :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importation de modules nécessaires</span>
+<span class="c1"># Pour les modules dont le nom est un peu long, on peut leur donner un nom plus cours avec `as`</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Vecteur des abscisses : un point tous les 0,1 s entre 0 et 10 s</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="c1"># Fréquence de la sinusoïde</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">0.3</span>
+
+<span class="c1"># Sinusoïde : c&#39;est tout simple, il suffit d&#39;écrire l&#39;expression mathématique 😎</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">f</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+
+<span class="c1"># Affichage du signal</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
+
+<span class="c1"># Des légendes, c&#39;est toujours bien !</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;w(t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Une belle sinusoïde&quot;</span><span class="p">)</span>
+
+<span class="c1"># Affichage (pas toujours nécessaire, mais parfois c&#39;est indispensable)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/tp_1_0.png" src="../_images/tp_1_0.png" />
+</div>
+</div>
 <ul>
 <li><p>(Re)copier le code ci-avant dans votre notebook pour vérifier que le signal s’affiche de la même manière.</p></li>
-<li><p>Modifier le code pour représentez le signal sinusoïdal</p>
+<li><p>Modifier le code pour représenter le signal sinusoïdal</p>
 <div class="math notranslate nohighlight">
 \[
     x(t) = A \sin(2\pi f t + \varphi)
   \]</div>
-<p>sur 1 seconde et avec <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(f=5\)</span> Hz et <span class="math notranslate nohighlight">\(\varphi=\pi/3\)</span>.</p>
-<p>Choisissez en particulier un pas de temps correct pour obtenir une courbe lisse.</p>
+<p>sur 1 seconde avec <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(f=5\)</span> Hz et <span class="math notranslate nohighlight">\(\varphi=\pi/3\)</span>.<br />
+Choisissez un pas de temps correct pour obtenir une courbe lisse.</p>
 </li>
 <li><p>Représentez la sinusoïde amortie</p>
 <div class="math notranslate nohighlight">
 \[
     y(t) = A e^{-at} \sin(2 \pi f t)
   \]</div>
-<p>entre 0 et 10 s avec <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(a=0,5\)</span> et <span class="math notranslate nohighlight">\(f = 2\)</span> Hz.</p>
+<p>entre 0 et 10 s avec <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(a=0,\!5\)</span> et <span class="math notranslate nohighlight">\(f = 2\)</span> Hz.</p>
 <p>Étudiez l’influence des paramètres sur la forme du signal.</p>
 </li>
 <li><p>Représentez le signal porte</p>
@@ -480,14 +419,14 @@ ce TP est également une initiation à la programmation scientifique en Python.<
 \[
     z[n] = A\,\mathrm{rect}\left(\frac{n-m}{N}\right)
   \]</div>
-<p>avec <span class="math notranslate nohighlight">\(A = 3\)</span>, <span class="math notranslate nohighlight">\(m = 4\)</span> et <span class="math notranslate nohighlight">\(N = 5\)</span>.</p>
-<p>Comme le signal est à temps discret, vous pouvez utiliser la syntaxe <code class="docutils literal notranslate"><span class="pre">plt.plot(...,&quot;.&quot;)</span></code> pour afficher les points individuellement sans les relier.</p>
+<p>avec <span class="math notranslate nohighlight">\(A = 3\)</span>, <span class="math notranslate nohighlight">\(m = 4\)</span> et <span class="math notranslate nohighlight">\(N = 5\)</span>.
+Comme le signal est à temps discret, vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.stem</span></code>
+pour afficher les points individuellement sans les relier.</p>
 </li>
-<li><p>Le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/hello.wav">hello.wav</a> contient un signal sonore sous forme d’une matrice dont la première colonne correspond aux échantillons temporels et les deux colonnes suivantes aux canaux gauche et droite. Affichez le signal sonore issu du canal gauche.</p></li>
+<li><p>Le fichier <a href="../_static/pluie.wav">pluie.wav</a> contient un signal sonore sous forme d’une matrice
+dont la première colonne correspond aux échantillons temporels et les deux colonnes suivantes aux canaux gauche et droite.
+Chargez le signal sonore (<code class="docutils literal notranslate"><span class="pre">scipy.io.wavfile.read</span></code>) et affichez uniquement le signal issu du canal gauche.</p></li>
 </ul>
-</div>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -516,7 +455,7 @@ ce TP est également une initiation à la programmation scientifique en Python.<
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="td.html" title="previous page">Exercices : notions élémentaires</a>
-    <a class='right-next' id="next-link" href="correc.html" title="next page">Introduction</a>
+    <a class='right-next' id="next-link" href="../conv/convolution.html" title="next page">Produit de convolution</a>
 
         </div>
         

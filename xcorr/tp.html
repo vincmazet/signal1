@@ -56,7 +56,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Introduction" href="correc.html" />
+    <link rel="next" title="Représentation vectorielle des signaux" href="../vect/representation-vectorielle.html" />
     <link rel="prev" title="Exercices : intercorrélation" href="td.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -128,22 +128,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notions/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -162,22 +150,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../conv/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -196,22 +172,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    ✎ Exercices sur machine
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -230,22 +194,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../vect/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -274,22 +226,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../fourier/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -318,22 +258,10 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../num/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../num/correc.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -434,31 +362,39 @@
                 
   <div class="section" id="tp-intercorrelation">
 <h1>TP : intercorrélation<a class="headerlink" href="#tp-intercorrelation" title="Lien permanent vers ce titre">¶</a></h1>
-<p>L’objectif est, comme dans l’exemple <a class="reference internal" href="intercorrelation.html#f-intercorrelation-sinusoide"><span class="std std-numref">Fig. 13</span></a>, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
-Le motif en question sera ici une exponentielle décroissante.</p>
+<p>L’objectif est, comme dans l’exemple <a class="reference internal" href="intercorrelation.html#f-intercorrelation-communications"><span class="std std-numref">Fig. 12</span></a>, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).</p>
+<p>Dans cet exercice, les signaux sont de taille <span class="math notranslate nohighlight">\(N=100\)</span> échantillons.</p>
 <ul>
-<li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> de <span class="math notranslate nohighlight">\(N=1000\)</span> échantillons correspondant à une exponentielle décroissante :</p>
+<li><p>Créez le motif <span class="math notranslate nohighlight">\(m\)</span> comme une porte non nulle entre 0 et 9 :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    x[n] =
+    \forall n\in\{0,\dots,N-1\},\qquad
+    m[n] =
     \begin{cases}
-      \exp\left(-\frac{n-k}{100}\right)    &amp;\text{si} n \geq k, \\
-      0                                    &amp;\text{sinon},
+      0 &amp;\text{si } n \in \{0,\dots,9\} \\
+      1 &amp;\text{sinon}
     \end{cases}
   \end{split}\]</div>
-<p>en choisissant vous-même une valeur (positive) pour <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </li>
-<li><p>Créez une deuxième exponentielle décroissante débutant en <span class="math notranslate nohighlight">\(k=0\)</span> : ce signal sera le motif <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
+<li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> avec une porte située en <span class="math notranslate nohighlight">\(k\)</span> (en choisissant vous-même une valeur positive pour <span class="math notranslate nohighlight">\(k\)</span>) :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \forall n\in\{0,\dots,N-1\},\qquad
+    x[n] =
+    \begin{cases}
+      0 &amp;\text{si } n \in \{k,\dots,k+9\} \\
+      1 &amp;\text{sinon}
+    \end{cases}
+  \end{split}\]</div>
+</li>
 <li><p>Représentez l’intercorrélation <span class="math notranslate nohighlight">\(R_{xm}\)</span> entre <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(m\)</span>.
 Que se passe-t-il lorsque <span class="math notranslate nohighlight">\(k\)</span> varie ?</p></li>
-<li><p>Chargez le fichier <a class="reference external" href="https://vincmazet.github.io/signal1/_static/files/tp13.csv">tp13.csv</a> et affichez le signal correspondant.
-Ce signal est une exponentielle décroissante très bruitée.
-Êtes-vous capable de détecter à l’œil à quel instant <span class="math notranslate nohighlight">\(k\)</span> débute l’exponentielle décroissante ?</p></li>
-<li><p>Représentez l’intercorrélation entre le signal signal3.csv et <span class="math notranslate nohighlight">\(m\)</span>
-pour en déduire l’instant auquel commence le motif.</p></li>
+<li><p>Chargez le fichier <a href="../_static/message1.csv">message1.csv</a> et affichez le signal correspondant.
+Ce signal est un message codant un message binaire de 10 bits,
+où les 0 sont codés par une porte d’amplitude négative et les 1 par une porte d’amplitude positive.
+Représentez l’intercorrélation entre ce signal et le motif pour en déduire le message codé.</p></li>
+<li><p>Même question pour le fichier <a href="../_static/message2.csv">message2.csv</a>.</p></li>
 </ul>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -487,7 +423,7 @@ pour en déduire l’instant auquel commence le motif.</p></li>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="td.html" title="previous page">Exercices : intercorrélation</a>
-    <a class='right-next' id="next-link" href="correc.html" title="next page">Introduction</a>
+    <a class='right-next' id="next-link" href="../vect/representation-vectorielle.html" title="next page">Représentation vectorielle des signaux</a>
 
         </div>
         
