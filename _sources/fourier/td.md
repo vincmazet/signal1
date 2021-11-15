@@ -1,24 +1,24 @@
 # Exercices : analyse de Fourier
 
 
-## Exercice 1 : transformations de Fourier d'un signal porte
+## Exercice 1
 
 <!-- Cet exo permet de comparer les différentes transformations de Fourier, mais également de distinguer variable de fréquence, variable de temps, période et fréquence. -->
 
-* Calculez la série de Fourier du créneau $y(t)$ défini sur $[-T,\,T]$ :
+* Calculez la série de Fourier du créneau $x(t)$ défini sur $[-T,\,T]$ :
   
   $$
-    y(t) =
+    x(t) =
     \begin{cases}
       A   &\text{si}\, -\frac{T}{2} \leq t \leq \frac{T}{2}, \\
       0   &\text{sinon}.
     \end{cases}
   $$
 
-* Calculez la transformée de Fourier du signal $x(t)$ :
+* Calculez la transformée de Fourier du signal $y(t)$ :
   
   $$
-    x(t) = A\,\mathrm{rect}\left(\frac{t}{T}\right) =
+    y(t) = A\,\mathrm{rect}\left(\frac{t}{T}\right) =
     \begin{cases}
       A   &\text{si}\, -\frac{T}{2} \leq t \leq \frac{T}{2}, \\
       0   &\text{sinon}.
@@ -36,7 +36,7 @@
   $$
   
 
-## Exercice 2 : série de Fourier d'une sinusoïde
+## Exercice 2
 
 * Calculez la série de Fourier d'une sinusoïde de fréquence $f_0$ et de phase $\varphi$.
 
@@ -54,13 +54,13 @@
 Calculez la transformée de Fourier du signal $x(t) = \exp(-at)\,u(t)$ où $a$ est un réel strictement positif.
 
 
-## Exercice 4 : modulation d'amplitude avec porteuse
+## Exercice 4
 
 Le module du spectre d'un signal musical $m(t)$ est schématisé ci-dessous (la phase n'a pas d'importance dans cet exercice) :
 
-```{figure} _static/figs/fourier-am.png
+```{figure} fourier-am.svg
 ---
-height: 150px
+height: 200px
 name: F:td-fourier:am
 ```
 
@@ -79,7 +79,7 @@ Le deuxième terme de cette équation est la «&nbsp;porteuse&nbsp;» qui est mo
   Proposez une valeur de la fréquence de la porteuse de ce deuxième programme.
   
 
-## Exercice 5 : dualité
+## Exercice 5
 
 * Quel est, intuitivement, le spectre d'un signal temporel constant ? <!-- un dirac en 0 car pas de sinusoide -->
 * En déduire le spectre d'une impulsion de Dirac centrée en 0. <!-- dualité : c'est une constante -->
@@ -91,9 +91,9 @@ Le deuxième terme de cette équation est la «&nbsp;porteuse&nbsp;» qui est mo
 
 Le signal $x(t)$ est représenté ci-dessous.
 
-```{figure} _static/figs/signal-M.png
+```{figure} signal-M.svg
 ---
-height: 150px
+height: 200px
 name: F:td-fourier:signal-M
 ```
 
@@ -152,7 +152,7 @@ $$
 
 Sa démodulation est effectuée par le dispositif suivant :
 
-```{figure} _static/figs/chaine-modulation.png
+```{figure} chaine-modulation.png
 ---
 height: 150px
 name: F:td-fourier:chaine-modulation
@@ -162,13 +162,13 @@ où le filtre passe-bas $h(t)$ est idéal, de gain 2 et de fréquence de coupure
 Déterminez $y(t)$.
 
 
-## Exercice 12 : ancien chiffrement du son Canal+
+## Exercice 12
 <!-- Source : Ventre exo 2.1 -->
 
 Lorsque Canal+ émettait encore en analogique, le son $s(t)$ était chiffré en inversant son spectre comme schématisé ci-dessous.
 Proposez une technique pour réaliser cette opération.
 
-```{figure} _static/figs/canalplus.png
+```{figure} canalplus.png
 ---
 height: 150px
 name: F:td-fourier:canalplus
@@ -179,9 +179,9 @@ name: F:td-fourier:canalplus
 
 La figure ci-dessous est tirée de la publication scientifique
 > R. Reiz, C. Gordan, D. Purcaru & C. Kokkonis, « Using Advanced Signal Processing Methods for DTMF Detection »,
-> Journal of Electrical and Electronics Engineering, 2009.
+> _Journal of Electrical and Electronics Engineering_, 2009.
 
-```{figure} _static/figs/sftf.png
+```{figure} sftf.png
 ---
 height: 300px
 name: F:td-fourier:sftf

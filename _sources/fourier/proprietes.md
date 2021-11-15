@@ -6,7 +6,7 @@ Dans cette section, $x$ et $y$ représentent deux signaux temporels
 dont les transformations de Fourier sont notées respectivement $X$ et $Y$.
 Si le signal $x$ est périodique, sa période est notée $N$ (dans le cas discret) ou $T$ (dans le cas continu).
 Par ailleurs, on dispose des constantes $a, b \in \mathbb{C}$, $\alpha,\, t_0,\, f_0 \in \mathbb{R}$ et $M\in \mathbb{N}$.
-On note $\mathcal{F}$ l'une des quatre transformation de Fourier.
+On note $\mathcal{F}$ l'une des quatre transformations de Fourier.
 Les propriétés ci-dessous sont communes à toutes les transformations de Fourier, sauf mention contraire.
 
 
@@ -50,24 +50,24 @@ La translation dans un domaine correspond à une multiplication par une exponent
 
 * Translation en temporel :
 
-$$
-\text{SF :}\qquad  x(t-t_0) \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k t_0 / T} \\
-\text{TF :}\qquad  x(t-t_0) \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f) e^{-j2\pi f t_0} \\
-\text{SFD :}\qquad x[n-n_0] \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k n_0 / N}
-$$
-
+  $$
+  \text{SF :}\qquad  x(t-t_0) \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k t_0 / T} \\
+  \text{TF :}\qquad  x(t-t_0) \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f) e^{-j2\pi f t_0} \\
+  \text{SFD :}\qquad x[n-n_0] \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k n_0 / N}
+  $$
 
 * Translation en fréquentiel :
 
-$$
-\text{SF :}\qquad  x(t) e^{+j2\pi k_0 t / T} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0] \\
-\text{TF :}\qquad  x(t) e^{+j2\pi f_0 / T} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
-\text{SFD :}\qquad x(t) e^{+j2\pi k_0 n / N} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0]
-$$
+  $$
+  \text{SF :}\qquad  x(t) e^{+j2\pi k_0 t / T} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0] \\
+  \text{TF :}\qquad  x(t) e^{+j2\pi f_0 / T} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
+  \text{SFD :}\qquad x(t) e^{+j2\pi k_0 n / N} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0]
+  $$
+  
+  La multiplication par une exponentielle complexe correspond à une « modulation » en temporel
+  et à un « déphasage » en fréquentiel.
 
-La multiplication par une exponentielle complexe correspond à une « modulation » en temporel
-et à un « déphasage » en fréquentiel.
-    
+
 ### Discrétisation et périodicité
 
 À partir du tableau synthétisant les différentes transformées de Fourier (fait en exercice de TD),
@@ -76,12 +76,12 @@ Par conséquent, l'aspect continu de l'espace d'un domaine est équivalent à l'
 
 Autrement dit :
 
-$$
-\text{signal à temps discret} \quad&\Leftrightarrow\quad \text{spectre périodique} \\
-\text{signal à temps continu} \quad&\Leftrightarrow\quad \text{spectre apériodique} \\
-\text{signal temporel périodique} \quad&\Leftrightarrow\quad \text{spectre discret en fréquence} \\
-\text{signal temporel apériodique} \quad&\Leftrightarrow\quad \text{spectre continu en fréquence}
-$$
+<center>
+    signal à temps discret \(\quad\Leftrightarrow\quad\) spectre périodique<br />
+    signal à temps continu \(\quad\Leftrightarrow\quad\) spectre apériodique<br />
+    signal temporel périodique \(\quad\Leftrightarrow\quad\) spectre discret en fréquence<br />
+    signal temporel apériodique \(\quad\Leftrightarrow\quad\) spectre continu en fréquence
+</center>
 
 ## Théorème de Parseval–Plancherel
 
@@ -124,8 +124,9 @@ alors le signal reconstruit sera différent du signal original.
 Lorsque le nombre de coefficients augmente, la reconstruction se rapproche du signal,
 sauf au discontinuités où il se produit des oscillations qui ne peuvent s'atténuer.
 
-```{glue:figure} G:props-fourier:gibbs
-:name: "F:props-fourier:gibbs"
-
+```{figure} gibbs.svg
+---
+name: F:props-fourier:gibbs
+---
 Reconstruction d'un créneau à partir de quelques coefficients de sa série de Fourier discrète.
 ```

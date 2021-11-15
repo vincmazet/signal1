@@ -128,10 +128,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc11.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -150,10 +162,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc12.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -172,10 +196,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc13.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -194,10 +230,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc14.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -398,16 +446,16 @@ Les valeurs que prend le signal non quantifié <span class="math notranslate noh
 x_q(t) = q \times \left\lfloor \frac{x}{q}+\frac{1}{2} \right\rfloor
 \]</div>
 <p>où <span class="math notranslate nohighlight">\(\lfloor\cdot\rfloor\)</span> est la partie entière.</p>
-<p>La <a class="reference internal" href="#f-quantification-signal"><span class="std std-numref">Fig. 35</span></a> représente un exemple de quantification uniforme par arrondi pour <span class="math notranslate nohighlight">\(K=8\)</span> niveaux de quantification et <span class="math notranslate nohighlight">\(q=0,3\)</span>.</p>
+<p>La <a class="reference internal" href="#f-quantification-signal"><span class="std std-numref">Fig. 36</span></a> représente un exemple de quantification uniforme par arrondi pour <span class="math notranslate nohighlight">\(K=8\)</span> niveaux de quantification et <span class="math notranslate nohighlight">\(q=0,3\)</span>.</p>
 <div class="figure align-default" id="f-quantification-signal">
-<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">Exemple de quantification d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-signal" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Exemple de quantification d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-signal" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>La « caractéristique de quantification » illustre la quantification utilisée.
-C’est la courbe représentant <span class="math notranslate nohighlight">\(x_q\)</span> en fonction de <span class="math notranslate nohighlight">\(x\)</span>, elle a donc la forme d’une fonction en escalier (<a class="reference internal" href="#f-quantification-caracteristique"><span class="std std-numref">Fig. 36</span></a>).</p>
+C’est la courbe représentant <span class="math notranslate nohighlight">\(x_q\)</span> en fonction de <span class="math notranslate nohighlight">\(x\)</span>, elle a donc la forme d’une fonction en escalier (<a class="reference internal" href="#f-quantification-caracteristique"><span class="std std-numref">Fig. 37</span></a>).</p>
 <div class="figure align-default" id="f-quantification-caracteristique">
-<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Caractéristique de quantification d’une quantification uniforme par arrondi sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Caractéristique de quantification d’une quantification uniforme par arrondi sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique" title="Lien permanent vers cette image">¶</a></p>
 </div>
-<p>Pour éviter la saturation du signal (comme c’est le cas dans l’exemple de la <a class="reference internal" href="#f-quantification-signal"><span class="std std-numref">Fig. 35</span></a>),
+<p>Pour éviter la saturation du signal (comme c’est le cas dans l’exemple de la <a class="reference internal" href="#f-quantification-signal"><span class="std std-numref">Fig. 36</span></a>),
 le choix du niveau de quantification <span class="math notranslate nohighlight">\(q\)</span> doit être déterminé en fonction des amplitudes extrêmes du signal <span class="math notranslate nohighlight">\(x_\mathrm{min}\)</span> et <span class="math notranslate nohighlight">\(x_\mathrm{max}\)</span>
 et du nombre de niveaux de quantification <span class="math notranslate nohighlight">\(K\)</span>, tel que : <span class="math notranslate nohighlight">\(q = (x_\mathrm{max}-x_\mathrm{min})/(K-1)\)</span>.</p>
 </div>
@@ -417,9 +465,9 @@ et du nombre de niveaux de quantification <span class="math notranslate nohighli
 (à condition de respecter la condition <span class="math notranslate nohighlight">\(f_e &gt; 2 f_\mathrm{max}\)</span>).
 Ce n’est pas le cas pour la quantification :
 elle engendre une erreur puisque le signal quantifié <span class="math notranslate nohighlight">\(x_q\)</span> n’a pas les mêmes valeurs que le signal non quantifié <span class="math notranslate nohighlight">\(x\)</span>.
-La différence <span class="math notranslate nohighlight">\(\varepsilon(t) = x(t) - x_q(t)\)</span> est appelée « erreur de quantification » (cf. <a class="reference internal" href="#f-quantification-erreur"><span class="std std-numref">Fig. 37</span></a>).</p>
+La différence <span class="math notranslate nohighlight">\(\varepsilon(t) = x(t) - x_q(t)\)</span> est appelée « erreur de quantification » (cf. <a class="reference internal" href="#f-quantification-erreur"><span class="std std-numref">Fig. 38</span></a>).</p>
 <div class="figure align-default" id="f-quantification-erreur">
-<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Erreur de quantification sur l’exemple précédent (en rouge).</span><a class="headerlink" href="#f-quantification-erreur" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Erreur de quantification sur l’exemple précédent (en rouge).</span><a class="headerlink" href="#f-quantification-erreur" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>La valeur maximale de cette erreur est la moitié du pas de quantification : <span class="math notranslate nohighlight">\(q/2\)</span>.
 Sa moyenne est (statistiquement) nulle et sa puissance est (statistiquement) égale à <span class="math notranslate nohighlight">\(q^2/12\)</span> (dans l’hypothèse d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> distribué uniformément).</p>
@@ -433,9 +481,9 @@ Plus précisément, on privilégiera un pas de quantifcation faible pour les fai
 Cela aboutit à une quantification non uniforme.</p>
 <p>Par exemple, l’application d’une transformation non linéaire sur le signal avant une quantification uniforme
 correspond à une quantification non uniforme.
-En téléphonie, la « loi A » permet d’obtenir la quantification représentée <a class="reference internal" href="#f-quantification-caracteristique-a"><span class="std std-numref">Fig. 38</span></a>.</p>
+En téléphonie, la « loi A » permet d’obtenir la quantification représentée <a class="reference internal" href="#f-quantification-caracteristique-a"><span class="std std-numref">Fig. 39</span></a>.</p>
 <div class="figure align-default" id="f-quantification-caracteristique-a">
-<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Caractéristique de quantification d’une quantification uniforme par arrondi sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique-a" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Caractéristique de quantification d’une quantification uniforme par arrondi sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique-a" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
 </div>

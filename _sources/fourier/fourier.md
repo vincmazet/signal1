@@ -1,6 +1,6 @@
 # Transformations de Fourier
 
-Joseph Fourier (1768–1830) étati professeur à l'École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
+Joseph Fourier (1768–1830) était professeur à l'École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
 et préfet de l'Isère.
 Il a aussi été membre de l'Académie des sciences et de l'Académie française.
 
@@ -44,7 +44,7 @@ alors que le signal fréquentiel $X$ est en majuscule.
 ```
 
 où $k \in \mathbb{Z}$ est la « fréquence » et $X[k]$ sont des coefficients.
-L'ensemble de ces coefficients, noté simplement $X$, est la série de Fourier de $x$ ; et c'est aussi un signal.
+L'ensemble de ces coefficients, noté simplement $X$, est la série de Fourier de $x$ ; c'est aussi un signal.
 On montre que les coefficients de la série de Fourier sont définis par :
 
 ```{margin}
@@ -56,8 +56,8 @@ X[k] = \frac{1}{T} \int_T x(t) e^{-j 2 \pi k t / T } dt.
 $$
 
 Le terme $k$ est appelé la $k$<sup>e</sup> harmonique.
-En particulier, le terme pour $X[1]$ est la première harmonique, que l'on appelle aussi la « composante fondamentale ».
-Par ailleurs, le terme pour $k=0$ correspond à la moyenne du signal :
+En particulier, le terme $X[1]$ est la première harmonique, que l'on appelle aussi la « composante fondamentale ».
+Le terme $X[0]$ correspond à la moyenne du signal :
 
 $$
 X[0] = \frac{1}{T} \int_T x(t) dt.
@@ -163,13 +163,20 @@ Pour cette raison, les transformations de Fourier sont représentées à l'aide 
 
 L'ensemble de ces deux graphiques s'appelle le « spectre ».
 
+```{figure} spectre.svg
+---
+name: F:fourier:exemple
+---
+Spectre de la transformée de Fourier de $3\,\mathrm{rect}(t+1/4)$.
+```
+
 On peut être surpris que le spectre présente des fréquences « négatives » (à gauche de l'axe des ordonnées).
 En fait, il ne s'agit pas de fréquences négatives (cela n'a pas de sens),
 mais d'exponentielles complexes tournant en sens opposé aux exponentielles complexes de la partie à droite de l'axe des ordonnées.
 
-```{figure} _static/figs/negative-freqs.png
+```{figure} negative-freqs.png
 ---
-height: 200px
+height: 250px
 name: F:fourier:freqs-neg
 ---
 Illustration des exponentielles complexes associées à l'axe des fréquences d'un spectre.
@@ -212,7 +219,7 @@ Quelle que soit la transformation, on peut donc résumer ainsi les différentes 
 <br>
 
 Par ailleurs, on remarque que le passage du domaine temporel au domaine fréquentiel utilise une exponentielle du type $e^{-\theta}$
-alors que l'inverse utilise $e^{+\theta}$, où :
+alors que l'inverse utilise $e^{+\theta}$ où :
 * $\theta = j 2 \pi k t / T$ pour la SF,
 * $\theta = j 2 \pi f t    $ pour la TF,
 * $\theta = j 2 \pi k n / N$ pour la SFD (ou TFD).

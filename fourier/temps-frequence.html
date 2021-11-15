@@ -128,10 +128,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc11.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -150,10 +162,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc12.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -172,10 +196,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc13.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -194,10 +230,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc14.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -378,14 +426,14 @@
 <p>Les transformations de Fourier font ressortir le contenu fréquentiel
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
 comme des changements brusques ou des modifications de fréquence.</p>
-<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 20</span></a> représente deux signaux et leur spectres respectifs.
+<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 21</span></a> représente deux signaux et leur spectres respectifs.
 Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
 la différence étant l’ordre d’apparition des sinusoïdes.
 À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
 d’après le module, on comprend que les signaux temporels sont constitués de deux sinusoïdes de 50 Hz et 200 Hz,
 mais la phase n’est pas interprétable.</p>
 <div class="figure align-default" id="f-temps-frequence-deux-sinus">
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>Pour répondre à la difficulté d’analyser les localisations temporelles des fréquences, d’autres outils ont été développés.</p>
 <div class="section" id="transformee-de-fourier-a-court-terme">
@@ -409,38 +457,38 @@ Le spectrogramme fournit une indication sur la quantité d’énergie présente 
 autour de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de l’instant <span class="math notranslate nohighlight">\(\tau\)</span>.
 Les figures représentent les spectrogrammes de quelques signaux.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="203d518b-7440-4c66-8f9c-9319f5958829" name="02a4560b-fdeb-44a0-ac79-d820ba1108c5" type="radio">
-</input><label class="tabbed-label" for="203d518b-7440-4c66-8f9c-9319f5958829">
+<input checked="checked" id="a2fc2188-8764-470d-a847-972941be939a" name="f86175e9-97b9-4c30-a43d-c2a04b6db791" type="radio">
+</input><label class="tabbed-label" for="a2fc2188-8764-470d-a847-972941be939a">
 Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 </div>
 </div>
-<input id="d7d9da9c-3b50-43d9-b83d-75fd9f350b0f" name="02a4560b-fdeb-44a0-ac79-d820ba1108c5" type="radio">
-</input><label class="tabbed-label" for="d7d9da9c-3b50-43d9-b83d-75fd9f350b0f">
+<input id="4ada942a-820a-4014-bd29-16c42e2986ff" name="f86175e9-97b9-4c30-a43d-c2a04b6db791" type="radio">
+</input><label class="tabbed-label" for="4ada942a-820a-4014-bd29-16c42e2986ff">
 Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 </div>
 </div>
-<input id="36477ea0-5295-4359-be6d-5591cbbcd0d8" name="02a4560b-fdeb-44a0-ac79-d820ba1108c5" type="radio">
-</input><label class="tabbed-label" for="36477ea0-5295-4359-be6d-5591cbbcd0d8">
+<input id="7e684a1b-77e2-4705-a932-4db3d5e8e393" name="f86175e9-97b9-4c30-a43d-c2a04b6db791" type="radio">
+</input><label class="tabbed-label" for="7e684a1b-77e2-4705-a932-4db3d5e8e393">
 Gaussienne modulée</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 </div>
 </div>
-<input id="384ef42f-e884-4b77-b93a-e430965ed159" name="02a4560b-fdeb-44a0-ac79-d820ba1108c5" type="radio">
-</input><label class="tabbed-label" for="384ef42f-e884-4b77-b93a-e430965ed159">
+<input id="43c9bc9d-e2cc-4874-88bc-7952f9c7fb86" name="f86175e9-97b9-4c30-a43d-c2a04b6db791" type="radio">
+</input><label class="tabbed-label" for="43c9bc9d-e2cc-4874-88bc-7952f9c7fb86">
 Chirp</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 </div>
 </div>
-<input id="d0475dca-6408-43b0-9549-bc4db9e8ab86" name="02a4560b-fdeb-44a0-ac79-d820ba1108c5" type="radio">
-</input><label class="tabbed-label" for="d0475dca-6408-43b0-9549-bc4db9e8ab86">
+<input id="76b8bd3a-15ef-4e0b-aa1b-5859aefccdc3" name="f86175e9-97b9-4c30-a43d-c2a04b6db791" type="radio">
+</input><label class="tabbed-label" for="76b8bd3a-15ef-4e0b-aa1b-5859aefccdc3">
 Hello</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 </div>
 </div>
-<input id="2f847178-3806-44f2-a416-d15f6720f202" name="02a4560b-fdeb-44a0-ac79-d820ba1108c5" type="radio">
-</input><label class="tabbed-label" for="2f847178-3806-44f2-a416-d15f6720f202">
+<input id="f803967a-75d9-45fb-9e06-df8f6c39527b" name="f86175e9-97b9-4c30-a43d-c2a04b6db791" type="radio">
+</input><label class="tabbed-label" for="f803967a-75d9-45fb-9e06-df8f6c39527b">
 Coin coin coin</label><div class="tabbed-content docutils">
 <div class="figure align-default" style="width: 800px">
 </div>
@@ -475,7 +523,7 @@ par exemple dans le domaine biomédical, en géophysique ou en traitement de la 
 (utilisée par exemple dans le format de compression JPEG 2000).</p>
 <div class="figure align-default" id="f-temps-frequence-temps-frequence">
 <a class="reference internal image-reference" href="fourier/_static/figs/temps-frequence.png"><img alt="fourier/_static/figs/temps-frequence.png" src="fourier/_static/figs/temps-frequence.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence-temps-frequence" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence-temps-frequence" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
 </div>

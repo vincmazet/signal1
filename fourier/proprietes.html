@@ -128,10 +128,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc11.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -150,10 +162,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc12.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -172,10 +196,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc13.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -194,10 +230,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc14.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -423,7 +471,7 @@
 dont les transformations de Fourier sont notées respectivement <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(Y\)</span>.
 Si le signal <span class="math notranslate nohighlight">\(x\)</span> est périodique, sa période est notée <span class="math notranslate nohighlight">\(N\)</span> (dans le cas discret) ou <span class="math notranslate nohighlight">\(T\)</span> (dans le cas continu).
 Par ailleurs, on dispose des constantes <span class="math notranslate nohighlight">\(a, b \in \mathbb{C}\)</span>, <span class="math notranslate nohighlight">\(\alpha,\, t_0,\, f_0 \in \mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(M\in \mathbb{N}\)</span>.
-On note <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> l’une des quatre transformation de Fourier.
+On note <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> l’une des quatre transformations de Fourier.
 Les propriétés ci-dessous sont communes à toutes les transformations de Fourier, sauf mention contraire.</p>
 <div class="section" id="linearite">
 <h3>Linéarité<a class="headerlink" href="#linearite" title="Lien permanent vers ce titre">¶</a></h3>
@@ -457,26 +505,26 @@ car la série de Fourier est indépendante de la valeur de la période du signal
 <div class="section" id="translation">
 <h3>Translation<a class="headerlink" href="#translation" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La translation dans un domaine correspond à une multiplication par une exponentielle complexe dans l’autre domaine :</p>
-<ul class="simple">
-<li><p>Translation en temporel :</p></li>
-</ul>
+<ul>
+<li><p>Translation en temporel :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\text{SF :}\qquad  x(t-t_0) \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k t_0 / T} \\
-\text{TF :}\qquad  x(t-t_0) \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X(f) e^{-j2\pi f t_0} \\
-\text{SFD :}\qquad x[n-n_0] \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k n_0 / N}
-\end{split}\]</div>
-<ul class="simple">
-<li><p>Translation en fréquentiel :</p></li>
-</ul>
+  \text{SF :}\qquad  x(t-t_0) \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k t_0 / T} \\
+  \text{TF :}\qquad  x(t-t_0) \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X(f) e^{-j2\pi f t_0} \\
+  \text{SFD :}\qquad x[n-n_0] \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k n_0 / N}
+  \end{split}\]</div>
+</li>
+<li><p>Translation en fréquentiel :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\text{SF :}\qquad  x(t) e^{+j2\pi k_0 t / T} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0] \\
-\text{TF :}\qquad  x(t) e^{+j2\pi f_0 / T} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
-\text{SFD :}\qquad x(t) e^{+j2\pi k_0 n / N} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0]
-\end{split}\]</div>
+  \text{SF :}\qquad  x(t) e^{+j2\pi k_0 t / T} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0] \\
+  \text{TF :}\qquad  x(t) e^{+j2\pi f_0 / T} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
+  \text{SFD :}\qquad x(t) e^{+j2\pi k_0 n / N} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0]
+  \end{split}\]</div>
 <p>La multiplication par une exponentielle complexe correspond à une « modulation » en temporel
 et à un « déphasage » en fréquentiel.</p>
+</li>
+</ul>
 </div>
 <div class="section" id="discretisation-et-periodicite">
 <h3>Discrétisation et périodicité<a class="headerlink" href="#discretisation-et-periodicite" title="Lien permanent vers ce titre">¶</a></h3>
@@ -484,13 +532,12 @@ et à un « déphasage » en fréquentiel.</p>
 on constate que la discrétisation de l’espace d’un domaine est équivalent à la périodicité du signal dans l’autre domaine.
 Par conséquent, l’aspect continu de l’espace d’un domaine est équivalent à l’apériodicité du signal dans l’autre domaine.</p>
 <p>Autrement dit :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\text{signal à temps discret} \quad&amp;\Leftrightarrow\quad \text{spectre périodique} \\
-\text{signal à temps continu} \quad&amp;\Leftrightarrow\quad \text{spectre apériodique} \\
-\text{signal temporel périodique} \quad&amp;\Leftrightarrow\quad \text{spectre discret en fréquence} \\
-\text{signal temporel apériodique} \quad&amp;\Leftrightarrow\quad \text{spectre continu en fréquence}
-\end{split}\]</div>
+<center>
+    signal à temps discret \(\quad\Leftrightarrow\quad\) spectre périodique<br />
+    signal à temps continu \(\quad\Leftrightarrow\quad\) spectre apériodique<br />
+    signal temporel périodique \(\quad\Leftrightarrow\quad\) spectre discret en fréquence<br />
+    signal temporel apériodique \(\quad\Leftrightarrow\quad\) spectre continu en fréquence
+</center>
 </div>
 </div>
 <div class="section" id="theoreme-de-parsevalplancherel">
@@ -533,7 +580,7 @@ alors le signal reconstruit sera différent du signal original.
 Lorsque le nombre de coefficients augmente, la reconstruction se rapproche du signal,
 sauf au discontinuités où il se produit des oscillations qui ne peuvent s’atténuer.</p>
 <div class="figure align-default" id="f-props-fourier-gibbs">
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Reconstruction d’un créneau à partir de quelques coefficients de sa série de Fourier discrète.</span><a class="headerlink" href="#f-props-fourier-gibbs" title="Lien permanent vers cette image">¶</a></p>
+<img alt="../_images/gibbs.svg" src="../_images/gibbs.svg" /><p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Reconstruction d’un créneau à partir de quelques coefficients de sa série de Fourier discrète.</span><a class="headerlink" href="#f-props-fourier-gibbs" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
 </div>

@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Propriétés des transformations de Fourier" href="proprietes.html" />
-    <link rel="prev" title="TP : décomposition dans la base de Haar" href="../vect/tp.html" />
+    <link rel="prev" title="Décomposition dans la base de Haar" href="../vect/correc14.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -128,10 +128,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc11.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -150,10 +162,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc12.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -172,10 +196,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc13.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -194,10 +230,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc14.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -402,7 +450,7 @@
                 
   <div class="section" id="transformations-de-fourier">
 <h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Joseph Fourier (1768–1830) étati professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
+<p>Joseph Fourier (1768–1830) était professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
 et préfet de l’Isère.
 Il a aussi été membre de l’Académie des sciences et de l’Académie française.</p>
 <p>En travaillant sur le phénomène de propagation de la chaleur,
@@ -440,7 +488,7 @@ x(t) = \sum_{k=-\infty}^{+\infty} X[k] e^{+j 2 \pi k t / T}
 alors que le signal fréquentiel <span class="math notranslate nohighlight">\(X\)</span> est en majuscule.</p>
 </div>
 <p>où <span class="math notranslate nohighlight">\(k \in \mathbb{Z}\)</span> est la « fréquence » et <span class="math notranslate nohighlight">\(X[k]\)</span> sont des coefficients.
-L’ensemble de ces coefficients, noté simplement <span class="math notranslate nohighlight">\(X\)</span>, est la série de Fourier de <span class="math notranslate nohighlight">\(x\)</span> ; et c’est aussi un signal.
+L’ensemble de ces coefficients, noté simplement <span class="math notranslate nohighlight">\(X\)</span>, est la série de Fourier de <span class="math notranslate nohighlight">\(x\)</span> ; c’est aussi un signal.
 On montre que les coefficients de la série de Fourier sont définis par :</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -451,8 +499,8 @@ On montre que les coefficients de la série de Fourier sont définis par :</p>
 X[k] = \frac{1}{T} \int_T x(t) e^{-j 2 \pi k t / T } dt.
 \]</div>
 <p>Le terme <span class="math notranslate nohighlight">\(k\)</span> est appelé la <span class="math notranslate nohighlight">\(k\)</span><sup>e</sup> harmonique.
-En particulier, le terme pour <span class="math notranslate nohighlight">\(X[1]\)</span> est la première harmonique, que l’on appelle aussi la « composante fondamentale ».
-Par ailleurs, le terme pour <span class="math notranslate nohighlight">\(k=0\)</span> correspond à la moyenne du signal :</p>
+En particulier, le terme <span class="math notranslate nohighlight">\(X[1]\)</span> est la première harmonique, que l’on appelle aussi la « composante fondamentale ».
+Le terme <span class="math notranslate nohighlight">\(X[0]\)</span> correspond à la moyenne du signal :</p>
 <div class="math notranslate nohighlight">
 \[
 X[0] = \frac{1}{T} \int_T x(t) dt.
@@ -550,12 +598,15 @@ Vous conviendrez que ce n’est pas commode de représenter un signal à valeurs
 <li><p>le second représente l’argument de <span class="math notranslate nohighlight">\(X\)</span> en fonction de la fréquence.</p></li>
 </ul>
 <p>L’ensemble de ces deux graphiques s’appelle le « spectre ».</p>
+<div class="figure align-default" id="f-fourier-exemple">
+<img alt="../_images/spectre.svg" src="../_images/spectre.svg" /><p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Spectre de la transformée de Fourier de <span class="math notranslate nohighlight">\(3\,\mathrm{rect}(t+1/4)\)</span>.</span><a class="headerlink" href="#f-fourier-exemple" title="Lien permanent vers cette image">¶</a></p>
+</div>
 <p>On peut être surpris que le spectre présente des fréquences « négatives » (à gauche de l’axe des ordonnées).
 En fait, il ne s’agit pas de fréquences négatives (cela n’a pas de sens),
 mais d’exponentielles complexes tournant en sens opposé aux exponentielles complexes de la partie à droite de l’axe des ordonnées.</p>
 <div class="figure align-default" id="f-fourier-freqs-neg">
-<a class="reference internal image-reference" href="fourier/_static/figs/negative-freqs.png"><img alt="fourier/_static/figs/negative-freqs.png" src="fourier/_static/figs/negative-freqs.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Illustration des exponentielles complexes associées à l’axe des fréquences d’un spectre.</span><a class="headerlink" href="#f-fourier-freqs-neg" title="Lien permanent vers cette image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/negative-freqs.png"><img alt="../_images/negative-freqs.png" src="../_images/negative-freqs.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Illustration des exponentielles complexes associées à l’axe des fréquences d’un spectre.</span><a class="headerlink" href="#f-fourier-freqs-neg" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
 <div class="section" id="recapitulatif">
@@ -593,7 +644,7 @@ mais d’exponentielles complexes tournant en sens opposé aux exponentielles co
 </table>
 <br>
 <p>Par ailleurs, on remarque que le passage du domaine temporel au domaine fréquentiel utilise une exponentielle du type <span class="math notranslate nohighlight">\(e^{-\theta}\)</span>
-alors que l’inverse utilise <span class="math notranslate nohighlight">\(e^{+\theta}\)</span>, où :</p>
+alors que l’inverse utilise <span class="math notranslate nohighlight">\(e^{+\theta}\)</span> où :</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi k t / T\)</span> pour la SF,</p></li>
 <li><p><span class="math notranslate nohighlight">\(\theta = j 2 \pi f t    \)</span> pour la TF,</p></li>
@@ -639,7 +690,7 @@ et la fréquence <span class="math notranslate nohighlight">\(F\)</span> qui est
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../vect/tp.html" title="previous page">TP : décomposition dans la base de Haar</a>
+    <a class='left-prev' id="prev-link" href="../vect/correc14.html" title="previous page">Décomposition dans la base de Haar</a>
     <a class='right-next' id="next-link" href="proprietes.html" title="next page">Propriétés des transformations de Fourier</a>
 
         </div>

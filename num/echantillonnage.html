@@ -128,10 +128,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc11.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -150,10 +162,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc12.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -172,10 +196,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc13.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -194,10 +230,22 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc14.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -415,7 +463,7 @@ en une séquence (suite de nombres) <span class="math notranslate nohighlight">\
 où <span class="math notranslate nohighlight">\(T_e\)</span> est la « période d’échantillonnage ».</p>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-temporel-1.png"><img alt="num/_static/figs/echantillonnage-temporel-1.png" src="num/_static/figs/echantillonnage-temporel-1.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x[n]\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x[n]\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>Pour étudier le phénomène de l’échantillonnage d’un point de vue mathématique,
 il est plus simple de représenter le signal échantillonné par un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>, défini par :</p>
@@ -429,7 +477,7 @@ x(t) &amp;\text{si}\ t\ \text{est multiple de}\ T_e \\
 \end{split}\]</div>
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-temporel-2.png"><img alt="num/_static/figs/echantillonnage-temporel-2.png" src="num/_static/figs/echantillonnage-temporel-2.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>On peut montrer que la transformée de Fourier de <span class="math notranslate nohighlight">\(x^*(t)\)</span> s’écrit :</p>
 <div class="math notranslate nohighlight">
@@ -441,11 +489,11 @@ Par conséquent, l’échantillonnage du signal temporel à la période <span cl
 comme illustré sur les figures ci-dessous.</p>
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-frequentiel-1.png"><img alt="num/_static/figs/echantillonnage-frequentiel-1.png" src="num/_static/figs/echantillonnage-frequentiel-1.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-frequentiel-2.png"><img alt="num/_static/figs/echantillonnage-frequentiel-2.png" src="num/_static/figs/echantillonnage-frequentiel-2.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien permanent vers cette image">¶</a></p>
 </div>
 </div>
 <div class="section" id="reconstruction-ideale">
@@ -457,11 +505,11 @@ Cette opération est effectuée en appliquant un filtre passe-bas de fréquence 
 afin d’obtenir un nouveau signal <span class="math notranslate nohighlight">\(\tilde{x}\)</span> qu’on espère être égal à <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-frequentiel-3.png"><img alt="num/_static/figs/echantillonnage-frequentiel-3.png" src="num/_static/figs/echantillonnage-frequentiel-3.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver (en vert).</span><a class="headerlink" href="#id5" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver (en vert).</span><a class="headerlink" href="#id5" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <div class="figure align-default" id="id6">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-frequentiel-4.png"><img alt="num/_static/figs/echantillonnage-frequentiel-4.png" src="num/_static/figs/echantillonnage-frequentiel-4.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>En fréquentiel, le filtre correspond à une multiplication du spectre <span class="math notranslate nohighlight">\(X^*(f)\)</span> par une porte de largeur <span class="math notranslate nohighlight">\(2f_c\)</span> :</p>
 <div class="math notranslate nohighlight">
@@ -508,11 +556,11 @@ Si <span class="math notranslate nohighlight">\(f_e\)</span> est trop faible, al
 et le filtrage ne permettra pas de les séparer convenablement.</p>
 <div class="figure align-default" id="id7">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-frequentiel-6.png"><img alt="num/_static/figs/echantillonnage-frequentiel-6.png" src="num/_static/figs/echantillonnage-frequentiel-6.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id7" title="Lien permanent vers cette image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id7" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <div class="figure align-default" id="id8">
 <a class="reference internal image-reference" href="num/_static/figs/echantillonnage-frequentiel-7.png"><img alt="num/_static/figs/echantillonnage-frequentiel-7.png" src="num/_static/figs/echantillonnage-frequentiel-7.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
 on n’obtient pas le signal original <span class="math notranslate nohighlight">\(x\)</span>, il y a repliement spectral.</span><a class="headerlink" href="#id8" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <p>La reconstruction correcte de <span class="math notranslate nohighlight">\(x(t)\)</span> à partir de <span class="math notranslate nohighlight">\(x^*(t)\)</span> implique donc une valeur minimale de <span class="math notranslate nohighlight">\(f_e\)</span> :</p>
@@ -543,8 +591,8 @@ L’animation ci-dessous simule l’effet du repliement spectral sur une sinuso�
 <p>Le repliement spectral peut apparaître sur tout signal numérique, s’il est mal échantillonné.
 Les exemples ci-dessous illustrent l’effet du repliement spectral sur différents signaux.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c1a9334b-54f3-4fb0-836e-1deac92f492e" name="1cc79808-f88a-45fc-bed1-a82422d4481c" type="radio">
-</input><label class="tabbed-label" for="c1a9334b-54f3-4fb0-836e-1deac92f492e">
+<input checked="checked" id="42311d38-ca32-4789-baea-473ee2a00dbc" name="f51c1cfd-0364-42c9-bbd3-1f39b15042a8" type="radio">
+</input><label class="tabbed-label" for="42311d38-ca32-4789-baea-473ee2a00dbc">
 Signal</label><div class="tabbed-content docutils">
 <p>Un cosinus de fréquence 6 Hz (en gris) est échantillonné à 6,5 Hz.
 Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (points bleus).</p>
@@ -552,8 +600,8 @@ Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (
 <a class="reference internal image-reference" href="num/_static/figs/aliasing-signal.png"><img alt="num/_static/figs/aliasing-signal.png" src="num/_static/figs/aliasing-signal.png" style="width: 400px;" /></a>
 </div>
 </div>
-<input id="6be7c4e1-65f5-48d7-a38b-e6e5e0641e6d" name="1cc79808-f88a-45fc-bed1-a82422d4481c" type="radio">
-</input><label class="tabbed-label" for="6be7c4e1-65f5-48d7-a38b-e6e5e0641e6d">
+<input id="61aad437-fe23-4eea-840c-a9d461328782" name="f51c1cfd-0364-42c9-bbd3-1f39b15042a8" type="radio">
+</input><label class="tabbed-label" for="61aad437-fe23-4eea-840c-a9d461328782">
 Image</label><div class="tabbed-content docutils">
 <p>Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l’image présente des structures très fines par rapport aux pixels.</p>
@@ -561,8 +609,8 @@ Le repliement spectral apparaît lorsque le motif présent dans l’image prése
 <a class="reference internal image-reference" href="num/_static/figs/aliasing-photo.jpg"><img alt="num/_static/figs/aliasing-photo.jpg" src="num/_static/figs/aliasing-photo.jpg" style="width: 400px;" /></a>
 </div>
 </div>
-<input id="ce2730bc-0de2-4b6a-8f09-0915a50396e8" name="1cc79808-f88a-45fc-bed1-a82422d4481c" type="radio">
-</input><label class="tabbed-label" for="ce2730bc-0de2-4b6a-8f09-0915a50396e8">
+<input id="facf8426-5e2f-4211-b99e-c31f27fc3c87" name="f51c1cfd-0364-42c9-bbd3-1f39b15042a8" type="radio">
+</input><label class="tabbed-label" for="facf8426-5e2f-4211-b99e-c31f27fc3c87">
 Vidéo</label><div class="tabbed-content docutils">
 <p>Une vidéo possède à la fois un échantillonnage spatial (au sein d’une même image)
 mais aussi un échantillonnage temporel lié au nombres d’images acquises par seconde.
