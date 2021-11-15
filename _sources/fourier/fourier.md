@@ -1,12 +1,12 @@
 # Transformations de Fourier
 
-Joseph Fourier (1768–1830) a été professeur à l'École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
+Joseph Fourier (1768–1830) étati professeur à l'École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
 et préfet de l'Isère.
 Il a aussi été membre de l'Académie des sciences et de l'Académie française.
 
 En travaillant sur le phénomène de propagation de la chaleur,
 il s'aperçut qu'il était utile de représenter la distribution de température dans les matériaux comme une somme de sinusoïdes :
-c'est ce qu'on appelle maintenant une décomposition en _série de Fourier_.
+c'est ce qu'on appelle maintenant une décomposition en série de Fourier.
 La série de Fourier, et les autres transformations qui en découlent,
 jouent un rôle capital en traitement du signal
 car elles permettent de mettre en évidence les fréquences contenues dans un signal.
@@ -89,9 +89,9 @@ x(t) = a_0 + \sum_{k=1}^{+\infty} \left( a_k \cos(2 \pi k t / T) + b_k \sin(2 \p
 $$
 
 Dans le cadre de ce module, nous n'utiliserons pas les formules faisant intervenir $a_k$ et $b_k$
-car elles obligent à effectuer deux fois plus de calcul qu'avec les formules précédentes utilisant $X[k]$.
+car elles obligent à effectuer deux fois plus de calculs qu'avec les formules précédentes utilisant $X[k]$.
 En effet, la formulation avec l'exponentielle complexe regroupe les termes en cosinus et en sinus.
-C'est donc plus simple en complexe ! 😎
+C'est donc plus simple en complexe ! 😜
 
 ## Transformée de Fourier
 
@@ -146,7 +146,8 @@ peut être vu comme un signal périodique de période $N$.
 Il possède donc une série de Fourier discrète qui s'appelle dans ce cas « transformée de Fourier discrète » (TFD).
 Comme les signaux que l'on traite sur ordinateur sont toujours à durée limitée,
 alors ce sera cette transformée de Fourier discrète qui sera calculée.
-Il existe un algorithme très rapide pour la calculer : l'algorithme FFT (implémenté en Python dans la fonction `numpy.fft.fft`).
+Il existe un algorithme très rapide pour la calculer : l'algorithme [FFT](https://fr.wikipedia.org/wiki/Transformation_de_Fourier_rapide)
+(implémenté en Python dans la fonction `numpy.fft.fft`).
 
 ## Représentation
 

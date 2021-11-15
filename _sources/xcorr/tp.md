@@ -10,8 +10,8 @@ Dans cet exercice, les signaux sont de taille $N=100$ échantillons.
     \forall n\in\{0,\dots,N-1\},\qquad
     m[n] =
     \begin{cases}
-      0 &\text{si } n \in \{0,\dots,9\} \\
-      1 &\text{sinon}
+      1 &\text{si } n \in \{0,\dots,9\} \\
+      0 &\text{sinon}
     \end{cases}
   $$
 
@@ -21,8 +21,8 @@ Dans cet exercice, les signaux sont de taille $N=100$ échantillons.
     \forall n\in\{0,\dots,N-1\},\qquad
     x[n] =
     \begin{cases}
-      0 &\text{si } n \in \{k,\dots,k+9\} \\
-      1 &\text{sinon}
+      1 &\text{si } n \in \{k,\dots,k+9\} \\
+      0 &\text{sinon}
     \end{cases}
   $$
 

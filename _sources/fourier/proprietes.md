@@ -4,7 +4,7 @@
 
 Dans cette section, $x$ et $y$ représentent deux signaux temporels
 dont les transformations de Fourier sont notées respectivement $X$ et $Y$.
-Si le signal $x$ est périodique, sa période est notée $T$ (dans le cas discret) ou $N$ (dans le cas continu).
+Si le signal $x$ est périodique, sa période est notée $N$ (dans le cas discret) ou $T$ (dans le cas continu).
 Par ailleurs, on dispose des constantes $a, b \in \mathbb{C}$, $\alpha,\, t_0,\, f_0 \in \mathbb{R}$ et $M\in \mathbb{N}$.
 On note $\mathcal{F}$ l'une des quatre transformation de Fourier.
 Les propriétés ci-dessous sont communes à toutes les transformations de Fourier, sauf mention contraire.

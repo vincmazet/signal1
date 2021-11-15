@@ -402,12 +402,12 @@
                 
   <div class="section" id="transformations-de-fourier">
 <h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Joseph Fourier (1768–1830) a été professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
+<p>Joseph Fourier (1768–1830) étati professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
 et préfet de l’Isère.
 Il a aussi été membre de l’Académie des sciences et de l’Académie française.</p>
 <p>En travaillant sur le phénomène de propagation de la chaleur,
 il s’aperçut qu’il était utile de représenter la distribution de température dans les matériaux comme une somme de sinusoïdes :
-c’est ce qu’on appelle maintenant une décomposition en <em>série de Fourier</em>.
+c’est ce qu’on appelle maintenant une décomposition en série de Fourier.
 La série de Fourier, et les autres transformations qui en découlent,
 jouent un rôle capital en traitement du signal
 car elles permettent de mettre en évidence les fréquences contenues dans un signal.</p>
@@ -479,9 +479,9 @@ X[0] = \frac{1}{T} \int_T x(t) dt.
 x(t) = a_0 + \sum_{k=1}^{+\infty} \left( a_k \cos(2 \pi k t / T) + b_k \sin(2 \pi k t / T) \right).
 \]</div>
 <p>Dans le cadre de ce module, nous n’utiliserons pas les formules faisant intervenir <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span>
-car elles obligent à effectuer deux fois plus de calcul qu’avec les formules précédentes utilisant <span class="math notranslate nohighlight">\(X[k]\)</span>.
+car elles obligent à effectuer deux fois plus de calculs qu’avec les formules précédentes utilisant <span class="math notranslate nohighlight">\(X[k]\)</span>.
 En effet, la formulation avec l’exponentielle complexe regroupe les termes en cosinus et en sinus.
-C’est donc plus simple en complexe ! 😎</p>
+C’est donc plus simple en complexe ! 😜</p>
 </div>
 </div>
 <div class="section" id="transformee-de-fourier">
@@ -534,7 +534,8 @@ peut être vu comme un signal périodique de période <span class="math notransl
 Il possède donc une série de Fourier discrète qui s’appelle dans ce cas « transformée de Fourier discrète » (TFD).
 Comme les signaux que l’on traite sur ordinateur sont toujours à durée limitée,
 alors ce sera cette transformée de Fourier discrète qui sera calculée.
-Il existe un algorithme très rapide pour la calculer : l’algorithme FFT (implémenté en Python dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code>).</p>
+Il existe un algorithme très rapide pour la calculer : l’algorithme <a class="reference external" href="https://fr.wikipedia.org/wiki/Transformation_de_Fourier_rapide">FFT</a>
+(implémenté en Python dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code>).</p>
 </div>
 <div class="section" id="representation">
 <h2>Représentation<a class="headerlink" href="#representation" title="Lien permanent vers ce titre">¶</a></h2>
