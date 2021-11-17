@@ -518,7 +518,7 @@ car la série de Fourier est indépendante de la valeur de la période du signal
 <div class="math notranslate nohighlight">
 \[\begin{split}
   \text{SF :}\qquad  x(t) e^{+j2\pi k_0 t / T} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0] \\
-  \text{TF :}\qquad  x(t) e^{+j2\pi f_0 / T} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
+  \text{TF :}\qquad  x(t) e^{+j2\pi f_0 t} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
   \text{SFD :}\qquad x(t) e^{+j2\pi k_0 n / N} \quad&amp;\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0]
   \end{split}\]</div>
 <p>La multiplication par une exponentielle complexe correspond à une « modulation » en temporel
@@ -564,7 +564,7 @@ x(t) = \mathcal{F}^{-1}\big[\mathcal{F}[x(t)]\big].
 <li><p><span class="math notranslate nohighlight">\(x(t)\)</span> doit être absolument intégrable :</p>
 <div class="math notranslate nohighlight">
 \[
-  \int_T [x(t)| dt &lt; \infty,
+  \int_T |x(t)| dt &lt; \infty,
   \]</div>
 </li>
 <li><p><span class="math notranslate nohighlight">\(x(t)\)</span> a un nombre fini de minima et de maxima (dans un intervalle fini),</p></li>

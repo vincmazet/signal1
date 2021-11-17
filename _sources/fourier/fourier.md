@@ -138,7 +138,7 @@ Cette formule est la série de Fourier discrète.
 ```
 
 $$
-X[k] = \sum_{k=0}^{N-1} x[n] e^{-j 2 \pi k n / N}.
+X[k] = \sum_{n=0}^{N-1} x[n] e^{-j 2 \pi k n / N}.
 $$
 
 **Remarque** &ensp; Un signal $x[n]$ à durée limité (donc non défini en dehors de l'intervalle $\{0,\dots,N-1\}$)

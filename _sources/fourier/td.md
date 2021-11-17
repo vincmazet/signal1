@@ -5,7 +5,7 @@
 
 <!-- Cet exo permet de comparer les différentes transformations de Fourier, mais également de distinguer variable de fréquence, variable de temps, période et fréquence. -->
 
-* Calculez la série de Fourier du créneau $x(t)$ défini sur $[-T,\,T]$ :
+* Calculez la série de Fourier du créneau $x(t)$ tel que sur la période $[-T,\,T]$ il est défini comme :
   
   $$
     x(t) =

@@ -60,7 +60,7 @@ La translation dans un domaine correspond à une multiplication par une exponent
 
   $$
   \text{SF :}\qquad  x(t) e^{+j2\pi k_0 t / T} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0] \\
-  \text{TF :}\qquad  x(t) e^{+j2\pi f_0 / T} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
+  \text{TF :}\qquad  x(t) e^{+j2\pi f_0 t} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
   \text{SFD :}\qquad x(t) e^{+j2\pi k_0 n / N} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0]
   $$
   
@@ -108,7 +108,7 @@ Les conditions de Dirichlet sont au nombre de trois :
 * $x(t)$ doit être absolument intégrable :
 
   $$
-  \int_T [x(t)| dt < \infty,
+  \int_T |x(t)| dt < \infty,
   $$
   
 * $x(t)$ a un nombre fini de minima et de maxima (dans un intervalle fini),
