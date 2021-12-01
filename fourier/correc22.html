@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Représentation temps-fréquence &#8212; Traitement du signal 1</title>
+    <title>Transformée de Fourier discrète d’un signal numérique &#8212; Traitement du signal 1</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,8 +56,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Exercices : analyse de Fourier" href="td.html" />
-    <link rel="prev" title="Propriétés des transformations de Fourier" href="proprietes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -253,7 +251,7 @@
   Analyse de Fourier
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="fourier.html">
    Transformations de Fourier
@@ -264,8 +262,8 @@
    Propriétés des transformations de Fourier
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="temps-frequence.html">
    Représentation temps-fréquence
   </a>
  </li>
@@ -375,9 +373,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/fourier/temps-frequence.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/fourier/correc22.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -406,8 +404,23 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transformee-de-fourier-a-court-terme">
-   Transformée de Fourier à court terme
+  <a class="reference internal nav-link" href="#spectre-non-centre-en-fonction-des-echantillons">
+   Spectre non centré, en fonction des échantillons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectre-centre-en-fonction-des-echantillons">
+   Spectre centré, en fonction des échantillons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectre-centre-en-fonction-de-la-frequence">
+   Spectre centré, en fonction de la fréquence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application">
+   Application
   </a>
  </li>
 </ul>
@@ -421,110 +434,82 @@
         
               <div>
                 
-  <div class="section" id="representation-temps-frequence">
-<h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les transformations de Fourier font ressortir le contenu fréquentiel
-mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
-comme des changements brusques ou des modifications de fréquence.</p>
-<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 21</span></a> représente deux signaux et leur spectres respectifs.
-Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
-la différence étant l’ordre d’apparition des sinusoïdes.
-À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
-d’après le module, on comprend que les signaux temporels sont constitués de deux sinusoïdes de 50 Hz et 200 Hz,
-mais la phase n’est pas interprétable.</p>
-<div class="figure align-default" id="f-temps-frequence-deux-sinus">
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">¶</a></p>
-</div>
-<p>Pour répondre à la difficulté d’analyser les localisations temporelles des fréquences, d’autres outils ont été développés.</p>
-<div class="section" id="transformee-de-fourier-a-court-terme">
-<h2>Transformée de Fourier à court terme<a class="headerlink" href="#transformee-de-fourier-a-court-terme" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La transformée de Fourier à court terme (STFT : <em>short-time Fourier transform</em>)
-est une transformée de Fourier restreinte à une portion du signal délimitée par une fenêtre <span class="math notranslate nohighlight">\(w(t)\)</span>
-qu’on fait glisser le long de l’axe temporel :</p>
-<div class="math notranslate nohighlight">
-\[
-X(f,\tau) = \int_{-\infty}^{+\infty} x(t) w(t-\tau) e^{-j2\pi f t} dt
-\]</div>
-<p>Il s’agit simplement de la formule de la transformée de Fourier dans laquelle a été introduite la fenêtre,
-qui est positionnée en <span class="math notranslate nohighlight">\(\tau\)</span>.
-La transformée de Fourier à court terme est donc un signal à deux dimensions
-qui dépend d’un temps <span class="math notranslate nohighlight">\(\tau\)</span> et d’une fréquence <span class="math notranslate nohighlight">\(f\)</span>, d’où le nom de « représentation temps-fréquence ».
-L’objectif de cette transformée étant l’analyse dans le domaine temps-fréquence, et non la reconstruction du signal temporel,
-la transformée inverse n’a pas d’utilité.</p>
-<p>Lorsqu’on représente une transformée de Fourier à court terme, on utilise uniquement son module,
-et plus précisément le carré du module <span class="math notranslate nohighlight">\(|X(f,\tau)|^2\)</span> qui est appelé « spectrogramme » de <span class="math notranslate nohighlight">\(x(t)\)</span>.
-Le spectrogramme fournit une indication sur la quantité d’énergie présente dans le signal
-autour de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de l’instant <span class="math notranslate nohighlight">\(\tau\)</span>.
-Les figures représentent les spectrogrammes de quelques signaux.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="65c35c13-f9cd-4202-8470-ce7e124b99b8" name="78313b72-fca7-4dd1-8c7a-56280a24bf05" type="radio">
-</input><label class="tabbed-label" for="65c35c13-f9cd-4202-8470-ce7e124b99b8">
-Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
+  <div class="section" id="transformee-de-fourier-discrete-d-un-signal-numerique">
+<h1>Transformée de Fourier discrète d’un signal numérique<a class="headerlink" href="#transformee-de-fourier-discrete-d-un-signal-numerique" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Le signal temporel est une porte :</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/correc22_3_0.png" src="../_images/correc22_3_0.png" />
 </div>
 </div>
-<input id="0e87e4e6-c00a-4839-b53f-afb7e7bee6c8" name="78313b72-fca7-4dd1-8c7a-56280a24bf05" type="radio">
-</input><label class="tabbed-label" for="0e87e4e6-c00a-4839-b53f-afb7e7bee6c8">
-Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
+<p>Attention ! Le signal contient 100 échantillons (de 0 à 99) et l’échantillon en <span class="math notranslate nohighlight">\(n=50\)</span> est nul !</p>
+<div class="section" id="spectre-non-centre-en-fonction-des-echantillons">
+<h2>Spectre non centré, en fonction des échantillons<a class="headerlink" href="#spectre-non-centre-en-fonction-des-echantillons" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Par simplicité et lisibilité, les spectres sont tracés avec <code class="docutils literal notranslate"><span class="pre">plot</span></code> mais ils restent discrets !</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z1</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">k1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">myplot</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span> <span class="n">Z1</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
-<input id="3ce019c3-2c1c-4ccf-969f-3ffd7e43a555" name="78313b72-fca7-4dd1-8c7a-56280a24bf05" type="radio">
-</input><label class="tabbed-label" for="3ce019c3-2c1c-4ccf-969f-3ffd7e43a555">
-Gaussienne modulée</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="98efc95b-22eb-4145-a77f-7588487883f8" name="78313b72-fca7-4dd1-8c7a-56280a24bf05" type="radio">
-</input><label class="tabbed-label" for="98efc95b-22eb-4145-a77f-7588487883f8">
-Chirp</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="9dc51c27-9bb9-4228-a368-60e23b5f971c" name="78313b72-fca7-4dd1-8c7a-56280a24bf05" type="radio">
-</input><label class="tabbed-label" for="9dc51c27-9bb9-4228-a368-60e23b5f971c">
-Hello</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="6fad70d9-9aca-4b37-8034-d0151e6f4342" name="78313b72-fca7-4dd1-8c7a-56280a24bf05" type="radio">
-</input><label class="tabbed-label" for="6fad70d9-9aca-4b37-8034-d0151e6f4342">
-Coin coin coin</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="../_images/correc22_7_0.png" src="../_images/correc22_7_0.png" />
 </div>
 </div>
 </div>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<p>Certains artistes s’amusent également avec cette transformée, comme Aphex Twin sur <a class="reference external" href="https://youtu.be/M9xMuPWAZW8?t=305"><em>Formula</em></a>.</p>
+<div class="section" id="spectre-centre-en-fonction-des-echantillons">
+<h2>Spectre centré, en fonction des échantillons<a class="headerlink" href="#spectre-centre-en-fonction-des-echantillons" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k2</span> <span class="o">=</span> <span class="n">k1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Z2</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">Z1</span><span class="p">)</span>
+<span class="n">myplot</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
-<p>La représentation en spectrogramme est également intéressante en musique.
-Voyez par exemple le résultat sur
-<a class="reference external" href="https://www.youtube.com/watch?v=S2XkCfvGPXE"><em>La Lettre à Élise</em></a> de Ludwig van Beethoven
-ou la <a class="reference external" href="https://youtu.be/Txp-pHU2K6w?t=652"><em>Symphonie du Nouveau Monde</em></a> de Antonín Dvořák.</p>
-<p>En traitement du signal, une fenêtre est un signal de durée limitée.
-Par conséquent, la majeure partie de l’énergie de la fenêtre <span class="math notranslate nohighlight">\(w(t)\)</span> est contenue dans un intervalle temporel.
-De même, l’énergie de la fenêtre est également contenue dans un intervalle fréquentiel.
-Ces deux intervalles définissent une zone délimitée dans le plan temps-fréquence.
-L’idéal serait d’avoir une zone très localisée pour avoir une bonne résolution, à la fois temporelle et fréquentielle.
-Or, il est impossible d’avoir une très bonne localisation à la fois en temps et en fréquence,
-c’est-à-dire une zone qui se réduit à un point.
-Ce phénomène est le principe d’incertitude de Gabor-Heisenberg.
-C’est d’ailleurs ce qui explique la propriété de changement d’échelle des transformations de Fourier :
-la contraction dans un domaine implique une dilatation dans l’autre domaine.
-Les fenêtres qui conduisent à la meilleur location temps-fréquence sont des gaussiennes :
-on parle alors d’analyse de Gabor.</p>
-<p>La tranformée de Fourier à court terme a l’avantage d’être très simple.
-En revanche, elle considère implicitement le signal stationnaire dans la fenêtre d’observation
-(c’est-à-dire que durant la durée de la fenêtre, le signal n’est pas censé présenter de grands changements).
-Elle s’applique donc aux signaux qui sont lentement stationnaires,
-par exemple dans le domaine biomédical, en géophysique ou en traitement de la parole.</p>
-<p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes
-(utilisée par exemple dans le format de compression JPEG 2000).</p>
-<div class="figure align-default" id="f-temps-frequence-temps-frequence">
-<a class="reference internal image-reference" href="fourier/_static/figs/temps-frequence.png"><img alt="fourier/_static/figs/temps-frequence.png" src="fourier/_static/figs/temps-frequence.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence-temps-frequence" title="Lien permanent vers cette image">¶</a></p>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/correc22_9_0.png" src="../_images/correc22_9_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="spectre-centre-en-fonction-de-la-frequence">
+<h2>Spectre centré, en fonction de la fréquence<a class="headerlink" href="#spectre-centre-en-fonction-de-la-frequence" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On vérifie que les abscisses représentent bien une période du spectre (entre <span class="math notranslate nohighlight">\(-f_e/2\)</span> et <span class="math notranslate nohighlight">\(f_e/2\)</span>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">k2</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">Te</span><span class="p">)</span>
+<span class="n">myplot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="s2">&quot;f (Hz)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/correc22_11_0.png" src="../_images/correc22_11_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="application">
+<h2>Application<a class="headerlink" href="#application" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le signal temporel est :</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/correc22_13_0.png" src="../_images/correc22_13_0.png" />
+</div>
+</div>
+<p>Son spectre est :</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/correc22_15_0.png" src="../_images/correc22_15_0.png" />
+</div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.xlim</span></code> permet de zoomer sur la partie intéressante :</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/correc22_17_0.png" src="../_images/correc22_17_0.png" />
+</div>
+</div>
+<p>La fréquence principale du signal est donc à 0,1 Hz.</p>
 </div>
 </div>
 
@@ -553,8 +538,6 @@ par exemple dans le domaine biomédical, en géophysique ou en traitement de la 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="proprietes.html" title="previous page">Propriétés des transformations de Fourier</a>
-    <a class='right-next' id="next-link" href="td.html" title="next page">Exercices : analyse de Fourier</a>
 
         </div>
         
