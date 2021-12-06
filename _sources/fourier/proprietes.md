@@ -91,8 +91,10 @@ un signal temporel et sa transformation de Fourier ont la même énergie.
 $$
 \text{SF :}\qquad  \frac{1}{T} \int_T |x(t)|^2 dt &= \sum_{k=-\infty}^{+\infty} |X[k]|^2 \\
 \text{TF :}\qquad  \int_{-\infty}^{+\infty} |x(t)|^2 dt &= \int_{\infty}^{+\infty} |X(f)|^2 df \\
-\text{SFD :}\qquad \frac{1}{N} \sum_{n=0}^{N-1} |x[n]|^2 &= \sum_{k=0}^{N-1} |X[k]|^2
+\text{SFD :}\qquad \sum_{n=0}^{N-1} |x[n]|^2 &= \frac{1}{N} \sum_{k=0}^{N-1} |X[k]|^2
 $$
+
+<center><span style="color:#a00">(Attention, ajout du facteur 1/N)</span></center>
 
 ## Conditions de Dirichlet
 

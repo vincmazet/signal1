@@ -128,8 +128,10 @@ Cette formule est la série de Fourier discrète inverse.
 ```
 
 $$
-x[n] = \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / N}
+x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / N}
 $$
+
+<center><span style="color:#a00">(Attention, ajout du facteur 1/N)</span></center>
 
 et :
 
