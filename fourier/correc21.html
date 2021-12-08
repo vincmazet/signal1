@@ -56,6 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Transformée de Fourier discrète d’un signal numérique" href="correc22.html" />
+    <link rel="prev" title="TP : analyse de Fourier" href="tp.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -251,7 +253,7 @@
   Analyse de Fourier
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="fourier.html">
    Transformations de Fourier
@@ -272,10 +274,27 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="tp.html">
    ✎ Exercices sur machine
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Série de Fourier d’un créneau
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="correc22.html">
+     Transformée de Fourier discrète d’un signal numérique
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -440,6 +459,10 @@ Y[k] = \frac{A}{2} \mathrm{sinc}\left(\frac{k}{2}\right).
 <img alt="../_images/correc21_5_5.png" src="../_images/correc21_5_5.png" />
 </div>
 </div>
+<p>On observe que lorsque <span class="math notranslate nohighlight">\(N\)</span> augmente, la reconstruction tend vers le créneau.
+Cependant, des oscillations apparaissent aux discontinuités du signal et ne peuvent s’annuler, même si <span class="math notranslate nohighlight">\(N\)</span> est très grand :
+c’est le phénomène de Gibbs.
+Le phénomène disparaît seulement pour <span class="math notranslate nohighlight">\(N \rightarrow +\infty\)</span></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -467,6 +490,8 @@ Y[k] = \frac{A}{2} \mathrm{sinc}\left(\frac{k}{2}\right).
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="tp.html" title="previous page">TP : analyse de Fourier</a>
+    <a class='right-next' id="next-link" href="correc22.html" title="next page">Transformée de Fourier discrète d’un signal numérique</a>
 
         </div>
         

@@ -56,6 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Numérisation d’un signal" href="../num/numerisation.html" />
+    <link rel="prev" title="Série de Fourier d’un créneau" href="correc21.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -251,7 +253,7 @@
   Analyse de Fourier
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="fourier.html">
    Transformations de Fourier
@@ -272,10 +274,27 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="tp.html">
    ✎ Exercices sur machine
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="correc21.html">
+     Série de Fourier d’un créneau
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Transformée de Fourier discrète d’un signal numérique
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -450,12 +469,13 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z1</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 <span class="n">k1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-<span class="n">myplot</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span> <span class="n">Z1</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../_images/correc22_7_0.png" src="../_images/correc22_7_0.png" />
+<img alt="../_images/correc22_8_0.png" src="../_images/correc22_8_0.png" />
 </div>
 </div>
 </div>
@@ -465,12 +485,18 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k2</span> <span class="o">=</span> <span class="n">k1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Z2</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">Z1</span><span class="p">)</span>
-<span class="n">myplot</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myplot</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/correc22_9_0.png" src="../_images/correc22_9_0.png" />
+<img alt="../_images/correc22_11_0.png" src="../_images/correc22_11_0.png" />
 </div>
 </div>
 </div>
@@ -480,12 +506,13 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">k2</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">Te</span><span class="p">)</span>
-<span class="n">myplot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="s2">&quot;f (Hz)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../_images/correc22_11_0.png" src="../_images/correc22_11_0.png" />
+<img alt="../_images/correc22_14_0.png" src="../_images/correc22_14_0.png" />
 </div>
 </div>
 </div>
@@ -494,22 +521,22 @@
 <p>Le signal temporel est :</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../_images/correc22_13_0.png" src="../_images/correc22_13_0.png" />
+<img alt="../_images/correc22_16_0.png" src="../_images/correc22_16_0.png" />
 </div>
 </div>
 <p>Son spectre est :</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../_images/correc22_15_0.png" src="../_images/correc22_15_0.png" />
+<img alt="../_images/correc22_18_0.png" src="../_images/correc22_18_0.png" />
 </div>
 </div>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.xlim</span></code> permet de zoomer sur la partie intéressante :</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../_images/correc22_17_0.png" src="../_images/correc22_17_0.png" />
+<img alt="../_images/correc22_20_0.png" src="../_images/correc22_20_0.png" />
 </div>
 </div>
-<p>La fréquence principale du signal est donc à 0,1 Hz.</p>
+<p>La fréquence principale du signal est donc à 100 Hz.</p>
 </div>
 </div>
 
@@ -538,6 +565,8 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="correc21.html" title="previous page">Série de Fourier d’un créneau</a>
+    <a class='right-next' id="next-link" href="../num/numerisation.html" title="next page">Numérisation d’un signal</a>
 
         </div>
         
