@@ -427,6 +427,11 @@
    Transformée de Fourier à court terme
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resolution-du-plan-temps-frequence">
+   Résolution du plan temps-fréquence
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -440,7 +445,8 @@
                 
   <div class="section" id="representation-temps-frequence">
 <h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les transformations de Fourier font ressortir le contenu fréquentiel
+<!-- chirp = gazouilli -->
+<p>Les transformations de Fourier font ressortir le contenu fréquentiel d’un signal
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
 comme des changements brusques ou des modifications de fréquence.</p>
 <p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 21</span></a> représente deux signaux et leur spectres respectifs.
@@ -448,86 +454,126 @@ Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinuso�
 la différence étant l’ordre d’apparition des sinusoïdes.
 À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
 d’après le module, on comprend que les signaux temporels sont constitués de deux sinusoïdes de 50 Hz et 200 Hz,
-mais la phase n’est pas interprétable.</p>
+mais la phase n’est pas interprétable :
+on ne connaît pas l’ordre dans lequel arrivent les deux sinusoïdes.</p>
 <div class="figure align-default" id="f-temps-frequence-deux-sinus">
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">¶</a></p>
+<img alt="../_images/deux-sinus.svg" src="../_images/deux-sinus.svg" /><p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">¶</a></p>
 </div>
-<p>Pour répondre à la difficulté d’analyser les localisations temporelles des fréquences, d’autres outils ont été développés.</p>
+<p>Pour répondre à la difficulté d’analyser les localisations temporelles des fréquences,
+des outils de « temps-fréquence » ont été développés,
+le plus simple étant la transformée de Fourier à court terme.</p>
 <div class="section" id="transformee-de-fourier-a-court-terme">
 <h2>Transformée de Fourier à court terme<a class="headerlink" href="#transformee-de-fourier-a-court-terme" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La transformée de Fourier à court terme (STFT : <em>short-time Fourier transform</em>)
-est une transformée de Fourier restreinte à une portion du signal délimitée par une fenêtre <span class="math notranslate nohighlight">\(w(t)\)</span>
-qu’on fait glisser le long de l’axe temporel :</p>
-<div class="math notranslate nohighlight">
-\[
-X(f,\tau) = \int_{-\infty}^{+\infty} x(t) w(t-\tau) e^{-j2\pi f t} dt
-\]</div>
-<p>Il s’agit simplement de la formule de la transformée de Fourier dans laquelle a été introduite la fenêtre,
-qui est positionnée en <span class="math notranslate nohighlight">\(\tau\)</span>.
-La transformée de Fourier à court terme est donc un signal à deux dimensions
-qui dépend d’un temps <span class="math notranslate nohighlight">\(\tau\)</span> et d’une fréquence <span class="math notranslate nohighlight">\(f\)</span>, d’où le nom de « représentation temps-fréquence ».
-L’objectif de cette transformée étant l’analyse dans le domaine temps-fréquence, et non la reconstruction du signal temporel,
-la transformée inverse n’a pas d’utilité.</p>
-<p>Lorsqu’on représente une transformée de Fourier à court terme, on utilise uniquement son module,
-et plus précisément le carré du module <span class="math notranslate nohighlight">\(|X(f,\tau)|^2\)</span> qui est appelé « spectrogramme » de <span class="math notranslate nohighlight">\(x(t)\)</span>.
-Le spectrogramme fournit une indication sur la quantité d’énergie présente dans le signal
-autour de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de l’instant <span class="math notranslate nohighlight">\(\tau\)</span>.
-Les figures représentent les spectrogrammes de quelques signaux.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="f7c685d1-08b7-4a13-8d8f-99934cd57c12" name="d8171371-7ed4-441a-b4a5-f41e569b4c99" type="radio">
-</input><label class="tabbed-label" for="f7c685d1-08b7-4a13-8d8f-99934cd57c12">
-Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="59a9866c-ea83-4820-b9d8-8eec8985bd37" name="d8171371-7ed4-441a-b4a5-f41e569b4c99" type="radio">
-</input><label class="tabbed-label" for="59a9866c-ea83-4820-b9d8-8eec8985bd37">
-Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="8999182d-eb69-40cc-8c67-0118f446752e" name="d8171371-7ed4-441a-b4a5-f41e569b4c99" type="radio">
-</input><label class="tabbed-label" for="8999182d-eb69-40cc-8c67-0118f446752e">
-Gaussienne modulée</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="b3565d24-d4ef-489a-bac4-960f567200b0" name="d8171371-7ed4-441a-b4a5-f41e569b4c99" type="radio">
-</input><label class="tabbed-label" for="b3565d24-d4ef-489a-bac4-960f567200b0">
-Chirp</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="10a3259f-4406-4349-8ef1-41888932be56" name="d8171371-7ed4-441a-b4a5-f41e569b4c99" type="radio">
-</input><label class="tabbed-label" for="10a3259f-4406-4349-8ef1-41888932be56">
-Hello</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-<input id="eddff3da-e1c3-43b1-9c10-d1d9152d8166" name="d8171371-7ed4-441a-b4a5-f41e569b4c99" type="radio">
-</input><label class="tabbed-label" for="eddff3da-e1c3-43b1-9c10-d1d9152d8166">
-Coin coin coin</label><div class="tabbed-content docutils">
-<div class="figure align-default" style="width: 800px">
-</div>
-</div>
-</div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>Certains artistes s’amusent également avec cette transformée, comme Aphex Twin sur <a class="reference external" href="https://youtu.be/M9xMuPWAZW8?t=305"><em>Formula</em></a>.</p>
+<p>Une fenêtre est un signal limité dans le temps qui est utilisé en le multipliant par un signal quelconque, de façon à en sélectionner une partie.</p>
 </div>
-<p>La représentation en spectrogramme est également intéressante en musique.
+<p>La transformée de Fourier à court terme (STFT : <em>short-time Fourier transform</em>)
+est une transformée de Fourier restreinte à une portion du signal délimitée par une fenêtre <span class="math notranslate nohighlight">\(w\)</span>
+qu’on fait glisser le long de l’axe temporel.
+Dans le cas de signaux discrets, la STFT est :</p>
+<!-- $$X(f,\tau) = \int_{-\infty}^{+\infty} x(t) w(t-\tau) e^{-j2\pi f t} dt$$ -->
+<div class="math notranslate nohighlight">
+\[
+X[k,p] = \sum_{n=-0}^{N} x[n] w[n-p] e^{-j2\pi kn/N}
+\]</div>
+<p>Il s’agit donc de la formule de la transformée de Fourier discrète dans laquelle a été introduite la fenêtre positionnée en <span class="math notranslate nohighlight">\(p\)</span>.
+La STFT est donc un signal à deux dimensions qui dépend d’un temps <span class="math notranslate nohighlight">\(p\)</span> et d’une fréquence <span class="math notranslate nohighlight">\(k\)</span>), d’où le nom de « représentation temps-fréquence ».
+L’objectif de cette transformée étant l’analyse dans le domaine temps-fréquence, et non la reconstruction du signal temporel,
+la transformée inverse n’a pas d’utilité.</p>
+<p>Le résultat de la STFT dépend forcément de la fenêtre choisie.
+En particulier, la durée de la fenêtre et les décalages <span class="math notranslate nohighlight">\(p\)</span> considérés ont une influence importante sur le résultat.</p>
+<!-- ce serait bien de l'illustrer -->
+<p>Lorsqu’on représente une STFT, on utilise uniquement son module,
+et plus précisément le carré du module <span class="math notranslate nohighlight">\(|X[k,p]|^2\)</span> qui est appelé « spectrogramme » de <span class="math notranslate nohighlight">\(x\)</span>.
+Le spectrogramme fournit une indication sur la quantité d’énergie présente dans le signal
+autour de la fréquence <span class="math notranslate nohighlight">\(k\)</span> et de l’instant <span class="math notranslate nohighlight">\(p\)</span>.
+Les figures ci-après représentent les spectrogrammes de quelques signaux.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="eb51a1f1-90bf-474e-b61b-33f26b50a28c" name="4ab29551-fc7f-4934-9c9b-f65ab346ebac" type="radio">
+</input><label class="tabbed-label" for="eb51a1f1-90bf-474e-b61b-33f26b50a28c">
+Sinus à 50 et 200 Hz</label><div class="tabbed-content docutils">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tf-sin50200.svg"><img alt="../_images/tf-sin50200.svg" src="../_images/tf-sin50200.svg" width="800px" /></a>
+</div>
+<p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
+</div>
+<input id="0884e447-601b-434d-90c8-0d4f0df63be7" name="4ab29551-fc7f-4934-9c9b-f65ab346ebac" type="radio">
+</input><label class="tabbed-label" for="0884e447-601b-434d-90c8-0d4f0df63be7">
+Sinus à 200 et 50 Hz</label><div class="tabbed-content docutils">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tf-sin20050.svg"><img alt="../_images/tf-sin20050.svg" src="../_images/tf-sin20050.svg" width="800px" /></a>
+</div>
+<p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
+</div>
+<input id="286dd04e-36e6-47c4-bc46-8092bb8b3e85" name="4ab29551-fc7f-4934-9c9b-f65ab346ebac" type="radio">
+</input><label class="tabbed-label" for="286dd04e-36e6-47c4-bc46-8092bb8b3e85">
+Gaussienne modulée</label><div class="tabbed-content docutils">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tf-gaussienne.svg"><img alt="../_images/tf-gaussienne.svg" src="../_images/tf-gaussienne.svg" width="800px" /></a>
+</div>
+<p>L’instant d’apparition de l’oscillation, ainsi que sa fréquence, sont clairement visibles sur le spectrogramme.</p>
+</div>
+<input id="d83726d7-7abf-4ee9-8d3e-c98c647a5625" name="4ab29551-fc7f-4934-9c9b-f65ab346ebac" type="radio">
+</input><label class="tabbed-label" for="d83726d7-7abf-4ee9-8d3e-c98c647a5625">
+Chirp</label><div class="tabbed-content docutils">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tf-chirp.svg"><img alt="../_images/tf-chirp.svg" src="../_images/tf-chirp.svg" width="800px" /></a>
+</div>
+<p>Un « chirp » est une sinusoïde dont la fréquence évolue en fonction du temps.
+Dans la nature, le chant des oiseaux, les vocalises des cétacés ou les ultrasons émis par les chauve-souris ressemblent à des chirps.
+Les chirps sont également émis par les sonars et les radars.</p>
+</div>
+<input id="d97db190-9311-4b96-92c0-9df55627b4e6" name="4ab29551-fc7f-4934-9c9b-f65ab346ebac" type="radio">
+</input><label class="tabbed-label" for="d97db190-9311-4b96-92c0-9df55627b4e6">
+Voyelles</label><div class="tabbed-content docutils">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tf-aeiou.svg"><img alt="../_images/tf-aeiou.svg" src="../_images/tf-aeiou.svg" width="800px" /></a>
+</div>
+<p>Ce graphique représente l’enregistrement des voyelles françaises : elles sont facilement différentiables sur la représentation temps-fréquence.</p>
+</div>
+<input id="41827b41-1ed0-4e69-b1dc-3503dfbc6a01" name="4ab29551-fc7f-4934-9c9b-f65ab346ebac" type="radio">
+</input><label class="tabbed-label" for="41827b41-1ed0-4e69-b1dc-3503dfbc6a01">
+Voyelle « i » dite par un homme et une femme</label><div class="tabbed-content docutils">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tf-homme-femme.svg"><img alt="../_images/tf-homme-femme.svg" src="../_images/tf-homme-femme.svg" width="800px" /></a>
+</div>
+<p>Une homme et une femme disent la voyelle « i » l’un après l’autre.
+Qui parle en premier ?</p>
+</div>
+<input id="64d84301-88b4-4aa6-935f-d405f608f234" name="4ab29551-fc7f-4934-9c9b-f65ab346ebac" type="radio">
+</input><label class="tabbed-label" for="64d84301-88b4-4aa6-935f-d405f608f234">
+Lettre à Élise</label><div class="tabbed-content docutils">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tf-elise.svg"><img alt="../_images/tf-elise.svg" src="../_images/tf-elise.svg" width="800px" /></a>
+</div>
+<p>Les notes de musique sont bien visibles sur la représentation temps-fréquence.
+Certains artistes s’amusent également avec cette transformée, comme Aphex Twin sur <a class="reference external" href="https://youtu.be/M9xMuPWAZW8?t=305"><em>Formula</em></a>.</p>
+</div>
+</div>
+<!-- La représentation en spectrogramme est également intéressante en musique.
 Voyez par exemple le résultat sur
-<a class="reference external" href="https://www.youtube.com/watch?v=S2XkCfvGPXE"><em>La Lettre à Élise</em></a> de Ludwig van Beethoven
-ou la <a class="reference external" href="https://youtu.be/Txp-pHU2K6w?t=652"><em>Symphonie du Nouveau Monde</em></a> de Antonín Dvořák.</p>
-<p>En traitement du signal, une fenêtre est un signal de durée limitée.
-Par conséquent, la majeure partie de l’énergie de la fenêtre <span class="math notranslate nohighlight">\(w(t)\)</span> est contenue dans un intervalle temporel.
-De même, l’énergie de la fenêtre est également contenue dans un intervalle fréquentiel.
-Ces deux intervalles définissent une zone délimitée dans le plan temps-fréquence.
-L’idéal serait d’avoir une zone très localisée pour avoir une bonne résolution, à la fois temporelle et fréquentielle.
-Or, il est impossible d’avoir une très bonne localisation à la fois en temps et en fréquence,
-c’est-à-dire une zone qui se réduit à un point.
-Ce phénomène est le principe d’incertitude de Gabor-Heisenberg.
-C’est d’ailleurs ce qui explique la propriété de changement d’échelle des transformations de Fourier :
+[_La Lettre à Élise_](https://www.youtube.com/watch?v=S2XkCfvGPXE) de Ludwig van Beethoven
+ou la [_Symphonie du Nouveau Monde_](https://youtu.be/Txp-pHU2K6w?t=652) de Antonín Dvořák.
+ -->
+</div>
+<div class="section" id="resolution-du-plan-temps-frequence">
+<h2>Résolution du plan temps-fréquence<a class="headerlink" href="#resolution-du-plan-temps-frequence" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La STFT partage le plan temps-fréquence en zones égales, définissant ainsi la résolution de la représentation.
+À titre de comparaison, la représentation temporelle d’un signal est très résolue en temps mais pas du tout en fréquence,
+alors que c’est l’inverse pour la représentation fréquentielle.</p>
+<div class="figure align-default" id="f-temps-frequence">
+<a class="reference internal image-reference" href="../_images/temps-frequence.svg"><img alt="../_images/temps-frequence.svg" src="../_images/temps-frequence.svg" width="700px" /></a>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien permanent vers cette image">¶</a></p>
+</div>
+<p>L’idéal serait d’avoir une représentation temps-fréquence très résolue à la fois en temps et en fréquence.
+Mais ce n’est pas possible.</p>
+<p>On peut expliquer cela par le fait que la fenêtre <span class="math notranslate nohighlight">\(w\)</span> et de durée limitée et que son énergie est contenue dans un intervalle fréquentiel.
+Ces deux intervalles représentent une zone délimitée dans le plan temps-fréquence et définissent la résolution de la représentation temps-fréquence.
+Or, il est impossible d’avoir une zone qui se réduise à un point
+pour avoir une très bonne localisation à la fois en temps et en fréquence.</p>
+<p>Ce phénomène est le principe d’incertitude de Gabor-Heisenberg.</p>
+<p>C’est d’ailleurs ce qui explique la propriété de changement d’échelle des transformations de Fourier :
 la contraction dans un domaine implique une dilatation dans l’autre domaine.
 Les fenêtres qui conduisent à la meilleur location temps-fréquence sont des gaussiennes :
 on parle alors d’analyse de Gabor.</p>
@@ -536,13 +582,11 @@ En revanche, elle considère implicitement le signal stationnaire dans la fenêt
 (c’est-à-dire que durant la durée de la fenêtre, le signal n’est pas censé présenter de grands changements).
 Elle s’applique donc aux signaux qui sont lentement stationnaires,
 par exemple dans le domaine biomédical, en géophysique ou en traitement de la parole.</p>
-<p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes
-(utilisée par exemple dans le format de compression JPEG 2000).</p>
-<div class="figure align-default" id="f-temps-frequence-temps-frequence">
-<a class="reference internal image-reference" href="fourier/_static/figs/temps-frequence.png"><img alt="fourier/_static/figs/temps-frequence.png" src="fourier/_static/figs/temps-frequence.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence-temps-frequence" title="Lien permanent vers cette image">¶</a></p>
-</div>
-</div>
+<p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes.
+Avec cette transformée, la résolution en temps et en fréquence varie en fonction de la fréquence
+(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 22</span></a>).</p>
+<!-- (d'après un exemple de PFlandrin) principe d'incertitude : pour observer une fréquence (oscillation), il faut le faire sur un axe suffisamment long. De même, pour mesurer la vitesse d'un objet, il vaut mieux chornométrer en deux emplacements éloignés (bonne estimation de la vitesse, mais pas de la position : à quelle endroit exactement y a-t-il cette vitesse ?). Si les deux emplacements sont très proches (bonne estimation de la position), mais mauvaise estimation de la vitesse
+ --></div>
 </div>
 
     <script type="text/x-thebe-config">
