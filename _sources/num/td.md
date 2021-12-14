@@ -54,7 +54,7 @@ Pour étudier l'effet du repliement spectral, on applique la chaîne de traiteme
 le signal $x(t) = \cos(2\pi f_0 t)$ est échantillonné à une fréquence $f_e=1/T_e$ pour obtenir le signal $y(t)$,
 puis filtré par un filtre passe-bas idéal de fréquence de coupure $f_c = f_e/2$ pour obtenir le signal $z(t)$.
 
-```{figure} _static/figs/aliasing.png
+```{figure} aliasing.png
 ---
 width: 300px
 ```

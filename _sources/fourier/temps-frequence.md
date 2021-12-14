@@ -40,7 +40,7 @@ Dans le cas de signaux discrets, la STFT est :
 <!-- $$X(f,\tau) = \int_{-\infty}^{+\infty} x(t) w(t-\tau) e^{-j2\pi f t} dt$$ -->
 
 $$
-X[k,p] = \sum_{n=-0}^{N} x[n] w[n-p] e^{-j2\pi kn/N}
+X[k,p] = \sum_{n=0}^{N-1} x[n] w[n-p] e^{-j2\pi kn/N}
 $$
 
 Il s'agit donc de la formule de la transformée de Fourier discrète dans laquelle a été introduite la fenêtre positionnée en $p$.

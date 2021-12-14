@@ -2,9 +2,9 @@
 # Échantillonnage
 
 Dans ce chapitre, nous allons dans un premier temps présenter le principe de l'échantillonnage d'un signal analogique,
-puis le principe de la reconstruction de ce signal analogique à partir du signal échantillonné.
+puis dans un deuxième temps le principe de l'opération inverse : la reconstruction de ce signal analogique à partir du signal échantillonné.
 Ces deux opérations seront considérées dans un cas idéal.
-Nous continuerons ensuite sur le choix des paramètres de l'échantillonnage,
+Nous discuterons ensuite du choix des paramètres de l'échantillonnage,
 à savoir la fréquence d'échantillonnage $f_e$ et la fréquence de coupure $f_c$.
 Enfin, nous terminerons pas l'énoncé du théorème de l'échantillonnage.
 
@@ -14,9 +14,8 @@ L'échantillonnage consiste à convertir un signal $x(t)$ analogique
 en une séquence (suite de nombres) $x[n] = x(nT_e)$
 où $T_e$ est la « période d'échantillonnage ».
 
-```{figure} _static/figs/echantillonnage-temporel-1.png
+```{figure} echantillonnage-temporel-1.svg
 ---
-width: 400px
 ---
 Signal analogique $x[n]$ et échantillonné $x[n]$.
 ```
@@ -33,9 +32,8 @@ x(t) &\text{si}\ t\ \text{est multiple de}\ T_e \\
 $$
 
 
-```{figure} _static/figs/echantillonnage-temporel-2.png
+```{figure} echantillonnage-temporel-2.svg
 ---
-width: 400px
 ---
 Le signal échantillonné $x[n]$ est considéré comme un train d'impulsions $x^*(t)$.
 ```
@@ -46,18 +44,18 @@ $$
 X^*(f) = \sum_k X(f-kf_e)
 $$
 
-où $f_e=1/T_e$ est la « fréquence d'échantillonnage » (en anglais _sampling frequency_, souvent notée $F_s$).
+où $f_e=1/T_e$ est la « fréquence d'échantillonnage » (en anglais _sampling frequency_, souvent notée $f_s$).
 Par conséquent, l'échantillonnage du signal temporel à la période $T_e$ produit une périodisation du spectre à la période $f_e=1/T_e$,
 comme illustré sur les figures ci-dessous.
 
-```{figure} _static/figs/echantillonnage-frequentiel-1.png
+```{figure} echantillonnage-frequentiel-1.png
 ---
 width: 400px
 ---
 Spectre de $x$.
 ```
 
-```{figure} _static/figs/echantillonnage-frequentiel-2.png
+```{figure} echantillonnage-frequentiel-2.png
 ---
 width: 400px
 ---
@@ -72,14 +70,14 @@ c'est-à-dire la période située entre les fréquences entre $-f_c$ et $+f_c$.
 Cette opération est effectuée en appliquant un filtre passe-bas de fréquence de coupure $f_c$ sur le signal $x^*$,
 afin d'obtenir un nouveau signal $\tilde{x}$ qu'on espère être égal à $x$.
 
-```{figure} _static/figs/echantillonnage-frequentiel-3.png
+```{figure} echantillonnage-frequentiel-3.png
 ---
 width: 400px
 ---
 Spectre de $x^*$ et la zone du spectre à conserver (en vert).
 ```
 
-```{figure} _static/figs/echantillonnage-frequentiel-4.png
+```{figure} echantillonnage-frequentiel-4.png
 ---
 width: 400px
 ---
@@ -99,6 +97,14 @@ $$
 $$
 
 Chaque impulsion de $x^*$ est convoluée par un sinus cardinal.
+
+
+```{figure} echantillonnage-frequentiel-5.png
+---
+---
+Reconstruction du signal analogique $\tilde{x}$.
+```
+
 En ajustant correctement la valeur de la fréquence de coupure avec la période d'échantillonnage,
 cette opération revient à une interpolation de $x^*$,
 et permet donc de reconstruire les valeurs du signal qui n'existent pas.
@@ -108,6 +114,13 @@ suffisent pour avoir toute l'information du signal analogique $x$ !
 <!-- interpsinc.m peut être présenté ici. Je peux présenter les versions Matlab, Python, animation depuis Python, GIF animé...
 Je peux aussi faire une interface qui permettent de jouer sur les valeurs de fe et fc
 => ça permet de discuter du choix de ces paramètres et de leur influcene -->
+
+```{figure} echantillonnage-temporel-3.svg
+---
+---
+Reconstruction du signal analogique $\tilde{x}[n]$.
+```
+
 
 ## Choix de la fréquence de coupure
 
@@ -125,7 +138,7 @@ $$
 Le meilleur choix pour la fréquence de coupure du filtre passe-bas est donc $f_c=f_e/2$,
 cette valeur est appelée « fréquence de Nyquist ».
 
-```{figure} _static/figs/echantillonnage-frequentiel-5.png
+```{figure} echantillonnage-frequentiel-5.png
 ---
 width: 400px
 ```
@@ -136,14 +149,14 @@ Le spectre de $x^*(t)$ est une périodisation du spectre de $x(t)$ a une périod
 Si $f_e$ est trop faible, alors il peut y avoir une superposition des périodes,
 et le filtrage ne permettra pas de les séparer convenablement.
 
-```{figure} _static/figs/echantillonnage-frequentiel-6.png
+```{figure} echantillonnage-frequentiel-6.png
 ---
 width: 400px
 ---
 Aïe aïe aïe ! Avec une fréquence d'échantillonnage trop faible, la périodisation du spectre de $x$ produit des recouvrement de périodes.
 ```
 
-```{figure} _static/figs/echantillonnage-frequentiel-7.png
+```{figure} echantillonnage-frequentiel-7.png
 ---
 width: 400px
 ---
@@ -178,8 +191,9 @@ On parle de « repliement spectral » (en anglais : _aliasing_).
 L'animation ci-dessous simule l'effet du repliement spectral sur une sinusoïde dont on peut régler la période d'échantillonnage.
 
 <div id='aliasing' class='spetsi'></div>
-<script src="_static/js/spetsi.js" type="text/javascript"></script>
-<script src="_static/js/aliasing.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/aliasing.js" type="text/javascript"></script>
+
 
 Le repliement spectral peut apparaître sur tout signal numérique, s'il est mal échantillonné.
 Les exemples ci-dessous illustrent l'effet du repliement spectral sur différents signaux.
@@ -189,7 +203,7 @@ Les exemples ci-dessous illustrent l'effet du repliement spectral sur différent
 Un cosinus de fréquence 6 Hz (en gris) est échantillonné à 6,5 Hz.
 Le signal obtenu avec l'échantillonnage est un cosinus de fréquence 0,5 Hz (points bleus).
 
-```{figure} _static/figs/aliasing-signal.png
+```{figure} aliasing-signal.png
 ---
 width: 400px
 ```
@@ -198,7 +212,7 @@ width: 400px
 ````{tabbed} Image
 Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l'image présente des structures très fines par rapport aux pixels.
-```{figure} _static/figs/aliasing-photo.jpg
+```{figure} aliasing-photo.jpg
 ---
 width: 400px
 ```
