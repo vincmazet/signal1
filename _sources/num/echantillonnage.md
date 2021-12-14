@@ -17,7 +17,7 @@ où $T_e$ est la « période d'échantillonnage ».
 ```{figure} echantillonnage-temporel-1.svg
 ---
 ---
-Signal analogique $x[n]$ et échantillonné $x[n]$.
+Signal analogique $x(t)$ et échantillonné $x[n]$.
 ```
 
 Pour étudier le phénomène de l'échantillonnage d'un point de vue mathématique,
@@ -48,16 +48,14 @@ où $f_e=1/T_e$ est la « fréquence d'échantillonnage » (en anglais _sampling
 Par conséquent, l'échantillonnage du signal temporel à la période $T_e$ produit une périodisation du spectre à la période $f_e=1/T_e$,
 comme illustré sur les figures ci-dessous.
 
-```{figure} echantillonnage-frequentiel-1.png
+```{figure} echantillonnage-frequentiel-1.svg
 ---
-width: 400px
 ---
 Spectre de $x$.
 ```
 
-```{figure} echantillonnage-frequentiel-2.png
+```{figure} echantillonnage-frequentiel-2.svg
 ---
-width: 400px
 ---
 Spectre de $x^*$.
 ```
@@ -70,16 +68,14 @@ c'est-à-dire la période située entre les fréquences entre $-f_c$ et $+f_c$.
 Cette opération est effectuée en appliquant un filtre passe-bas de fréquence de coupure $f_c$ sur le signal $x^*$,
 afin d'obtenir un nouveau signal $\tilde{x}$ qu'on espère être égal à $x$.
 
-```{figure} echantillonnage-frequentiel-3.png
+```{figure} echantillonnage-frequentiel-3.svg
 ---
-width: 400px
 ---
-Spectre de $x^*$ et la zone du spectre à conserver (en vert).
+Spectre de $x^*$ et la zone du spectre à conserver.
 ```
 
-```{figure} echantillonnage-frequentiel-4.png
+```{figure} echantillonnage-frequentiel-4.svg
 ---
-width: 400px
 ---
 Résultat du filtre passe-bas de fréquence de coupure $f_c$.
 ```
@@ -96,15 +92,7 @@ $$
 \tilde{x}(t) = x^*(t) \ * \ 2 f_c \mathrm{sinc}(2f_ct)
 $$
 
-Chaque impulsion de $x^*$ est convoluée par un sinus cardinal.
-
-
-```{figure} echantillonnage-frequentiel-5.png
----
----
-Reconstruction du signal analogique $\tilde{x}$.
-```
-
+Donc, chaque impulsion de $x^*$ est convoluée par un sinus cardinal.
 En ajustant correctement la valeur de la fréquence de coupure avec la période d'échantillonnage,
 cette opération revient à une interpolation de $x^*$,
 et permet donc de reconstruire les valeurs du signal qui n'existent pas.
@@ -118,8 +106,13 @@ Je peux aussi faire une interface qui permettent de jouer sur les valeurs de fe 
 ```{figure} echantillonnage-temporel-3.svg
 ---
 ---
-Reconstruction du signal analogique $\tilde{x}[n]$.
+Reconstruction du signal analogique $\tilde{x}(t)$ (ici, $f_c=f_e$).
 ```
+
+La reconstruction est très bonne au centre du signal, ce qui illustre le bon comportement de l'interpolation par sinus cardinal.
+Au contraire, la reconstruction n'est pas bonne aux extrémités du signal :
+cela s'explique par le fait qu'à l'extérieur de l'intervalle considéré,
+il n'y a pas d'échantillons de $x^*$ qui permettent de définir des sinus cardinaux qui permettent de reconstruire le signal analogique.
 
 
 ## Choix de la fréquence de coupure
@@ -138,9 +131,10 @@ $$
 Le meilleur choix pour la fréquence de coupure du filtre passe-bas est donc $f_c=f_e/2$,
 cette valeur est appelée « fréquence de Nyquist ».
 
-```{figure} echantillonnage-frequentiel-5.png
+```{figure} echantillonnage-frequentiel-5.svg
 ---
-width: 400px
+---
+Spectre de $x^*$ et la zone du spectre à conserver, dans le cas où $f_c=f_e/2$.
 ```
 
 ## Choix de la fréquence d'échantillonnage
@@ -149,22 +143,20 @@ Le spectre de $x^*(t)$ est une périodisation du spectre de $x(t)$ a une périod
 Si $f_e$ est trop faible, alors il peut y avoir une superposition des périodes,
 et le filtrage ne permettra pas de les séparer convenablement.
 
-```{figure} echantillonnage-frequentiel-6.png
+```{figure} echantillonnage-frequentiel-6.svg
 ---
-width: 400px
 ---
 Aïe aïe aïe ! Avec une fréquence d'échantillonnage trop faible, la périodisation du spectre de $x$ produit des recouvrement de périodes.
 ```
 
-```{figure} echantillonnage-frequentiel-7.png
+```{figure} echantillonnage-frequentiel-7.svg
 ---
-width: 400px
 ---
 Signal reconstruit après filtrage, pour une fréquence d'échantillonnage trop faible :
 on n'obtient pas le signal original $x$, il y a repliement spectral.
 ```
 
-La reconstruction correcte de $x(t)$ à partir de $x^*(t)$ implique donc une valeur minimale de $f_e$ :
+La reconstruction correcte de $x$ à partir de $x^*$ implique donc une valeur minimale de $f_e$ :
 
 ```{margin}
 Si vous ne deviez retenir qu'une seule formule du cours de traitement de signal, ce serait cette équation.
@@ -176,6 +168,8 @@ $$
 \qquad\Leftrightarrow\qquad
 f_e > 2f_\mathrm{max}
 $$
+
+où $f_\mathrm{max}$ est la plus grande fréquence présente dans le signal $x$.
 
 Ainsi, on prendra soin de vérifier que cette condition est vérifiée avant tout échantillonnage.
 Si ce n'est pas possible (par exemple, la fréquence d'échantillonnage est limitée pour des raisons techniques),
