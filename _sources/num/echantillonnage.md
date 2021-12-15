@@ -234,7 +234,7 @@ si un signal analogique $x(t)$ de fréquence maximale $f_\mathrm{max}$ est écha
 alors $x(t)$ peut être exactement reconstruit à partir de ses échantillons à l'aide d'une interpolation par sinus cardinal :
 
 $$
-x(t) = \sum_{n=-\infty}^{+\infty} x\left(\frac{n}{f_e}\right) \mathrm{sinc} \left(f_e\left(t-\frac{n}{f_e}\right)\right).
+\tilde{x}(t) = \sum_{n=-\infty}^{+\infty} x\left(\frac{n}{f_e}\right) \mathrm{sinc} \left(f_e\left(t-\frac{n}{f_e}\right)\right).
 $$
 
 En pratique, la reconstruction n'est pas parfaite car il faut une somme infinie de termes dans la somme

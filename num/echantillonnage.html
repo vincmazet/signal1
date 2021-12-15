@@ -608,8 +608,8 @@ L’animation ci-dessous simule l’effet du repliement spectral sur une sinuso�
 <p>Le repliement spectral peut apparaître sur tout signal numérique, s’il est mal échantillonné.
 Les exemples ci-dessous illustrent l’effet du repliement spectral sur différents signaux.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f920333b-674d-4893-b58a-70f3fe86d2b5" name="13047d3d-ece9-4f84-bab1-dd4dc534a70e" type="radio">
-</input><label class="tabbed-label" for="f920333b-674d-4893-b58a-70f3fe86d2b5">
+<input checked="checked" id="28aacf54-bbf4-47fc-96de-53f8137ce494" name="25d401d4-3aba-47f6-9532-9f63ba509288" type="radio">
+</input><label class="tabbed-label" for="28aacf54-bbf4-47fc-96de-53f8137ce494">
 Signal</label><div class="tabbed-content docutils">
 <p>Un cosinus de fréquence 6 Hz (en gris) est échantillonné à 6,5 Hz.
 Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (points bleus).</p>
@@ -617,8 +617,8 @@ Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (
 <a class="reference internal image-reference" href="../_images/aliasing-signal.png"><img alt="../_images/aliasing-signal.png" src="../_images/aliasing-signal.png" style="width: 400px;" /></a>
 </div>
 </div>
-<input id="45f0fb4a-a666-4121-8908-ff31bc22e898" name="13047d3d-ece9-4f84-bab1-dd4dc534a70e" type="radio">
-</input><label class="tabbed-label" for="45f0fb4a-a666-4121-8908-ff31bc22e898">
+<input id="e97b5cb3-57ee-4bcf-a492-90d0b7482350" name="25d401d4-3aba-47f6-9532-9f63ba509288" type="radio">
+</input><label class="tabbed-label" for="e97b5cb3-57ee-4bcf-a492-90d0b7482350">
 Image</label><div class="tabbed-content docutils">
 <p>Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l’image présente des structures très fines par rapport aux pixels.</p>
@@ -626,8 +626,8 @@ Le repliement spectral apparaît lorsque le motif présent dans l’image prése
 <a class="reference internal image-reference" href="../_images/aliasing-photo.jpg"><img alt="../_images/aliasing-photo.jpg" src="../_images/aliasing-photo.jpg" style="width: 400px;" /></a>
 </div>
 </div>
-<input id="3e78a12f-b0c7-4c45-a272-72fd7d3e350d" name="13047d3d-ece9-4f84-bab1-dd4dc534a70e" type="radio">
-</input><label class="tabbed-label" for="3e78a12f-b0c7-4c45-a272-72fd7d3e350d">
+<input id="b73975b2-c540-41d8-8944-3685d01626ba" name="25d401d4-3aba-47f6-9532-9f63ba509288" type="radio">
+</input><label class="tabbed-label" for="b73975b2-c540-41d8-8944-3685d01626ba">
 Vidéo</label><div class="tabbed-content docutils">
 <p>Une vidéo possède à la fois un échantillonnage spatial (au sein d’une même image)
 mais aussi un échantillonnage temporel lié au nombres d’images acquises par seconde.
@@ -650,7 +650,7 @@ si un signal analogique <span class="math notranslate nohighlight">\(x(t)\)</spa
 alors <span class="math notranslate nohighlight">\(x(t)\)</span> peut être exactement reconstruit à partir de ses échantillons à l’aide d’une interpolation par sinus cardinal :</p>
 <div class="math notranslate nohighlight">
 \[
-x(t) = \sum_{n=-\infty}^{+\infty} x\left(\frac{n}{f_e}\right) \mathrm{sinc} \left(f_e\left(t-\frac{n}{f_e}\right)\right).
+\tilde{x}(t) = \sum_{n=-\infty}^{+\infty} x\left(\frac{n}{f_e}\right) \mathrm{sinc} \left(f_e\left(t-\frac{n}{f_e}\right)\right).
 \]</div>
 <p>En pratique, la reconstruction n’est pas parfaite car il faut une somme infinie de termes dans la somme
 et des instants d’échantillonnage très précis.
