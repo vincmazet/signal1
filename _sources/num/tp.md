@@ -18,7 +18,7 @@ En musique, la note _la_ correspond à une sinusoïde de fréquence 440 Hz.
 ## Représentation temps-fréquence
 
 <!-- Le fichier bigben.wav est un enregistrement d'une partie de la sonnerie de Big Ben. -->
-Le fichier [gamme.wav](https://vincmazet.github.io/signal1/_static/files/gamme.wav) est un enregistrement d'une gamme musicale au piano.
+Le fichier <a href="../_static/gamme.wav">gamme.wav</a> est un enregistrement d'une gamme musicale au piano.
 Nous allons chercher quelles sont les notes jouées.
 
 * Chargez et affichez le signal.
@@ -36,7 +36,7 @@ Ainsi, la fonction `matplotlib.pyplot.specgram` permet d'afficher le spectrogram
 
 ## Interpolation
 
-Le fichier [son8820.csv](https://vincmazet.github.io/signal1/_static/files/son8820.csv) contient un court extrait sonore échantillonné à 8 820 Hz.
+Le fichier <a href="../_static/8820Hz.csv">8820Hz.csv</a> contient un signal échantillonné à 8 820 Hz.
 
 * Affichez ce signal, noté $x$, en mettant en évidence les échantillons
   (par exemple avec la commande `plot(t,x,'-*')`).
@@ -63,8 +63,8 @@ c'est-à-dire calculer de nouveaux échantillons à l'intérieur du signal.
 %   Autrement dit, cela revient à convoluer $x_0$ par $h = \big[1\;1\;1\;1\;1\big]$.
 -->
 
-La technique de _zero-padding_ consiste à ajouter des zéros de part et d'autre du spectre de Fourier
-pour obtenir un signal contenant cinq fois plus d'échantillons.
+La technique de « _zero-padding_ fréquentiel » consiste à ajouter des zéros de part et d'autre du spectre de Fourier
+pour obtenir un spectre, et donc un signal temporel, contenant cinq fois plus d'échantillons.
 
 * En notant $X$ la TFD du signal $x$ et $N$ son nombre d'échantillons,
   ajoutez $M$ zéros de part et d'autre de la TFD de manière à créer un vecteur $Y$ cinq fois plus long que $X$ :
@@ -72,7 +72,7 @@ pour obtenir un signal contenant cinq fois plus d'échantillons.
   Y = np.concatenate([np.zeros(M), X, np.zeros(M)])
   ```
 
-* Affichez la TFD $Y$ (après avoir défini son axe des fréquences).
+* Affichez la TFD $Y$ (après avoir redéfini son axe des fréquences).
 
 * Affichez le signal interpolé, issu de la TFD inverse de $Y$,
   et comparez-le au signal original $x$ (après avoir défini son axe des temps).
