@@ -323,10 +323,32 @@
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../num/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc31.html">
+     Repliement spectral
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc32.html">
+     Représentation temps-fréquence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc33.html">
+     Interpolation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -553,6 +575,70 @@
     Your browser does not support the audio element.
 </audio>
 </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test : compression de 25%, on garde 1 échantillon sur 4 en temporel et 25% des basses fréquences en Haar</span>
+
+<span class="c1"># Chargement de la musique</span>
+<span class="n">fe</span><span class="p">,</span> <span class="n">mus</span> <span class="o">=</span> <span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../_static/Elise.wav&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ne conserve que le début</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">17</span>
+<span class="n">mus</span> <span class="o">=</span> <span class="n">mus</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">M</span><span class="p">]</span>              <span class="c1"># Musique originale</span>
+<span class="n">mu1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">mus</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>   <span class="c1"># Musique compressée dans la base canonique</span>
+<span class="n">mu2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">mus</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>   <span class="c1"># Musique compressée dans la base de Haar</span>
+
+<span class="c1"># Paramètres</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">16</span>         <span class="c1"># Nombre de points par morceau</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">8</span>          <span class="c1"># Nombre de points conservés</span>
+<span class="n">K</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>   <span class="c1"># Nombre de morceaux</span>
+
+<span class="c1"># Vecteurs de la base et des coefficients</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">haar</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+
+    <span class="c1"># Morceau du signal de N échantillons</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">N</span><span class="o">-</span><span class="n">N</span><span class="p">),</span> <span class="n">k</span><span class="o">*</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">mus</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+    <span class="c1"># Compression dans la base canonique</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="n">test</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="k">if</span> <span class="n">test</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">x1</span><span class="p">[</span><span class="n">L</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">if</span> <span class="n">test</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">x1</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">x1</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">x1</span><span class="p">[</span><span class="mi">3</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        
+    <span class="k">if</span> <span class="n">test</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+        <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">[:</span><span class="n">L</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    
+    <span class="n">mu1</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span>
+
+    <span class="c1"># Compression dans la base de Haar</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  
+    <span class="n">c</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">x2</span> <span class="o">+=</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">mu2</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">x2</span>
+    
+<span class="n">display</span><span class="p">(</span><span class="n">Audio</span><span class="p">(</span><span class="n">mus</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">fe</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Audio</span><span class="p">(</span><span class="n">mu1</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">fe</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Audio</span><span class="p">(</span><span class="n">mu2</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">fe</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
