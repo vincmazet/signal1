@@ -20,7 +20,7 @@ $$
   \end{cases}
 $$
 
-<div id='dilatation' class='spetsi'></div>
+<div id="dilatation" class="spetsi mathjax_process"></div>
 <script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
 <script src="https://vincmazet.github.io/spetsi/js/dilatation.js" type="text/javascript"></script>
 

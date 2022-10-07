@@ -1,3 +1,4 @@
+(C:xcorr:tp)=
 # TP : intercorrélation
 
 L'objectif est, comme dans l'exemple {numref}`F:intercorrelation:communications`, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
@@ -35,3 +36,5 @@ Dans cet exercice, les signaux sont de taille $N=100$ échantillons.
   Représentez l'intercorrélation entre ce signal et le motif pour en déduire le message codé.
   
 * Même question pour le fichier <a href="../_static/message2.csv">message2.csv</a>.
+
+<a class="btn btn-light" href="../vect/tp.html" role="button">Suite du TP</a>

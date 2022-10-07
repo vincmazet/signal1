@@ -5,20 +5,18 @@
 L'intercorrélation de deux signaux $x(t)$ et $y(t)$ est un signal $R_{xy}(\tau)$
 qui mesure la ressemblance du signal $x(t+\tau)$ avec $y(t)$.
 
-```{panels}
-:column: col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2
+::::{grid} 1 1 1 1
+:gutter: 3
 
-Signaux à temps continu
-^^^
+:::{grid-item-card} Signaux à temps continu
 $$R_{xy}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) y(t) dt$$
+:::
 
----
-
-Signaux à temps discret
-^^^
+:::{grid-item-card} Signaux à temps discret
 $$R_{xy}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] y[n]$$
+:::
 
-```
+::::
 
 Attention, la formule de l'intercorrélation est très proche de celle de la convolution puisque seul un signe change ! Malgré cela, l'intercorrélation et la convolution sont deux outils très différents et dont l'interprétation n'est pas du tout la même.
 
@@ -27,7 +25,12 @@ Attention, la formule de l'intercorrélation est très proche de celle de la con
 <div class="example">
 
     
-En communications numériques, il n'est pas rare que le récepteur du sytème de communication reçoive un signal de l'émetteur qui soit très brouillé (on dit qu'il est _bruité_). Par exemple, si le récepteur reçoit le signal $x$ représenté {numref}`F:intercorrelation:communications`, et qu'il sait qu'il devrait être une suite d'échelon d'amplitude &minus;1 (représentant le bit 0) ou +1 (représentant le bit 1), alors l'intercorrélation de $x$ avec un échelon $y$ permet de détecter à chaque instant si le signal reçu ressemble à $y$ (dans ce cas, on a reçu un 1) ou pas (on a reçu un 0).
+En communications numériques, il n'est pas rare que le récepteur du sytème de communication reçoive un signal de l'émetteur qui soit très brouillé
+(on dit qu'il est _bruité_).
+Par exemple, si le récepteur reçoit le signal $x$ représenté {numref}`F:intercorrelation:communications`,
+et que ce signal est en réalité une suite d'échelons d'amplitude &minus;1 (représentant le bit 0) ou +1 (représentant le bit 1),
+alors l'intercorrélation de $x$ avec un échelon $y$ permet de détecter à chaque instant si le signal reçu ressemble à $y$
+(dans ce cas, on a reçu un 1) ou pas (on a reçu un 0).
 
 ```{figure} communications.svg
 ---
@@ -47,8 +50,8 @@ Un autre exemple d'utilisation de l'intecorrélation est la mesure de la fréque
 ---
 name: F:intercorrelation:sinusoide
 ---
-Intercorrélation de $x$ ( une sinusoïde bruitée de fréquence 1 Hz) avec un sinusoïde de fréquence variable.
-La corrélation la plus forte est obtenue pour une sinusoïde de 1 Hz.
+Intercorrélation de $x$ ( une sinusoïde bruitée de fréquence 0,5 Hz) avec un sinusoïde de fréquence variable.
+La corrélation la plus forte est obtenue pour une sinusoïde de 0,5 Hz.
 ```
     
 </div>
@@ -58,20 +61,18 @@ La corrélation la plus forte est obtenue pour une sinusoïde de 1 Hz.
 
 L'autocorrélation est l'intercorrélation d'un signal avec lui-même.
 
-```{panels}
-:column: col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2
+::::{grid} 1 1 1 1
+:gutter: 3
 
-Signaux à temps continu
-^^^
+:::{grid-item-card} Signaux à temps continu
 $$R_{x}(\tau) = \int_{-\infty}^{+\infty} x(t+\tau) x(t) dt$$
+:::
 
----
-
-Signaux à temps discret
-^^^
+:::{grid-item-card} Signaux à temps discret
 $$R_{x}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] x[n]$$
+:::
 
-```
+::::
 
 L'autocorrélation possède quelques propriétés remarquables :
 * l'autocorrélation est symétrique car $R_{x}(\tau) = R_{x}(-\tau)$

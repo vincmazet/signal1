@@ -29,7 +29,7 @@ $$
 $$
 
 Leur représentation est donnée {numref}`F:vect:ex-graphe`.
-Il s'agit simplement de ux signaux de deux échantillons. 
+Il s'agit simplement de signaux de deux échantillons. 
 Les axes de cette représentation sont : les échantillons en abscisse, et les amplitudes en ordonnée.
 
 ```{figure} ex-graphe.svg
@@ -104,7 +104,7 @@ $$
 
 ### Base
 
-Une _base_ est un ensemble de $N$ signaux tels que tout signal échantillonné de taille $N$ peut s'écrire comme une combinaison linéaire unique de signaux de cette base. Ainsi, si $\{\varphi_0 \, \varphi_1 \, \dots \, \varphi_{N-1}\}$ est un ensemble de $N$ signaux formant une base, alors tout signal $x\in\mathbb{C}^N$ s'écrira
+Une _base_ est un ensemble de $N$ signaux tels que tout signal échantillonné de taille $N$ peut s'écrire comme une combinaison linéaire unique de signaux de cette base. Ainsi, si $\{\varphi_0,\, \varphi_1,\, \dots,\, \varphi_{N-1}\}$ est un ensemble de $N$ signaux formant une base, alors tout signal $x\in\mathbb{C}^N$ s'écrira
 
 $$
   x = \sum_{k=0}^{N-1} \alpha_k \varphi_k

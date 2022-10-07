@@ -58,7 +58,9 @@ Le spectrogramme fournit une indication sur la quantité d'énergie présente da
 autour de la fréquence $k$ et de l'instant $p$.
 Les figures ci-après représentent les spectrogrammes de quelques signaux.
 
-````{tabbed} Sinus à 50 et 200 Hz
+`````{tab-set}
+
+````{tab-item} Sinus à 50 et 200 Hz
 ```{figure} tf-sin50200.svg
 ---
 width: 800px
@@ -66,7 +68,7 @@ width: 800px
 L'ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.
 ````
 
-````{tabbed} Sinus à 200 et 50 Hz
+````{tab-item} Sinus à 200 et 50 Hz
 ```{figure} tf-sin20050.svg
 ---
 width: 800px
@@ -74,7 +76,7 @@ width: 800px
 L'ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.
 ````
 
-````{tabbed} Gaussienne modulée
+````{tab-item} Gaussienne modulée
 ```{figure} tf-gaussienne.svg
 ---
 width: 800px
@@ -82,7 +84,7 @@ width: 800px
 L'instant d'apparition de l'oscillation, ainsi que sa fréquence, sont clairement visibles sur le spectrogramme.
 ````
 
-````{tabbed} Chirp
+````{tab-item} Chirp
 ```{figure} tf-chirp.svg
 ---
 width: 800px
@@ -92,7 +94,7 @@ Dans la nature, le chant des oiseaux, les vocalises des cétacés ou les ultraso
 Les chirps sont également émis par les sonars et les radars.
 ````
 
-````{tabbed} Voyelles
+````{tab-item} Voyelles
 ```{figure} tf-aeiou.svg
 ---
 width: 800px
@@ -100,7 +102,7 @@ width: 800px
 Ce graphique représente l'enregistrement des voyelles françaises : elles sont facilement différentiables sur la représentation temps-fréquence.
 ````
 
-````{tabbed} Voyelle « i » dite par un homme et une femme
+````{tab-item} Voyelle « i » dite par un homme et une femme
 ```{figure} tf-homme-femme.svg
 ---
 width: 800px
@@ -109,7 +111,7 @@ Une homme et une femme disent la voyelle « i » l'un après l'autre.
 Qui parle en premier ?
 ````
 
-````{tabbed} Lettre à Élise
+````{tab-item} Lettre à Élise
 ```{figure} tf-elise.svg
 ---
 width: 800px
@@ -117,6 +119,9 @@ width: 800px
 Les notes de musique sont bien visibles sur la représentation temps-fréquence.
 Certains artistes s'amusent également avec cette transformée, comme Aphex Twin sur [_Formula_](https://youtu.be/M9xMuPWAZW8?t=305).
 ````
+
+`````
+
 
 <!-- La représentation en spectrogramme est également intéressante en musique.
 Voyez par exemple le résultat sur

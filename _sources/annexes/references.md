@@ -39,11 +39,14 @@
 
 * I. Bellin. [Histoire du traitement d'images](https://interstices.info/histoire-du-traitement-dimages/). Interstices, 2004.
 
+* [Plein d'articles sur le traitement du signal et ses applications !](https://interstices.info/?s=signal&fwp_sort=date_desc).
+  Interstices.
+
 * [Traitement du signal](http://culturesciencesphysique.ens-lyon.fr/dossiersthematiques/traitement-du-signal/). Culture Sciences physique, ENS Lyon.
 
 * Doc Sciences : entre les hommes et les machines, automatique et traitement du signal, n<sup>o</sup> 15, 2013. Disponible en demandant gentiment à votre professeur préféré.
 
-* [Gretsi](http://www.gretsi.fr/). Groupe de recherche en traitement du signal et des images.
+* [Gretsi](http://gretsi.fr/historique). Groupe de recherche en traitement du signal et des images.
 
 * [Signal Processing Society](https://signalprocessingsociety.org/). Société savante, éditrice notamment de la revue Signal Processing Magazine.
 

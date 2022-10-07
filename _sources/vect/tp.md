@@ -1,3 +1,4 @@
+(C:vect:tp)=
 # TP : décomposition dans la base de Haar
 
 * Créez un signal $x$ de taille $N=16$.
@@ -16,21 +17,21 @@ Pour un taux de compression égal à 50 %, la moitié des valeurs de $x$ sont p
 * Supprimez les $N/2$ derniers échantillons du signal $x$ pour obtenir un premier signal compressé $x_1$.
   Vous pouvez vous inspirer du code ci-dessous.
   
-```
-import numpy as np
+  ```
+  import numpy as np
 
-# Nombre d'échantillons
-N = 10
+  # Nombre d'échantillons
+  N = 10
 
-# Signal à traiter
-x = np.arange(N)
+  # Signal à traiter
+  x = np.arange(N)
 
-# Copie du vecteur
-x1 = x.copy()
+  # Copie du vecteur
+  x1 = x.copy()
 
-# Annule les N/2 derniers échantillons
-x1[int(N/2):] = 0
-```
+  # Annule les N/2 derniers échantillons
+  x1[int(N/2):] = 0
+  ```
   
 * Une autre façon de compresser le signal $x$ est de supprimer les plus petits coefficients $\alpha_k$ de sa décomposition de Haar.
   Aussi, après avoir calculé ces coefficients, supprimez la moitié des coefficients les plus faibles puis reconstruisez-le signal qu'on appellera $x_2$.

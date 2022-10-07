@@ -6,10 +6,9 @@
 Complétez le <a href="../_static/classification.pdf">tableau de classification des signaux</a>.
 
 Placez dans le tableau les signaux suivants :
-- un signal acoustique dans l'air, en fonction du temps
-- l'enregistrement du nombre de personnes atteintes d'une maladie en fonction du temps
-- le nombre d'étudiants dans une classe en fonction du temps
-- l'heure du lever de soleil tous les jours
+- la température ambiante en fonction du temps,
+- le nombre d'étudiants dans une classe en fonction du temps,
+- l'heure du lever de soleil tous les jours.
 
 
 ## Exercice 2
@@ -17,9 +16,10 @@ Placez dans le tableau les signaux suivants :
 Tracez à la main les signaux suivants :
 
 $$
-  x(t) = \frac{1}{2} \mathrm{sinc}\!\left(\frac{t}{2}\right),\qquad
-  y[n] = \sin(\pi n),\qquad
-  z[n] = \mathrm{rect}\!\left(\frac{n}{4}-\frac{1}{2}\right) - \delta[n-2]
+  w(t) &= 3 \mathrm{sin}\!\left(8\pi t + \pi\right),&\qquad
+  x(t) &= \frac{1}{2} \mathrm{sinc}\!\left(\frac{t}{2}\right),\\
+  y[n] &= \sin(\pi n),&\qquad
+  z[n] &= \mathrm{rect}\!\left(\frac{n}{4}-\frac{1}{2}\right) - \delta[n-2]
 $$
 
 
