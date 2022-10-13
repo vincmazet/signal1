@@ -12,7 +12,7 @@ d'une variable [discrète](http://www.educatim.fr/tq/co/Module_TQ_web/co/variabl
 et de plus les amplitudes du signal sont également discrètes.
 Ces signaux sont _numériques_.
 On peut citer comme exemple une photographie numérique qui est constituée de pixels
-dont les intensités ne peuvent prendre que 255<sup>3</sup> = 16&nbsp;581&nbsp;375 valeurs.
+dont les intensités ne peuvent prendre que 256<sup>3</sup> = 16&nbsp;777&nbsp;216 valeurs.
 
 Un signal numérique est à la fois _échantillonné_
 (c'est-à-dire qu'il dépend d'une variable discrète) et _quantifié_ (ses amplitudes sont discrètes).
