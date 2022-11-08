@@ -443,13 +443,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#serie-de-fourier">
    Série de Fourier
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulation-alternative">
-     Formulation alternative
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#transformee-de-fourier">
@@ -494,13 +487,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#serie-de-fourier">
    Série de Fourier
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulation-alternative">
-     Formulation alternative
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#transformee-de-fourier">
@@ -533,7 +519,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="transformations-de-fourier">
-<h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Lien permanent vers ce titre">#</a></h1>
+<span id="c-fourier"></span><h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Lien permanent vers ce titre">#</a></h1>
 <p>Joseph Fourier (1768–1830) était professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
 et préfet de l’Isère.
 Il a aussi été membre de l’Académie des sciences et de l’Académie française.</p>
@@ -589,33 +575,38 @@ Le terme <span class="math notranslate nohighlight">\(X[0]\)</span> correspond �
 \[
 X[0] = \frac{1}{T} \int_T x(t) dt.
 \]</div>
-<section id="formulation-alternative">
-<h3>Formulation alternative<a class="headerlink" href="#formulation-alternative" title="Lien permanent vers ce titre">#</a></h3>
-<p>Parfois, la série de Fourier de signaux réels est définie comme l’ensemble des coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> tels que :</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Formulation alternative<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Parfois, la série de Fourier de signaux réels est définie comme l’ensemble des coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> tels que :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
                                   a_0 &amp;= \frac{1}{T} \int_0^T x(t) dt \\
 \forall k \in\mathbb{N}^*, \qquad a_k &amp;= \frac{2}{T} \int_0^T x(t) \cos(2 \pi k t / T) dt \\
 \forall k \in\mathbb{N}^*, \qquad b_k &amp;= \frac{2}{T} \int_0^T x(t) \sin(2 \pi k t / T) dt
 \end{split}\]</div>
-<p>La relation entre ces coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> avec l’expression précédente de la série de Fourier est :</p>
+<p class="sd-card-text">La relation entre ces coefficients <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span> avec l’expression précédente de la série de Fourier est :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \text{si}\, k&lt;0\,:\qquad X[k] &amp;= \frac{a_{-k}+jb_{-k}}{2} \\
 \text{si}\, k=0\,:\qquad X[0] &amp;= a_0 \\
 \text{si}\, k&gt;0\,:\qquad X[k] &amp;= \frac{a_k-jb_k}{2}
 \end{split}\]</div>
-<p>et la formule de la série de Fourier inverse devient :</p>
+<p class="sd-card-text">et la formule de la série de Fourier inverse devient :</p>
 <div class="math notranslate nohighlight">
 \[
 x(t) = a_0 + \sum_{k=1}^{+\infty} \left( a_k \cos(2 \pi k t / T) + b_k \sin(2 \pi k t / T) \right).
 \]</div>
-<p>Dans le cadre de ce module, nous n’utiliserons pas les formules faisant intervenir <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span>
+<p class="sd-card-text">Dans le cadre de ce module, nous n’utiliserons pas les formules faisant intervenir <span class="math notranslate nohighlight">\(a_k\)</span> et <span class="math notranslate nohighlight">\(b_k\)</span>
 car elles obligent à effectuer deux fois plus de calculs qu’avec les formules précédentes utilisant <span class="math notranslate nohighlight">\(X[k]\)</span>.
 En effet, la formulation avec l’exponentielle complexe regroupe les termes en cosinus et en sinus.
 C’est donc plus simple en complexe ! 😜</p>
-</section>
-</section>
+</div>
+</details></section>
 <section id="transformee-de-fourier">
 <h2>Transformée de Fourier<a class="headerlink" href="#transformee-de-fourier" title="Lien permanent vers ce titre">#</a></h2>
 <p>On peut considérer qu’un signal apériodique est le cas limite d’un signal périodique de période infinie.
@@ -652,7 +643,6 @@ qui sont également périodiques de période <span class="math notranslate nohig
 \[
 x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / N}
 \]</div>
-<center><span style="color:#a00">(Attention, ajout du facteur 1/N)</span></center>
 <p>et :</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -704,34 +694,34 @@ mais d’exponentielles complexes tournant en sens opposé aux exponentielles co
 <table>
 <thead>
   <tr>
-    <td>&emsp;•&ensp;Domaine</td>
+      <td><ul><li>Domaine :</li></ul></td><td>&emsp;</td>
     <td>temporel</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
     <td>fréquentiel</td>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>&emsp;•&ensp;Signal :</td>
-    <td>\(x\)</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
-    <td>\(X\)</td>
+    <td><ul><li>Signal :</li></ul></td><td>&emsp;</td>
+    <td><span class="math notranslate nohighlight">\(x\)</span></td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
+    <td><span class="math notranslate nohighlight">\(X\)</span></td>
   </tr>
   <tr>
-    <td>&emsp;•&ensp;Variable :</td>
-    <td>\(t\) ou \(n\)</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
-    <td>\(f\) ou \(k\)</td>
+    <td><ul><li>Variable :</li></ul></td><td>&emsp;</td>
+    <td><span class="math notranslate nohighlight">\(t\)</span> ou <span class="math notranslate nohighlight">\(n\)</span></td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
+    <td><span class="math notranslate nohighlight">\(f\)</span> ou <span class="math notranslate nohighlight">\(k\)</span></td>
   </tr>
   <tr>
-    <td>&emsp;•&ensp;Exemple d'unité&emsp;</td>
+    <td><ul><li>Exemple d'unité :</li></ul></td><td>&emsp;</td>
     <td>seconde (s)</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
     <td>s<sup>–1</sup> = hertz (Hz)</td>
   </tr>
 </tbody>
 </table>
-<br>
+<br />
 <p>Par ailleurs, on remarque que le passage du domaine temporel au domaine fréquentiel utilise une exponentielle du type <span class="math notranslate nohighlight">\(e^{-\theta}\)</span>
 alors que l’inverse utilise <span class="math notranslate nohighlight">\(e^{+\theta}\)</span> où :</p>
 <ul class="simple">

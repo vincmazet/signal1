@@ -45,16 +45,16 @@ On considère le signal $x = \begin{bmatrix} 3 & 4 & 5 \end{bmatrix}$ de taille 
 
 1. Les signaux $w_i$ tels que
 
-$$
-\forall\,i\in\{0,\dots,N-1\}, \qquad
-w_i = \begin{bmatrix}
-    \frac{1}{\sqrt{N}} &
-    \frac{1}{\sqrt{N}} e^{-j\frac{2\pi}{N}i} &
-    \frac{1}{\sqrt{N}} e^{-j\frac{2\pi}{N}2i}
-\end{bmatrix}
-$$
+   $$
+   \forall\,i\in\{0,\dots,N-1\}, \qquad
+   w_i = \begin{bmatrix}
+       \frac{1}{\sqrt{N}} &
+       \frac{1}{\sqrt{N}} e^{-j\frac{2\pi}{N}i} &
+       \frac{1}{\sqrt{N}} e^{-j\frac{2\pi}{N}2i}
+   \end{bmatrix}
+   $$
 
-forment une base orthonormée qu'on appellera $W$.
-Écrivez tous les vecteurs de la base $W$.
+   forment une base orthonormée qu'on appellera $W$.
+   Écrivez tous les vecteurs de la base $W$.
 
 1. Déterminez la projection $x'$ de $x$ dans la base $W$ et calculez son énergie. Que remarquez-vous ?

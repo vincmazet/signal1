@@ -1,3 +1,4 @@
+(C:fourier)=
 # Transformations de Fourier
 
 Joseph Fourier (1768–1830) était professeur à l'École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
@@ -63,8 +64,7 @@ $$
 X[0] = \frac{1}{T} \int_T x(t) dt.
 $$
 
-
-### Formulation alternative
+```{dropdown} Formulation alternative
 
 Parfois, la série de Fourier de signaux réels est définie comme l'ensemble des coefficients $a_k$ et $b_k$ tels que :
 
@@ -92,6 +92,8 @@ Dans le cadre de ce module, nous n'utiliserons pas les formules faisant interven
 car elles obligent à effectuer deux fois plus de calculs qu'avec les formules précédentes utilisant $X[k]$.
 En effet, la formulation avec l'exponentielle complexe regroupe les termes en cosinus et en sinus.
 C'est donc plus simple en complexe ! 😜
+
+```
 
 ## Transformée de Fourier
 
@@ -130,8 +132,6 @@ Cette formule est la série de Fourier discrète inverse.
 $$
 x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{+j 2 \pi k n / N}
 $$
-
-<center><span style="color:#a00">(Attention, ajout du facteur 1/N)</span></center>
 
 et :
 
@@ -191,34 +191,34 @@ Quelle que soit la transformation, on peut donc résumer ainsi les différentes 
 <table>
 <thead>
   <tr>
-    <td>&emsp;•&ensp;Domaine</td>
+      <td><ul><li>Domaine :</li></ul></td><td>&emsp;</td>
     <td>temporel</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
     <td>fréquentiel</td>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>&emsp;•&ensp;Signal :</td>
-    <td>\(x\)</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
-    <td>\(X\)</td>
+    <td><ul><li>Signal :</li></ul></td><td>&emsp;</td>
+    <td><span class="math notranslate nohighlight">\(x\)</span></td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
+    <td><span class="math notranslate nohighlight">\(X\)</span></td>
   </tr>
   <tr>
-    <td>&emsp;•&ensp;Variable :</td>
-    <td>\(t\) ou \(n\)</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
-    <td>\(f\) ou \(k\)</td>
+    <td><ul><li>Variable :</li></ul></td><td>&emsp;</td>
+    <td><span class="math notranslate nohighlight">\(t\)</span> ou <span class="math notranslate nohighlight">\(n\)</span></td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
+    <td><span class="math notranslate nohighlight">\(f\)</span> ou <span class="math notranslate nohighlight">\(k\)</span></td>
   </tr>
   <tr>
-    <td>&emsp;•&ensp;Exemple d'unité&emsp;</td>
+    <td><ul><li>Exemple d'unité :</li></ul></td><td>&emsp;</td>
     <td>seconde (s)</td>
-    <td>\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</td>
+    <td><span class="math notranslate nohighlight">\(\quad\xrightarrow{\;\mathcal{F}\;}\quad\)</span></td>
     <td>s<sup>–1</sup> = hertz (Hz)</td>
   </tr>
 </tbody>
 </table>
-<br>
+<br />
 
 Par ailleurs, on remarque que le passage du domaine temporel au domaine fréquentiel utilise une exponentielle du type $e^{-\theta}$
 alors que l'inverse utilise $e^{+\theta}$ où :

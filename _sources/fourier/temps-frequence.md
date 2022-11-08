@@ -6,7 +6,9 @@ Les transformations de Fourier font ressortir le contenu fréquentiel d'un signa
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
 comme des changements brusques ou des modifications de fréquence.
 
-La {numref}`F:temps-frequence:deux-sinus` représente deux signaux et leur spectres respectifs.
+<div class="example">
+    
+La {numref}`F:temps-frequence:deux-sinus` représente deux signaux et leurs spectres respectifs.
 Ces deux signaux ont en commun le fait qu'ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
 la différence étant l'ordre d'apparition des sinusoïdes.
 À partir des spectres seuls, il n'est pas possible de comprendre clairement ce que sont les signaux temporels :
@@ -20,6 +22,8 @@ name: F:temps-frequence:deux-sinus
 ---
 Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.
 ```
+
+</div>
 
 Pour répondre à la difficulté d'analyser les localisations temporelles des fréquences,
 des outils de « temps-fréquence » ont été développés,
@@ -44,7 +48,7 @@ X[k,p] = \sum_{n=0}^{N-1} x[n] w[n-p] e^{-j2\pi kn/N}
 $$
 
 Il s'agit donc de la formule de la transformée de Fourier discrète dans laquelle a été introduite la fenêtre positionnée en $p$.
-La STFT est donc un signal à deux dimensions qui dépend d'un temps $p$ et d'une fréquence $k$), d'où le nom de « représentation temps-fréquence ».
+La STFT est donc un signal à deux dimensions qui dépend d'un temps $p$ et d'une fréquence $k$, d'où le nom de « représentation temps-fréquence ».
 L'objectif de cette transformée étant l'analyse dans le domaine temps-fréquence, et non la reconstruction du signal temporel, 
 la transformée inverse n'a pas d'utilité.
 

@@ -77,10 +77,21 @@ Par conséquent, l'aspect continu de l'espace d'un domaine est équivalent à l'
 Autrement dit :
 
 <center>
-    signal à temps discret \(\quad\Leftrightarrow\quad\) spectre périodique<br />
-    signal à temps continu \(\quad\Leftrightarrow\quad\) spectre apériodique<br />
-    signal temporel périodique \(\quad\Leftrightarrow\quad\) spectre discret en fréquence<br />
-    signal temporel apériodique \(\quad\Leftrightarrow\quad\) spectre continu en fréquence
+    signal à temps discret
+    <span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad\)</span>
+    spectre périodique
+    <br />
+    signal à temps continu
+    <span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad\)</span>
+    spectre apériodique
+    <br />
+    signal temporel périodique
+    <span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad\)</span>
+    spectre discret en fréquence
+    <br />
+    signal temporel apériodique
+    <span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad\)</span>
+    spectre continu en fréquence
 </center>
 
 ## Théorème de Parseval–Plancherel
@@ -93,8 +104,6 @@ $$
 \text{TF :}\qquad  \int_{-\infty}^{+\infty} |x(t)|^2 dt &= \int_{\infty}^{+\infty} |X(f)|^2 df \\
 \text{SFD :}\qquad \sum_{n=0}^{N-1} |x[n]|^2 &= \frac{1}{N} \sum_{k=0}^{N-1} |X[k]|^2
 $$
-
-<center><span style="color:#a00">(Attention, ajout du facteur 1/N)</span></center>
 
 ## Conditions de Dirichlet
 

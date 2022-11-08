@@ -134,7 +134,7 @@ Cette base est d'ailleurs appelée _base canonique_ car c'est la base naturelle 
 ## Décomposition sur une base
 
 Parfois, il est intéressant de représenter les signaux dans une autre base que la base canonique : on parle alors de _décomposition_ ou de _projection_ d'un signal $x$ sur une base.
-La transformée de Fourier peut être vue comme la décomposition de signaux dans une autre base.
+La [transformée de Fourier](C:fourier) peut être vue comme la décomposition de signaux dans une autre base.
 De même, les techniques de compression (audio, image ou vidéo) utilisent astucieusement une décomposition dans une base particulière pour réduire le poids des données.
 Les coefficients du signal dans cette nouvelle base vont donc être différent des coefficients de la base canonique.
 

@@ -136,3 +136,9 @@ table p { margin-bottom: 0 }
 a.exercise::before {
     content: "➜ Exercice ";
 }
+
+/* Fond pour les tabs */
+
+sd-tab-content {
+    background-color: #f4f4f4;
+}
