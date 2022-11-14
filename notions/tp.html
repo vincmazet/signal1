@@ -525,9 +525,10 @@ Choisissez un pas de temps correct pour obtenir une courbe lisse.</p>
 Comme le signal est à temps discret, vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.stem</span></code>
 pour afficher les points individuellement sans les relier.</p>
 </li>
-<li><p>Le fichier <a href="../_static/pluie.wav">pluie.wav</a> contient un signal sonore sous forme d’une matrice
-dont la première colonne correspond aux échantillons temporels et les deux colonnes suivantes aux canaux gauche et droite.
-Chargez le signal sonore (<code class="docutils literal notranslate"><span class="pre">scipy.io.wavfile.read</span></code>) et affichez uniquement le signal issu du canal gauche.</p></li>
+<li><p>Le fichier <a href="../_static/world-co2.csv">world-co2.csv</a> contient les mesures de la quantité de CO<sub>2</sub> dans l’atmosphère
+(en ppm : partie par million) sur toute la Terre.
+Chargez ces données avec <code class="docutils literal notranslate"><span class="pre">numpy.loadtxt</span></code>, en définissant correctement les arguments.
+Affichez l’évolution du CO<sub>2</sub> atmosphérique en fonction des années.</p></li>
 </ul>
 <p><a class="btn btn-light" href="../conv/tp.html" role="button">Suite du TP</a></p>
 </section>

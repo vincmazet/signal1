@@ -34,7 +34,7 @@ $$
     \end{cases}
  $$
 
-* Représentez le signal $x$ <a href="../_static/AEP-2005.csv">AEP-2005.csv</a> (à charger avec `numpy.loadtxt`)
+* Représentez le signal $x$ <a href="../_static/AEP-2005.csv">AEP-2005.csv</a>
   qui correspond à la consommation électrique de l'est des États-Unis, heure par heure sur un an.
   Représentez également le signal $y$ défini ci-dessous, ainsi que le produit de convolution $x*y$.
 

@@ -27,8 +27,10 @@ Dans cet exercice, les signaux sont de taille $N=100$ échantillons.
     \end{cases}
   $$
 
-* Représentez l'intercorrélation $R_{xm}$ entre $x$ et $m$.
-  Que se passe-t-il lorsque $k$ varie ?
+* Représentez l'intercorrélation $R_{xm}$ entre $x$ et $m$ (`numpy.correlate`).
+  Attention à définir un nouveau vecteur des abscisses !
+  
+* Que se passe-t-il lorsque $k$ varie ?
 
 * Chargez le fichier <a href="../_static/message1.csv">message1.csv</a> et affichez le signal correspondant.
   Ce signal est un message codant un message binaire de 10 bits,
