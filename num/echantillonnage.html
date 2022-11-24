@@ -149,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc11.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -171,10 +183,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc12.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -193,10 +217,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc13.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -215,10 +251,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc14.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -695,8 +743,8 @@ L’animation ci-dessous simule l’effet du repliement spectral sur une sinuso�
 <p>Le repliement spectral peut apparaître sur tout signal numérique, s’il est mal échantillonné.
 Les exemples ci-dessous illustrent l’effet du repliement spectral sur différents signaux.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="2596a450-db47-45e3-908a-365924a2efc8" name="de586033-0803-42e2-91de-4487ac7a9cb1" type="radio">
-</input><label class="sd-tab-label" for="2596a450-db47-45e3-908a-365924a2efc8">
+<input checked="checked" id="ab80e919-b611-4742-90d3-2448f468ac89" name="51301b2f-9cd3-44db-bc0c-d6e7fb47e82f" type="radio">
+</input><label class="sd-tab-label" for="ab80e919-b611-4742-90d3-2448f468ac89">
 Signal</label><div class="sd-tab-content docutils">
 <p>Un cosinus de fréquence 6 Hz (en gris) est échantillonné à 6,5 Hz.
 Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (points bleus).</p>
@@ -704,8 +752,8 @@ Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (
 <a class="reference internal image-reference" href="../_images/aliasing-signal.png"><img alt="../_images/aliasing-signal.png" src="../_images/aliasing-signal.png" style="width: 400px;" /></a>
 </figure>
 </div>
-<input id="5abec2f3-504f-4931-976d-e54c0772c555" name="de586033-0803-42e2-91de-4487ac7a9cb1" type="radio">
-</input><label class="sd-tab-label" for="5abec2f3-504f-4931-976d-e54c0772c555">
+<input id="da295f31-6aaa-4278-b249-a80c89693eba" name="51301b2f-9cd3-44db-bc0c-d6e7fb47e82f" type="radio">
+</input><label class="sd-tab-label" for="da295f31-6aaa-4278-b249-a80c89693eba">
 Image</label><div class="sd-tab-content docutils">
 <p>Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l’image présente des structures très fines par rapport aux pixels.</p>
@@ -713,8 +761,8 @@ Le repliement spectral apparaît lorsque le motif présent dans l’image prése
 <a class="reference internal image-reference" href="../_images/aliasing-photo.jpg"><img alt="../_images/aliasing-photo.jpg" src="../_images/aliasing-photo.jpg" style="width: 400px;" /></a>
 </figure>
 </div>
-<input id="d6efa8ff-5e0b-474a-afe8-3e8333abcc24" name="de586033-0803-42e2-91de-4487ac7a9cb1" type="radio">
-</input><label class="sd-tab-label" for="d6efa8ff-5e0b-474a-afe8-3e8333abcc24">
+<input id="7ba949a1-17ed-41f3-9a33-a2419e8b4fd4" name="51301b2f-9cd3-44db-bc0c-d6e7fb47e82f" type="radio">
+</input><label class="sd-tab-label" for="7ba949a1-17ed-41f3-9a33-a2419e8b4fd4">
 Vidéo</label><div class="sd-tab-content docutils">
 <p>Une vidéo possède à la fois un échantillonnage spatial (au sein d’une même image)
 mais aussi un échantillonnage temporel lié au nombres d’images acquises par seconde.

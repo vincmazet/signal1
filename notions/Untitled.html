@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercices : intercorrélation &#8212; Traitement du signal 1</title>
+    <title>&lt;no title&gt; &#8212; Traitement du signal 1</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,12 +53,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="TP : intercorrélation" href="tp.html" />
-    <link rel="prev" title="Intercorrélation" href="intercorrelation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="fr">
     
@@ -120,51 +116,39 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../notions/definition.html">
+  <a class="reference internal" href="definition.html">
    Traitement du signal ?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../notions/classification.html">
+  <a class="reference internal" href="classification.html">
    Classification des signaux
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../notions/signaux-elementaires.html">
+  <a class="reference internal" href="signaux-elementaires.html">
    Signaux élémentaires
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../notions/proprietes-des-signaux.html">
+  <a class="reference internal" href="proprietes-des-signaux.html">
    Propriétés des signaux
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../notions/energie-puissance.html">
+  <a class="reference internal" href="energie-puissance.html">
    Énergie et puissance
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../notions/td.html">
+  <a class="reference internal" href="td.html">
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../notions/tp.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notions/correc11.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -183,22 +167,10 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../conv/correc12.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -206,33 +178,21 @@ const thebe_selector_output = ".output, .cell_output"
   Intercorrélation
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intercorrelation.html">
+  <a class="reference internal" href="../xcorr/intercorrelation.html">
    Intercorrélation
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../xcorr/td.html">
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="tp.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="correc13.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -251,22 +211,10 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../vect/correc14.html">
-     ✎ Correction
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -428,7 +376,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/xcorr/td.md"
+        <a href="../_sources/notions/Untitled.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -439,7 +387,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -486,27 +434,7 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4">
-   Exercice 4
-  </a>
- </li>
+        <ul class="simple visible nav section-nav flex-column">
 </ul>
 
     </nav>
@@ -516,7 +444,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Exercices : intercorrélation</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -525,27 +453,7 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4">
-   Exercice 4
-  </a>
- </li>
+                            <ul class="simple visible nav section-nav flex-column">
 </ul>
 
                         </nav>
@@ -556,49 +464,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="exercices-intercorrelation">
-<h1>Exercices : intercorrélation<a class="headerlink" href="#exercices-intercorrelation" title="Lien permanent vers ce titre">#</a></h1>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">#</a></h2>
-<p>Montrez que l’autocorrélation d’un signal périodique est également périodique et de même période.</p>
-</section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">#</a></h2>
-<p>Démontrez que le maximum de l’autocorrélation est en 0.</p>
-</section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">#</a></h2>
-<p>Calculez l’autocorrélation du signal ci-dessous, puis représentez-la pour <span class="math notranslate nohighlight">\(N=2\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-x[n] =
-\begin{cases}
-  1 \quad&amp;\text{si } -N \leq n \leq N \\
-  0 \quad&amp;\text{sinon} \\
-\end{cases}
-\quad\text{où}\, N\in\mathbb{N}.
-\end{split}\]</div>
-</section>
-<section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">#</a></h2>
-<!-- Proakis, exo 2.61 -->
-<p>Un signal audio <span class="math notranslate nohighlight">\(s(t)\)</span> est émis par un haut-parleur et un microphone enregistre le signal reçu <span class="math notranslate nohighlight">\(x(t)\)</span>.
-Ce signal <span class="math notranslate nohighlight">\(x(t)\)</span> est la somme du son provenant directement du haut-parleur ainsi que du son réfléchi par un mur :</p>
-<div class="math notranslate nohighlight">
-\[
-x(t) = s(t) + a\,s(t-d)
-\]</div>
-<p>où <span class="math notranslate nohighlight">\(a\)</span> est l’atténuation et <span class="math notranslate nohighlight">\(d\)</span> le retard dus à la réflexion sur le mur.</p>
-<figure class="align-default" id="f-td2-echo">
-<a class="reference internal image-reference" href="../_images/echo.png"><img alt="../_images/echo.png" src="../_images/echo.png" style="height: 80px;" /></a>
-</figure>
-<ol class="simple">
-<li><p>Déterminez l’autocorrélation de <span class="math notranslate nohighlight">\(x(t)\)</span> en fonction de l’autocorrélation de <span class="math notranslate nohighlight">\(s(t)\)</span>.</p></li>
-<li><p>Comment peut-on obtenir <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(d\)</span> à partir de l’autocorrélation ?</p></li>
-</ol>
-</section>
-</section>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -612,7 +478,7 @@ x(t) = s(t) + a\,s(t-d)
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./xcorr"
+            path: "./notions"
         },
         predefinedOutput: true
     }
@@ -626,20 +492,6 @@ x(t) = s(t) + a\,s(t-d)
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intercorrelation.html" title="précédent page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">précédent</p>
-            <p class="prev-next-title">Intercorrélation</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="tp.html" title="suivant page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">TP : intercorrélation</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

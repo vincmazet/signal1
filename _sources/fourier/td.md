@@ -170,7 +170,7 @@ Proposez une technique pour réaliser cette opération.
 
 ```{figure} canalplus.png
 ---
-height: 150px
+width: 100%
 name: F:td-fourier:canalplus
 ```
 

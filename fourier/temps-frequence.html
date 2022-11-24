@@ -149,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../notions/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notions/correc11.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -171,10 +183,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../conv/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conv/correc12.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -193,10 +217,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../xcorr/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../xcorr/correc13.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -215,10 +251,22 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../vect/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vect/correc14.html">
+     ✎ Correction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -539,32 +587,32 @@ Le spectrogramme fournit une indication sur la quantité d’énergie présente 
 autour de la fréquence <span class="math notranslate nohighlight">\(k\)</span> et de l’instant <span class="math notranslate nohighlight">\(p\)</span>.
 Les figures ci-après représentent les spectrogrammes de quelques signaux.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="feb6b3c5-4f27-478e-87d3-f5fe62135921" name="9cd171f6-2458-4d57-96de-7157333f542b" type="radio">
-</input><label class="sd-tab-label" for="feb6b3c5-4f27-478e-87d3-f5fe62135921">
+<input checked="checked" id="97575d16-6b8b-4270-9182-18bbb6a5d6e2" name="0e82a9c9-94dd-4c7e-ae2b-512866c6c46d" type="radio">
+</input><label class="sd-tab-label" for="97575d16-6b8b-4270-9182-18bbb6a5d6e2">
 Sinus à 50 et 200 Hz</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-sin50200.svg"><img alt="../_images/tf-sin50200.svg" src="../_images/tf-sin50200.svg" width="800px" /></a>
 </figure>
 <p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
 </div>
-<input id="6a59f64d-edb5-40c8-9862-0840cabc817e" name="9cd171f6-2458-4d57-96de-7157333f542b" type="radio">
-</input><label class="sd-tab-label" for="6a59f64d-edb5-40c8-9862-0840cabc817e">
+<input id="737571f9-4e29-4977-b663-75ea85371433" name="0e82a9c9-94dd-4c7e-ae2b-512866c6c46d" type="radio">
+</input><label class="sd-tab-label" for="737571f9-4e29-4977-b663-75ea85371433">
 Sinus à 200 et 50 Hz</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-sin20050.svg"><img alt="../_images/tf-sin20050.svg" src="../_images/tf-sin20050.svg" width="800px" /></a>
 </figure>
 <p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
 </div>
-<input id="b04019c8-0795-4a89-a98c-6598c1f382b4" name="9cd171f6-2458-4d57-96de-7157333f542b" type="radio">
-</input><label class="sd-tab-label" for="b04019c8-0795-4a89-a98c-6598c1f382b4">
+<input id="83a519c0-ce4d-4ca7-8a6a-0d1c3d739227" name="0e82a9c9-94dd-4c7e-ae2b-512866c6c46d" type="radio">
+</input><label class="sd-tab-label" for="83a519c0-ce4d-4ca7-8a6a-0d1c3d739227">
 Gaussienne modulée</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-gaussienne.svg"><img alt="../_images/tf-gaussienne.svg" src="../_images/tf-gaussienne.svg" width="800px" /></a>
 </figure>
 <p>L’instant d’apparition de l’oscillation, ainsi que sa fréquence, sont clairement visibles sur le spectrogramme.</p>
 </div>
-<input id="9467d257-20ca-4940-b624-6d72953bd794" name="9cd171f6-2458-4d57-96de-7157333f542b" type="radio">
-</input><label class="sd-tab-label" for="9467d257-20ca-4940-b624-6d72953bd794">
+<input id="b542d4c0-7ff9-4e13-b68f-dbb70b6e2196" name="0e82a9c9-94dd-4c7e-ae2b-512866c6c46d" type="radio">
+</input><label class="sd-tab-label" for="b542d4c0-7ff9-4e13-b68f-dbb70b6e2196">
 Chirp</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-chirp.svg"><img alt="../_images/tf-chirp.svg" src="../_images/tf-chirp.svg" width="800px" /></a>
@@ -573,16 +621,16 @@ Chirp</label><div class="sd-tab-content docutils">
 Dans la nature, le chant des oiseaux, les vocalises des cétacés ou les ultrasons émis par les chauve-souris ressemblent à des chirps.
 Les chirps sont également émis par les sonars et les radars.</p>
 </div>
-<input id="70e13370-59fe-423a-ac13-c842bdfd6802" name="9cd171f6-2458-4d57-96de-7157333f542b" type="radio">
-</input><label class="sd-tab-label" for="70e13370-59fe-423a-ac13-c842bdfd6802">
+<input id="e2e2c48e-79ee-4f66-bdff-d8be00ddfbb0" name="0e82a9c9-94dd-4c7e-ae2b-512866c6c46d" type="radio">
+</input><label class="sd-tab-label" for="e2e2c48e-79ee-4f66-bdff-d8be00ddfbb0">
 Voyelles</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-aeiou.svg"><img alt="../_images/tf-aeiou.svg" src="../_images/tf-aeiou.svg" width="800px" /></a>
 </figure>
 <p>Ce graphique représente l’enregistrement des voyelles françaises : elles sont facilement différentiables sur la représentation temps-fréquence.</p>
 </div>
-<input id="3cc7b2d1-6cde-4d8f-9a58-de2cb739f686" name="9cd171f6-2458-4d57-96de-7157333f542b" type="radio">
-</input><label class="sd-tab-label" for="3cc7b2d1-6cde-4d8f-9a58-de2cb739f686">
+<input id="b6319340-f3ed-470a-a2bc-41484b81a62e" name="0e82a9c9-94dd-4c7e-ae2b-512866c6c46d" type="radio">
+</input><label class="sd-tab-label" for="b6319340-f3ed-470a-a2bc-41484b81a62e">
 Voyelle « i » dite par un homme et une femme</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-homme-femme.svg"><img alt="../_images/tf-homme-femme.svg" src="../_images/tf-homme-femme.svg" width="800px" /></a>
@@ -590,8 +638,8 @@ Voyelle « i » dite par un homme et une femme</label><div class="sd-tab-content
 <p>Une homme et une femme disent la voyelle « i » l’un après l’autre.
 Qui parle en premier ?</p>
 </div>
-<input id="fd293483-c016-4d3d-bb3e-2acd2543226b" name="9cd171f6-2458-4d57-96de-7157333f542b" type="radio">
-</input><label class="sd-tab-label" for="fd293483-c016-4d3d-bb3e-2acd2543226b">
+<input id="2b825128-3bb6-4a60-a589-daf5c20ce5c0" name="0e82a9c9-94dd-4c7e-ae2b-512866c6c46d" type="radio">
+</input><label class="sd-tab-label" for="2b825128-3bb6-4a60-a589-daf5c20ce5c0">
 Lettre à Élise</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-elise.svg"><img alt="../_images/tf-elise.svg" src="../_images/tf-elise.svg" width="800px" /></a>
