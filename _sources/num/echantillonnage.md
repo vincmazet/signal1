@@ -207,7 +207,7 @@ width: 400px
 ````{tab-item} Image
 Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l'image présente des structures très fines par rapport aux pixels.
-```{figure} aliasing-photo.jpg
+```{figure} aliasing-photo.png
 ---
 width: 400px
 ```
