@@ -571,8 +571,8 @@ Nous allons chercher quelles sont les notes jouées.</p>
 <li><p>Chargez et affichez le signal.</p></li>
 <li><p>Vérifiez sur la TFD qu’il n’est pas facile de trouver la partition musicale correspondante.</p></li>
 </ul>
-<p>Afficher une représentation temps-fréquence du signal permet de retrouver très simplement la partition musicale.
-Ainsi, la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.specgram</span></code> permet d’afficher le spectrogramme d’un signal.</p>
+<p>La représentation temps-fréquence du signal permet de retrouver très simplement la partition musicale.
+Par exemple, la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.specgram</span></code> permet d’afficher le spectrogramme d’un signal.</p>
 <ul class="simple">
 <li><p>Affichez le spectrogramme du signal en conservant les paramètres par défaut.</p></li>
 <li><p>Étudiez l’influence des paramètres principaux de la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.specgram</span></code> pour comprendre leur signification.</p></li>
@@ -581,10 +581,11 @@ Ainsi, la fonction <code class="docutils literal notranslate"><span class="pre">
 </section>
 <section id="interpolation">
 <h2>Interpolation<a class="headerlink" href="#interpolation" title="Lien permanent vers ce titre">#</a></h2>
-<p>Le fichier <a href="../_static/8820Hz.csv">8820Hz.csv</a> contient un signal échantillonné à 8 820 Hz.</p>
+<p>Le fichier <a href="../_static/8820Hz.csv">8820Hz.csv</a> contient un signal échantillonné à 8 820 Hz.
+La première colonne correspond aux échantillons temporels, et la seconde colonne aux amplitudes du signal.</p>
 <ul class="simple">
-<li><p>Affichez ce signal, noté <span class="math notranslate nohighlight">\(x\)</span>, en mettant en évidence les échantillons
-(par exemple avec la commande <code class="docutils literal notranslate"><span class="pre">plot(t,x,'-*')</span></code>).</p></li>
+<li><p>Affichez ce signal, noté <span class="math notranslate nohighlight">\(x\)</span>, en mettant en évidence les échantillons,
+par exemple avec la commande <code class="docutils literal notranslate"><span class="pre">plot(t,x,'-*')</span></code>.</p></li>
 <li><p>Générez et affichez la transformée de Fourier discrète (TFD) de <span class="math notranslate nohighlight">\(x\)</span> en centrant l’axe des fréquences.</p></li>
 </ul>
 <p>On souhaite augmenter la fréquence d’échantillonnage de <span class="math notranslate nohighlight">\(x\)</span> d’un facteur cinq,
@@ -606,7 +607,7 @@ c’est-à-dire calculer de nouveaux échantillons à l’intérieur du signal.<
 %   Autrement dit, cela revient à convoluer $x_0$ par $h = \big[1\;1\;1\;1\;1\big]$.
 -->
 <p>La technique de « <em>zero-padding</em> fréquentiel » consiste à ajouter des zéros de part et d’autre du spectre de Fourier
-pour obtenir un spectre, et donc un signal temporel, contenant cinq fois plus d’échantillons.</p>
+pour obtenir un spectre (et donc un signal temporel) contenant cinq fois plus d’échantillons.</p>
 <ul>
 <li><p>En notant <span class="math notranslate nohighlight">\(X\)</span> la TFD du signal <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(N\)</span> son nombre d’échantillons,
 ajoutez <span class="math notranslate nohighlight">\(M\)</span> zéros de part et d’autre de la TFD de manière à créer un vecteur <span class="math notranslate nohighlight">\(Y\)</span> cinq fois plus long que <span class="math notranslate nohighlight">\(X\)</span> :</p>

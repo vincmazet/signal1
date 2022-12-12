@@ -25,8 +25,8 @@ Nous allons chercher quelles sont les notes jouées.
 
 * Vérifiez sur la TFD qu'il n'est pas facile de trouver la partition musicale correspondante.
 
-Afficher une représentation temps-fréquence du signal permet de retrouver très simplement la partition musicale.
-Ainsi, la fonction `matplotlib.pyplot.specgram` permet d'afficher le spectrogramme d'un signal.
+La représentation temps-fréquence du signal permet de retrouver très simplement la partition musicale.
+Par exemple, la fonction `matplotlib.pyplot.specgram` permet d'afficher le spectrogramme d'un signal.
 
 * Affichez le spectrogramme du signal en conservant les paramètres par défaut.
 
@@ -37,9 +37,10 @@ Ainsi, la fonction `matplotlib.pyplot.specgram` permet d'afficher le spectrogram
 ## Interpolation
 
 Le fichier <a href="../_static/8820Hz.csv">8820Hz.csv</a> contient un signal échantillonné à 8 820 Hz.
+La première colonne correspond aux échantillons temporels, et la seconde colonne aux amplitudes du signal.
 
-* Affichez ce signal, noté $x$, en mettant en évidence les échantillons
-  (par exemple avec la commande `plot(t,x,'-*')`).
+* Affichez ce signal, noté $x$, en mettant en évidence les échantillons,
+  par exemple avec la commande `plot(t,x,'-*')`.
 
 * Générez et affichez la transformée de Fourier discrète (TFD) de $x$ en centrant l'axe des fréquences.
 
@@ -64,7 +65,7 @@ c'est-à-dire calculer de nouveaux échantillons à l'intérieur du signal.
 -->
 
 La technique de « _zero-padding_ fréquentiel » consiste à ajouter des zéros de part et d'autre du spectre de Fourier
-pour obtenir un spectre, et donc un signal temporel, contenant cinq fois plus d'échantillons.
+pour obtenir un spectre (et donc un signal temporel) contenant cinq fois plus d'échantillons.
 
 * En notant $X$ la TFD du signal $x$ et $N$ son nombre d'échantillons,
   ajoutez $M$ zéros de part et d'autre de la TFD de manière à créer un vecteur $Y$ cinq fois plus long que $X$ :
