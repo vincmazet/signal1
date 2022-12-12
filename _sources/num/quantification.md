@@ -38,7 +38,7 @@ name: F:quantification:caracteristique
 Caractéristique de quantification d'une quantification uniforme par arrondi sur $K=8$ niveaux.
 ```
 
-Le choix du niveau de quantification $q$ doit être déterminé en fonction de la dynamique du signal
+Le choix du pas de quantification $q$ doit être déterminé en fonction de la dynamique du signal
 qui est la différence entre ses valeurs extrêmes $x_\mathrm{min}$ et $x_\mathrm{max}$.
 Puisqu'une quantification sur $K$ niveaux correspond à une amplitude maximale de $(K-1)q$,
 alors le pas de quantification est égale à :
@@ -76,7 +76,7 @@ Sa moyenne est (statistiquement) nulle et sa puissance est (statistiquement) ég
 ## Qantification non uniforme
 
 Dans certaines applications, le signal présente rarement de grandes amplitudes mais il est souvent d'amplitude faible.
-C'est le cas par exemple des signaux de parole.
+C'est le cas des signaux de parole.
 Aussi, il est intéressant d'avoir une quantification où le pas de quantification est différent dans les faibles et les grandes amplitudes.
 Plus précisément, on privilégiera un pas de quantification faible pour les faibles amplitudes et grand pour les grandes amplitudes.
 Cela aboutit à une quantification non uniforme.
