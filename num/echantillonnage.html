@@ -344,10 +344,32 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="correc31.html">
+     Repliement spectral
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="correc32.html">
+     Représentation temps-fréquence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="correc33.html">
+     Interpolation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -760,8 +782,8 @@ L’animation ci-dessous simule l’effet du repliement spectral sur une sinuso�
 <p>Le repliement spectral peut apparaître sur tout signal numérique, s’il est mal échantillonné.
 Les exemples ci-dessous illustrent l’effet du repliement spectral sur différents signaux.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="4108ce2e-b25f-44cb-ba2d-f18727462b09" name="38107afd-4a6d-46d7-a07a-e481c0a96ac1" type="radio">
-</input><label class="sd-tab-label" for="4108ce2e-b25f-44cb-ba2d-f18727462b09">
+<input checked="checked" id="5c0688b1-fa34-44f9-8571-625c712767eb" name="eaea4687-f13a-4697-86ac-648faa38a428" type="radio">
+</input><label class="sd-tab-label" for="5c0688b1-fa34-44f9-8571-625c712767eb">
 Signal</label><div class="sd-tab-content docutils">
 <p>Un cosinus de fréquence 6 Hz (en gris) est échantillonné à 6,5 Hz.
 Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (points bleus).</p>
@@ -769,8 +791,8 @@ Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (
 <a class="reference internal image-reference" href="../_images/aliasing-signal.png"><img alt="../_images/aliasing-signal.png" src="../_images/aliasing-signal.png" style="width: 400px;" /></a>
 </figure>
 </div>
-<input id="7664552a-4f4a-4ed4-b81f-0cee71bf7263" name="38107afd-4a6d-46d7-a07a-e481c0a96ac1" type="radio">
-</input><label class="sd-tab-label" for="7664552a-4f4a-4ed4-b81f-0cee71bf7263">
+<input id="37ff2e6d-79f2-4a03-b1da-6211fb9ca0bc" name="eaea4687-f13a-4697-86ac-648faa38a428" type="radio">
+</input><label class="sd-tab-label" for="37ff2e6d-79f2-4a03-b1da-6211fb9ca0bc">
 Image</label><div class="sd-tab-content docutils">
 <p>Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l’image présente des structures très fines par rapport aux pixels.</p>
@@ -778,8 +800,8 @@ Le repliement spectral apparaît lorsque le motif présent dans l’image prése
 <a class="reference internal image-reference" href="../_images/aliasing-photo.png"><img alt="../_images/aliasing-photo.png" src="../_images/aliasing-photo.png" style="width: 400px;" /></a>
 </figure>
 </div>
-<input id="02c75c3a-cef1-4d08-8175-cd9bcf7f5346" name="38107afd-4a6d-46d7-a07a-e481c0a96ac1" type="radio">
-</input><label class="sd-tab-label" for="02c75c3a-cef1-4d08-8175-cd9bcf7f5346">
+<input id="b9c09dbb-f001-4366-a07e-eb06a8747838" name="eaea4687-f13a-4697-86ac-648faa38a428" type="radio">
+</input><label class="sd-tab-label" for="b9c09dbb-f001-4366-a07e-eb06a8747838">
 Vidéo</label><div class="sd-tab-content docutils">
 <p>Une vidéo possède à la fois un échantillonnage spatial (au sein d’une même image)
 mais aussi un échantillonnage temporel lié au nombres d’images acquises par seconde.

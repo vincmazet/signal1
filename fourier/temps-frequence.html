@@ -344,10 +344,32 @@ const thebe_selector_output = ".output, .cell_output"
    ✎ Exercices théoriques
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../num/tp.html">
    ✎ Exercices sur machine
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc31.html">
+     Repliement spectral
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc32.html">
+     Représentation temps-fréquence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../num/correc33.html">
+     Interpolation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -604,32 +626,32 @@ Le spectrogramme fournit une indication sur la quantité d’énergie présente 
 autour de la fréquence <span class="math notranslate nohighlight">\(k\)</span> et de l’instant <span class="math notranslate nohighlight">\(p\)</span>.
 Les figures ci-après représentent les spectrogrammes de quelques signaux.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="76030cbf-81ec-4db3-ae01-fc9c40e55629" name="719bb895-609f-4047-909e-7307e5be7fde" type="radio">
-</input><label class="sd-tab-label" for="76030cbf-81ec-4db3-ae01-fc9c40e55629">
+<input checked="checked" id="c4041ae5-cbd6-4efc-9d2b-e87decc89cbf" name="47f98f7b-ab0e-4e75-bff9-e2b3fa165015" type="radio">
+</input><label class="sd-tab-label" for="c4041ae5-cbd6-4efc-9d2b-e87decc89cbf">
 Sinus à 50 et 200 Hz</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-sin50200.svg"><img alt="../_images/tf-sin50200.svg" src="../_images/tf-sin50200.svg" width="800px" /></a>
 </figure>
 <p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
 </div>
-<input id="7e123947-01a4-462e-b616-22cffedee5b0" name="719bb895-609f-4047-909e-7307e5be7fde" type="radio">
-</input><label class="sd-tab-label" for="7e123947-01a4-462e-b616-22cffedee5b0">
+<input id="3d79c46a-e697-4d90-b43a-b8971576b968" name="47f98f7b-ab0e-4e75-bff9-e2b3fa165015" type="radio">
+</input><label class="sd-tab-label" for="3d79c46a-e697-4d90-b43a-b8971576b968">
 Sinus à 200 et 50 Hz</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-sin20050.svg"><img alt="../_images/tf-sin20050.svg" src="../_images/tf-sin20050.svg" width="800px" /></a>
 </figure>
 <p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
 </div>
-<input id="1f8311d9-5c21-45b3-8b37-ae7ced495f0c" name="719bb895-609f-4047-909e-7307e5be7fde" type="radio">
-</input><label class="sd-tab-label" for="1f8311d9-5c21-45b3-8b37-ae7ced495f0c">
+<input id="57f47c6b-0edc-4846-adc1-aa02079d577e" name="47f98f7b-ab0e-4e75-bff9-e2b3fa165015" type="radio">
+</input><label class="sd-tab-label" for="57f47c6b-0edc-4846-adc1-aa02079d577e">
 Gaussienne modulée</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-gaussienne.svg"><img alt="../_images/tf-gaussienne.svg" src="../_images/tf-gaussienne.svg" width="800px" /></a>
 </figure>
 <p>L’instant d’apparition de l’oscillation, ainsi que sa fréquence, sont clairement visibles sur le spectrogramme.</p>
 </div>
-<input id="67fa64e1-6c33-4a90-8925-9b0d2a56a001" name="719bb895-609f-4047-909e-7307e5be7fde" type="radio">
-</input><label class="sd-tab-label" for="67fa64e1-6c33-4a90-8925-9b0d2a56a001">
+<input id="fa84e5c3-30d7-45b9-ad68-603fd588bee3" name="47f98f7b-ab0e-4e75-bff9-e2b3fa165015" type="radio">
+</input><label class="sd-tab-label" for="fa84e5c3-30d7-45b9-ad68-603fd588bee3">
 Chirp</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-chirp.svg"><img alt="../_images/tf-chirp.svg" src="../_images/tf-chirp.svg" width="800px" /></a>
@@ -638,16 +660,16 @@ Chirp</label><div class="sd-tab-content docutils">
 Dans la nature, le chant des oiseaux, les vocalises des cétacés ou les ultrasons émis par les chauve-souris ressemblent à des chirps.
 Les chirps sont également émis par les sonars et les radars.</p>
 </div>
-<input id="555983a1-9314-4fdd-9f41-a0afe7466eb4" name="719bb895-609f-4047-909e-7307e5be7fde" type="radio">
-</input><label class="sd-tab-label" for="555983a1-9314-4fdd-9f41-a0afe7466eb4">
+<input id="a2558d8f-1f08-411f-a2b6-1f4d2e90a4b9" name="47f98f7b-ab0e-4e75-bff9-e2b3fa165015" type="radio">
+</input><label class="sd-tab-label" for="a2558d8f-1f08-411f-a2b6-1f4d2e90a4b9">
 Voyelles</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-aeiou.svg"><img alt="../_images/tf-aeiou.svg" src="../_images/tf-aeiou.svg" width="800px" /></a>
 </figure>
 <p>Ce graphique représente l’enregistrement des voyelles françaises : elles sont facilement différentiables sur la représentation temps-fréquence.</p>
 </div>
-<input id="8cebf0d0-5a42-4996-b59a-11ad51831bc2" name="719bb895-609f-4047-909e-7307e5be7fde" type="radio">
-</input><label class="sd-tab-label" for="8cebf0d0-5a42-4996-b59a-11ad51831bc2">
+<input id="6c535a6a-6882-4e14-af0d-08fa2fe3a9f5" name="47f98f7b-ab0e-4e75-bff9-e2b3fa165015" type="radio">
+</input><label class="sd-tab-label" for="6c535a6a-6882-4e14-af0d-08fa2fe3a9f5">
 Voyelle « i » dite par un homme et une femme</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-homme-femme.svg"><img alt="../_images/tf-homme-femme.svg" src="../_images/tf-homme-femme.svg" width="800px" /></a>
@@ -655,8 +677,8 @@ Voyelle « i » dite par un homme et une femme</label><div class="sd-tab-content
 <p>Une homme et une femme disent la voyelle « i » l’un après l’autre.
 Qui parle en premier ?</p>
 </div>
-<input id="a25b8e39-1895-4b17-9d1c-abc53f3ee1d7" name="719bb895-609f-4047-909e-7307e5be7fde" type="radio">
-</input><label class="sd-tab-label" for="a25b8e39-1895-4b17-9d1c-abc53f3ee1d7">
+<input id="32017d1e-d2cc-4fd2-a180-41f4b1287ab6" name="47f98f7b-ab0e-4e75-bff9-e2b3fa165015" type="radio">
+</input><label class="sd-tab-label" for="32017d1e-d2cc-4fd2-a180-41f4b1287ab6">
 Lettre à Élise</label><div class="sd-tab-content docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/tf-elise.svg"><img alt="../_images/tf-elise.svg" src="../_images/tf-elise.svg" width="800px" /></a>
