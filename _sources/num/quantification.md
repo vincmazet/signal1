@@ -73,7 +73,7 @@ Dans le cas où $q$ est correctement défini, la valeur maximale de cette erreur
 Sa moyenne est (statistiquement) nulle et sa puissance est (statistiquement) égale à $q^2/12$ (dans l'hypothèse d'un signal $x(t)$ distribué uniformément).
 
 
-## Qantification non uniforme
+## Quantification non uniforme
 
 Dans certaines applications, le signal présente rarement de grandes amplitudes mais il est souvent d'amplitude faible.
 C'est le cas des signaux de parole.
