@@ -20,6 +20,9 @@ $$R_{xy}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] y[n]$$
 
 Attention, la formule de l'intercorrélation est très proche de celle de la convolution puisque seul un signe change ! Malgré cela, l'intercorrélation et la convolution sont deux outils très différents et dont l'interprétation n'est pas du tout la même.
 
+Propriété :
+* l'intercorrélation de signaux périodiques de même période $T$ est également périodique de période $T$.
+
 ## Exemples
 
 <div class="example">
@@ -86,3 +89,8 @@ L'autocorrélation possède quelques propriétés remarquables :
   $$
   
 * L'autocorrélation d'un signal périodique de période $T$ est également périodique de période $T$ (puisqu'en décalant le signal de $T$, il ressemble à nouveau avec lui-même)
+
+<a class="exercise btn btn-light" href="td.html#exercice-1" role="button">1</a>
+<a class="exercise btn btn-light" href="td.html#exercice-2" role="button">2</a>
+<a class="exercise btn btn-light" href="td.html#exercice-3" role="button">3</a>
+<a class="exercise btn btn-light" href="td.html#exercice-4" role="button">4</a>

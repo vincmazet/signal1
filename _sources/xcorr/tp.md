@@ -1,5 +1,5 @@
 (C:xcorr:tp)=
-# TP : intercorrélation
+# Exercices sur machine
 
 L'objectif est, comme dans l'exemple {numref}`F:intercorrelation:communications`, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
 

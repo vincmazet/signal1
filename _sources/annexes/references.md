@@ -1,4 +1,4 @@
-(P:references)=
+(C:references)=
 # Références
 
 
@@ -10,6 +10,12 @@
   Schaum’s Outline.
   McGraw Hill, 1995.
   Cote : 006.4 HSU.
+  
+* [Jutten 2018]
+  C. Jutten.
+  _Théorie du signal_.
+  Univ. Grenoble Alpes - Polytech Grenoble, 2018.
+  [Téléchargeable librement](https://www.gipsa-lab.grenoble-inp.fr/~christian.jutten/mescours/Cours_Theorie_Signal_2018.pdf)
 
 * [Oppenheim 1989]
   A.V. Oppenheim, R.W. Schafer et J.R. Buck.

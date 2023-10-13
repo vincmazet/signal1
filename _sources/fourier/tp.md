@@ -1,4 +1,4 @@
-# TP : analyse de Fourier
+# Exercices sur machine
 
 ## Série de Fourier d'un créneau
 

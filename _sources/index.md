@@ -1,13 +1,13 @@
 # Introduction
 
-Ce manuel est le support du cours de Traitement du signal de la formation EII
+Ce manuel est le support du cours de Traitement du signal de la formation ESN
 à [Télécom Physique Strasbourg](http://www.telecom-physique.fr/).
 Il correspond au cours de première année,
 le cours de deuxième année est accessible dans un [autre manuel](https://vincmazet.github.io/signal2/).
 
 Nous commencons par définir ce qu'est un signal,
 puis par donner quelques exemples de signaux élémentaires
-et donnons des propriétés générales sur les signaux.
+et des propriétés générales sur les signaux.
 Nous présenterons ensuite un outil indispensable : le produit de convolution.
 L'intercorrélation, qui permet de détecter des motifs particuliers dans les signaux
 sera également discutée.
@@ -22,7 +22,7 @@ Enfin, nous terminerons par les conséquences et les conditions nécessaires
 
 Ce cours est accompagné d'exercices théoriques (à faire sur feuille)
 et pratiques (programmation en Python).
-Python est un langage de programmation libre et utilisé dans de nombreux domaines
+Python est un langage de programmation libre qui est utilisé dans de nombreux domaines
 (traitement des données, web...).
 Une aide sur l'installation de Python et son utilisation est disponible sur la page {ref}`C:python`.
 

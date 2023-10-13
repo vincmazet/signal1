@@ -10,9 +10,15 @@ body {
   font-size: 1.1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.bd-article-container h1,
+.bd-article-container h2,
+.bd-article-container h3,
+.bd-article-container h4,
+.bd-article-container h5,
+.bd-article-container h6 {
   font-family: "Source Sans Pro";
   font-weight: 600;
+  color: var(--pst-color-text-base);
 }
 
 h1 {font-size: 2.5em}
@@ -33,11 +39,6 @@ span.pre {
   line-height: 1.3077
 }
 
-#site-navigation {
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-
 /* Taille des légendes */
 
 main.bd-content #main-content div.figure span {
@@ -52,7 +53,7 @@ main.bd-content #main-content div.figure span {
 
 /* Hack pour faire disparaître le footer (et mettre le mien à la place) */
 
-.footer p {
+.component-author, .copyright {
     display: none;
 }
 
@@ -141,4 +142,35 @@ a.exercise::before {
 
 sd-tab-content {
     background-color: #f4f4f4;
+}
+
+/* Numéro d'équation */
+
+span.eqno {
+    font-size: 1em;
+}
+
+/* Print mode */
+
+@media print {
+    
+    body {
+        width: 100%;
+    }
+    
+    # Supprimer le texte "Passer au contenu principal"
+    skip-link {
+        display: none;
+    }
+
+    #print-main-content {
+        border: 1px solid #333;
+        padding: 0mm 10mm 0mm 10mm;
+        width: 80%;
+        margin: auto;
+        margin-top: 10mm;
+        margin-bottom: 10mm;
+        background-color: #eee;
+    }
+
 }

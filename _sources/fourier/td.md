@@ -1,4 +1,4 @@
-# Exercices : analyse de Fourier
+# Exercices sur feuille
 
 
 ## Exercice 1
