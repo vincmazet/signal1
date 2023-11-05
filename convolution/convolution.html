@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Produit de convolution &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,8 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'convolution/convolution';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="nav bd-sidenav">
@@ -365,9 +376,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="produit-de-convolution">
-<h1>Produit de convolution<a class="headerlink" href="#produit-de-convolution" title="Lien permanent vers ce titre">#</a></h1>
+<h1>Produit de convolution<a class="headerlink" href="#produit-de-convolution" title="Lien permanent vers cette rubrique">#</a></h1>
 <section id="definition">
-<h2>Définition<a class="headerlink" href="#definition" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Définition<a class="headerlink" href="#definition" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Le produit de convolution est une opération mathématique entre deux signaux qui calcule un troisième signal. Il est noté <span class="math notranslate nohighlight">\(*\)</span>. Il décrit l’effet que produit un instrument de mesure ou un système sur une mesure, caractérisé par sa <em>réponse impulsionnelle</em> <span class="math notranslate nohighlight">\(h\)</span>.</p>
 <figure class="align-default" id="f-convolution-intro">
 <a class="reference internal image-reference" href="../_images/convolution.svg"><img alt="../_images/convolution.svg" src="../_images/convolution.svg" width="400px" /></a>
@@ -402,7 +413,7 @@ Signaux à temps discret</div>
 </div>
 </section>
 <section id="exemples">
-<h2>Exemples<a class="headerlink" href="#exemples" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exemples<a class="headerlink" href="#exemples" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>L’animation ci-dessous illustre l’effet du produit de convolution entre les signaux
 <font color="#0060A9"><span class="math notranslate nohighlight">\(x\)</span></font> et <font color="#BE1600"><span class="math notranslate nohighlight">\(h\)</span></font>.
 La première opération effectuée lors du calcul d’une convolution est le renversement et le décalage temporel d’un des deux signaux
@@ -419,7 +430,8 @@ En faisant glisser <span class="math notranslate nohighlight">\(t\)</span>, on o
 <script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
 <script src="https://vincmazet.github.io/spetsi/js/convolution.js" type="text/javascript"></script>
 <script type="text/javascript">window.onload = function (){ init_conv1c(); init_convolution(); };</script>
-<div class="example">
+<div class="exemple admonition">
+<p class="admonition-title">Exemple</p>
 <p>La <a class="reference internal" href="#f-convolution-suspension"><span class="std std-numref">figure 3</span></a> représente les signaux <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(h\)</span> et <span class="math notranslate nohighlight">\(y\)</span> dans le cas d’une simulation réaliste : le système de suspension d’un véhicule. Si <span class="math notranslate nohighlight">\(x\)</span> représente le profil de la route (ici, avec deux bosses) et que <span class="math notranslate nohighlight">\(h\)</span> est le signal qui caractérise le système de suspension, alors le véhicule va osciller suivant le signal <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <figure class="align-default" id="f-convolution-suspension">
 <img alt="../_images/a367acf400b37dc31634442e65db1504c9b79fde5b91ae39d02bcb5601cb54ac.png" src="../_images/a367acf400b37dc31634442e65db1504c9b79fde5b91ae39d02bcb5601cb54ac.png" />
@@ -432,7 +444,8 @@ En faisant glisser <span class="math notranslate nohighlight">\(t\)</span>, on o
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MwaoX7Rb7Ag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 </div>
-<div class="example">
+<div class="exemple admonition">
+<p class="admonition-title">Exemple</p>
 <p>En physique, un spectre représente la quantité de lumière émise ou transmise par un objet. Il est mesuré par un spectromètre. Or, un spectromètre n’est jamais parfait, comme tous les instruments de mesure. Malgré la qualité de sa conception, il reste toujours un peu de « flou ». Ce principe est représent <a class="reference internal" href="#f-convolution-spectre"><span class="std std-numref">Fig. 4</span></a> : <span class="math notranslate nohighlight">\(x\)</span> est le spectre réel de l’objet, tel qu’on voudrait le voir, mais à cause du flou introduit par le spectromètre (signal <span class="math notranslate nohighlight">\(h\)</span>), l’observation n’est pas aussi précise (signal <span class="math notranslate nohighlight">\(y\)</span>). En particulier sur cet exemple, la première raie, très petite, n’est plus visible.</p>
 <figure class="align-default" id="f-convolution-spectre">
 <img alt="../_images/be2c3b12ccbd8c46a4446ae44df6fd779cf23c1f624396ae64de0d2494e1929e.png" src="../_images/be2c3b12ccbd8c46a4446ae44df6fd779cf23c1f624396ae64de0d2494e1929e.png" />
@@ -441,7 +454,8 @@ En faisant glisser <span class="math notranslate nohighlight">\(t\)</span>, on o
 </figcaption>
 </figure>
 </div>
-<div class="example">
+<div class="exemple admonition">
+<p class="admonition-title">Exemple</p>
 <p>Le produit de convolution, modélise également l’effet du filtrage d’un signal, comme on le verra en deuxième année. Dans l’exemple représenté <a class="reference internal" href="#f-convolution-son"><span class="std std-numref">Fig. 5</span></a>, un effet sonore est appliqué sur le signal audio <span class="math notranslate nohighlight">\(x\)</span> par l’intermédiaire du filtre <span class="math notranslate nohighlight">\(h\)</span> (qui est appelé passe-bas), et cela résulte en le signal <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <figure class="align-default" id="f-convolution-son">
 <img alt="../_images/512ce03462f943fbb0b4a6616e0c339a11e16f2a5fc798f57d31ca3c36f90695.png" src="../_images/512ce03462f943fbb0b4a6616e0c339a11e16f2a5fc798f57d31ca3c36f90695.png" />
@@ -471,7 +485,7 @@ En faisant glisser <span class="math notranslate nohighlight">\(t\)</span>, on o
 </div>
 </div></section>
 <section id="proprietes">
-<h2>Propriétés<a class="headerlink" href="#proprietes" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Propriétés<a class="headerlink" href="#proprietes" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Soient <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(g\)</span> et <span class="math notranslate nohighlight">\(h\)</span> des signaux (à temps continu ou discret), et <span class="math notranslate nohighlight">\(a\)</span> une constante. Le produit de convolution vérifie les propriétés suivantes.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">

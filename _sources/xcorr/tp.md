@@ -1,42 +1,59 @@
 (C:xcorr:tp)=
 # Exercices sur machine
 
-L'objectif est, comme dans l'exemple {numref}`F:intercorrelation:communications`, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).
+:::{margin}
+L'énoncé de ce TP provient d'un projet ingénieur réalisé par Pierre Misiuk et Mathieu Schwoerer (FIP ESN, promo 2024).
+:::
 
-Dans cet exercice, les signaux sont de taille $N=100$ échantillons.
+L'objectif de cet exercice est de mesurer la vitesse du son dans l'air en utilisant l'intercorrélation.
 
-* Créez le motif $m$ comme une porte non nulle entre 0 et 9 :
 
-  $$
-    \forall n\in\{0,\dots,N-1\},\qquad
-    m[n] =
-    \begin{cases}
-      1 &\text{si } n \in \{0,\dots,9\} \\
-      0 &\text{sinon}
-    \end{cases}
-  $$
+## Préambule
 
-* Créez un signal $x$ avec une porte située en $k$ (en choisissant vous-même une valeur positive pour $k$) :
+La mesure de la vitesse du son est une expérience qui remonte à plusieurs siècles.
+Dès le XVII<sup>e</sup> siècle, des scientifiques comme Isaac Newton et Robert Boyle ont commencé à étudier les propriétés acoustiques du son.
+En 1660, le physicien et astronome irlandais Robert Boyle a réalisé l'une des premières expériences de mesure de la vitesse du son
+en plaçant des spectateurs à des distances variables d'un canon.
+En observant la différence de temps entre l'impact visuel et sonore de la détonation, Boyle a pu estimer la vitesse du son à environ 332 m/s. 
 
-  $$
-    \forall n\in\{0,\dots,N-1\},\qquad
-    x[n] =
-    \begin{cases}
-      1 &\text{si } n \in \{k,\dots,k+9\} \\
-      0 &\text{sinon}
-    \end{cases}
-  $$
+Au XVIII<sup>e</sup> siècle, le scientifique français Pierre-Simon Laplace a proposé une méthode pour mesurer la vitesse du son en utilisant des réflexions sonores.
+Cette technique a été perfectionnée par d'autres scientifiques, notamment Ernst Chladni et Charles Wheatstone,
+qui ont utilisé des plaques de verre et des tuyaux résonateurs.
 
-* Représentez l'intercorrélation $R_{xm}$ entre $x$ et $m$ (`numpy.correlate`).
-  Attention à définir un nouveau vecteur des abscisses !
-  
-* Que se passe-t-il lorsque $k$ varie ?
+Au XIX<sup>e</sup> siècle, le physicien allemand Ernst Mach a utilisé des tambours tournants pour mesurer la vitesse du son dans différents gaz,
+tandis que le scientifique britannique Lord Rayleigh a étudié la propagation du son dans l'air et l'eau.
 
-* Chargez le fichier <a href="../_static/message1.csv">message1.csv</a> et affichez le signal correspondant.
-  Ce signal est un message codant un message binaire de 10 bits,
-  où les 0 sont codés par une porte d'amplitude négative et les 1 par une porte d'amplitude positive.
-  Représentez l'intercorrélation entre ce signal et le motif pour en déduire le message codé.
-  
-* Même question pour le fichier <a href="../_static/message2.csv">message2.csv</a>.
+Aujourd'hui, la mesure de la vitesse du son est effectuée à l'aide de technologies modernes, telles que des microphones, des ordinateurs et des capteurs de pression.
+Cette mesure est utilisée dans de nombreux domaines, notamment l'aéronautique, l'acoustique architecturale et la médecine.
 
-<a class="btn btn-light" href="../vect/tp.html" role="button">Suite du TP</a>
+## Matériel nécessaire
+
+Pour réaliser ce TP, vous avez besoin du matériel suivant :
+- un haut-parleur 🔈 ;
+- deux microphones 🎤 ;
+- une règle 📏 ;
+- un ordinateur avec Python ;
+- le module [sound.py](https://) à enregistrer dans le dossier contenant votre notebook.
+
+Réalisez ensuite les branchements suivants (cf. {numref}`F:xcorr:maquette`) :
+- haut-parleur branché sur la sortie enceinte de l'ordinateur ;
+- microphones branchés sur l'adaptateur (cela permet d'aiguiller le son du premier microphone sur le canal gauche et le son du second microphone sur le canal droit) ;
+- adaptateur branché sur l'entrée microphone de l'ordinateur.
+
+:::{figure} maquette.png
+:width: 600px
+:name: F:xcorr:maquette
+
+Maquette du TP.
+:::
+
+## Mesure de la vitesse du son
+
+* En plaçant les deux microphones à une distance différente du haut-parleur,
+  le son produit par celui-ci sera capté à des instants différents par les deux microphones.
+  Comment obtenir alors une mesure de la vitesse du son ?
+* Quel outil vu en cours permet de déduire le décalage temporel entre les deux sons acquis par les microphones ?
+* Effectuer une acquisition à l'aide de la fonction `sound.play_and_record`.
+  L'aide de la fonction est accessible avec l'instruction `help(sound.play_and_record)`.
+* Comment peut-on effectuer la mesure du son sans utiliser le haut-parleur ?
+<!-- * Comment peut-on minimiser les bruits captés par les microphones ? -->

@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Transformations de Fourier &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,13 +64,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fourier/fourier';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Propriétés des transformations de Fourier" href="proprietes.html" />
-    <link rel="prev" title="Exercices sur machine" href="../vectoriel/tp.html" />
+    <link rel="prev" title="Exercices sur feuille" href="../vectoriel/td.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="current nav bd-sidenav">
@@ -367,7 +378,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transformations-de-fourier">
-<span id="c-fourier"></span><h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Lien permanent vers ce titre">#</a></h1>
+<span id="c-fourier"></span><h1>Transformations de Fourier<a class="headerlink" href="#transformations-de-fourier" title="Lien permanent vers cette rubrique">#</a></h1>
 <p>Joseph Fourier (1768–1830) était professeur à l’École Polytechnique, scientifique pendant la campagne de Napoléon en Égypte,
 et préfet de l’Isère.
 Il a aussi été membre de l’Académie des sciences et de l’Académie française.</p>
@@ -389,7 +400,7 @@ car elles permettent de mettre en évidence les fréquences contenues dans un si
 <li><p>et la « transformée de Fourier à temps discret » (TFTD) s’applique aux signaux à temps discret et apériodiques.</p></li>
 </ul>
 <section id="serie-de-fourier">
-<h2>Série de Fourier<a class="headerlink" href="#serie-de-fourier" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Série de Fourier<a class="headerlink" href="#serie-de-fourier" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Tout signal <span class="math notranslate nohighlight">\(x(t)\)</span> à temps continu et périodique de période <span class="math notranslate nohighlight">\(T\)</span> peut s’écrire comme une combinaison linéaire
 de fonctions <span class="math notranslate nohighlight">\(\exp\left(j 2\pi k t/T\right)\)</span>, qui sont elles-mêmes périodiques de période <span class="math notranslate nohighlight">\(T\)</span> :</p>
 <aside class="margin sidebar">
@@ -456,7 +467,7 @@ C’est donc plus simple en complexe ! 😜</p>
 </div>
 </details></section>
 <section id="transformee-de-fourier">
-<h2>Transformée de Fourier<a class="headerlink" href="#transformee-de-fourier" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Transformée de Fourier<a class="headerlink" href="#transformee-de-fourier" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>On peut considérer qu’un signal apériodique est le cas limite d’un signal périodique de période infinie.
 Dans ce cas, la série de Fourier tend vers la transformée de Fourier :</p>
 <aside class="margin sidebar">
@@ -479,7 +490,7 @@ x(t) = \int_{-\infty}^{+\infty} X(f) e^{+j 2 \pi f t} df.
 \]</div>
 </section>
 <section id="serie-de-fourier-discrete">
-<h2>Série de Fourier discrète<a class="headerlink" href="#serie-de-fourier-discrete" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Série de Fourier discrète<a class="headerlink" href="#serie-de-fourier-discrete" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>De même que pour la série de Fourier, un signal à temps discret et périodique de période <span class="math notranslate nohighlight">\(N\)</span>
 peut s’écrire comme la combinaison linéaire de fonctions <span class="math notranslate nohighlight">\(\exp\left(j\frac{2\pi k n}{N}\right)\)</span>,
 qui sont également périodiques de période <span class="math notranslate nohighlight">\(N\)</span> :</p>
@@ -509,7 +520,7 @@ Il existe un algorithme très rapide pour la calculer : l’algorithme <a class=
 (implémenté en Python dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code>).</p>
 </section>
 <section id="representation">
-<h2>Représentation<a class="headerlink" href="#representation" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Représentation<a class="headerlink" href="#representation" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>On l’a vu, les transformations de Fourier <span class="math notranslate nohighlight">\(X\)</span> du signal <span class="math notranslate nohighlight">\(x\)</span> sont des signaux.
 En raison de l’exponentielle complexe dans les formules ci-dessus, <span class="math notranslate nohighlight">\(X\)</span> est souvent complexe.
 Pour représenter <span class="math notranslate nohighlight">\(X\)</span>, il faudrait donc se placer dans un espace en trois dimensions dont les axes seraient
@@ -523,7 +534,7 @@ Vous conviendrez que ce n’est pas commode de représenter un signal à valeurs
 <p>L’ensemble de ces deux graphiques s’appelle le « spectre ».</p>
 <figure class="align-default" id="f-fourier-exemple">
 <img alt="../_images/spectre.svg" src="../_images/spectre.svg" /><figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Spectre de la transformée de Fourier de <span class="math notranslate nohighlight">\(3\,\mathrm{rect}(t+1/4)\)</span>.</span><a class="headerlink" href="#f-fourier-exemple" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Spectre de la transformée de Fourier de <span class="math notranslate nohighlight">\(3\,\mathrm{rect}(t+1/4)\)</span>.</span><a class="headerlink" href="#f-fourier-exemple" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>On peut être surpris que le spectre présente des fréquences « négatives » (à gauche de l’axe des ordonnées).
@@ -532,12 +543,12 @@ mais d’exponentielles complexes tournant en sens opposé aux exponentielles co
 <figure class="align-default" id="f-fourier-freqs-neg">
 <a class="reference internal image-reference" href="../_images/negative-freqs.png"><img alt="../_images/negative-freqs.png" src="../_images/negative-freqs.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Illustration des exponentielles complexes associées à l’axe des fréquences d’un spectre.</span><a class="headerlink" href="#f-fourier-freqs-neg" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Illustration des exponentielles complexes associées à l’axe des fréquences d’un spectre.</span><a class="headerlink" href="#f-fourier-freqs-neg" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="recapitulatif">
-<h2>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Quelle que soit la transformation, on peut donc résumer ainsi les différentes notations utilisées :</p>
 <table>
 <thead>
@@ -624,12 +635,12 @@ et la fréquence <span class="math notranslate nohighlight">\(F\)</span> qui est
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../vectoriel/tp.html"
+       href="../vectoriel/td.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Exercices sur machine</p>
+        <p class="prev-next-title">Exercices sur feuille</p>
       </div>
     </a>
     <a class="right-next"

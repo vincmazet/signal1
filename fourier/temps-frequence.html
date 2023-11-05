@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Représentation temps-fréquence &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,8 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fourier/temps-frequence';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="current nav bd-sidenav">
@@ -364,13 +375,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="representation-temps-frequence">
-<h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Lien permanent vers ce titre">#</a></h1>
+<h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Lien permanent vers cette rubrique">#</a></h1>
 <!-- chirp = gazouilli -->
 <p>Les transformations de Fourier font ressortir le contenu fréquentiel d’un signal
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
 comme des changements brusques ou des modifications de fréquence.</p>
 <div class="example">
-<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 14</span></a> représente deux signaux et leurs spectres respectifs.
+<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 16</span></a> représente deux signaux et leurs spectres respectifs.
 Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
 la différence étant l’ordre d’apparition des sinusoïdes.
 À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
@@ -379,7 +390,7 @@ mais la phase n’est pas interprétable :
 on ne connaît pas l’ordre dans lequel arrivent les deux sinusoïdes.</p>
 <figure class="align-default" id="f-temps-frequence-deux-sinus">
 <img alt="../_images/deux-sinus.svg" src="../_images/deux-sinus.svg" /><figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -387,7 +398,7 @@ on ne connaît pas l’ordre dans lequel arrivent les deux sinusoïdes.</p>
 des outils de « temps-fréquence » ont été développés,
 le plus simple étant la transformée de Fourier à court terme.</p>
 <section id="transformee-de-fourier-a-court-terme">
-<h2>Transformée de Fourier à court terme<a class="headerlink" href="#transformee-de-fourier-a-court-terme" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Transformée de Fourier à court terme<a class="headerlink" href="#transformee-de-fourier-a-court-terme" title="Lien permanent vers cette rubrique">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Une fenêtre est un signal limité dans le temps qui est utilisé en le multipliant par un signal quelconque, de façon à en sélectionner une partie.</p>
@@ -482,14 +493,14 @@ ou la [_Symphonie du Nouveau Monde_](https://youtu.be/Txp-pHU2K6w?t=652) de Anto
  -->
 </section>
 <section id="resolution-du-plan-temps-frequence">
-<h2>Résolution du plan temps-fréquence<a class="headerlink" href="#resolution-du-plan-temps-frequence" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Résolution du plan temps-fréquence<a class="headerlink" href="#resolution-du-plan-temps-frequence" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>La STFT partage le plan temps-fréquence en zones égales, définissant ainsi la résolution de la représentation.
 À titre de comparaison, la représentation temporelle d’un signal est très résolue en temps mais pas du tout en fréquence,
 alors que c’est l’inverse pour la représentation fréquentielle.</p>
 <figure class="align-default" id="f-temps-frequence">
 <a class="reference internal image-reference" href="../_images/temps-frequence.svg"><img alt="../_images/temps-frequence.svg" src="../_images/temps-frequence.svg" width="700px" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>L’idéal serait d’avoir une représentation temps-fréquence très résolue à la fois en temps et en fréquence.
@@ -510,7 +521,7 @@ Elle s’applique donc aux signaux qui sont lentement stationnaires,
 par exemple dans le domaine biomédical, en géophysique ou en traitement de la parole.</p>
 <p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes.
 Avec cette transformée, la résolution en temps et en fréquence varie en fonction de la fréquence
-(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 15</span></a>).</p>
+(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 17</span></a>).</p>
 <!-- (d'après un exemple de PFlandrin) principe d'incertitude : pour observer une fréquence (oscillation), il faut le faire sur un axe suffisamment long. De même, pour mesurer la vitesse d'un objet, il vaut mieux chornométrer en deux emplacements éloignés (bonne estimation de la vitesse, mais pas de la position : à quelle endroit exactement y a-t-il cette vitesse ?). Si les deux emplacements sont très proches (bonne estimation de la position), mais mauvaise estimation de la vitesse
  --></section>
 </section>

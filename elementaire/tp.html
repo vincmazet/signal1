@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Exercices sur machine &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,13 +64,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'elementaire/tp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Produit de convolution" href="../convolution/convolution.html" />
-    <link rel="prev" title="Exercices sur feuille" href="td.html" />
+    <link rel="prev" title="Correction" href="tdc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="nav bd-sidenav">
@@ -353,7 +364,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercices-sur-machine">
-<span id="c-notions-tp"></span><h1>Exercices sur machine<a class="headerlink" href="#exercices-sur-machine" title="Lien permanent vers ce titre">#</a></h1>
+<span id="c-notions-tp"></span><h1>Exercices sur machine<a class="headerlink" href="#exercices-sur-machine" title="Lien permanent vers cette rubrique">#</a></h1>
 <p>Pour représenter la sinusoïde <span class="math notranslate nohighlight">\(w(t) = \sin(2\pi f t)\)</span> de fréquence <span class="math notranslate nohighlight">\(f=0,3\)</span> Hz, on peut utiliser le code ci-dessous :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -379,7 +390,7 @@ document.write(`
 
 
 <span class="c1"># Affichage de la sinusoïde (dans la figure créée)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;sinusoïde&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;.-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;sinusoïde&quot;</span><span class="p">)</span>
 
 <span class="c1"># Légende</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
@@ -395,7 +406,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/eace3c1c9b52b28f34a107310299d1e83f20e6bd0ef857acdb0f8630a4b4e41f.png" src="../_images/eace3c1c9b52b28f34a107310299d1e83f20e6bd0ef857acdb0f8630a4b4e41f.png" />
+<img alt="../_images/f3c0afde9e0ad4089b8f917c807e1f89ff2a6dd2791a37ad0d84d0266066dce3.png" src="../_images/f3c0afde9e0ad4089b8f917c807e1f89ff2a6dd2791a37ad0d84d0266066dce3.png" />
 </div>
 </div>
 <ul>
@@ -423,11 +434,14 @@ Choisissez un pas de temps correct pour obtenir une courbe lisse.</p>
   \]</div>
 <p>avec <span class="math notranslate nohighlight">\(A = 3\)</span>, <span class="math notranslate nohighlight">\(m = 4\)</span> et <span class="math notranslate nohighlight">\(N = 5\)</span>.
 Comme le signal est à temps discret, vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.stem</span></code>
+à la place de  <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot</span></code>
 pour afficher les points individuellement sans les relier.</p>
 </li>
-<li><p>Le fichier <a href="../_static/world-co2.csv">world-co2.csv</a> contient les mesures de la quantité de CO<sub>2</sub> dans l’atmosphère
+<li><p>Le fichier <a href="../_static/world-co2.csv">world-co2.csv</a>
+contient les mesures de la quantité de CO<sub>2</sub> dans l’atmosphère
 (en ppm : partie par million) sur toute la Terre.
 Chargez ces données avec <code class="docutils literal notranslate"><span class="pre">numpy.loadtxt</span></code>, en définissant correctement les arguments.
+La sélection de la colonne <code class="docutils literal notranslate"><span class="pre">i</span></code> d’une matrice <code class="docutils literal notranslate"><span class="pre">A</span></code> s’effectue avec <code class="docutils literal notranslate"><span class="pre">A[:,i]</span></code>.
 Affichez l’évolution du CO<sub>2</sub> atmosphérique en fonction des années.</p></li>
 </ul>
 <p><a class="btn btn-light" href="../conv/tp.html" role="button">Suite du TP</a></p>
@@ -465,12 +479,12 @@ Affichez l’évolution du CO<sub>2</sub> atmosphérique en fonction des années
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="td.html"
+       href="tdc.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Exercices sur feuille</p>
+        <p class="prev-next-title">Correction</p>
       </div>
     </a>
     <a class="right-next"

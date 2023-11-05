@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Exercices sur feuille &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,8 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerisation/td';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="nav bd-sidenav">
@@ -371,9 +382,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercices-sur-feuille">
-<h1>Exercices sur feuille<a class="headerlink" href="#exercices-sur-feuille" title="Lien permanent vers ce titre">#</a></h1>
+<h1>Exercices sur feuille<a class="headerlink" href="#exercices-sur-feuille" title="Lien permanent vers cette rubrique">#</a></h1>
 <section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers cette rubrique">#</a></h2>
 <ul>
 <li><p>Montrez que le train d’impulsions <span class="math notranslate nohighlight">\(x^*\)</span> défini par</p>
 <div class="math notranslate nohighlight">
@@ -396,21 +407,21 @@ document.write(`
 </ul>
 </section>
 <section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Rappelez les relations entre fréquence d’échantillonnage, période d’échantillonnage et fréquence de Nyquist.</p>
 </section>
 <section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Proposez une fréquence d’échantillonnage pour effectuer un enregistrement numérique d’un électrocardiogramme.</p>
 </section>
 <section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Prandoni, exo 9.6 -->
 <p>Une sinusoïde <span class="math notranslate nohighlight">\(x(t)\)</span> de fréquence 10 kHz est échantillonnée à une fréquence de 8 kHz.
 Quel sera le signal analogique reconstruit à partir du signal numérique ?</p>
 </section>
 <section id="exercice-5">
-<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Pour étudier l’effet du repliement spectral, on applique la chaîne de traitement ci-dessous à un signal sinusoïdal :
 le signal <span class="math notranslate nohighlight">\(x(t) = \cos(2\pi f_0 t)\)</span> est échantillonné à une fréquence <span class="math notranslate nohighlight">\(f_e=1/T_e\)</span> pour obtenir le signal <span class="math notranslate nohighlight">\(y(t)\)</span>,
 puis filtré par un filtre passe-bas idéal de fréquence de coupure <span class="math notranslate nohighlight">\(f_c = f_e/2\)</span> pour obtenir le signal <span class="math notranslate nohighlight">\(z(t)\)</span>.</p>
@@ -426,13 +437,13 @@ Y a-t-il du repliement spectral ?</p></li>
 </ul>
 </section>
 <section id="exercice-6">
-<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Le signal <span class="math notranslate nohighlight">\(x(t) = A \sin(2 \pi f t + \varphi)\)</span> avec <span class="math notranslate nohighlight">\(A=3\)</span>, <span class="math notranslate nohighlight">\(f=2\)</span> Hz et <span class="math notranslate nohighlight">\(\varphi=\pi/5\)</span>
 est quantifié sur 8 bits avec un quantifieur uniforme par arrondi.
 Quel valeur du pas de quantification doit-on choisir pour obtenir la meilleure résolution sans saturation ?</p>
 </section>
 <section id="exercice-7">
-<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Sur un CD audio, le signal sonore est quantifié sur 16 bits.</p>
 <ul class="simple">
 <li><p>Déterminez le nombre de niveaux de quantification.</p></li>
@@ -457,13 +468,13 @@ $$
 différence importante ! -->
 </section>
 <section id="exercice-8">
-<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Un signal analogique de bande passante 20 kHz est numérisé sur 16 bits.
 Combien de bits par seconde au minimum doit traiter le convertisseur analogique-numérique ?
 En déduire la capacité de stockage d’un CD audio de 60 minutes, sachant que le son y est enregistré en stéréo.</p>
 </section>
 <section id="exercice-9">
-<h2>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : cours de C. Doignon -->
 <p>Un convertisseur numérique-analogique 5 bits produit des tensions positives (commençant à 0 mV).
 Une entrée égale à 1 0 1 0 0 (bit de poids fort à gauche) correspond à une tension de 100 mV.</p>

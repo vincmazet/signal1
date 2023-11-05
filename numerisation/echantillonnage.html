@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Échantillonnage &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,8 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerisation/echantillonnage';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="nav bd-sidenav">
@@ -370,7 +381,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="echantillonnage">
-<span id="p-echantillonnage"></span><h1>Échantillonnage<a class="headerlink" href="#echantillonnage" title="Lien permanent vers ce titre">#</a></h1>
+<span id="p-echantillonnage"></span><h1>Échantillonnage<a class="headerlink" href="#echantillonnage" title="Lien permanent vers cette rubrique">#</a></h1>
 <p>Dans ce chapitre, nous allons dans un premier temps présenter le principe de l’échantillonnage d’un signal analogique,
 puis dans un deuxième temps le principe de l’opération inverse : la reconstruction de ce signal analogique à partir du signal échantillonné.
 Ces deux opérations seront considérées dans un cas idéal.
@@ -378,13 +389,13 @@ Nous discuterons ensuite du choix des paramètres de l’échantillonnage,
 à savoir la fréquence d’échantillonnage <span class="math notranslate nohighlight">\(f_e\)</span> et la fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.
 Enfin, nous terminerons pas l’énoncé du théorème de l’échantillonnage.</p>
 <section id="echantillonnage-ideal">
-<h2>Échantillonnage idéal<a class="headerlink" href="#echantillonnage-ideal" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Échantillonnage idéal<a class="headerlink" href="#echantillonnage-ideal" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>L’échantillonnage consiste à convertir un signal <span class="math notranslate nohighlight">\(x(t)\)</span> analogique
 en une séquence (suite de nombres) <span class="math notranslate nohighlight">\(x[n] = x(nT_e)\)</span>
 où <span class="math notranslate nohighlight">\(T_e\)</span> est la « période d’échantillonnage ».</p>
 <figure class="align-default" id="id1">
 <img alt="../_images/echantillonnage-temporel-1.svg" src="../_images/echantillonnage-temporel-1.svg" /><figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>Pour étudier le phénomène de l’échantillonnage d’un point de vue mathématique,
@@ -399,7 +410,7 @@ x(t) &amp;\text{si}\ t\ \text{est multiple de}\ T_e \\
 \end{split}\]</div>
 <figure class="align-default" id="id2">
 <img alt="../_images/echantillonnage-temporel-2.svg" src="../_images/echantillonnage-temporel-2.svg" /><figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>On peut montrer que la transformée de Fourier de <span class="math notranslate nohighlight">\(x^*(t)\)</span> s’écrit :</p>
@@ -412,17 +423,17 @@ Par conséquent, l’échantillonnage du signal temporel à la période <span cl
 comme illustré sur les figures ci-dessous.</p>
 <figure class="align-default" id="id3">
 <img alt="../_images/echantillonnage-frequentiel-1.svg" src="../_images/echantillonnage-frequentiel-1.svg" /><figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id4">
 <img alt="../_images/echantillonnage-frequentiel-2.svg" src="../_images/echantillonnage-frequentiel-2.svg" /><figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="reconstruction-ideale">
-<h2>Reconstruction idéale<a class="headerlink" href="#reconstruction-ideale" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Reconstruction idéale<a class="headerlink" href="#reconstruction-ideale" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>On peut retrouver le signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> à partir du signal échantillonné <span class="math notranslate nohighlight">\(x^*(t)\)</span>,
 en sélectionnant la période du spectre centrée autour de <span class="math notranslate nohighlight">\(0\)</span>,
 c’est-à-dire la période située entre les fréquences entre <span class="math notranslate nohighlight">\(-f_c\)</span> et <span class="math notranslate nohighlight">\(+f_c\)</span>.
@@ -430,12 +441,12 @@ Cette opération est effectuée en appliquant un filtre passe-bas de fréquence 
 afin d’obtenir un nouveau signal <span class="math notranslate nohighlight">\(\tilde{x}\)</span> qu’on espère être égal à <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <figure class="align-default" id="id5">
 <img alt="../_images/echantillonnage-frequentiel-3.svg" src="../_images/echantillonnage-frequentiel-3.svg" /><figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver.</span><a class="headerlink" href="#id5" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver.</span><a class="headerlink" href="#id5" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id6">
 <img alt="../_images/echantillonnage-frequentiel-4.svg" src="../_images/echantillonnage-frequentiel-4.svg" /><figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>En fréquentiel, le filtre correspond à une multiplication du spectre <span class="math notranslate nohighlight">\(X^*(f)\)</span> par une porte de largeur <span class="math notranslate nohighlight">\(2f_c\)</span> :</p>
@@ -459,7 +470,7 @@ Je peux aussi faire une interface qui permettent de jouer sur les valeurs de fe 
 => ça permet de discuter du choix de ces paramètres et de leur influcene -->
 <figure class="align-default" id="id7">
 <img alt="../_images/echantillonnage-temporel-3.svg" src="../_images/echantillonnage-temporel-3.svg" /><figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Reconstruction du signal analogique <span class="math notranslate nohighlight">\(\tilde{x}(t)\)</span> (ici, <span class="math notranslate nohighlight">\(f_c=f_e\)</span>).</span><a class="headerlink" href="#id7" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Reconstruction du signal analogique <span class="math notranslate nohighlight">\(\tilde{x}(t)\)</span> (ici, <span class="math notranslate nohighlight">\(f_c=f_e\)</span>).</span><a class="headerlink" href="#id7" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>La reconstruction est très bonne au centre du signal, ce qui illustre le bon comportement de l’interpolation par sinus cardinal.
@@ -468,7 +479,7 @@ cela s’explique par le fait qu’à l’extérieur de l’intervalle considér
 il n’y a pas d’échantillons de <span class="math notranslate nohighlight">\(x^*\)</span> qui permettent de définir des sinus cardinaux qui permettent de reconstruire le signal analogique.</p>
 </section>
 <section id="choix-de-la-frequence-de-coupure">
-<h2>Choix de la fréquence de coupure<a class="headerlink" href="#choix-de-la-frequence-de-coupure" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Choix de la fréquence de coupure<a class="headerlink" href="#choix-de-la-frequence-de-coupure" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Lors de la reconstruction, la moindre des choses est que les valeurs non nulles de <span class="math notranslate nohighlight">\(x^*\)</span> ne soient pas modifiées,
 puisqu’elles sont égales à <span class="math notranslate nohighlight">\(x\)</span> aux instants d’échantillonnage.
 Il faut donc que les sinus cardinaux qui apparaissent dans la reconstruction s’annulent aux points d’échantillonnage,
@@ -483,23 +494,23 @@ f_c = \frac{1}{2T_e} = \frac{f_e}{2}
 cette valeur est appelée « fréquence de Nyquist ».</p>
 <figure class="align-default" id="id8">
 <img alt="../_images/echantillonnage-frequentiel-5.svg" src="../_images/echantillonnage-frequentiel-5.svg" /><figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver, dans le cas où <span class="math notranslate nohighlight">\(f_c=f_e/2\)</span>.</span><a class="headerlink" href="#id8" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver, dans le cas où <span class="math notranslate nohighlight">\(f_c=f_e/2\)</span>.</span><a class="headerlink" href="#id8" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="choix-de-la-frequence-d-echantillonnage">
-<h2>Choix de la fréquence d’échantillonnage<a class="headerlink" href="#choix-de-la-frequence-d-echantillonnage" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Choix de la fréquence d’échantillonnage<a class="headerlink" href="#choix-de-la-frequence-d-echantillonnage" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Le spectre de <span class="math notranslate nohighlight">\(x^*(t)\)</span> est une périodisation du spectre de <span class="math notranslate nohighlight">\(x(t)\)</span> a une période <span class="math notranslate nohighlight">\(f_e\)</span>.
 Si <span class="math notranslate nohighlight">\(f_e\)</span> est trop faible, alors il peut y avoir une superposition des périodes,
 et le filtrage ne permettra pas de les séparer convenablement.</p>
 <figure class="align-default" id="id9">
 <img alt="../_images/echantillonnage-frequentiel-6.svg" src="../_images/echantillonnage-frequentiel-6.svg" /><figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id9" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id9" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id10">
 <img alt="../_images/echantillonnage-frequentiel-7.svg" src="../_images/echantillonnage-frequentiel-7.svg" /><figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
 on n’obtient pas le signal original <span class="math notranslate nohighlight">\(x\)</span>, il y a repliement spectral.</span><a class="headerlink" href="#id10" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
@@ -522,7 +533,7 @@ alors il convient de supprimer les fréquences supérieures à la fréquence de 
 Pour cela, on applique avant l’échantillonnage un filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_e/2\)</span>.
 Ce filtre est appelé « filtre anti-repliement ».</p>
 <section id="repliement-spectral">
-<h3>Repliement spectral<a class="headerlink" href="#repliement-spectral" title="Lien permanent vers ce titre">#</a></h3>
+<h3>Repliement spectral<a class="headerlink" href="#repliement-spectral" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Lorsque la condition ci-avant n’est pas respectée, et donc que <span class="math notranslate nohighlight">\(f_e &lt; 2f_\mathrm{max}\)</span>, alors il y a recouvrement des périodes.
 On parle de « repliement spectral » (en anglais : <em>aliasing</em>).
 L’animation ci-dessous simule l’effet du repliement spectral sur une sinusoïde dont on peut régler la période d’échantillonnage.</p>
@@ -564,7 +575,7 @@ donc tout phénomène plus rapide que 12,5 Hz peut engendrer des effets étrange
 </section>
 </section>
 <section id="theoreme-de-l-echantillonnage">
-<h2>Théorème de l’échantillonnage<a class="headerlink" href="#theoreme-de-l-echantillonnage" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Théorème de l’échantillonnage<a class="headerlink" href="#theoreme-de-l-echantillonnage" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Vetterli p. 498 -->
 <p>Le théorème de l’échantillonnage a été formulé différemment et souvent indépendamment par plusieurs scientifiques :
 Whittaker (1915), Nyquist (1928), Kotelnikov (1933), Raabe (1939) et Someya (1949),

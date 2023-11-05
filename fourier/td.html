@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Exercices sur feuille &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,8 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fourier/td';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="current nav bd-sidenav">
@@ -375,9 +386,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercices-sur-feuille">
-<h1>Exercices sur feuille<a class="headerlink" href="#exercices-sur-feuille" title="Lien permanent vers ce titre">#</a></h1>
+<h1>Exercices sur feuille<a class="headerlink" href="#exercices-sur-feuille" title="Lien permanent vers cette rubrique">#</a></h1>
 <section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Cet exo permet de comparer les différentes transformations de Fourier, mais également de distinguer variable de fréquence, variable de temps, période et fréquence. -->
 <ul>
 <li><p>Calculez la série de Fourier du créneau <span class="math notranslate nohighlight">\(x(t)\)</span> tel que sur la période <span class="math notranslate nohighlight">\([-T,\,T]\)</span> il est défini comme :</p>
@@ -413,7 +424,7 @@ document.write(`
 </ul>
 </section>
 <section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers cette rubrique">#</a></h2>
 <ul>
 <li><p>Calculez la série de Fourier d’une sinusoïde de fréquence <span class="math notranslate nohighlight">\(f_0\)</span> et de phase <span class="math notranslate nohighlight">\(\varphi\)</span>.</p></li>
 <li><p>Que devient le spectre lorsque la phase varie ?</p></li>
@@ -424,13 +435,13 @@ Que constatez-vous ?</p>
 </ul>
 </section>
 <section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : cours de C. Doignon -->
 <!-- X(f) = 1/(a+j2\pi f) -->
 <p>Calculez la transformée de Fourier du signal <span class="math notranslate nohighlight">\(x(t) = \exp(-at)\,u(t)\)</span> où <span class="math notranslate nohighlight">\(a\)</span> est un réel strictement positif.</p>
 </section>
 <section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Le module du spectre d’un signal musical <span class="math notranslate nohighlight">\(m(t)\)</span> est schématisé ci-dessous (la phase n’a pas d’importance dans cet exercice) :</p>
 <figure class="align-default" id="f-td-fourier-am">
 <a class="reference internal image-reference" href="../_images/fourier-am.svg"><img alt="../_images/fourier-am.svg" height="200px" src="../_images/fourier-am.svg" /></a>
@@ -449,7 +460,7 @@ Proposez une valeur de la fréquence de la porteuse de ce deuxième programme.</
 </ul>
 </section>
 <section id="exercice-5">
-<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers cette rubrique">#</a></h2>
 <ul class="simple">
 <li><p>Quel est, intuitivement, le spectre d’un signal temporel constant ? <!-- un dirac en 0 car pas de sinusoide --></p></li>
 <li><p>En déduire le spectre d’une impulsion de Dirac centrée en 0. <!-- dualité : c'est une constante --></p></li>
@@ -457,7 +468,7 @@ Proposez une valeur de la fréquence de la porteuse de ce deuxième programme.</
 </ul>
 </section>
 <section id="exercice-6">
-<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Inspiré de Oppenheim 4.25 -->
 <p>Le signal <span class="math notranslate nohighlight">\(x(t)\)</span> est représenté ci-dessous.</p>
 <figure class="align-default" id="f-td-fourier-signal-m">
@@ -473,7 +484,7 @@ Répondez aux questions suivantes sans calculer explicitement <span class="math 
 </ul>
 </section>
 <section id="exercice-7">
-<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Oppenheim 4.21 -->
 <p>Calculez la transformée de Fourier du signal</p>
 <div class="math notranslate nohighlight">
@@ -486,21 +497,21 @@ Répondez aux questions suivantes sans calculer explicitement <span class="math 
 \end{split}\]</div>
 </section>
 <section id="exercice-8">
-<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Duvaut exercice 1.1.1 -->
 <p>Soit <span class="math notranslate nohighlight">\(x(t)\)</span> un signal réel. Quelle est la relation entre la transformée de Fourier de <span class="math notranslate nohighlight">\(x(t)\)</span> et celle de <span class="math notranslate nohighlight">\(x(-t)\)</span> ?</p>
 </section>
 <section id="exercice-9">
-<h2>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Duvaut exercice 1.1.2 -->
 <p>Soit <span class="math notranslate nohighlight">\(x(t)\)</span> un signal réel. Quelle est la relation entre la transformée de Fourier de <span class="math notranslate nohighlight">\(x(t)\)</span> et celle de <span class="math notranslate nohighlight">\(x(t)\times\cos(2\pi f_0 t)\)</span> ?</p>
 </section>
 <section id="exercice-10">
-<h2>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Calculez la transformée de Fourier du signal <span class="math notranslate nohighlight">\(\mathrm{rect}(t)\times\cos(2\pi f_p t)\)</span>.</p>
 </section>
 <section id="exercice-11">
-<h2>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Oppenheim exo 8.3 -->
 <p>Le signal <span class="math notranslate nohighlight">\(m(t)\)</span> est à bande limitée : <span class="math notranslate nohighlight">\(M(f)=0\)</span> pour <span class="math notranslate nohighlight">\(|f|&gt;1\)</span> kHz.
 Il est modulé en amplitude par une porteuse sinusoïdale de fréquence <span class="math notranslate nohighlight">\(f_p=1\)</span> kHz :</p>
@@ -516,7 +527,7 @@ x(t) = m(t) \sin(2\pi f_p t)
 Déterminez <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
 </section>
 <section id="exercice-12">
-<h2>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Ventre exo 2.1 -->
 <p>Lorsque Canal+ émettait encore en analogique, le son <span class="math notranslate nohighlight">\(s(t)\)</span> était chiffré en inversant son spectre comme schématisé ci-dessous.
 Proposez une technique pour réaliser cette opération.</p>
@@ -525,7 +536,7 @@ Proposez une technique pour réaliser cette opération.</p>
 </figure>
 </section>
 <section id="exercice-13">
-<h2>Exercice 13<a class="headerlink" href="#exercice-13" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Exercice 13<a class="headerlink" href="#exercice-13" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>La figure ci-dessous est tirée de la publication scientifique</p>
 <blockquote>
 <div><p>R. Reiz, C. Gordan, D. Purcaru &amp; C. Kokkonis, « Using Advanced Signal Processing Methods for DTMF Detection »,

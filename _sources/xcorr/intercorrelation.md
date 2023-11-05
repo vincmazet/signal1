@@ -25,8 +25,8 @@ Propriété :
 
 ## Exemples
 
-<div class="example">
-
+::::{admonition} Exemple
+:class: exemple
     
 En communications numériques, il n'est pas rare que le récepteur du sytème de communication reçoive un signal de l'émetteur qui soit très brouillé
 (on dit qu'il est _bruité_).
@@ -35,29 +35,29 @@ et que ce signal est en réalité une suite d'échelons d'amplitude &minus;1 (re
 alors l'intercorrélation de $x$ avec un échelon $y$ permet de détecter à chaque instant si le signal reçu ressemble à $y$
 (dans ce cas, on a reçu un 1) ou pas (on a reçu un 0).
 
-```{figure} communications.svg
----
-width: 100%
-name: F:intercorrelation:communications
----
+:::{figure} communications.svg
+:width: 100%
+:name: F:intercorrelation:communications
+
 Intercorrélation de $x$ avec $y$. Le signal $x$ véhicule le message 10011010 codé en NRZ avec le motif $y$.
-```
+:::
 
-</div>
+::::
 
-<div class="example">
+
+::::{admonition} Exemple
+:class: exemple
 
 Un autre exemple d'utilisation de l'intecorrélation est la mesure de la fréquence d'un signal. Si on dispose d'un signal sinusoïdal $x$, mais qu'il est très bruité et que l'on cherche sa fréquence inconnue, alors on peut représenter l'intercorrélation de $x$ avec plusieurs sinusoïdes $y$ dont on connaît la fréquence. La sinusoïde qui permet d'obtenir la plus grande intercorrélation sera la plus ressemblante : on pourra alors en déduire la valeur de la fréquence inconnue. Ce principe est illustré {numref}`F:intercorrelation:sinusoide`.
 
-```{figure} sinusoide.svg
----
-name: F:intercorrelation:sinusoide
----
+:::{figure} sinusoide.svg
+:name: F:intercorrelation:sinusoide
+
 Intercorrélation de $x$ ( une sinusoïde bruitée de fréquence 0,5 Hz) avec un sinusoïde de fréquence variable.
 La corrélation la plus forte est obtenue pour une sinusoïde de 0,5 Hz.
-```
+:::
     
-</div>
+::::
 
 
 ## Autocorrélation

@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Exercices sur machine &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,8 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fourier/tp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -161,26 +162,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="current nav bd-sidenav">
@@ -370,9 +381,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercices-sur-machine">
-<h1>Exercices sur machine<a class="headerlink" href="#exercices-sur-machine" title="Lien permanent vers ce titre">#</a></h1>
+<h1>Exercices sur machine<a class="headerlink" href="#exercices-sur-machine" title="Lien permanent vers cette rubrique">#</a></h1>
 <section id="serie-de-fourier-d-un-creneau">
-<h2>Série de Fourier d’un créneau<a class="headerlink" href="#serie-de-fourier-d-un-creneau" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Série de Fourier d’un créneau<a class="headerlink" href="#serie-de-fourier-d-un-creneau" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>On considère le signal créneau <span class="math notranslate nohighlight">\(y(t)\)</span> de période <span class="math notranslate nohighlight">\(2T\)</span> défini par :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -400,7 +411,7 @@ Que constatez-vous ?</p></li>
 </ul>
 </section>
 <section id="transformee-de-fourier-discrete-d-un-signal-numerique">
-<h2>Transformée de Fourier discrète d’un signal numérique<a class="headerlink" href="#transformee-de-fourier-discrete-d-un-signal-numerique" title="Lien permanent vers ce titre">#</a></h2>
+<h2>Transformée de Fourier discrète d’un signal numérique<a class="headerlink" href="#transformee-de-fourier-discrete-d-un-signal-numerique" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>On considère le signal suivant de longueur <span class="math notranslate nohighlight">\(N=100\)</span> échantillons :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -419,7 +430,7 @@ est implémenté dans la fonction <code class="docutils literal notranslate"><sp
 La TFD étant périodique de période <span class="math notranslate nohighlight">\(N\)</span>, elle n’est tracée que sur une seule période.
 Les questions suivantes ont pour objectif de représenter la TFD de trois façons différentes.</p>
 <section id="spectre-non-centre-en-fonction-des-echantillons">
-<h3>Spectre non centré, en fonction des échantillons<a class="headerlink" href="#spectre-non-centre-en-fonction-des-echantillons" title="Lien permanent vers ce titre">#</a></h3>
+<h3>Spectre non centré, en fonction des échantillons<a class="headerlink" href="#spectre-non-centre-en-fonction-des-echantillons" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">numpy.fft.fft</span></code> retourne la TFD <span class="math notranslate nohighlight">\(Z\)</span> de <span class="math notranslate nohighlight">\(z\)</span>
 en fonction des échantillons fréquentiels <span class="math notranslate nohighlight">\(k\)</span>, numérotés de <span class="math notranslate nohighlight">\(0\)</span> à <span class="math notranslate nohighlight">\(N-1\)</span>.</p>
 <ul class="simple">
@@ -430,7 +441,7 @@ que l’on réutilisera par la suite
 </ul>
 </section>
 <section id="spectre-centre-en-fonction-des-echantillons">
-<h3>Spectre centré, en fonction des échantillons<a class="headerlink" href="#spectre-centre-en-fonction-des-echantillons" title="Lien permanent vers ce titre">#</a></h3>
+<h3>Spectre centré, en fonction des échantillons<a class="headerlink" href="#spectre-centre-en-fonction-des-echantillons" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>En général, on préfère centrer la TFD autour de 0,
 donc entre les échantillons
 <span class="math notranslate nohighlight">\(-N/2\)</span> et <span class="math notranslate nohighlight">\(N/2-1\)</span> (si <span class="math notranslate nohighlight">\(N\)</span> est pair),
@@ -452,7 +463,7 @@ v = [6\,5\,4\,3\,2\,1]
 </ul>
 </section>
 <section id="spectre-centre-en-fonction-des-frequences">
-<h3>Spectre centré, en fonction des fréquences<a class="headerlink" href="#spectre-centre-en-fonction-des-frequences" title="Lien permanent vers ce titre">#</a></h3>
+<h3>Spectre centré, en fonction des fréquences<a class="headerlink" href="#spectre-centre-en-fonction-des-frequences" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Chaque échantillon du spectre peut être relié à une fréquence particulière,
 à condition de connaître la « période d’échantillonnage » <span class="math notranslate nohighlight">\(T_e\)</span> entre deux échantillons du signal temporel.
 On peut montrer (cf. <a class="reference internal" href="../numerisation/echantillonnage.html#p-echantillonnage"><span class="std std-ref">Échantillonnage</span></a>) que la fréquence <span class="math notranslate nohighlight">\(f\)</span> correspondant à l’échantillon <span class="math notranslate nohighlight">\(k\)</span>
@@ -463,7 +474,7 @@ dans le cas où <span class="math notranslate nohighlight">\(T_e=0,1\)</span> s.
 </ul>
 </section>
 <section id="application">
-<h3>Application<a class="headerlink" href="#application" title="Lien permanent vers ce titre">#</a></h3>
+<h3>Application<a class="headerlink" href="#application" title="Lien permanent vers cette rubrique">#</a></h3>
 <ul class="simple">
 <li><p>Chargez le signal <a href="../_static/inconnu.csv">inconnu.csv</a> (<span class="math notranslate nohighlight">\(T_e=0,1\)</span> ms) et tracez sa TFD pour déterminer quelle est la
 fréquence principale de ce signal.</p></li>

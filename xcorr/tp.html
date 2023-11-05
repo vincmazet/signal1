@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Exercices sur machine &#8212; Traitement du signal 1</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -63,13 +64,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'xcorr/tp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Représentation vectorielle des signaux" href="../vectoriel/representation-vectorielle.html" />
-    <link rel="prev" title="Exercices sur feuille" href="td.html" />
+    <link rel="prev" title="Correction" href="tdc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -161,26 +160,34 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tdc.html">Correction</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vectoriel/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
 <ul class="nav bd-sidenav">
@@ -327,7 +334,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -343,6 +352,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preambule">Préambule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiel-necessaire">Matériel nécessaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-la-vitesse-du-son">Mesure de la vitesse du son</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -353,42 +372,62 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercices-sur-machine">
-<span id="c-xcorr-tp"></span><h1>Exercices sur machine<a class="headerlink" href="#exercices-sur-machine" title="Lien permanent vers ce titre">#</a></h1>
-<p>L’objectif est, comme dans l’exemple <a class="reference internal" href="intercorrelation.html#f-intercorrelation-communications"><span class="std std-numref">Fig. 5</span></a>, de détecter un signal particulier (un « motif ») dans un signal perturbé par de forts parasites (on parle de « bruit »).</p>
-<p>Dans cet exercice, les signaux sont de taille <span class="math notranslate nohighlight">\(N=100\)</span> échantillons.</p>
-<ul>
-<li><p>Créez le motif <span class="math notranslate nohighlight">\(m\)</span> comme une porte non nulle entre 0 et 9 :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    \forall n\in\{0,\dots,N-1\},\qquad
-    m[n] =
-    \begin{cases}
-      1 &amp;\text{si } n \in \{0,\dots,9\} \\
-      0 &amp;\text{sinon}
-    \end{cases}
-  \end{split}\]</div>
-</li>
-<li><p>Créez un signal <span class="math notranslate nohighlight">\(x\)</span> avec une porte située en <span class="math notranslate nohighlight">\(k\)</span> (en choisissant vous-même une valeur positive pour <span class="math notranslate nohighlight">\(k\)</span>) :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    \forall n\in\{0,\dots,N-1\},\qquad
-    x[n] =
-    \begin{cases}
-      1 &amp;\text{si } n \in \{k,\dots,k+9\} \\
-      0 &amp;\text{sinon}
-    \end{cases}
-  \end{split}\]</div>
-</li>
-<li><p>Représentez l’intercorrélation <span class="math notranslate nohighlight">\(R_{xm}\)</span> entre <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(m\)</span> (<code class="docutils literal notranslate"><span class="pre">numpy.correlate</span></code>).
-Attention à définir un nouveau vecteur des abscisses !</p></li>
-<li><p>Que se passe-t-il lorsque <span class="math notranslate nohighlight">\(k\)</span> varie ?</p></li>
-<li><p>Chargez le fichier <a href="../_static/message1.csv">message1.csv</a> et affichez le signal correspondant.
-Ce signal est un message codant un message binaire de 10 bits,
-où les 0 sont codés par une porte d’amplitude négative et les 1 par une porte d’amplitude positive.
-Représentez l’intercorrélation entre ce signal et le motif pour en déduire le message codé.</p></li>
-<li><p>Même question pour le fichier <a href="../_static/message2.csv">message2.csv</a>.</p></li>
+<span id="c-xcorr-tp"></span><h1>Exercices sur machine<a class="headerlink" href="#exercices-sur-machine" title="Lien permanent vers cette rubrique">#</a></h1>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>L’énoncé de ce TP provient d’un projet ingénieur réalisé par Pierre Misiuk et Mathieu Schwoerer (FIP ESN, promo 2024).</p>
+</aside>
+<p>L’objectif de cet exercice est de mesurer la vitesse du son dans l’air en utilisant l’intercorrélation.</p>
+<section id="preambule">
+<h2>Préambule<a class="headerlink" href="#preambule" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>La mesure de la vitesse du son est une expérience qui remonte à plusieurs siècles.
+Dès le XVII<sup>e</sup> siècle, des scientifiques comme Isaac Newton et Robert Boyle ont commencé à étudier les propriétés acoustiques du son.
+En 1660, le physicien et astronome irlandais Robert Boyle a réalisé l’une des premières expériences de mesure de la vitesse du son
+en plaçant des spectateurs à des distances variables d’un canon.
+En observant la différence de temps entre l’impact visuel et sonore de la détonation, Boyle a pu estimer la vitesse du son à environ 332 m/s.</p>
+<p>Au XVIII<sup>e</sup> siècle, le scientifique français Pierre-Simon Laplace a proposé une méthode pour mesurer la vitesse du son en utilisant des réflexions sonores.
+Cette technique a été perfectionnée par d’autres scientifiques, notamment Ernst Chladni et Charles Wheatstone,
+qui ont utilisé des plaques de verre et des tuyaux résonateurs.</p>
+<p>Au XIX<sup>e</sup> siècle, le physicien allemand Ernst Mach a utilisé des tambours tournants pour mesurer la vitesse du son dans différents gaz,
+tandis que le scientifique britannique Lord Rayleigh a étudié la propagation du son dans l’air et l’eau.</p>
+<p>Aujourd’hui, la mesure de la vitesse du son est effectuée à l’aide de technologies modernes, telles que des microphones, des ordinateurs et des capteurs de pression.
+Cette mesure est utilisée dans de nombreux domaines, notamment l’aéronautique, l’acoustique architecturale et la médecine.</p>
+</section>
+<section id="materiel-necessaire">
+<h2>Matériel nécessaire<a class="headerlink" href="#materiel-necessaire" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Pour réaliser ce TP, vous avez besoin du matériel suivant :</p>
+<ul class="simple">
+<li><p>un haut-parleur 🔈 ;</p></li>
+<li><p>deux microphones 🎤 ;</p></li>
+<li><p>une règle 📏 ;</p></li>
+<li><p>un ordinateur avec Python ;</p></li>
+<li><p>le module <a class="reference external" href="https://">sound.py</a> à enregistrer dans le dossier contenant votre notebook.</p></li>
 </ul>
-<p><a class="btn btn-light" href="../vect/tp.html" role="button">Suite du TP</a></p>
+<p>Réalisez ensuite les branchements suivants (cf. <a class="reference internal" href="#f-xcorr-maquette"><span class="std std-numref">Fig. 9</span></a>) :</p>
+<ul class="simple">
+<li><p>haut-parleur branché sur la sortie enceinte de l’ordinateur ;</p></li>
+<li><p>microphones branchés sur l’adaptateur (cela permet d’aiguiller le son du premier microphone sur le canal gauche et le son du second microphone sur le canal droit) ;</p></li>
+<li><p>adaptateur branché sur l’entrée microphone de l’ordinateur.</p></li>
+</ul>
+<figure class="align-default" id="f-xcorr-maquette">
+<a class="reference internal image-reference" href="../_images/maquette.png"><img alt="../_images/maquette.png" src="../_images/maquette.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Maquette du TP.</span><a class="headerlink" href="#f-xcorr-maquette" title="Lien permanent vers cette image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="mesure-de-la-vitesse-du-son">
+<h2>Mesure de la vitesse du son<a class="headerlink" href="#mesure-de-la-vitesse-du-son" title="Lien permanent vers cette rubrique">#</a></h2>
+<ul class="simple">
+<li><p>En plaçant les deux microphones à une distance différente du haut-parleur,
+le son produit par celui-ci sera capté à des instants différents par les deux microphones.
+Comment obtenir alors une mesure de la vitesse du son ?</p></li>
+<li><p>Quel outil vu en cours permet de déduire le décalage temporel entre les deux sons acquis par les microphones ?</p></li>
+<li><p>Effectuer une acquisition à l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">sound.play_and_record</span></code>.
+L’aide de la fonction est accessible avec l’instruction <code class="docutils literal notranslate"><span class="pre">help(sound.play_and_record)</span></code>.</p></li>
+<li><p>Comment peut-on effectuer la mesure du son sans utiliser le haut-parleur ?</p></li>
+</ul>
+<!-- * Comment peut-on minimiser les bruits captés par les microphones ? --></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -423,12 +462,12 @@ Représentez l’intercorrélation entre ce signal et le motif pour en déduire 
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="td.html"
+       href="tdc.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Exercices sur feuille</p>
+        <p class="prev-next-title">Correction</p>
       </div>
     </a>
     <a class="right-next"
@@ -449,6 +488,22 @@ Représentez l’intercorrélation entre ce signal et le motif pour en déduire 
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preambule">Préambule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiel-necessaire">Matériel nécessaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-la-vitesse-du-son">Mesure de la vitesse du son</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

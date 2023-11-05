@@ -18,7 +18,8 @@ L'équivalence entre signal échantillonné à temps limité et vecteur a plusie
 * on peut faire des interprétations géométriques ;
 * c'est l'interprétation qui est faite dans les logiciels et les langages de calcul numérique, comme en Python.
 
-<div class="example">
+::::{admonition} Exemple
+:class: exemple
 
 L'échelon $u$ et l'impulsion $\delta$ s'écrivent dont dans $\mathbb{R}^2$ :
 
@@ -32,26 +33,24 @@ Leur représentation est donnée {numref}`F:vect:ex-graphe`.
 Il s'agit simplement de signaux de deux échantillons. 
 Les axes de cette représentation sont : les échantillons en abscisse, et les amplitudes en ordonnée.
 
-```{figure} ex-graphe.svg
----
-width: 600px
-name: F:vect:ex-graphe
----
+:::{figure} ex-graphe.svg
+:width: 600px
+:name: F:vect:ex-graphe
+
 Représentation de l'échelon et de l'impulsion de taille 2 sous forme de signaux.
-```
+:::
 
 La représentation vectorelle de ces deux signaux se fait dans un espace à deux dimensions, comme dans la {numref}`F:vect:ex-espace`.
 Les axes de cette représentation sont : le premier échantillon du signal en abscisse, et le deuxième échantillon en ordonnée.
 
-```{figure} ex-espace.svg
----
-width: 300px
-name: F:vect:ex-espace
----
+:::{figure} ex-espace.svg
+:width: 300px
+:name: F:vect:ex-espace
+
 Représentation de l'échelon et de l'impulsion de taille 2 sous forme de vecteurs.
-```
+:::
     
-</div>
+::::
 
 ## Quelques définitions
 
@@ -114,22 +113,22 @@ où les $\alpha_k$ sont des coefficients uniques (il ne peut pas y avoir plusieu
 
 Si en plus les vecteurs $\{\varphi_k\}$ de cette base sont orthogonaux deux à deux et de norme 1, alors la base est _orthonormée_.
 
-<div class="example">
+::::{admonition} Exemple
+:class: exemple
 
 Pour $N=4$, les signaux $\delta[n-k]$ avec $k\in\{0,\dots,3\}$ forment une base, qui plus est orthonormée.
 
-```{figure} base-canonique.svg
----
-name: F:vect:base-canonique
----
+:::{figure} base-canonique.svg
+:name: F:vect:base-canonique
+
 Base canonique dans $\mathbb{R}^4$.
-```
+:::
 
 Nous ne représentons pas ces quatre signaux sous forme de vecteur, car cela nécessite de les représenter dans un espace à quatre dimensions (or, votre écran n'en a que deux).
 
 Cette base est d'ailleurs appelée _base canonique_ car c'est la base naturelle pour représenter les signaux. En effet, les échantillons de tout signal de taille $N$ correspondent aux coefficients $\alpha_k$.
     
-</div>
+::::
 
 ## Décomposition sur une base
 
