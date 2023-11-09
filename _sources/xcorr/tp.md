@@ -33,7 +33,7 @@ Pour réaliser ce TP, vous avez besoin du matériel suivant :
 - deux microphones 🎤 ;
 - une règle 📏 ;
 - un ordinateur avec Python ;
-- le module [sound.py](https://) à enregistrer dans le dossier contenant votre notebook.
+- le module <a href="../_static/sound.py">sound.py</a> à enregistrer dans le dossier contenant votre notebook.
 
 Réalisez ensuite les branchements suivants (cf. {numref}`F:xcorr:maquette`) :
 - haut-parleur branché sur la sortie enceinte de l'ordinateur ;
