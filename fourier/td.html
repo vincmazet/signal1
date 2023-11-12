@@ -189,8 +189,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/representation-vectorielle.html">Représentation vectorielle des signaux</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
@@ -373,7 +371,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10">Exercice 10</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-11">Exercice 11</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-12">Exercice 12</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-13">Exercice 13</a></li>
 </ul>
             </nav>
         </div>
@@ -436,12 +433,17 @@ Que constatez-vous ?</p>
 </section>
 <section id="exercice-3">
 <h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers cette rubrique">#</a></h2>
+<!-- Source : Duvaut exercice 1.1.2 -->
+<p>Soit <span class="math notranslate nohighlight">\(x(t)\)</span> un signal réel. Quelle est la relation entre la transformée de Fourier de <span class="math notranslate nohighlight">\(x(t)\)</span> et celle de <span class="math notranslate nohighlight">\(x(t)\times\cos(2\pi f_0 t)\)</span> ?</p>
+</section>
+<section id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : cours de C. Doignon -->
 <!-- X(f) = 1/(a+j2\pi f) -->
 <p>Calculez la transformée de Fourier du signal <span class="math notranslate nohighlight">\(x(t) = \exp(-at)\,u(t)\)</span> où <span class="math notranslate nohighlight">\(a\)</span> est un réel strictement positif.</p>
 </section>
-<section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers cette rubrique">#</a></h2>
+<section id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Le module du spectre d’un signal musical <span class="math notranslate nohighlight">\(m(t)\)</span> est schématisé ci-dessous (la phase n’a pas d’importance dans cet exercice) :</p>
 <figure class="align-default" id="f-td-fourier-am">
 <a class="reference internal image-reference" href="../_images/fourier-am.svg"><img alt="../_images/fourier-am.svg" height="200px" src="../_images/fourier-am.svg" /></a>
@@ -459,16 +461,16 @@ Le deuxième terme de cette équation est la « porteuse » qui est modulée e
 Proposez une valeur de la fréquence de la porteuse de ce deuxième programme.</p></li>
 </ul>
 </section>
-<section id="exercice-5">
-<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers cette rubrique">#</a></h2>
+<section id="exercice-6">
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers cette rubrique">#</a></h2>
 <ul class="simple">
 <li><p>Quel est, intuitivement, le spectre d’un signal temporel constant ? <!-- un dirac en 0 car pas de sinusoide --></p></li>
 <li><p>En déduire le spectre d’une impulsion de Dirac centrée en 0. <!-- dualité : c'est une constante --></p></li>
 <li><p>Qu’en concluez-vous sur la composition fréquentielle d’une impulsion de Dirac ? <!-- contient toutes les fréquences en quantité égale --></p></li>
 </ul>
 </section>
-<section id="exercice-6">
-<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers cette rubrique">#</a></h2>
+<section id="exercice-7">
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Inspiré de Oppenheim 4.25 -->
 <p>Le signal <span class="math notranslate nohighlight">\(x(t)\)</span> est représenté ci-dessous.</p>
 <figure class="align-default" id="f-td-fourier-signal-m">
@@ -483,8 +485,8 @@ Répondez aux questions suivantes sans calculer explicitement <span class="math 
 <li><p>Donnez <span class="math notranslate nohighlight">\(\int|X(f)|^2\,df\)</span></p></li>
 </ul>
 </section>
-<section id="exercice-7">
-<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers cette rubrique">#</a></h2>
+<section id="exercice-8">
+<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Oppenheim 4.21 -->
 <p>Calculez la transformée de Fourier du signal</p>
 <div class="math notranslate nohighlight">
@@ -496,22 +498,12 @@ Répondez aux questions suivantes sans calculer explicitement <span class="math 
   \end{cases}
 \end{split}\]</div>
 </section>
-<section id="exercice-8">
-<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers cette rubrique">#</a></h2>
-<!-- Source : Duvaut exercice 1.1.1 -->
-<p>Soit <span class="math notranslate nohighlight">\(x(t)\)</span> un signal réel. Quelle est la relation entre la transformée de Fourier de <span class="math notranslate nohighlight">\(x(t)\)</span> et celle de <span class="math notranslate nohighlight">\(x(-t)\)</span> ?</p>
-</section>
 <section id="exercice-9">
 <h2>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers cette rubrique">#</a></h2>
-<!-- Source : Duvaut exercice 1.1.2 -->
-<p>Soit <span class="math notranslate nohighlight">\(x(t)\)</span> un signal réel. Quelle est la relation entre la transformée de Fourier de <span class="math notranslate nohighlight">\(x(t)\)</span> et celle de <span class="math notranslate nohighlight">\(x(t)\times\cos(2\pi f_0 t)\)</span> ?</p>
+<p>Calculez la transformée de Fourier du signal <span class="math notranslate nohighlight">\(\mathrm{rect}(t)\times\cos(2\pi f_p t)\)</span>.</p>
 </section>
 <section id="exercice-10">
 <h2>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Calculez la transformée de Fourier du signal <span class="math notranslate nohighlight">\(\mathrm{rect}(t)\times\cos(2\pi f_p t)\)</span>.</p>
-</section>
-<section id="exercice-11">
-<h2>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Oppenheim exo 8.3 -->
 <p>Le signal <span class="math notranslate nohighlight">\(m(t)\)</span> est à bande limitée : <span class="math notranslate nohighlight">\(M(f)=0\)</span> pour <span class="math notranslate nohighlight">\(|f|&gt;1\)</span> kHz.
 Il est modulé en amplitude par une porteuse sinusoïdale de fréquence <span class="math notranslate nohighlight">\(f_p=1\)</span> kHz :</p>
@@ -526,8 +518,8 @@ x(t) = m(t) \sin(2\pi f_p t)
 <p>où le filtre passe-bas <span class="math notranslate nohighlight">\(h(t)\)</span> est idéal, de gain 2 et de fréquence de coupure <span class="math notranslate nohighlight">\(f_c=1\)</span> kHz.
 Déterminez <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
 </section>
-<section id="exercice-12">
-<h2>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers cette rubrique">#</a></h2>
+<section id="exercice-11">
+<h2>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers cette rubrique">#</a></h2>
 <!-- Source : Ventre exo 2.1 -->
 <p>Lorsque Canal+ émettait encore en analogique, le son <span class="math notranslate nohighlight">\(s(t)\)</span> était chiffré en inversant son spectre comme schématisé ci-dessous.
 Proposez une technique pour réaliser cette opération.</p>
@@ -535,8 +527,8 @@ Proposez une technique pour réaliser cette opération.</p>
 <a class="reference internal image-reference" href="../_images/canalplus.png"><img alt="../_images/canalplus.png" src="../_images/canalplus.png" style="width: 100%;" /></a>
 </figure>
 </section>
-<section id="exercice-13">
-<h2>Exercice 13<a class="headerlink" href="#exercice-13" title="Lien permanent vers cette rubrique">#</a></h2>
+<section id="exercice-12">
+<h2>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>La figure ci-dessous est tirée de la publication scientifique</p>
 <blockquote>
 <div><p>R. Reiz, C. Gordan, D. Purcaru &amp; C. Kokkonis, « Using Advanced Signal Processing Methods for DTMF Detection »,
@@ -632,7 +624,6 @@ c’est une maladresse des auteurs…) ?</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-10">Exercice 10</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-11">Exercice 11</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-12">Exercice 12</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-13">Exercice 13</a></li>
 </ul>
   </nav></div>
 

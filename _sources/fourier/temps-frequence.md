@@ -6,7 +6,8 @@ Les transformations de Fourier font ressortir le contenu fréquentiel d'un signa
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
 comme des changements brusques ou des modifications de fréquence.
 
-<div class="example">
+::::{admonition} Exemple
+:class: exemple
     
 La {numref}`F:temps-frequence:deux-sinus` représente deux signaux et leurs spectres respectifs.
 Ces deux signaux ont en commun le fait qu'ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
@@ -23,7 +24,7 @@ name: F:temps-frequence:deux-sinus
 Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.
 ```
 
-</div>
+::::
 
 Pour répondre à la difficulté d'analyser les localisations temporelles des fréquences,
 des outils de « temps-fréquence » ont été développés,
@@ -151,12 +152,11 @@ Découpage du plan temps-fréquence pour quatre représentations d'un signal.
 L'idéal serait d'avoir une représentation temps-fréquence très résolue à la fois en temps et en fréquence.
 Mais ce n'est pas possible.
 
-On peut expliquer cela par le fait que la fenêtre $w$ et de durée limitée et que son énergie est contenue dans un intervalle fréquentiel.
+On peut expliquer cela par le fait que la fenêtre $w$ est de durée limitée et que son énergie est contenue dans un intervalle fréquentiel.
 Ces deux intervalles représentent une zone délimitée dans le plan temps-fréquence et définissent la résolution de la représentation temps-fréquence.
 Or, il est impossible d'avoir une zone qui se réduise à un point
-pour avoir une très bonne localisation à la fois en temps et en fréquence.
-
-Ce phénomène est le principe d'incertitude de Gabor-Heisenberg.
+pour avoir une très bonne localisation à la fois en temps et en fréquence :
+ce phénomène est le principe d'incertitude de Gabor-Heisenberg.
 
 C'est d'ailleurs ce qui explique la propriété de changement d'échelle des transformations de Fourier :
 la contraction dans un domaine implique une dilatation dans l'autre domaine.

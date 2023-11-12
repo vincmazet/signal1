@@ -185,8 +185,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
@@ -367,6 +365,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changement-d-echelle">Changement d’échelle</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#translation">Translation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretisation-et-periodicite">Discrétisation et périodicité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dualite">Dualité</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theoreme-de-parsevalplancherel">Théorème de Parseval–Plancherel</a></li>
@@ -448,7 +447,7 @@ et à un « déphasage » en fréquentiel.</p>
 </section>
 <section id="discretisation-et-periodicite">
 <h3>Discrétisation et périodicité<a class="headerlink" href="#discretisation-et-periodicite" title="Lien permanent vers cette rubrique">#</a></h3>
-<p>À partir du tableau synthétisant les différentes transformées de Fourier (fait en exercice de TD),
+<p>À partir du tableau synthétisant les différentes transformées de Fourier,
 on constate que la discrétisation de l’espace d’un domaine est équivalent à la périodicité du signal dans l’autre domaine.
 Par conséquent, l’aspect continu de l’espace d’un domaine est équivalent à l’apériodicité du signal dans l’autre domaine.</p>
 <p>Autrement dit :</p>
@@ -469,6 +468,18 @@ Par conséquent, l’aspect continu de l’espace d’un domaine est équivalent
     <span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad\)</span>
     spectre continu en fréquence
 </center>
+</section>
+<section id="dualite">
+<h3>Dualité<a class="headerlink" href="#dualite" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>La propriété de dualité indique que si <span class="math notranslate nohighlight">\(x(t)\)</span> a pour transformée de Fourier <span class="math notranslate nohighlight">\(X(f)\)</span>,
+alors <span class="math notranslate nohighlight">\(X(t)\)</span> a pour transformée de Fourier <span class="math notranslate nohighlight">\(x(-f)\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) \quad\xrightarrow{\;\mathcal{F}\;}\quad X(f)
+\qquad\Leftrightarrow\qquad
+X(t) \quad\xrightarrow{\;\mathcal{F}\;}\quad x(-f).
+\]</div>
+<p>La propriété de dualité est utile pour obtenir la transformée de Fourier d’un signal lorsque celle-ci est compliquée à calculer.</p>
 </section>
 </section>
 <section id="theoreme-de-parsevalplancherel">
@@ -501,18 +512,28 @@ x(t) = \mathcal{F}^{-1}\big[\mathcal{F}[x(t)]\big].
 <li><p><span class="math notranslate nohighlight">\(x(t)\)</span> a un nombre fini de minima et de maxima (dans un intervalle fini),</p></li>
 <li><p><span class="math notranslate nohighlight">\(x(t)\)</span> a un nombre fini de discontinuités (dans un intervalle fini), et ces discontinuités sont elles-mêmes finies.</p></li>
 </ul>
+<figure class="align-default" id="f-props-fourier-dirichlet">
+<img alt="../_images/dirichlet.svg" src="../_images/dirichlet.svg" /><figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Exemples de signaux ne vérifiant pas les conditions de Dirichlet.</span><a class="headerlink" href="#f-props-fourier-dirichlet" title="Lien permanent vers cette image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="phenomene-de-gibbs">
 <h2>Phénomène de Gibbs<a class="headerlink" href="#phenomene-de-gibbs" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Le phénomène de Gibbs est l’apparition d’oscillations au abords des discontinuités d’un signal,
-lorsque celui-ci est reconstruit à partir des coefficients de sa série de Fourier.
-On comprend que si la reconstruction n’utilise qu’une partie des coefficients de la série de Fourier,
-alors le signal reconstruit sera différent du signal original.
-Lorsque le nombre de coefficients augmente, la reconstruction se rapproche du signal,
-sauf au discontinuités où il se produit des oscillations qui ne peuvent s’atténuer.</p>
+<p>Le phénomène de Gibbs est l’apparition d’oscillations au abords des discontinuités d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span>,
+lorsque celui-ci est reconstruit à partir des coefficients <span class="math notranslate nohighlight">\(X[k]\)</span> de sa série de Fourier.</p>
+<p>On comprend que si la reconstruction n’utilise qu’une partie des coefficients de la série de Fourier et pas une infinité,
+alors le signal reconstruit sera différent du signal original :</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) \neq \sum_{k=-K}^{+K} X[k] e^{+j 2 \pi k t / T}
+\qquad\text{si } K &lt; +\infty.
+\]</div>
+<p>Lorsque <span class="math notranslate nohighlight">\(K\)</span> augmente, alors la reconstruction se rapproche du signal.
+Cependant, on aura toujours un écart entre le signal reconstruit et le signal original au niveau des discontinuités car il se produit des oscillations qui ne peuvent s’atténuer.</p>
 <figure class="align-default" id="f-props-fourier-gibbs">
 <img alt="../_images/gibbs.svg" src="../_images/gibbs.svg" /><figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Reconstruction d’un créneau à partir de quelques coefficients de sa série de Fourier discrète.</span><a class="headerlink" href="#f-props-fourier-gibbs" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Reconstruction d’un créneau à partir de quelques coefficients de sa série de Fourier discrète.</span><a class="headerlink" href="#f-props-fourier-gibbs" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -591,6 +612,7 @@ sauf au discontinuités où il se produit des oscillations qui ne peuvent s’at
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changement-d-echelle">Changement d’échelle</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#translation">Translation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretisation-et-periodicite">Discrétisation et périodicité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dualite">Dualité</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theoreme-de-parsevalplancherel">Théorème de Parseval–Plancherel</a></li>

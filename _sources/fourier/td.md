@@ -46,15 +46,18 @@
   Que constatez-vous ?
   <!-- Même module, phase différente. -->
   
-
 ## Exercice 3
+<!-- Source : Duvaut exercice 1.1.2 -->
+
+Soit $x(t)$ un signal réel. Quelle est la relation entre la transformée de Fourier de $x(t)$ et celle de $x(t)\times\cos(2\pi f_0 t)$ ?
+
+## Exercice 4
 <!-- Source : cours de C. Doignon -->
 <!-- X(f) = 1/(a+j2\pi f) -->
 
 Calculez la transformée de Fourier du signal $x(t) = \exp(-at)\,u(t)$ où $a$ est un réel strictement positif.
 
-
-## Exercice 4
+## Exercice 5
 
 Le module du spectre d'un signal musical $m(t)$ est schématisé ci-dessous (la phase n'a pas d'importance dans cet exercice) :
 
@@ -77,16 +80,14 @@ Le deuxième terme de cette équation est la «&nbsp;porteuse&nbsp;» qui est mo
 
 * Une autre station de radio désire elle aussi transmettre un signal musical, dont la fréquence maximale est 8000 Hz.
   Proposez une valeur de la fréquence de la porteuse de ce deuxième programme.
-  
 
-## Exercice 5
+## Exercice 6
 
 * Quel est, intuitivement, le spectre d'un signal temporel constant ? <!-- un dirac en 0 car pas de sinusoide -->
 * En déduire le spectre d'une impulsion de Dirac centrée en 0. <!-- dualité : c'est une constante -->
 * Qu'en concluez-vous sur la composition fréquentielle d'une impulsion de Dirac ? <!-- contient toutes les fréquences en quantité égale -->
 
-
-## Exercice 6
+## Exercice 7
 <!-- Inspiré de Oppenheim 4.25 -->
 
 Le signal $x(t)$ est représenté ci-dessous.
@@ -108,8 +109,7 @@ Répondez aux questions suivantes sans calculer explicitement $X(f)$.
 
 * Donnez $\int|X(f)|^2\,df$
 
-
-## Exercice 7
+## Exercice 8
 <!-- Source : Oppenheim 4.21 -->
 
 Calculez la transformée de Fourier du signal
@@ -122,25 +122,11 @@ $$
   \end{cases}
 $$
 
-
-## Exercice 8
-<!-- Source : Duvaut exercice 1.1.1 -->
-
-Soit $x(t)$ un signal réel. Quelle est la relation entre la transformée de Fourier de $x(t)$ et celle de $x(-t)$ ?
-
-
 ## Exercice 9
-<!-- Source : Duvaut exercice 1.1.2 -->
-
-Soit $x(t)$ un signal réel. Quelle est la relation entre la transformée de Fourier de $x(t)$ et celle de $x(t)\times\cos(2\pi f_0 t)$ ?
-
-
-## Exercice 10
 
 Calculez la transformée de Fourier du signal $\mathrm{rect}(t)\times\cos(2\pi f_p t)$.
 
-
-## Exercice 11
+## Exercice 10
 <!-- Source : Oppenheim exo 8.3 -->
 
 Le signal $m(t)$ est à bande limitée : $M(f)=0$ pour $|f|>1$ kHz.
@@ -161,8 +147,7 @@ name: F:td-fourier:chaine-modulation
 où le filtre passe-bas $h(t)$ est idéal, de gain 2 et de fréquence de coupure $f_c=1$ kHz.
 Déterminez $y(t)$.
 
-
-## Exercice 12
+## Exercice 11
 <!-- Source : Ventre exo 2.1 -->
 
 Lorsque Canal+ émettait encore en analogique, le son $s(t)$ était chiffré en inversant son spectre comme schématisé ci-dessous.
@@ -174,8 +159,7 @@ width: 100%
 name: F:td-fourier:canalplus
 ```
 
-
-## Exercice 13
+## Exercice 12
 
 La figure ci-dessous est tirée de la publication scientifique
 > R. Reiz, C. Gordan, D. Purcaru & C. Kokkonis, « Using Advanced Signal Processing Methods for DTMF Detection »,

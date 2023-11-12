@@ -70,7 +70,7 @@ La translation dans un domaine correspond à une multiplication par une exponent
 
 ### Discrétisation et périodicité
 
-À partir du tableau synthétisant les différentes transformées de Fourier (fait en exercice de TD),
+À partir du tableau synthétisant les différentes transformées de Fourier,
 on constate que la discrétisation de l'espace d'un domaine est équivalent à la périodicité du signal dans l'autre domaine.
 Par conséquent, l'aspect continu de l'espace d'un domaine est équivalent à l'apériodicité du signal dans l'autre domaine.
 
@@ -93,6 +93,20 @@ Autrement dit :
     <span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad\)</span>
     spectre continu en fréquence
 </center>
+
+### Dualité
+
+La propriété de dualité indique que si $x(t)$ a pour transformée de Fourier $X(f)$,
+alors $X(t)$ a pour transformée de Fourier $x(-f)$ :
+
+$$
+x(t) \quad\xrightarrow{\;\mathcal{F}\;}\quad X(f)
+\qquad\Leftrightarrow\qquad
+X(t) \quad\xrightarrow{\;\mathcal{F}\;}\quad x(-f).
+$$
+
+La propriété de dualité est utile pour obtenir la transformée de Fourier d'un signal lorsque celle-ci est compliquée à calculer.
+
 
 ## Théorème de Parseval–Plancherel
 
@@ -126,14 +140,28 @@ Les conditions de Dirichlet sont au nombre de trois :
 
 * $x(t)$ a un nombre fini de discontinuités (dans un intervalle fini), et ces discontinuités sont elles-mêmes finies.
 
+```{figure} dirichlet.svg
+---
+name: F:props-fourier:dirichlet
+---
+Exemples de signaux ne vérifiant pas les conditions de Dirichlet.
+```
+
 ## Phénomène de Gibbs
 
-Le phénomène de Gibbs est l'apparition d'oscillations au abords des discontinuités d'un signal,
-lorsque celui-ci est reconstruit à partir des coefficients de sa série de Fourier.
-On comprend que si la reconstruction n'utilise qu'une partie des coefficients de la série de Fourier,
-alors le signal reconstruit sera différent du signal original.
-Lorsque le nombre de coefficients augmente, la reconstruction se rapproche du signal,
-sauf au discontinuités où il se produit des oscillations qui ne peuvent s'atténuer.
+Le phénomène de Gibbs est l'apparition d'oscillations au abords des discontinuités d'un signal $x(t)$,
+lorsque celui-ci est reconstruit à partir des coefficients $X[k]$ de sa série de Fourier.
+
+On comprend que si la reconstruction n'utilise qu'une partie des coefficients de la série de Fourier et pas une infinité,
+alors le signal reconstruit sera différent du signal original :
+
+$$
+x(t) \neq \sum_{k=-K}^{+K} X[k] e^{+j 2 \pi k t / T}
+\qquad\text{si } K < +\infty.
+$$
+
+Lorsque $K$ augmente, alors la reconstruction se rapproche du signal.
+Cependant, on aura toujours un écart entre le signal reconstruit et le signal original au niveau des discontinuités car il se produit des oscillations qui ne peuvent s'atténuer.
 
 ```{figure} gibbs.svg
 ---

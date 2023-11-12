@@ -185,8 +185,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
 <ul class="nav bd-sidenav">
@@ -380,8 +378,9 @@ document.write(`
 <p>Les transformations de Fourier font ressortir le contenu fréquentiel d’un signal
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
 comme des changements brusques ou des modifications de fréquence.</p>
-<div class="example">
-<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 16</span></a> représente deux signaux et leurs spectres respectifs.
+<div class="exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 17</span></a> représente deux signaux et leurs spectres respectifs.
 Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
 la différence étant l’ordre d’apparition des sinusoïdes.
 À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
@@ -390,7 +389,7 @@ mais la phase n’est pas interprétable :
 on ne connaît pas l’ordre dans lequel arrivent les deux sinusoïdes.</p>
 <figure class="align-default" id="f-temps-frequence-deux-sinus">
 <img alt="../_images/deux-sinus.svg" src="../_images/deux-sinus.svg" /><figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -500,16 +499,16 @@ alors que c’est l’inverse pour la représentation fréquentielle.</p>
 <figure class="align-default" id="f-temps-frequence">
 <a class="reference internal image-reference" href="../_images/temps-frequence.svg"><img alt="../_images/temps-frequence.svg" src="../_images/temps-frequence.svg" width="700px" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien permanent vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>L’idéal serait d’avoir une représentation temps-fréquence très résolue à la fois en temps et en fréquence.
 Mais ce n’est pas possible.</p>
-<p>On peut expliquer cela par le fait que la fenêtre <span class="math notranslate nohighlight">\(w\)</span> et de durée limitée et que son énergie est contenue dans un intervalle fréquentiel.
+<p>On peut expliquer cela par le fait que la fenêtre <span class="math notranslate nohighlight">\(w\)</span> est de durée limitée et que son énergie est contenue dans un intervalle fréquentiel.
 Ces deux intervalles représentent une zone délimitée dans le plan temps-fréquence et définissent la résolution de la représentation temps-fréquence.
 Or, il est impossible d’avoir une zone qui se réduise à un point
-pour avoir une très bonne localisation à la fois en temps et en fréquence.</p>
-<p>Ce phénomène est le principe d’incertitude de Gabor-Heisenberg.</p>
+pour avoir une très bonne localisation à la fois en temps et en fréquence :
+ce phénomène est le principe d’incertitude de Gabor-Heisenberg.</p>
 <p>C’est d’ailleurs ce qui explique la propriété de changement d’échelle des transformations de Fourier :
 la contraction dans un domaine implique une dilatation dans l’autre domaine.
 Les fenêtres qui conduisent à la meilleur location temps-fréquence sont des gaussiennes :
@@ -521,7 +520,7 @@ Elle s’applique donc aux signaux qui sont lentement stationnaires,
 par exemple dans le domaine biomédical, en géophysique ou en traitement de la parole.</p>
 <p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes.
 Avec cette transformée, la résolution en temps et en fréquence varie en fonction de la fréquence
-(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 17</span></a>).</p>
+(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 18</span></a>).</p>
 <!-- (d'après un exemple de PFlandrin) principe d'incertitude : pour observer une fréquence (oscillation), il faut le faire sur un axe suffisamment long. De même, pour mesurer la vitesse d'un objet, il vaut mieux chornométrer en deux emplacements éloignés (bonne estimation de la vitesse, mais pas de la position : à quelle endroit exactement y a-t-il cette vitesse ?). Si les deux emplacements sont très proches (bonne estimation de la position), mais mauvaise estimation de la vitesse
  --></section>
 </section>
