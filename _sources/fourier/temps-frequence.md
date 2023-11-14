@@ -160,7 +160,7 @@ ce phénomène est le principe d'incertitude de Gabor-Heisenberg.
 
 C'est d'ailleurs ce qui explique la propriété de changement d'échelle des transformations de Fourier :
 la contraction dans un domaine implique une dilatation dans l'autre domaine.
-Les fenêtres qui conduisent à la meilleur location temps-fréquence sont des gaussiennes :
+Les fenêtres qui conduisent à la meilleure location temps-fréquence sont des gaussiennes :
 on parle alors d'analyse de Gabor.
 
 La tranformée de Fourier à court terme a l'avantage d'être très simple.
