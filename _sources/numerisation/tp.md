@@ -17,11 +17,10 @@ En musique, la note _la_ correspond à une sinusoïde de fréquence 440 Hz.
   
 ## Représentation temps-fréquence
 
-<!-- Le fichier bigben.wav est un enregistrement d'une partie de la sonnerie de Big Ben. -->
 Le fichier <a href="../_static/gamme.wav">gamme.wav</a> est un enregistrement d'une gamme musicale au piano.
 Nous allons chercher quelles sont les notes jouées.
 
-* Chargez et affichez le signal.
+* Chargez (`scipy.io.wavfile.read`) et affichez le signal.
 
 * Vérifiez sur la TFD qu'il n'est pas facile de trouver la partition musicale correspondante.
 

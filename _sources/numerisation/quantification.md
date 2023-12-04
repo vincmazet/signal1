@@ -19,36 +19,37 @@ où $\lfloor\cdot\rfloor$ est la [partie entière](https://www.bibmath.net/dico/
 
 La {numref}`F:quantification:signal` représente un exemple de quantification uniforme par arrondi pour $K=8$ niveaux de quantification et $q=0,3$.
 
-```{figure} quantification-signal.svg
+```{figure} quantification-signal-U.svg
 ---
 width: 700px
 name: F:quantification:signal
 ---
-Exemple de quantification d'un signal $x(t)$ sur $K=8$ niveaux.
+Exemple de quantification uniforme par arrondi d'un signal $x(t)$ sur $K=8$ niveaux.
 ```
 
 La « caractéristique de quantification » illustre la quantification utilisée.
 C'est la courbe représentant $x_q$ en fonction de $x$, elle a donc la forme d'une fonction en escalier ({numref}`F:quantification:caracteristique`).
 
-```{figure} quantification-caracteristique.svg
+```{figure} quantification-caracteristique-U.svg
 ---
 width: 400px
 name: F:quantification:caracteristique
 ---
-Caractéristique de quantification d'une quantification uniforme par arrondi sur $K=8$ niveaux.
+Caractéristique d'une quantification uniforme par arrondi sur $K=8$ niveaux.
 ```
 
 Le choix du pas de quantification $q$ doit être déterminé en fonction de la dynamique du signal
 qui est la différence entre ses valeurs extrêmes $x_\mathrm{min}$ et $x_\mathrm{max}$.
 Puisqu'une quantification sur $K$ niveaux correspond à une amplitude maximale de $(K-1)q$,
-alors le pas de quantification est égale à :
+alors le pas de quantification est égal à :
 
 $$
 q = \frac{x_\mathrm{max}-x_\mathrm{min}}{K-1}.
 $$
 
 Dans le cas où $q$ est plus petit que le deuxième membre de cette équation,
-on les amplitudes extrêmes du signal seront mal quantifiées, comme c'est le cas dans l'exemple de la {numref}`F:quantification:signal`.
+alors les amplitudes extrêmes du signal seront mal quantifiées
+et il se produira une saturation.
 
 
 ## Erreur de quantification
@@ -59,18 +60,17 @@ Ce n'est pas le cas pour la quantification :
 elle engendre une erreur puisque le signal quantifié $x_q$ n'a pas les mêmes valeurs que le signal non quantifié $x$.
 La différence $\varepsilon(t) = x(t) - x_q(t)$ est appelée « erreur de quantification » (cf. {numref}`F:quantification-erreur`).
 
-```{figure} quantification-erreur.svg
+```{figure} quantification-erreur-U.svg
 ---
 width: 700px
 name: F:quantification-erreur
 ---
 Erreur de quantification sur l'exemple précédent (en rouge).
 La zone en rouge pâle correspond à l'erreur maximale théorique.
-L'erreur dépasse cette zone autour de 0,4 et 0,8 car le pas de quantification est mal défini par rapport à la dynamique du signal.
 ```
 
-Dans le cas où $q$ est correctement défini, la valeur maximale de cette erreur est la moitié du pas de quantification : $q/2$.
-Sa moyenne est (statistiquement) nulle et sa puissance est (statistiquement) égale à $q^2/12$ (dans l'hypothèse d'un signal $x(t)$ distribué uniformément).
+On peut montrer que la valeur maximale de l'erreur de quantification est la moitié du pas de quantification : $q/2$.
+Sa moyenne est (statistiquement) nulle et sa puissance est (statistiquement) égale à $q^2/12$ (dans l'hypothèse d'un signal $x(t)$ distribué uniformément et sans saturation).
 
 
 ## Quantification non uniforme
@@ -85,11 +85,19 @@ Par exemple, l'application d'une transformation non linéaire sur le signal avan
 correspond à une quantification non uniforme.
 En téléphonie, la « loi A » permet d'obtenir la quantification représentée {numref}`F:quantification:caracteristique-A`.
 
+```{figure} quantification-signal-A.svg
+---
+width: 700px
+name: F:quantification:signal-A
+---
+Exemple de quantification non uniforme d'un signal $x(t)$ sur $K=8$ niveaux.
+```
+
 ```{figure} quantification-caracteristique-A.svg
 ---
 width: 400px
 name: F:quantification:caracteristique-A
 ---
-Caractéristique de quantification d'une quantification uniforme par arrondi sur $N=8$ niveaux.
+Caractéristique d'une quantification non uniforme sur $N=8$ niveaux.
 ```
 

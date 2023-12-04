@@ -195,22 +195,69 @@ Les exemples ci-dessous illustrent l'effet du repliement spectral sur différent
 `````{tab-set}
 
 ````{tab-item} Signal
-Un cosinus de fréquence 6 Hz (en gris) est échantillonné à 6,5 Hz.
-Le signal obtenu avec l'échantillonnage est un cosinus de fréquence 0,5 Hz (points bleus).
+Un cosinus de fréquence 6 Hz (en bleu) est échantillonné à 6,5 Hz.
+Le signal obtenu avec l'échantillonnage est un cosinus de fréquence 0,5 Hz (points oranges).
 
-```{figure} aliasing-signal.png
----
-width: 400px
+```{figure} aliasing-signal.svg
 ```
+````
+
+````{tab-item} Son
+Un son, initialement échantillonné à 44 100 Hz, est sous-échantillonné à une nouvelle fréquence.
+Il est ensuite rééchantillonné à 44 100 Hz pour que le haut-parleur puisse l'émettre convenablement
+(mais ce rééchantillonnage ne replace pas les fréquences repliées aux bonnes valeurs !).
+
+Son original ($f_e=$ 44 100 Hz)
+
+<audio controls src="../_static/Elise.wav">
+            <a href="../_static/Elise.wav">Son original</a>
+</audio>
+
+Son rééchantillonné à $f_e=$ 4410 Hz
+
+<audio controls src="../_static/Elise-4410.wav">
+            <a href="../_static/Elise-4410.wav">Son rééchantillonné 4410 Hz</a>
+</audio>
+
+Son rééchantillonné à $f_e=$ 2205 Hz
+
+<audio controls src="../_static/Elise-2205.wav">
+            <a href="../_static/Elise-2205.wav">Son rééchantillonné 2205 Hz</a>
+</audio>
+
+Son rééchantillonné à $f_e=$ 1470 Hz
+
+<audio controls src="../_static/Elise-1470.wav">
+            <a href="../_static/Elise-1470.wav">Son rééchantillonné 1470 Hz</a>
+</audio>
+
 ````
 
 ````{tab-item} Image
 Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l'image présente des structures très fines par rapport aux pixels.
-```{figure} aliasing-photo.png
+
+:::{figure} aliasing-moi-4.jpg
 ---
-width: 400px
-```
+---
+Image redimensionnée d'un facteur 4.
+:::
+:::{figure} aliasing-moi-5.jpg
+---
+---
+Image redimensionnée d'un facteur 5.
+:::
+:::{figure} aliasing-moi-6.jpg
+---
+---
+Image redimensionnée d'un facteur 6.
+:::
+:::{figure} aliasing-moi-9.jpg
+---
+---
+Image redimensionnée d'un facteur 9.
+:::
+
 ````
 
 ````{tab-item} Vidéo
