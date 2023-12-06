@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercices sur feuille &#8212; Traitement du signal 1</title>
+    <title>Série de Fourier d’un créneau &#8212; Traitement du signal 1</title>
   
   
   
@@ -66,11 +66,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'convolution/td';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fourier/tpc1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Convolution" href="tdc.html" />
-    <link rel="prev" title="Produit de convolution" href="convolution.html" />
+    <link rel="next" title="Transformée de Fourier discrète d’un signal numérique" href="tpc2.html" />
+    <link rel="prev" title="Exercices sur machine" href="tp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -172,14 +172,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Exercices sur feuille</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tdc.html">Convolution</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tpc2.html">Produit de convolution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tpc2.html">Produit de convolution</a></li>
 </ul>
 </li>
 </ul>
@@ -198,12 +198,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../vectoriel/td.html">Exercices sur feuille</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse de Fourier</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../fourier/fourier.html">Transformations de Fourier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier/proprietes.html">Propriétés des transformations de Fourier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier/temps-frequence.html">Représentation temps-fréquence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../fourier/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../fourier/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fourier.html">Transformations de Fourier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proprietes.html">Propriétés des transformations de Fourier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temps-frequence.html">Représentation temps-fréquence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Série de Fourier d’un créneau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tpc2.html">Transformée de Fourier discrète d’un signal numérique</a></li>
 </ul>
 </li>
 </ul>
@@ -275,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/convolution/td.md" target="_blank"
+      <li><a href="../_sources/fourier/tpc1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +287,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -344,9 +346,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -357,22 +357,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercices sur feuille</h1>
+    <h1>Série de Fourier d’un créneau</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contenu </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -382,67 +371,44 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="exercices-sur-feuille">
-<h1>Exercices sur feuille<a class="headerlink" href="#exercices-sur-feuille" title="Lien permanent vers cette rubrique">#</a></h1>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Représentez les signaux suivants :</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="serie-de-fourier-d-un-creneau">
+<h1>Série de Fourier d’un créneau<a class="headerlink" href="#serie-de-fourier-d-un-creneau" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>On considère le signal créneau <span class="math notranslate nohighlight">\(y(t)\)</span> de période <span class="math notranslate nohighlight">\(2T\)</span> défini par :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y(t) =
+\begin{cases}
+  A  \quad  &amp;\text{si}\ -\frac{T}{2} \leq t \leq \frac{T}{2}, \\
+  0  \quad  &amp;\text{sinon}
+\end{cases}
+\end{split}\]</div>
+<p>avec <span class="math notranslate nohighlight">\(A=1\)</span> et <span class="math notranslate nohighlight">\(T = 1\)</span>.</p>
+<p>Sa série de Fourier est égale à :</p>
 <div class="math notranslate nohighlight">
 \[
-\mathrm{rect}(t) * \delta(t),     \qquad
-\mathrm{rect}(t) * \delta(t-1),   \qquad
-\mathrm{rect}(t) * Ш_2(t).
+Y[k] = \frac{A}{2} \mathrm{sinc}\left(\frac{k}{2}\right).
 \]</div>
-</section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Calculez le produit de convolution pour les couples de signaux discrets suivants.
-Indiquez également quel est l’effet de la convolution sur le signal <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-x[n] =
-\begin{cases}
-  n \quad\text{pour}\, n\in\{0,\dots,5\} \\
-  0 \quad\text{ailleurs}
-\end{cases}
-\quad\text{et}\quad
-y[n] =
-\begin{cases}
-  3 \quad\text{pour}\, n=5 \\
-  0 \quad\text{ailleurs}
-\end{cases}
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-x[n] =
-\begin{cases}
-  1 \quad\text{pour } n=-1 \text{ ou } n=1 \\
-  2 \quad\text{pour } n=0 \\
-  0 \quad\text{ailleurs}
-\end{cases}
-\quad\text{et}\quad
-y[n] =
-\begin{cases}
-  -1 \quad\text{pour } n=-1 \\
-  1 \quad\text{pour } n=1 \\
-  0 \quad\text{ailleurs}
-\end{cases}
-\end{split}\]</div>
-</section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Calculez le produit de convolution <span class="math notranslate nohighlight">\(x*x\)</span> où <span class="math notranslate nohighlight">\(x(t) = A\)</span> sur <span class="math notranslate nohighlight">\([-T;T]\)</span> et <span class="math notranslate nohighlight">\(0\)</span> ailleurs.</p>
-</section>
-<section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>On peut obtenir un écho dans une grande salle vide, une grotte ou en face d’une montagne,
-lorsqu’un son émis (par une personne par exemple) est réfléchi sur plusieurs parois
-our revenir jusqu’à son lieu d’émission.
-Ce phénomène peut se représente comme un produit de convolution <span class="math notranslate nohighlight">\(y = x*h\)</span>.
-À quoi correspondent les signaux <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(h\)</span> ?</p>
-</section>
-<div class="toctree-wrapper compound">
+<p>Comme elle est à valeurs complexes, sa représentation est séparée en module et argument :</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/50d7968870e5cd3cebf93b43d73e88b81bb60938962da8a74f3bb166804ea810.png" src="../_images/50d7968870e5cd3cebf93b43d73e88b81bb60938962da8a74f3bb166804ea810.png" />
 </div>
+</div>
+<p>À partir de la série de Fourier, on peut revenir au signal temporel avec la série de Fourier inverse.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/70061d4e42259c653f36eedfa594f0501bfe249215a1a018c90a55e238cca383.png" src="../_images/70061d4e42259c653f36eedfa594f0501bfe249215a1a018c90a55e238cca383.png" />
+<img alt="../_images/30f5dcb7b2ecaacd5a7fd05ee354cbe7d7eaa0d4213b0e85371f75c1747b668e.png" src="../_images/30f5dcb7b2ecaacd5a7fd05ee354cbe7d7eaa0d4213b0e85371f75c1747b668e.png" />
+<img alt="../_images/0232c0990b35216bd695f8ab4393fde20227145f3220bb4e181955a04e2d9adc.png" src="../_images/0232c0990b35216bd695f8ab4393fde20227145f3220bb4e181955a04e2d9adc.png" />
+<img alt="../_images/1e622bfd1e051441cff5f8bba6b8c1028d70e977f1afc3efa9d04b0936f7d938.png" src="../_images/1e622bfd1e051441cff5f8bba6b8c1028d70e977f1afc3efa9d04b0936f7d938.png" />
+<img alt="../_images/4540fb80b3ec17a40d784c0fb44668fbb9b0223907ef3d5ed11ceaa6c91acaea.png" src="../_images/4540fb80b3ec17a40d784c0fb44668fbb9b0223907ef3d5ed11ceaa6c91acaea.png" />
+<img alt="../_images/1e85309e9d03683e90c12a7f9604b8815d0b300689b9de2bea61dc6f5b3348b2.png" src="../_images/1e85309e9d03683e90c12a7f9604b8815d0b300689b9de2bea61dc6f5b3348b2.png" />
+</div>
+</div>
+<p>On observe que lorsque <span class="math notranslate nohighlight">\(N\)</span> augmente, la reconstruction tend vers le créneau.
+Cependant, des oscillations apparaissent aux discontinuités du signal et ne peuvent s’annuler, même si <span class="math notranslate nohighlight">\(N\)</span> est très grand :
+c’est le phénomène de Gibbs.
+Le phénomène disparaît seulement pour <span class="math notranslate nohighlight">\(N \rightarrow +\infty\)</span></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -458,7 +424,7 @@ Ce phénomène peut se représente comme un produit de convolution <span class="
         },
         kernelOptions: {
             name: "python3",
-            path: "./convolution"
+            path: "./fourier"
         },
         predefinedOutput: true
     }
@@ -477,20 +443,20 @@ Ce phénomène peut se représente comme un produit de convolution <span class="
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="convolution.html"
+       href="tp.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Produit de convolution</p>
+        <p class="prev-next-title">Exercices sur machine</p>
       </div>
     </a>
     <a class="right-next"
-       href="tdc.html"
+       href="tpc2.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Convolution</p>
+        <p class="prev-next-title">Transformée de Fourier discrète d’un signal numérique</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -503,23 +469,6 @@ Ce phénomène peut se représente comme un produit de convolution <span class="
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenu
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
