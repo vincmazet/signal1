@@ -21,7 +21,7 @@
   X^*(f) = \sum_k X(f-kf_e).
   $$
   
-  La transformée de Fourier de $Ш_T(t)$ est $Ш_{1/T}(f)$.
+  La transformée de Fourier de $Ш_T(t)$ est $\frac{1}{T} Ш_{1/T}(f)$.
   
 
 ## Exercice 2
