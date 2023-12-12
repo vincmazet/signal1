@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Quantification &#8212; Traitement du signal 1</title>
+    <title>Interpolation &#8212; Traitement du signal 1</title>
   
   
   
@@ -66,11 +66,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'numerisation/quantification';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'numerisation/tpc3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Exercices sur feuille" href="td.html" />
-    <link rel="prev" title="Échantillonnage" href="echantillonnage.html" />
+    <link rel="next" title="Installer et utiliser Python" href="../annexes/python.html" />
+    <link rel="prev" title="Représentation temps-fréquence" href="tpc2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -213,12 +213,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="numerisation.html">Numérisation d’un signal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="echantillonnage.html">Échantillonnage</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Quantification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quantification.html">Quantification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="tpc1.html">Repliement spectral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tpc2.html">Représentation temps-fréquence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tpc3.html">Interpolation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Interpolation</a></li>
 </ul>
 </li>
 </ul>
@@ -282,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/numerisation/quantification.md" target="_blank"
+      <li><a href="../_sources/numerisation/tpc3.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -292,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -351,9 +351,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -364,21 +362,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Quantification</h1>
+    <h1>Interpolation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contenu </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">Principe</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erreur-de-quantification">Erreur de quantification</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantification-non-uniforme">Quantification non uniforme</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -388,88 +376,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="quantification">
-<span id="p-quantification"></span><h1>Quantification<a class="headerlink" href="#quantification" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>La quantification (<em>quantization</em>) consiste à transformer un signal à valeurs continues en un signal à valeurs discrètes.
-Ces valeurs discrètes correspondent à des « niveaux de quantification ».
-En pratique, elles sont représentées par un code binaire,
-c’est pourquoi le nombre de niveaux de quantification est souvent une puissance de deux.</p>
-<section id="principe">
-<h2>Principe<a class="headerlink" href="#principe" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>La « quantification uniforme par arrondi » est la méthode la plus plus simple : les niveaux de quantification sont répartis uniformément et distants de la même valeur <span class="math notranslate nohighlight">\(q\)</span> (appelée « pas de quantification »).
-Les valeurs que prend le signal non quantifié <span class="math notranslate nohighlight">\(x(t)\)</span> sont arrondies au niveau de quantification le plus proche :</p>
-<div class="math notranslate nohighlight">
-\[
-x_q(t) = q \times \left\lfloor \frac{x(t)}{q}+\frac{1}{2} \right\rfloor
-\]</div>
-<p>où <span class="math notranslate nohighlight">\(\lfloor\cdot\rfloor\)</span> est la <a class="reference external" href="https://www.bibmath.net/dico/index.php?action=affiche&amp;quoi=./p/partieentiere.html">partie entière</a>.</p>
-<p>La <a class="reference internal" href="#f-quantification-signal"><span class="std std-numref">Fig. 33</span></a> représente un exemple de quantification uniforme par arrondi pour <span class="math notranslate nohighlight">\(K=8\)</span> niveaux de quantification et <span class="math notranslate nohighlight">\(q=0,3\)</span>.</p>
-<figure class="align-default" id="f-quantification-signal">
-<a class="reference internal image-reference" href="../_images/quantification-signal-U.svg"><img alt="../_images/quantification-signal-U.svg" src="../_images/quantification-signal-U.svg" width="700px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Exemple de quantification uniforme par arrondi d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> sur <span class="math notranslate nohighlight">\(K=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-signal" title="Lien permanent vers cette image">#</a></p>
-</figcaption>
-</figure>
-<p>La « caractéristique de quantification » illustre la quantification utilisée.
-C’est la courbe représentant <span class="math notranslate nohighlight">\(x_q\)</span> en fonction de <span class="math notranslate nohighlight">\(x\)</span>, elle a donc la forme d’une fonction en escalier (<a class="reference internal" href="#f-quantification-caracteristique"><span class="std std-numref">Fig. 34</span></a>).</p>
-<figure class="align-default" id="f-quantification-caracteristique">
-<a class="reference internal image-reference" href="../_images/quantification-caracteristique-U.svg"><img alt="../_images/quantification-caracteristique-U.svg" src="../_images/quantification-caracteristique-U.svg" width="400px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Caractéristique d’une quantification uniforme par arrondi sur <span class="math notranslate nohighlight">\(K=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique" title="Lien permanent vers cette image">#</a></p>
-</figcaption>
-</figure>
-<p>Le choix du pas de quantification <span class="math notranslate nohighlight">\(q\)</span> doit être déterminé en fonction de la dynamique du signal
-qui est la différence entre ses valeurs extrêmes <span class="math notranslate nohighlight">\(x_\mathrm{min}\)</span> et <span class="math notranslate nohighlight">\(x_\mathrm{max}\)</span>.
-Puisqu’une quantification sur <span class="math notranslate nohighlight">\(K\)</span> niveaux correspond à une amplitude maximale de <span class="math notranslate nohighlight">\((K-1)q\)</span>,
-alors le pas de quantification est égal à :</p>
-<div class="math notranslate nohighlight">
-\[
-q = \frac{x_\mathrm{max}-x_\mathrm{min}}{K-1}.
-\]</div>
-<p>Dans le cas où <span class="math notranslate nohighlight">\(q\)</span> est plus petit que le deuxième membre de cette équation,
-alors les amplitudes extrêmes du signal seront mal quantifiées
-et il se produira une saturation.</p>
-</section>
-<section id="erreur-de-quantification">
-<h2>Erreur de quantification<a class="headerlink" href="#erreur-de-quantification" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>On a vu que l”<a class="reference internal" href="echantillonnage.html#p-echantillonnage"><span class="std std-ref">échantillonnage</span></a> n’introduisait aucune erreur
-(à condition de respecter la condition <span class="math notranslate nohighlight">\(f_e &gt; 2 f_\mathrm{max}\)</span>).
-Ce n’est pas le cas pour la quantification :
-elle engendre une erreur puisque le signal quantifié <span class="math notranslate nohighlight">\(x_q\)</span> n’a pas les mêmes valeurs que le signal non quantifié <span class="math notranslate nohighlight">\(x\)</span>.
-La différence <span class="math notranslate nohighlight">\(\varepsilon(t) = x(t) - x_q(t)\)</span> est appelée « erreur de quantification » (cf. <a class="reference internal" href="#f-quantification-erreur"><span class="std std-numref">Fig. 35</span></a>).</p>
-<figure class="align-default" id="f-quantification-erreur">
-<a class="reference internal image-reference" href="../_images/quantification-erreur-U.svg"><img alt="../_images/quantification-erreur-U.svg" src="../_images/quantification-erreur-U.svg" width="700px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Erreur de quantification sur l’exemple précédent (en rouge).
-La zone en rouge pâle correspond à l’erreur maximale théorique.</span><a class="headerlink" href="#f-quantification-erreur" title="Lien permanent vers cette image">#</a></p>
-</figcaption>
-</figure>
-<p>On peut montrer que la valeur maximale de l’erreur de quantification est la moitié du pas de quantification : <span class="math notranslate nohighlight">\(q/2\)</span>.
-Sa moyenne est (statistiquement) nulle et sa puissance est (statistiquement) égale à <span class="math notranslate nohighlight">\(q^2/12\)</span> (dans l’hypothèse d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> distribué uniformément et sans saturation).</p>
-</section>
-<section id="quantification-non-uniforme">
-<h2>Quantification non uniforme<a class="headerlink" href="#quantification-non-uniforme" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Dans certaines applications, le signal présente rarement de grandes amplitudes mais il est souvent d’amplitude faible.
-C’est le cas des signaux de parole.
-Aussi, il est intéressant d’avoir une quantification où le pas de quantification est différent dans les faibles et les grandes amplitudes.
-Plus précisément, on privilégiera un pas de quantification faible pour les faibles amplitudes et grand pour les grandes amplitudes.
-Cela aboutit à une quantification non uniforme.</p>
-<p>Par exemple, l’application d’une transformation non linéaire sur le signal avant une quantification uniforme
-correspond à une quantification non uniforme.
-En téléphonie, la « loi A » permet d’obtenir la quantification représentée <a class="reference internal" href="#f-quantification-caracteristique-a"><span class="std std-numref">Fig. 37</span></a>.</p>
-<figure class="align-default" id="f-quantification-signal-a">
-<a class="reference internal image-reference" href="../_images/quantification-signal-A.svg"><img alt="../_images/quantification-signal-A.svg" src="../_images/quantification-signal-A.svg" width="700px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Exemple de quantification non uniforme d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> sur <span class="math notranslate nohighlight">\(K=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-signal-a" title="Lien permanent vers cette image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="f-quantification-caracteristique-a">
-<a class="reference internal image-reference" href="../_images/quantification-caracteristique-A.svg"><img alt="../_images/quantification-caracteristique-A.svg" src="../_images/quantification-caracteristique-A.svg" width="400px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Caractéristique d’une quantification non uniforme sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique-a" title="Lien permanent vers cette image">#</a></p>
-</figcaption>
-</figure>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="interpolation">
+<h1>Interpolation<a class="headerlink" href="#interpolation" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>On définit le facteur multiplicatif de la fréquence d’échantillonnage.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le signal considéré est échantillonné à 8820 Hz :</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/7ce8d78763bd3d7aadaf6040bbdfdf452b98722a11c6a5fb1c28956960676a7c.png" src="../_images/7ce8d78763bd3d7aadaf6040bbdfdf452b98722a11c6a5fb1c28956960676a7c.png" />
+</div>
+</div>
+<p>En ajoutant des zéros du part et d’autres du spectre, de sorte à avoir un signal 5 fois plus grand, on augmente automatiquement la fréquence d’échantillonnage, tout en conservant le même contenu fréquentiel. De fait, de nouveaux échantillons apparaissent dans le signal.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/370769e7aa06702761988084b226af6cbabe5036a8841501cf1de9598fe2a845.png" src="../_images/370769e7aa06702761988084b226af6cbabe5036a8841501cf1de9598fe2a845.png" />
+</div>
+</div>
+<p>On peut comparer la qualité de l’interpolation avec le signal original (échantillonné à 5 <span class="math notranslate nohighlight">\(\times\)</span> 8820 = 44100 Hz).</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/8634e3a6e57e1d553e105fef001b7efdf969e0bdf8005b5149808f3ee51257a3.png" src="../_images/8634e3a6e57e1d553e105fef001b7efdf969e0bdf8005b5149808f3ee51257a3.png" />
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -504,20 +438,20 @@ En téléphonie, la « loi A » permet d’obtenir la quantification représent�
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="echantillonnage.html"
+       href="tpc2.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Échantillonnage</p>
+        <p class="prev-next-title">Représentation temps-fréquence</p>
       </div>
     </a>
     <a class="right-next"
-       href="td.html"
+       href="../annexes/python.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Exercices sur feuille</p>
+        <p class="prev-next-title">Installer et utiliser Python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -530,22 +464,6 @@ En téléphonie, la « loi A » permet d’obtenir la quantification représent�
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenu
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">Principe</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erreur-de-quantification">Erreur de quantification</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantification-non-uniforme">Quantification non uniforme</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
