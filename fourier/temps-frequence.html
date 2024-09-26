@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="fr" >
+<html lang="fr" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Représentation temps-fréquence &#8212; Traitement du signal 1</title>
   
@@ -15,55 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=109105fe" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css?v=8dc5e944" />
     <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=ff8fa330"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=bcf87968"></script>
+    <script src="../_static/translations.js?v=041d0952"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fourier/temps-frequence';</script>
@@ -80,19 +76,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Passer au contenu principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Haut de page</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -114,12 +114,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,6 +142,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -142,10 +153,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Traitement du signal 1</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -162,34 +185,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../elementaire/tpc1.html">Représentation de signaux</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../convolution/tpc2.html">Produit de convolution</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
@@ -203,11 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="proprietes.html">Propriétés des transformations de Fourier</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Représentation temps-fréquence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tpc1.html">Série de Fourier d’un créneau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tpc2.html">Transformée de Fourier discrète d’un signal numérique</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Numérisation</span></p>
 <ul class="nav bd-sidenav">
@@ -215,12 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../numerisation/echantillonnage.html">Échantillonnage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../numerisation/quantification.html">Quantification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../numerisation/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../numerisation/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../numerisation/tpc1.html">Repliement spectral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../numerisation/tpc2.html">Représentation temps-fréquence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../numerisation/tpc3.html">Interpolation</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../numerisation/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
@@ -243,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -252,14 +251,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -334,26 +333,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -385,17 +386,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="representation-temps-frequence">
-<h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Lien permanent vers cette rubrique">#</a></h1>
+<h1>Représentation temps-fréquence<a class="headerlink" href="#representation-temps-frequence" title="Lien vers cette rubrique">#</a></h1>
 <!-- chirp = gazouilli -->
 <p>Les transformations de Fourier font ressortir le contenu fréquentiel d’un signal
 mais elles ne permettent pas facilement de localiser temporellement certains évènements qui surviennent dans le signal,
 comme des changements brusques ou des modifications de fréquence.</p>
 <div class="exemple admonition">
 <p class="admonition-title">Exemple</p>
-<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 17</span></a> représente deux signaux et leurs spectres respectifs.
+<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 16</span></a> représente deux signaux et leurs spectres respectifs.
 Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
 la différence étant l’ordre d’apparition des sinusoïdes.
 À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
@@ -403,8 +404,9 @@ d’après le module, on comprend que les signaux temporels sont constitués de 
 mais la phase n’est pas interprétable :
 on ne connaît pas l’ordre dans lequel arrivent les deux sinusoïdes.</p>
 <figure class="align-default" id="f-temps-frequence-deux-sinus">
-<img alt="../_images/deux-sinus.svg" src="../_images/deux-sinus.svg" /><figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/deux-sinus.svg" src="../_images/deux-sinus.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -412,7 +414,7 @@ on ne connaît pas l’ordre dans lequel arrivent les deux sinusoïdes.</p>
 des outils de « temps-fréquence » ont été développés,
 le plus simple étant la transformée de Fourier à court terme.</p>
 <section id="transformee-de-fourier-a-court-terme">
-<h2>Transformée de Fourier à court terme<a class="headerlink" href="#transformee-de-fourier-a-court-terme" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Transformée de Fourier à court terme<a class="headerlink" href="#transformee-de-fourier-a-court-terme" title="Lien vers cette rubrique">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Une fenêtre est un signal limité dans le temps qui est utilisé en le multipliant par un signal quelconque, de façon à en sélectionner une partie.</p>
@@ -440,61 +442,61 @@ autour de la fréquence <span class="math notranslate nohighlight">\(k\)</span> 
 Les figures ci-après représentent les spectrogrammes de quelques signaux.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<label class="sd-tab-label" for="sd-tab-item-0">
 Sinus à 50 et 200 Hz</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/tf-sin50200.svg"><img alt="../_images/tf-sin50200.svg" src="../_images/tf-sin50200.svg" width="800px" /></a>
+<a class="reference internal image-reference" href="../_images/tf-sin50200.svg"><img alt="../_images/tf-sin50200.svg" src="../_images/tf-sin50200.svg" style="width: 800px;" /></a>
 </figure>
 <p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<label class="sd-tab-label" for="sd-tab-item-1">
 Sinus à 200 et 50 Hz</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/tf-sin20050.svg"><img alt="../_images/tf-sin20050.svg" src="../_images/tf-sin20050.svg" width="800px" /></a>
+<a class="reference internal image-reference" href="../_images/tf-sin20050.svg"><img alt="../_images/tf-sin20050.svg" src="../_images/tf-sin20050.svg" style="width: 800px;" /></a>
 </figure>
 <p>L’ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.</p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<label class="sd-tab-label" for="sd-tab-item-2">
 Gaussienne modulée</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/tf-gaussienne.svg"><img alt="../_images/tf-gaussienne.svg" src="../_images/tf-gaussienne.svg" width="800px" /></a>
+<a class="reference internal image-reference" href="../_images/tf-gaussienne.svg"><img alt="../_images/tf-gaussienne.svg" src="../_images/tf-gaussienne.svg" style="width: 800px;" /></a>
 </figure>
 <p>L’instant d’apparition de l’oscillation, ainsi que sa fréquence, sont clairement visibles sur le spectrogramme.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<label class="sd-tab-label" for="sd-tab-item-3">
 Chirp</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/tf-chirp.svg"><img alt="../_images/tf-chirp.svg" src="../_images/tf-chirp.svg" width="800px" /></a>
+<a class="reference internal image-reference" href="../_images/tf-chirp.svg"><img alt="../_images/tf-chirp.svg" src="../_images/tf-chirp.svg" style="width: 800px;" /></a>
 </figure>
 <p>Un « chirp » est une sinusoïde dont la fréquence évolue en fonction du temps.
 Dans la nature, le chant des oiseaux, les vocalises des cétacés ou les ultrasons émis par les chauve-souris ressemblent à des chirps.
 Les chirps sont également émis par les sonars et les radars.</p>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<label class="sd-tab-label" for="sd-tab-item-4">
 Voyelles</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/tf-aeiou.svg"><img alt="../_images/tf-aeiou.svg" src="../_images/tf-aeiou.svg" width="800px" /></a>
+<a class="reference internal image-reference" href="../_images/tf-aeiou.svg"><img alt="../_images/tf-aeiou.svg" src="../_images/tf-aeiou.svg" style="width: 800px;" /></a>
 </figure>
 <p>Ce graphique représente l’enregistrement des voyelles françaises : elles sont facilement différentiables sur la représentation temps-fréquence.</p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<label class="sd-tab-label" for="sd-tab-item-5">
 Voyelle « i » dite par un homme et une femme</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/tf-homme-femme.svg"><img alt="../_images/tf-homme-femme.svg" src="../_images/tf-homme-femme.svg" width="800px" /></a>
+<a class="reference internal image-reference" href="../_images/tf-homme-femme.svg"><img alt="../_images/tf-homme-femme.svg" src="../_images/tf-homme-femme.svg" style="width: 800px;" /></a>
 </figure>
 <p>Une homme et une femme disent la voyelle « i » l’un après l’autre.
 Qui parle en premier ?</p>
 </div>
 <input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
+<label class="sd-tab-label" for="sd-tab-item-6">
 Lettre à Élise</label><div class="sd-tab-content docutils">
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/tf-elise.svg"><img alt="../_images/tf-elise.svg" src="../_images/tf-elise.svg" width="800px" /></a>
+<a class="reference internal image-reference" href="../_images/tf-elise.svg"><img alt="../_images/tf-elise.svg" src="../_images/tf-elise.svg" style="width: 800px;" /></a>
 </figure>
 <p>Les notes de musique sont bien visibles sur la représentation temps-fréquence.
 Certains artistes s’amusent également avec cette transformée, comme Aphex Twin sur <a class="reference external" href="https://youtu.be/M9xMuPWAZW8?t=305"><em>Formula</em></a>.</p>
@@ -507,14 +509,14 @@ ou la [_Symphonie du Nouveau Monde_](https://youtu.be/Txp-pHU2K6w?t=652) de Anto
  -->
 </section>
 <section id="resolution-du-plan-temps-frequence">
-<h2>Résolution du plan temps-fréquence<a class="headerlink" href="#resolution-du-plan-temps-frequence" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Résolution du plan temps-fréquence<a class="headerlink" href="#resolution-du-plan-temps-frequence" title="Lien vers cette rubrique">#</a></h2>
 <p>La STFT partage le plan temps-fréquence en zones égales, définissant ainsi la résolution de la représentation.
 À titre de comparaison, la représentation temporelle d’un signal est très résolue en temps mais pas du tout en fréquence,
 alors que c’est l’inverse pour la représentation fréquentielle.</p>
 <figure class="align-default" id="f-temps-frequence">
-<a class="reference internal image-reference" href="../_images/temps-frequence.svg"><img alt="../_images/temps-frequence.svg" src="../_images/temps-frequence.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/temps-frequence.svg"><img alt="../_images/temps-frequence.svg" src="../_images/temps-frequence.svg" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>L’idéal serait d’avoir une représentation temps-fréquence très résolue à la fois en temps et en fréquence.
@@ -535,9 +537,10 @@ Elle s’applique donc aux signaux qui sont lentement stationnaires,
 par exemple dans le domaine biomédical, en géophysique ou en traitement de la parole.</p>
 <p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes.
 Avec cette transformée, la résolution en temps et en fréquence varie en fonction de la fréquence
-(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 18</span></a>).</p>
+(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 17</span></a>).</p>
 <!-- (d'après un exemple de PFlandrin) principe d'incertitude : pour observer une fréquence (oscillation), il faut le faire sur un axe suffisamment long. De même, pour mesurer la vitesse d'un objet, il vaut mieux chornométrer en deux emplacements éloignés (bonne estimation de la vitesse, mais pas de la position : à quelle endroit exactement y a-t-il cette vitesse ?). Si les deux emplacements sont très proches (bonne estimation de la position), mais mauvaise estimation de la vitesse
- --></section>
+ -->
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -565,11 +568,10 @@ Avec cette transformée, la résolution en temps et en fréquence varie en fonct
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="proprietes.html"
@@ -589,10 +591,7 @@ Avec cette transformée, la résolution en temps et en fréquence varie en fonct
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -600,6 +599,7 @@ Avec cette transformée, la résolution en temps et en fréquence varie en fonct
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -630,9 +630,10 @@ Par Vincent Mazet (Université de Strasbourg, France)
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2023-2024.
+      © Copyright 2023-2025.
       <br/>
     
   </p>
@@ -646,7 +647,7 @@ Par Vincent Mazet (Université de Strasbourg, France)
   <div class="footer-item">
     
 <div class="extra_footer">
-  Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2020-2024 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
+  Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2020-2025 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
 </div>
   </div>
   
@@ -659,8 +660,8 @@ Par Vincent Mazet (Université de Strasbourg, France)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

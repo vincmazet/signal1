@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="fr" >
+<html lang="fr" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Signaux élémentaires &#8212; Traitement du signal 1</title>
   
@@ -15,55 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=109105fe" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css?v=8dc5e944" />
     <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=ff8fa330"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=bcf87968"></script>
+    <script src="../_static/translations.js?v=041d0952"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'elementaire/signaux-elementaires';</script>
@@ -80,19 +76,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Passer au contenu principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Haut de page</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -114,12 +114,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,6 +142,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -142,10 +153,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Traitement du signal 1</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -162,34 +185,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tdc.html">Correction</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tpc1.html">Représentation de signaux</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../convolution/tpc2.html">Produit de convolution</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
@@ -203,11 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../fourier/proprietes.html">Propriétés des transformations de Fourier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fourier/temps-frequence.html">Représentation temps-fréquence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fourier/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../fourier/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../fourier/tpc1.html">Série de Fourier d’un créneau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fourier/tpc2.html">Transformée de Fourier discrète d’un signal numérique</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../fourier/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Numérisation</span></p>
 <ul class="nav bd-sidenav">
@@ -215,12 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../numerisation/echantillonnage.html">Échantillonnage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../numerisation/quantification.html">Quantification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../numerisation/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../numerisation/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../numerisation/tpc1.html">Repliement spectral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../numerisation/tpc2.html">Représentation temps-fréquence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../numerisation/tpc3.html">Interpolation</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../numerisation/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
@@ -243,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -252,14 +251,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -334,26 +333,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -391,14 +392,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="signaux-elementaires">
-<h1>Signaux élémentaires<a class="headerlink" href="#signaux-elementaires" title="Lien permanent vers cette rubrique">#</a></h1>
+<h1>Signaux élémentaires<a class="headerlink" href="#signaux-elementaires" title="Lien vers cette rubrique">#</a></h1>
 <p>Différents signaux seront régulièrement utilisés dans le cours : ils sont définis ici.
 La plupart peuvent être définis à temps continu ou à temps discret.</p>
 <section id="sinusoide">
-<h2>Sinusoïde<a class="headerlink" href="#sinusoide" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Sinusoïde<a class="headerlink" href="#sinusoide" title="Lien vers cette rubrique">#</a></h2>
 <p>En temps continu, la sinusoïde a pour expression :</p>
 <div class="math notranslate nohighlight">
 \[
@@ -420,11 +421,11 @@ et si <span class="math notranslate nohighlight">\(\varphi=\pi/2\)</span>, alors
 \]</div>
 <p>Le sinus est créé en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sin.html"><code class="docutils literal notranslate"><span class="pre">numpy.sin</span></code></a>.</p>
 <figure class="align-default" id="f-sinusoide">
-<a class="reference internal image-reference" href="../_images/sinusoide.svg"><img alt="../_images/sinusoide.svg" src="../_images/sinusoide.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/sinusoide.svg"><img alt="../_images/sinusoide.svg" src="../_images/sinusoide.svg" style="width: 700px;" /></a>
 </figure>
 </section>
 <section id="exponentielle-complexe">
-<h2>Exponentielle complexe<a class="headerlink" href="#exponentielle-complexe" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Exponentielle complexe<a class="headerlink" href="#exponentielle-complexe" title="Lien vers cette rubrique">#</a></h2>
 <p>En temps continu, l’exponentielle complexe a pour expression :</p>
 <div class="math notranslate nohighlight">
 \[
@@ -438,13 +439,14 @@ Pour le représenter, il faut être dans un espace à trois dimensions (la varia
 De cette manière, l’exponentielle complexe ressemble à une queue de cochon, ou un tire-bouchon.
 Remarquez que la variable <span class="math notranslate nohighlight">\(f\)</span>, souvent appelée fréquence, peut tout à fait être négative : dans ce cas, l’exponentielle complexe tourne dans le sens inverse.</p>
 <figure class="align-default" id="f-expo">
-<img alt="../_images/expo.svg" src="../_images/expo.svg" /></figure>
+<img alt="../_images/expo.svg" src="../_images/expo.svg" />
+</figure>
 <div id="expo" class="spetsi mathjax_process"></div>
 <script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
 <script src="https://vincmazet.github.io/spetsi/js/three.js"></script>
 <script src="https://vincmazet.github.io/spetsi/js/expo.js" type="text/javascript"></script></section>
 <section id="sinus-cardinal">
-<h2>Sinus cardinal<a class="headerlink" href="#sinus-cardinal" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Sinus cardinal<a class="headerlink" href="#sinus-cardinal" title="Lien vers cette rubrique">#</a></h2>
 <p>Le sinus cardinal, noté <span class="math notranslate nohighlight">\(\mathrm{sinc}\)</span>, a pour définition :</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -462,11 +464,11 @@ Remarquez que la variable <span class="math notranslate nohighlight">\(f\)</span
 <p>Encore une fois, le sinus cardinal à temps discret a la même expression (avec des crochets à la place des parenthèses).
 Le sinus cardinal est obtenu en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sinc.html"><code class="docutils literal notranslate"><span class="pre">numpy.sinc</span></code></a>.</p>
 <figure class="align-default" id="f-sinc">
-<a class="reference internal image-reference" href="../_images/sinc.svg"><img alt="../_images/sinc.svg" src="../_images/sinc.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/sinc.svg"><img alt="../_images/sinc.svg" src="../_images/sinc.svg" style="width: 700px;" /></a>
 </figure>
 </section>
 <section id="echelon">
-<h2>Échelon<a class="headerlink" href="#echelon" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Échelon<a class="headerlink" href="#echelon" title="Lien vers cette rubrique">#</a></h2>
 <p>L’échelon (également appelé fonction de Heaviside) a pour définition :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -479,7 +481,7 @@ Le sinus cardinal est obtenu en Python avec la fonction <a class="reference exte
 <p>L’échelon est donc nul pour <span class="math notranslate nohighlight">\(t&lt;0\)</span> et égal à 1 sinon.
 Il existe aussi une version à temps discret.</p>
 <figure class="align-default" id="f-echelon">
-<a class="reference internal image-reference" href="../_images/echelon.svg"><img alt="../_images/echelon.svg" src="../_images/echelon.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/echelon.svg"><img alt="../_images/echelon.svg" src="../_images/echelon.svg" style="width: 700px;" /></a>
 </figure>
 <p>Il n’existe pas de fonction permettant de générer un échelon en Python : il faut passer par des instructions spécifiques, comme par exemple dans le code suivant :</p>
 <div class="cell docutils container">
@@ -509,7 +511,7 @@ Il existe aussi une version à temps discret.</p>
 </div>
 </section>
 <section id="porte">
-<h2>Porte<a class="headerlink" href="#porte" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Porte<a class="headerlink" href="#porte" title="Lien vers cette rubrique">#</a></h2>
 <p>La porte (ou fonction rectangle) a pour définition :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -519,16 +521,13 @@ Il existe aussi une version à temps discret.</p>
     1 &amp;\text{si}\quad |t| \leq \frac{1}{2}
   \end{cases}
 \end{split}\]</div>
+<p>Cette porte est de longueur 1 et centrée sur 0.</p>
 <figure class="align-default" id="f-porte">
-<a class="reference internal image-reference" href="../_images/porte.svg"><img alt="../_images/porte.svg" src="../_images/porte.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/porte.svg"><img alt="../_images/porte.svg" src="../_images/porte.svg" style="width: 700px;" /></a>
 </figure>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Prélèvement d’un signal<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Prélèvement d’un signal</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">La porte est très utile pour exprimer mathématiquement le « prélèvement » d’une portion d’un signal :
 on parle de « fenêtrage ».
 Ainsi, la portion de largeur <span class="math notranslate nohighlight">\(T\)</span> centrée autour de <span class="math notranslate nohighlight">\(t_0\)</span> d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> s’exprime :</p>
@@ -537,19 +536,20 @@ Ainsi, la portion de largeur <span class="math notranslate nohighlight">\(T\)</s
   \tilde{x}(t) = x(t) \times \mathrm{rect}\left(\frac{t-t_0}{T}\right).
 \]</div>
 <figure class="align-default" id="f-fenetre">
-<a class="reference internal image-reference" href="../_images/fenetre.svg"><img alt="../_images/fenetre.svg" src="../_images/fenetre.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/fenetre.svg"><img alt="../_images/fenetre.svg" src="../_images/fenetre.svg" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Fenêtrage du signal <span class="math notranslate nohighlight">\(x\)</span> par une porte de largeur <span class="math notranslate nohighlight">\(T\)</span> et centrée autour de <span class="math notranslate nohighlight">\(t_0\)</span>.</span><a class="headerlink" href="#f-fenetre" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Fenêtrage du signal <span class="math notranslate nohighlight">\(x\)</span> par une porte de largeur <span class="math notranslate nohighlight">\(T\)</span> et centrée autour de <span class="math notranslate nohighlight">\(t_0\)</span>.</span><a class="headerlink" href="#f-fenetre" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </div>
-</details><p>Comme pour l’échelon, la porte peut être définie en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.where.html"><code class="docutils literal notranslate"><span class="pre">numpy.where</span></code></a> :</p>
+</details><p>Comme pour l’échelon, la porte peut être définie en Python avec la fonction <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.where.html"><code class="docutils literal notranslate"><span class="pre">numpy.where</span></code></a>.
+Par exemple, l’illustration ci-dessous est une porte discrète centrée sur 2 et de longueur 7 :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Porte définie entre -5 et 10,</span>
 <span class="c1"># représentée entre -15 et 14</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;=-</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">5</span><span class="p">)</span> <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -557,12 +557,12 @@ Ainsi, la portion de largeur <span class="math notranslate nohighlight">\(T\)</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3f2158d6a3b587ac7b6eaf3835f0e500c2e165f6617995b3ffe6209c7c77519b.png" src="../_images/3f2158d6a3b587ac7b6eaf3835f0e500c2e165f6617995b3ffe6209c7c77519b.png" />
+<img alt="../_images/c0b2d23958450e694456861e513be69ac34aa3bc941f7e2ebecdfcd0ceed478e.png" src="../_images/c0b2d23958450e694456861e513be69ac34aa3bc941f7e2ebecdfcd0ceed478e.png" />
 </div>
 </div>
 </section>
 <section id="impulsion-de-dirac">
-<h2>Impulsion de Dirac<a class="headerlink" href="#impulsion-de-dirac" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Impulsion de Dirac<a class="headerlink" href="#impulsion-de-dirac" title="Lien vers cette rubrique">#</a></h2>
 <p>L’impulsion de Dirac est telle que :</p>
 <div class="math notranslate nohighlight">
 \[
@@ -573,7 +573,7 @@ Ainsi, la portion de largeur <span class="math notranslate nohighlight">\(T\)</s
 <p>L’impulsion de Dirac n’est pas une fonction, au sens mathématique, car <span class="math notranslate nohighlight">\(\delta(0)\)</span> n’est pas défini : c’est en fait une distribution.
 Pour cette raison, on représente ce signal par une flèche, qui signifie que la valeur n’est pas définie en 0.</p>
 <figure class="align-default" id="f-dirac">
-<a class="reference internal image-reference" href="../_images/dirac.svg"><img alt="../_images/dirac.svg" src="../_images/dirac.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/dirac.svg"><img alt="../_images/dirac.svg" src="../_images/dirac.svg" style="width: 700px;" /></a>
 </figure>
 <p>C’est un signal non représentable physiquement car il n’existe pas dans la nature.
 Mais c’est une conceptualisation mathématique bien pratique.
@@ -594,7 +594,7 @@ On peut l’approcher par une porte dont la largeur tend vers 0 et l’amplitude
 Il existe cependant un signal qui s’en approche : l”<a class="reference internal" href="#c-signaux-elementaires-kronecker"><span class="std std-ref">impulsion discrète</span></a>.</p>
 </section>
 <section id="impulsion-discrete">
-<span id="c-signaux-elementaires-kronecker"></span><h2>Impulsion discrète<a class="headerlink" href="#impulsion-discrete" title="Lien permanent vers cette rubrique">#</a></h2>
+<span id="c-signaux-elementaires-kronecker"></span><h2>Impulsion discrète<a class="headerlink" href="#impulsion-discrete" title="Lien vers cette rubrique">#</a></h2>
 <p>L’impulsion discrète est l’équivalent à temps discret de l’impulsion de Dirac. C’est une fonction mathématique classique car elle est définie en tout point :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -626,7 +626,7 @@ Il existe cependant un signal qui s’en approche : l”<a class="reference inte
 </div>
 </section>
 <section id="peigne-de-dirac">
-<h2>Peigne de Dirac<a class="headerlink" href="#peigne-de-dirac" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Peigne de Dirac<a class="headerlink" href="#peigne-de-dirac" title="Lien vers cette rubrique">#</a></h2>
 <p>Le peigne de Dirac est défini par (<span class="math notranslate nohighlight">\(T &gt; 0\)</span>) :</p>
 <div class="math notranslate nohighlight">
 \[
@@ -634,7 +634,7 @@ Il existe cependant un signal qui s’en approche : l”<a class="reference inte
 \]</div>
 <p>Le peigne de Dirac est également appelé train d’impulsion, fonction d’échantillonnage ou distribution Cha (en raison de sa ressemblance avec la lettre cyrillique Ш).</p>
 <figure class="align-default" id="f-peigne">
-<a class="reference internal image-reference" href="../_images/peigne.svg"><img alt="../_images/peigne.svg" src="../_images/peigne.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/peigne.svg"><img alt="../_images/peigne.svg" src="../_images/peigne.svg" style="width: 700px;" /></a>
 </figure>
 <p><a class="exercise btn btn-light" href="td.html#exercice-2" role="button">2</a></p>
 </section>
@@ -665,11 +665,10 @@ Il existe cependant un signal qui s’en approche : l”<a class="reference inte
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="classification.html"
@@ -689,10 +688,7 @@ Il existe cependant un signal qui s’en approche : l”<a class="reference inte
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -700,6 +696,7 @@ Il existe cependant un signal qui s’en approche : l”<a class="reference inte
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -736,9 +733,10 @@ Par Vincent Mazet (Université de Strasbourg, France)
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2023-2024.
+      © Copyright 2023-2025.
       <br/>
     
   </p>
@@ -752,7 +750,7 @@ Par Vincent Mazet (Université de Strasbourg, France)
   <div class="footer-item">
     
 <div class="extra_footer">
-  Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2020-2024 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
+  Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2020-2025 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
 </div>
   </div>
   
@@ -765,8 +763,8 @@ Par Vincent Mazet (Université de Strasbourg, France)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

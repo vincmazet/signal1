@@ -21,25 +21,24 @@ body {
   color: var(--pst-color-text-base);
 }
 
-h1 {font-size: 2.5em}
-h2 {font-size: 1.7em}
+h1 {font-size: 2.5em;}
+h2 {font-size: 1.7em;}
 h3 {
   font-size: 1.0em;
   margin: 1.2rem 0 .5rem 0;
 }
 
 span.pre {
-  background-color: #eee;
-  padding: 1px 5px;
-  border: 0;
-  color: #000;
-  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  font-weight: normal;
-  font-size: inherit;
-  line-height: 1.3077
+  /* background-color: #eee; */
+  /* padding: 1px 5px; */
+  /* border: 0; */
+  color: var(--pst-color-text-base);
+  /* font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace; */
+  /* font-size: inherit; */
+  /* line-height: 1.3077 */
 }
 
-/* Taille des légendes */
+/* Légendes */
 
 figure span.caption-number, figure span.caption-text {
   font-family: "Source Sans Pro";
@@ -52,9 +51,9 @@ figure span.caption-number {
 
 /* Hack pour faire disparaître le bouton "launch" */
 
-.menu-dropdown.menu-dropdown-launch-buttons {
+/* .menu-dropdown.menu-dropdown-launch-buttons {
     display: none;
-}
+} */
 
 /* Hack pour faire disparaître le footer (et mettre le mien à la place) */
 
@@ -62,19 +61,24 @@ figure span.caption-number {
     display: none;
 }
 
-/* Style pour l'impression */
-
-@media print {
-  body {
-    font-family: Times;
-    margin: 2cm
-  }
-}
-
 /* Tableaux */
 
 table p { margin-bottom: 0 }
 
+/* Liens */
+
+a {text-decoration: none;}
+
+.prev-next-area a         p.prev-next-title,
+.prev-next-area a:hover   p.prev-next-title,
+.prev-next-area a:visited p.prev-next-title {text-decoration:none;}
+
+nav.bd-links li>a:active,
+nav.bd-links li>a:hover {text-decoration:none;}
+
+.toc-entry a.nav-link:active,
+.toc-entry a.nav-link:hover,
+.toc-entry a.nav-link.active:hover {text-decoration:none;}
 
 /* Cadre exemple */
 
@@ -106,52 +110,6 @@ div.admonition.exemple>.admonition-title:after {
 }
 
 
-/* Styles pour les animations */
-
-.spetsi {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.anim {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.anim-button {
-  background-color:#ededed;
-  /*-moz-border-radius:50%;
-  -webkit-border-radius:50%;
-  border-radius:50%;*/
-  border:1px solid #dcdcdc;
-  display:inline-block;
-  cursor:pointer;
-  color:#777777;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #ffffff;
-}
-.anim-button:hover {
-  background-color:#dfdfdf;
-}
-.anim-button:active {
-  position:relative;
-  top:1px;
-}
-
-.spetsi {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-
 /* Bouton exercice */
 
 a.exercise {
@@ -160,6 +118,10 @@ a.exercise {
 
 a.exercise::before {
     content: "➜ Exercice ";
+}
+
+a.exercise:visited, a.exercise:visited, a.exercise:active {
+    color: var(--pst-color-text-base);
 }
 
 /* Fond pour les tabs */
@@ -198,3 +160,17 @@ span.eqno {
     }
 
 }
+
+
+/* Séquence binaire */
+
+code {
+    color: inherit;
+    letter-spacing: .1rem;
+}
+
+code .pre {
+    /* annuler la valeur letter-spacing pour les commandes `x` */
+    letter-spacing: 0;
+}
+

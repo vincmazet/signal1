@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="fr" >
+<html lang="fr" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Échantillonnage &#8212; Traitement du signal 1</title>
   
@@ -15,55 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=109105fe" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/jbvinc.css?v=8dc5e944" />
     <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/jbvinc-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=ff8fa330"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=bcf87968"></script>
+    <script src="../_static/translations.js?v=041d0952"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerisation/echantillonnage';</script>
@@ -80,19 +76,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Passer au contenu principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Haut de page</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -114,12 +114,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,6 +142,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -142,10 +153,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Traitement du signal 1</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -162,34 +185,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../elementaire/tpc1.html">Représentation de signaux</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../convolution/tpc2.html">Produit de convolution</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
@@ -203,11 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../fourier/proprietes.html">Propriétés des transformations de Fourier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fourier/temps-frequence.html">Représentation temps-fréquence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fourier/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../fourier/tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../fourier/tpc1.html">Série de Fourier d’un créneau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fourier/tpc2.html">Transformée de Fourier discrète d’un signal numérique</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../fourier/tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Numérisation</span></p>
 <ul class="current nav bd-sidenav">
@@ -215,12 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Échantillonnage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quantification.html">Quantification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tpc1.html">Repliement spectral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tpc2.html">Représentation temps-fréquence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tpc3.html">Interpolation</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="tp.html">Exercices sur machine</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
@@ -243,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -252,14 +251,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -334,26 +333,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -391,10 +392,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="echantillonnage">
-<span id="p-echantillonnage"></span><h1>Échantillonnage<a class="headerlink" href="#echantillonnage" title="Lien permanent vers cette rubrique">#</a></h1>
+<span id="p-echantillonnage"></span><h1>Échantillonnage<a class="headerlink" href="#echantillonnage" title="Lien vers cette rubrique">#</a></h1>
 <p>Dans ce chapitre, nous allons dans un premier temps présenter le principe de l’échantillonnage d’un signal analogique,
 puis dans un deuxième temps le principe de l’opération inverse : la reconstruction de ce signal analogique à partir du signal échantillonné.
 Ces deux opérations seront considérées dans un cas idéal.
@@ -402,13 +403,14 @@ Nous discuterons ensuite du choix des paramètres de l’échantillonnage,
 à savoir la fréquence d’échantillonnage <span class="math notranslate nohighlight">\(f_e\)</span> et la fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.
 Enfin, nous terminerons pas l’énoncé du théorème de l’échantillonnage.</p>
 <section id="echantillonnage-ideal">
-<h2>Échantillonnage idéal<a class="headerlink" href="#echantillonnage-ideal" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Échantillonnage idéal<a class="headerlink" href="#echantillonnage-ideal" title="Lien vers cette rubrique">#</a></h2>
 <p>L’échantillonnage consiste à convertir un signal <span class="math notranslate nohighlight">\(x(t)\)</span> analogique
 en une séquence (suite de nombres) <span class="math notranslate nohighlight">\(x[n] = x(nT_e)\)</span>
 où <span class="math notranslate nohighlight">\(T_e\)</span> est la « période d’échantillonnage ».</p>
 <figure class="align-default" id="id1">
-<img alt="../_images/echantillonnage-temporel-1.svg" src="../_images/echantillonnage-temporel-1.svg" /><figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-temporel-1.svg" src="../_images/echantillonnage-temporel-1.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>Pour étudier le phénomène de l’échantillonnage d’un point de vue mathématique,
@@ -422,8 +424,9 @@ x(t) &amp;\text{si}\ t\ \text{est multiple de}\ T_e \\
 \end{cases}
 \end{split}\]</div>
 <figure class="align-default" id="id2">
-<img alt="../_images/echantillonnage-temporel-2.svg" src="../_images/echantillonnage-temporel-2.svg" /><figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-temporel-2.svg" src="../_images/echantillonnage-temporel-2.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>On peut montrer que la transformée de Fourier de <span class="math notranslate nohighlight">\(x^*(t)\)</span> s’écrit :</p>
@@ -435,31 +438,35 @@ X^*(f) = \sum_k X(f-kf_e)
 Par conséquent, l’échantillonnage du signal temporel à la période <span class="math notranslate nohighlight">\(T_e\)</span> produit une périodisation du spectre à la période <span class="math notranslate nohighlight">\(f_e=1/T_e\)</span>,
 comme illustré sur les figures ci-dessous.</p>
 <figure class="align-default" id="id3">
-<img alt="../_images/echantillonnage-frequentiel-1.svg" src="../_images/echantillonnage-frequentiel-1.svg" /><figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-frequentiel-1.svg" src="../_images/echantillonnage-frequentiel-1.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id4">
-<img alt="../_images/echantillonnage-frequentiel-2.svg" src="../_images/echantillonnage-frequentiel-2.svg" /><figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-frequentiel-2.svg" src="../_images/echantillonnage-frequentiel-2.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="reconstruction-ideale">
-<h2>Reconstruction idéale<a class="headerlink" href="#reconstruction-ideale" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Reconstruction idéale<a class="headerlink" href="#reconstruction-ideale" title="Lien vers cette rubrique">#</a></h2>
 <p>On peut retrouver le signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> à partir du signal échantillonné <span class="math notranslate nohighlight">\(x^*(t)\)</span>,
 en sélectionnant la période du spectre centrée autour de <span class="math notranslate nohighlight">\(0\)</span>,
 c’est-à-dire la période située entre les fréquences entre <span class="math notranslate nohighlight">\(-f_c\)</span> et <span class="math notranslate nohighlight">\(+f_c\)</span>.
 Cette opération est effectuée en appliquant un filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span> sur le signal <span class="math notranslate nohighlight">\(x^*\)</span>,
 afin d’obtenir un nouveau signal <span class="math notranslate nohighlight">\(\tilde{x}\)</span> qu’on espère être égal à <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <figure class="align-default" id="id5">
-<img alt="../_images/echantillonnage-frequentiel-3.svg" src="../_images/echantillonnage-frequentiel-3.svg" /><figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver.</span><a class="headerlink" href="#id5" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-frequentiel-3.svg" src="../_images/echantillonnage-frequentiel-3.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver.</span><a class="headerlink" href="#id5" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id6">
-<img alt="../_images/echantillonnage-frequentiel-4.svg" src="../_images/echantillonnage-frequentiel-4.svg" /><figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-frequentiel-4.svg" src="../_images/echantillonnage-frequentiel-4.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>En fréquentiel, le filtre correspond à une multiplication du spectre <span class="math notranslate nohighlight">\(X^*(f)\)</span> par une porte de largeur <span class="math notranslate nohighlight">\(2f_c\)</span> :</p>
@@ -482,8 +489,9 @@ suffisent pour avoir toute l’information du signal analogique <span class="mat
 Je peux aussi faire une interface qui permettent de jouer sur les valeurs de fe et fc
 => ça permet de discuter du choix de ces paramètres et de leur influcene -->
 <figure class="align-default" id="id7">
-<img alt="../_images/echantillonnage-temporel-3.svg" src="../_images/echantillonnage-temporel-3.svg" /><figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Reconstruction du signal analogique <span class="math notranslate nohighlight">\(\tilde{x}(t)\)</span> (ici, <span class="math notranslate nohighlight">\(f_c=f_e\)</span>).</span><a class="headerlink" href="#id7" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-temporel-3.svg" src="../_images/echantillonnage-temporel-3.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Reconstruction du signal analogique <span class="math notranslate nohighlight">\(\tilde{x}(t)\)</span> (ici, <span class="math notranslate nohighlight">\(f_c=f_e\)</span>).</span><a class="headerlink" href="#id7" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>La reconstruction est très bonne au centre du signal, ce qui illustre le bon comportement de l’interpolation par sinus cardinal.
@@ -492,7 +500,7 @@ cela s’explique par le fait qu’à l’extérieur de l’intervalle considér
 il n’y a pas d’échantillons de <span class="math notranslate nohighlight">\(x^*\)</span> qui permettent de définir des sinus cardinaux qui permettent de reconstruire le signal analogique.</p>
 </section>
 <section id="choix-de-la-frequence-de-coupure">
-<h2>Choix de la fréquence de coupure<a class="headerlink" href="#choix-de-la-frequence-de-coupure" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Choix de la fréquence de coupure<a class="headerlink" href="#choix-de-la-frequence-de-coupure" title="Lien vers cette rubrique">#</a></h2>
 <p>Lors de la reconstruction, la moindre des choses est que les valeurs non nulles de <span class="math notranslate nohighlight">\(x^*\)</span> ne soient pas modifiées,
 puisqu’elles sont égales à <span class="math notranslate nohighlight">\(x\)</span> aux instants d’échantillonnage.
 Il faut donc que les sinus cardinaux qui apparaissent dans la reconstruction s’annulent aux points d’échantillonnage,
@@ -506,25 +514,28 @@ f_c = \frac{1}{2T_e} = \frac{f_e}{2}
 <p>Le meilleur choix pour la fréquence de coupure du filtre passe-bas est donc <span class="math notranslate nohighlight">\(f_c=f_e/2\)</span>,
 cette valeur est appelée « fréquence de Nyquist ».</p>
 <figure class="align-default" id="id8">
-<img alt="../_images/echantillonnage-frequentiel-5.svg" src="../_images/echantillonnage-frequentiel-5.svg" /><figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver, dans le cas où <span class="math notranslate nohighlight">\(f_c=f_e/2\)</span>.</span><a class="headerlink" href="#id8" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-frequentiel-5.svg" src="../_images/echantillonnage-frequentiel-5.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver, dans le cas où <span class="math notranslate nohighlight">\(f_c=f_e/2\)</span>.</span><a class="headerlink" href="#id8" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="choix-de-la-frequence-d-echantillonnage">
-<h2>Choix de la fréquence d’échantillonnage<a class="headerlink" href="#choix-de-la-frequence-d-echantillonnage" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Choix de la fréquence d’échantillonnage<a class="headerlink" href="#choix-de-la-frequence-d-echantillonnage" title="Lien vers cette rubrique">#</a></h2>
 <p>Le spectre de <span class="math notranslate nohighlight">\(x^*(t)\)</span> est une périodisation du spectre de <span class="math notranslate nohighlight">\(x(t)\)</span> a une période <span class="math notranslate nohighlight">\(f_e\)</span>.
 Si <span class="math notranslate nohighlight">\(f_e\)</span> est trop faible, alors il peut y avoir une superposition des périodes,
 et le filtrage ne permettra pas de les séparer convenablement.</p>
 <figure class="align-default" id="id9">
-<img alt="../_images/echantillonnage-frequentiel-6.svg" src="../_images/echantillonnage-frequentiel-6.svg" /><figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id9" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-frequentiel-6.svg" src="../_images/echantillonnage-frequentiel-6.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id9" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id10">
-<img alt="../_images/echantillonnage-frequentiel-7.svg" src="../_images/echantillonnage-frequentiel-7.svg" /><figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
-on n’obtient pas le signal original <span class="math notranslate nohighlight">\(x\)</span>, il y a repliement spectral.</span><a class="headerlink" href="#id10" title="Lien permanent vers cette image">#</a></p>
+<img alt="../_images/echantillonnage-frequentiel-7.svg" src="../_images/echantillonnage-frequentiel-7.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
+on n’obtient pas le signal original <span class="math notranslate nohighlight">\(x\)</span>, il y a repliement spectral.</span><a class="headerlink" href="#id10" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>La reconstruction correcte de <span class="math notranslate nohighlight">\(x\)</span> à partir de <span class="math notranslate nohighlight">\(x^*\)</span> implique donc une valeur minimale de <span class="math notranslate nohighlight">\(f_e\)</span> :</p>
@@ -546,7 +557,7 @@ alors il convient de supprimer les fréquences supérieures à la fréquence de 
 Pour cela, on applique avant l’échantillonnage un filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_e/2\)</span>.
 Ce filtre est appelé « filtre anti-repliement ».</p>
 <section id="repliement-spectral">
-<h3>Repliement spectral<a class="headerlink" href="#repliement-spectral" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3>Repliement spectral<a class="headerlink" href="#repliement-spectral" title="Lien vers cette rubrique">#</a></h3>
 <p>Lorsque la condition ci-avant n’est pas respectée, et donc que <span class="math notranslate nohighlight">\(f_e &lt; 2f_\mathrm{max}\)</span>, alors il y a recouvrement des périodes.
 On parle de « repliement spectral » (en anglais : <em>aliasing</em>).
 L’animation ci-dessous simule l’effet du repliement spectral sur une sinusoïde dont on peut régler la période d’échantillonnage.</p>
@@ -557,15 +568,16 @@ L’animation ci-dessous simule l’effet du repliement spectral sur une sinuso�
 Les exemples ci-dessous illustrent l’effet du repliement spectral sur différents signaux.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<label class="sd-tab-label" for="sd-tab-item-0">
 Signal</label><div class="sd-tab-content docutils">
 <p>Un cosinus de fréquence 6 Hz (en bleu) est échantillonné à 6,5 Hz.
 Le signal obtenu avec l’échantillonnage est un cosinus de fréquence 0,5 Hz (points oranges).</p>
 <figure class="align-default">
-<img alt="../_images/aliasing-signal.svg" src="../_images/aliasing-signal.svg" /></figure>
+<img alt="../_images/aliasing-signal.svg" src="../_images/aliasing-signal.svg" />
+</figure>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<label class="sd-tab-label" for="sd-tab-item-1">
 Son</label><div class="sd-tab-content docutils">
 <p>Un son, initialement échantillonné à 44 100 Hz, est sous-échantillonné à une nouvelle fréquence.
 Il est ensuite rééchantillonné à 44 100 Hz pour que le haut-parleur puisse l’émettre convenablement
@@ -588,37 +600,37 @@ Il est ensuite rééchantillonné à 44 100 Hz pour que le haut-parleur puisse l
 </audio>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<label class="sd-tab-label" for="sd-tab-item-2">
 Image</label><div class="sd-tab-content docutils">
 <p>Une image est un signal en deux dimensions.
 Le repliement spectral apparaît lorsque le motif présent dans l’image présente des structures très fines par rapport aux pixels.</p>
 <figure class="align-default" id="id11">
 <img alt="../_images/aliasing-moi-4.jpg" src="../_images/aliasing-moi-4.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Image redimensionnée d’un facteur 4.</span><a class="headerlink" href="#id11" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Image redimensionnée d’un facteur 4.</span><a class="headerlink" href="#id11" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id12">
 <img alt="../_images/aliasing-moi-5.jpg" src="../_images/aliasing-moi-5.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Image redimensionnée d’un facteur 5.</span><a class="headerlink" href="#id12" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Image redimensionnée d’un facteur 5.</span><a class="headerlink" href="#id12" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id13">
 <img alt="../_images/aliasing-moi-6.jpg" src="../_images/aliasing-moi-6.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Image redimensionnée d’un facteur 6.</span><a class="headerlink" href="#id13" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Image redimensionnée d’un facteur 6.</span><a class="headerlink" href="#id13" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id14">
 <img alt="../_images/aliasing-moi-9.jpg" src="../_images/aliasing-moi-9.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Image redimensionnée d’un facteur 9.</span><a class="headerlink" href="#id14" title="Lien permanent vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Image redimensionnée d’un facteur 9.</span><a class="headerlink" href="#id14" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<label class="sd-tab-label" for="sd-tab-item-3">
 Vidéo</label><div class="sd-tab-content docutils">
 <p>Une vidéo possède à la fois un échantillonnage spatial (au sein d’une même image)
 mais aussi un échantillonnage temporel lié au nombres d’images acquises par seconde.
@@ -631,7 +643,7 @@ donc tout phénomène plus rapide que 12,5 Hz peut engendrer des effets étrange
 </section>
 </section>
 <section id="theoreme-de-l-echantillonnage">
-<h2>Théorème de l’échantillonnage<a class="headerlink" href="#theoreme-de-l-echantillonnage" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Théorème de l’échantillonnage<a class="headerlink" href="#theoreme-de-l-echantillonnage" title="Lien vers cette rubrique">#</a></h2>
 <!-- Vetterli p. 498 -->
 <p>Le théorème de l’échantillonnage a été formulé différemment et souvent indépendamment par plusieurs scientifiques :
 Whittaker (1915), Nyquist (1928), Kotelnikov (1933), Raabe (1939) et Someya (1949),
@@ -674,11 +686,10 @@ Aussi il est souvent préférable de choisir <span class="math notranslate nohig
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="numerisation.html"
@@ -698,10 +709,7 @@ Aussi il est souvent préférable de choisir <span class="math notranslate nohig
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -709,6 +717,7 @@ Aussi il est souvent préférable de choisir <span class="math notranslate nohig
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -745,9 +754,10 @@ Par Vincent Mazet (Université de Strasbourg, France)
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2023-2024.
+      © Copyright 2023-2025.
       <br/>
     
   </p>
@@ -761,7 +771,7 @@ Par Vincent Mazet (Université de Strasbourg, France)
   <div class="footer-item">
     
 <div class="extra_footer">
-  Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2020-2024 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
+  Traitement du signal 1 &mdash; Vincent Mazet (Université de Strasbourg), 2020-2025 &mdash; <a href='licence.html'>CC BY-NC 4.0</a>.
 </div>
   </div>
   
@@ -774,8 +784,8 @@ Par Vincent Mazet (Université de Strasbourg, France)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
