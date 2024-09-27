@@ -1,4 +1,4 @@
-(C:conv:tp)=
+(C:convolution:tp)=
 # Exercices sur machine
 
 Pour chacun des couples de signaux suivants, représentez $x$, $y$ et le produit de convolution $x*y$.
@@ -50,4 +50,5 @@ $$
   
 <!-- commentaire de 2019-2020 : l'utilisation de "same" et d'un axe temporel comme il faut est toujours un problème. Peut être faut-il y aller franco et leur demander "full", sans axe dans un premier temps. Peut être aussi rajouter dans la correc une illustration avec le résultat de full et same superposés, et différents axes des temps. -->
 
-<a class="btn btn-light" href="../xcorr/tp.html" role="button">Suite du TP</a>
+Continuez le TP avec l'[exercice sur l'intercorrélation](C:xcorr:tp).
+

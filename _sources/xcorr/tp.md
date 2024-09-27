@@ -29,9 +29,9 @@ Cette mesure est utilisée dans de nombreux domaines, notamment l'aéronautique,
 ## Matériel nécessaire
 
 Pour réaliser ce TP, vous avez besoin du matériel suivant :
-- un haut-parleur 🔈 ;
-- deux microphones 🎤 ;
-- une règle 📏 ;
+- un haut-parleur ;
+- deux microphones ;
+- une règle ;
 - un ordinateur avec Python ;
 - le module <a href="../_static/sound.py">sound.py</a> à enregistrer dans le dossier contenant votre notebook.
 
