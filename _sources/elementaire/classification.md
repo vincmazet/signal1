@@ -25,7 +25,7 @@ quelles sont les conditions qui permettent de ne pas trop dégrader le signal
 et quelles sont les conséquences sur le signal numérique.
 
 ```{admonition} Remarque
-Sur un ordinateur, on ne peut donc traiter que des signaux numériques, et de durée limité,
+Sur un ordinateur, on ne peut donc traiter que des signaux numériques, et de durée limitée,
 car une mémoire informatique ne peut stocker qu'un nombre fini de valeurs dont la précision est limitée.
 ```
 
