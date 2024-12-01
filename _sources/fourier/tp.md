@@ -15,7 +15,7 @@ $$
 avec $A=1$ et $T = 1$.
 
 * Tracez avec Python la série de Fourier de ce signal (qui a été calculée en TD),
-  c'est-à-dire le spectre d'amplitude et de phase de $y$, pour $k$ allant de $-10$ à $10$.
+  c'est-à-dire le spectre d'amplitude (`numpy.abs`) et de phase (`numpy.angle`) de $y$, pour $k$ allant de $-10$ à $10$.
 
 On souhaite maintenant reconstruire le signal temporel en ne considérant que les $K$ premières harmoniques.
 
