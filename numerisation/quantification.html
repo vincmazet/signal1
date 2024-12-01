@@ -406,7 +406,7 @@ x_q(t) = q \times \left\lfloor \frac{x(t)}{q}+\frac{1}{2} \right\rfloor
 <p>où <span class="math notranslate nohighlight">\(\lfloor\cdot\rfloor\)</span> est la <a class="reference external" href="https://www.bibmath.net/dico/index.php?action=affiche&amp;amp;quoi=./p/partieentiere.html">partie entière</a>.</p>
 <p>La <a class="reference internal" href="#f-quantification-signal"><span class="std std-numref">Fig. 32</span></a> représente un exemple de quantification uniforme par arrondi pour <span class="math notranslate nohighlight">\(K=8\)</span> niveaux de quantification et <span class="math notranslate nohighlight">\(q=0,3\)</span>.</p>
 <figure class="align-default" id="f-quantification-signal">
-<a class="reference internal image-reference" href="../_images/quantification-signal-U.svg"><img alt="../_images/quantification-signal-U.svg" src="../_images/quantification-signal-U.svg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/quantification-signal-U.svg"><img alt="../_images/quantification-signal-U.svg" src="../_images/quantification-signal-U.svg" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 32 </span><span class="caption-text">Exemple de quantification uniforme par arrondi d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> sur <span class="math notranslate nohighlight">\(K=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-signal" title="Lien vers cette image">#</a></p>
 </figcaption>
@@ -439,7 +439,7 @@ Ce n’est pas le cas pour la quantification :
 elle engendre une erreur puisque le signal quantifié <span class="math notranslate nohighlight">\(x_q\)</span> n’a pas les mêmes valeurs que le signal non quantifié <span class="math notranslate nohighlight">\(x\)</span>.
 La différence <span class="math notranslate nohighlight">\(\varepsilon(t) = x(t) - x_q(t)\)</span> est appelée « erreur de quantification » (cf. <a class="reference internal" href="#f-quantification-erreur"><span class="std std-numref">Fig. 34</span></a>).</p>
 <figure class="align-default" id="f-quantification-erreur">
-<a class="reference internal image-reference" href="../_images/quantification-erreur-U.svg"><img alt="../_images/quantification-erreur-U.svg" src="../_images/quantification-erreur-U.svg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/quantification-erreur-U.svg"><img alt="../_images/quantification-erreur-U.svg" src="../_images/quantification-erreur-U.svg" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 34 </span><span class="caption-text">Erreur de quantification sur l’exemple précédent (en rouge).
 La zone en rouge pâle correspond à l’erreur maximale théorique.</span><a class="headerlink" href="#f-quantification-erreur" title="Lien vers cette image">#</a></p>
@@ -457,17 +457,25 @@ Plus précisément, on privilégiera un pas de quantification faible pour les fa
 Cela aboutit à une quantification non uniforme.</p>
 <p>Par exemple, l’application d’une transformation non linéaire sur le signal avant une quantification uniforme
 correspond à une quantification non uniforme.
-En téléphonie, la « loi A » permet d’obtenir la quantification représentée <a class="reference internal" href="#f-quantification-caracteristique-a"><span class="std std-numref">Fig. 36</span></a>.</p>
+En téléphonie, la « loi A » permet d’obtenir la quantification représentée <a class="reference internal" href="#f-quantification-caracteristique-a"><span class="std std-numref">Fig. 37</span></a>.</p>
 <figure class="align-default" id="f-quantification-signal-a">
-<a class="reference internal image-reference" href="../_images/quantification-signal-A.svg"><img alt="../_images/quantification-signal-A.svg" src="../_images/quantification-signal-A.svg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/quantification-signal-A.svg"><img alt="../_images/quantification-signal-A.svg" src="../_images/quantification-signal-A.svg" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 35 </span><span class="caption-text">Exemple de quantification non uniforme d’un signal <span class="math notranslate nohighlight">\(x(t)\)</span> sur <span class="math notranslate nohighlight">\(K=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-signal-a" title="Lien vers cette image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="f-quantification-erreur-a">
+<a class="reference internal image-reference" href="../_images/quantification-erreur-A.svg"><img alt="../_images/quantification-erreur-A.svg" src="../_images/quantification-erreur-A.svg" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Erreur de quantification sur l’exemple précédent (en rouge).
+La zone en rouge pâle correspond à l’erreur maximale d’une quantification uniforme.
+On observe que l’erreur de cette quantification non uniforme peut parfois dépasser de la zone rouge mais est en général largement inférieure.</span><a class="headerlink" href="#f-quantification-erreur-a" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="f-quantification-caracteristique-a">
 <a class="reference internal image-reference" href="../_images/quantification-caracteristique-A.svg"><img alt="../_images/quantification-caracteristique-A.svg" src="../_images/quantification-caracteristique-A.svg" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Caractéristique d’une quantification non uniforme sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique-a" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Caractéristique d’une quantification non uniforme sur <span class="math notranslate nohighlight">\(N=8\)</span> niveaux.</span><a class="headerlink" href="#f-quantification-caracteristique-a" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
