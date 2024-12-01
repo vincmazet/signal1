@@ -185,7 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../elementaire/tpc1.html">Représentation de signaux</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
@@ -194,7 +197,10 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../convolution/tpc2.html">Produit de convolution</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
@@ -203,7 +209,10 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../xcorr/tpc3.html">Intercorrélation</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
@@ -419,7 +428,7 @@ où <span class="math notranslate nohighlight">\(T_e\)</span> est la « période
 <figure class="align-default" id="id1">
 <img alt="../_images/echantillonnage-temporel-1.svg" src="../_images/echantillonnage-temporel-1.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Signal analogique <span class="math notranslate nohighlight">\(x(t)\)</span> et échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span>.</span><a class="headerlink" href="#id1" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>Pour étudier le phénomène de l’échantillonnage d’un point de vue mathématique,
@@ -435,7 +444,7 @@ x(t) &amp;\text{si}\ t\ \text{est multiple de}\ T_e \\
 <figure class="align-default" id="id2">
 <img alt="../_images/echantillonnage-temporel-2.svg" src="../_images/echantillonnage-temporel-2.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Le signal échantillonné <span class="math notranslate nohighlight">\(x[n]\)</span> est considéré comme un train d’impulsions <span class="math notranslate nohighlight">\(x^*(t)\)</span>.</span><a class="headerlink" href="#id2" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>On peut montrer que la transformée de Fourier de <span class="math notranslate nohighlight">\(x^*(t)\)</span> s’écrit :</p>
@@ -449,13 +458,13 @@ comme illustré sur les figures ci-dessous.</p>
 <figure class="align-default" id="id3">
 <img alt="../_images/echantillonnage-frequentiel-1.svg" src="../_images/echantillonnage-frequentiel-1.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x\)</span>.</span><a class="headerlink" href="#id3" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id4">
 <img alt="../_images/echantillonnage-frequentiel-2.svg" src="../_images/echantillonnage-frequentiel-2.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span>.</span><a class="headerlink" href="#id4" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -469,13 +478,13 @@ afin d’obtenir un nouveau signal <span class="math notranslate nohighlight">\(
 <figure class="align-default" id="id5">
 <img alt="../_images/echantillonnage-frequentiel-3.svg" src="../_images/echantillonnage-frequentiel-3.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver.</span><a class="headerlink" href="#id5" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver.</span><a class="headerlink" href="#id5" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id6">
 <img alt="../_images/echantillonnage-frequentiel-4.svg" src="../_images/echantillonnage-frequentiel-4.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Résultat du filtre passe-bas de fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span>.</span><a class="headerlink" href="#id6" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>En fréquentiel, le filtre correspond à une multiplication du spectre <span class="math notranslate nohighlight">\(X^*(f)\)</span> par une porte de largeur <span class="math notranslate nohighlight">\(2f_c\)</span> :</p>
@@ -500,7 +509,7 @@ Je peux aussi faire une interface qui permettent de jouer sur les valeurs de fe 
 <figure class="align-default" id="id7">
 <img alt="../_images/echantillonnage-temporel-3.svg" src="../_images/echantillonnage-temporel-3.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Reconstruction du signal analogique <span class="math notranslate nohighlight">\(\tilde{x}(t)\)</span> (ici, <span class="math notranslate nohighlight">\(f_c=f_e\)</span>).</span><a class="headerlink" href="#id7" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Reconstruction du signal analogique <span class="math notranslate nohighlight">\(\tilde{x}(t)\)</span> (ici, <span class="math notranslate nohighlight">\(f_c=f_e\)</span>).</span><a class="headerlink" href="#id7" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>La reconstruction est très bonne au centre du signal, ce qui illustre le bon comportement de l’interpolation par sinus cardinal.
@@ -525,7 +534,7 @@ cette valeur est appelée « fréquence de Nyquist ».</p>
 <figure class="align-default" id="id8">
 <img alt="../_images/echantillonnage-frequentiel-5.svg" src="../_images/echantillonnage-frequentiel-5.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver, dans le cas où <span class="math notranslate nohighlight">\(f_c=f_e/2\)</span>.</span><a class="headerlink" href="#id8" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Spectre de <span class="math notranslate nohighlight">\(x^*\)</span> et la zone du spectre à conserver, dans le cas où <span class="math notranslate nohighlight">\(f_c=f_e/2\)</span>.</span><a class="headerlink" href="#id8" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -537,13 +546,13 @@ et le filtrage ne permettra pas de les séparer convenablement.</p>
 <figure class="align-default" id="id9">
 <img alt="../_images/echantillonnage-frequentiel-6.svg" src="../_images/echantillonnage-frequentiel-6.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id9" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Aïe aïe aïe ! Avec une fréquence d’échantillonnage trop faible, la périodisation du spectre de <span class="math notranslate nohighlight">\(x\)</span> produit des recouvrement de périodes.</span><a class="headerlink" href="#id9" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id10">
 <img alt="../_images/echantillonnage-frequentiel-7.svg" src="../_images/echantillonnage-frequentiel-7.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Signal reconstruit après filtrage, pour une fréquence d’échantillonnage trop faible :
 on n’obtient pas le signal original <span class="math notranslate nohighlight">\(x\)</span>, il y a repliement spectral.</span><a class="headerlink" href="#id10" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
@@ -616,25 +625,25 @@ Le repliement spectral apparaît lorsque le motif présent dans l’image prése
 <figure class="align-default" id="id11">
 <img alt="../_images/aliasing-moi-4.jpg" src="../_images/aliasing-moi-4.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Image redimensionnée d’un facteur 4.</span><a class="headerlink" href="#id11" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Image redimensionnée d’un facteur 4.</span><a class="headerlink" href="#id11" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id12">
 <img alt="../_images/aliasing-moi-5.jpg" src="../_images/aliasing-moi-5.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Image redimensionnée d’un facteur 5.</span><a class="headerlink" href="#id12" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Image redimensionnée d’un facteur 5.</span><a class="headerlink" href="#id12" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id13">
 <img alt="../_images/aliasing-moi-6.jpg" src="../_images/aliasing-moi-6.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Image redimensionnée d’un facteur 6.</span><a class="headerlink" href="#id13" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Image redimensionnée d’un facteur 6.</span><a class="headerlink" href="#id13" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id14">
 <img alt="../_images/aliasing-moi-9.jpg" src="../_images/aliasing-moi-9.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Image redimensionnée d’un facteur 9.</span><a class="headerlink" href="#id14" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Image redimensionnée d’un facteur 9.</span><a class="headerlink" href="#id14" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </div>

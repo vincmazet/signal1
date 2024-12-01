@@ -185,7 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/signaux-elementaires.html">Signaux élémentaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/proprietes-des-signaux.html">Propriétés des signaux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementaire/energie-puissance.html">Énergie et puissance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/td.html">Exercices sur feuille</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../elementaire/tdc.html">Correction</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../elementaire/tp.html">Exercices sur machine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../elementaire/tpc1.html">Représentation de signaux</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
@@ -194,7 +197,10 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tdc.html">Convolution</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../convolution/tpc2.html">Produit de convolution</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
@@ -203,7 +209,10 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../xcorr/tdc.html">Correction</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../xcorr/tpc3.html">Intercorrélation</a></li>
 </ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
@@ -405,7 +414,7 @@ mais elles ne permettent pas facilement de localiser temporellement certains év
 comme des changements brusques ou des modifications de fréquence.</p>
 <div class="exemple admonition">
 <p class="admonition-title">Exemple</p>
-<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 16</span></a> représente deux signaux et leurs spectres respectifs.
+<p>La <a class="reference internal" href="#f-temps-frequence-deux-sinus"><span class="std std-numref">Fig. 17</span></a> représente deux signaux et leurs spectres respectifs.
 Ces deux signaux ont en commun le fait qu’ils sont constitués de deux sinusoïdes de fréquence 50 Hz et 200 Hz,
 la différence étant l’ordre d’apparition des sinusoïdes.
 À partir des spectres seuls, il n’est pas possible de comprendre clairement ce que sont les signaux temporels :
@@ -415,7 +424,7 @@ on ne connaît pas l’ordre dans lequel arrivent les deux sinusoïdes.</p>
 <figure class="align-default" id="f-temps-frequence-deux-sinus">
 <img alt="../_images/deux-sinus.svg" src="../_images/deux-sinus.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Spectres de deux signaux constitués de sinusoïdes de fréquence 50 Hz et 200 Hz.</span><a class="headerlink" href="#f-temps-frequence-deux-sinus" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -525,7 +534,7 @@ alors que c’est l’inverse pour la représentation fréquentielle.</p>
 <figure class="align-default" id="f-temps-frequence">
 <a class="reference internal image-reference" href="../_images/temps-frequence.svg"><img alt="../_images/temps-frequence.svg" src="../_images/temps-frequence.svg" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien vers cette image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Découpage du plan temps-fréquence pour quatre représentations d’un signal.</span><a class="headerlink" href="#f-temps-frequence" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 <p>L’idéal serait d’avoir une représentation temps-fréquence très résolue à la fois en temps et en fréquence.
@@ -546,7 +555,7 @@ Elle s’applique donc aux signaux qui sont lentement stationnaires,
 par exemple dans le domaine biomédical, en géophysique ou en traitement de la parole.</p>
 <p>Il existe d’autres représentations temps-fréquence, comme la transformée en ondelettes.
 Avec cette transformée, la résolution en temps et en fréquence varie en fonction de la fréquence
-(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 17</span></a>).</p>
+(figure <a class="reference internal" href="#f-temps-frequence"><span class="std std-numref">Fig. 18</span></a>).</p>
 <!-- (d'après un exemple de PFlandrin) principe d'incertitude : pour observer une fréquence (oscillation), il faut le faire sur un axe suffisamment long. De même, pour mesurer la vitesse d'un objet, il vaut mieux chornométrer en deux emplacements éloignés (bonne estimation de la vitesse, mais pas de la position : à quelle endroit exactement y a-t-il cette vitesse ?). Si les deux emplacements sont très proches (bonne estimation de la position), mais mauvaise estimation de la vitesse
  -->
 </section>
