@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Exercices sur machine &#8212; Traitement du signal 1</title>
+    <title>Intercorrélation &#8212; Traitement du signal 1</title>
   
   
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'convolution/tp';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'xcorr/tpc3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Produit de convolution" href="tpc2.html" />
-    <link rel="prev" title="Exercices sur feuille" href="td.html" />
+    <link rel="next" title="Représentation vectorielle des signaux" href="../vectoriel/representation-vectorielle.html" />
+    <link rel="prev" title="Exercices sur machine" href="tp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -192,21 +192,21 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Convolution</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="convolution.html">Produit de convolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Exercices sur machine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tpc2.html">Produit de convolution</a></li>
-</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../convolution/convolution.html">Produit de convolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convolution/td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convolution/tp.html">Exercices sur machine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convolution/tpc2.html">Produit de convolution</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intercorrélation</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/intercorrelation.html">Intercorrélation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../xcorr/td.html">Exercices sur feuille</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../xcorr/tp.html">Exercices sur machine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../xcorr/tpc3.html">Intercorrélation</a></li>
-</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intercorrelation.html">Intercorrélation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td.html">Exercices sur feuille</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tp.html">Exercices sur machine</a><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Intercorrélation</a></li>
+</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Représentation vectorielle</span></p>
@@ -290,7 +290,7 @@
       
       
       
-      <li><a href="../_sources/convolution/tp.md" target="_blank"
+      <li><a href="../_sources/xcorr/tpc3.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -300,7 +300,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -372,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercices sur machine</h1>
+    <h1>Intercorrélation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,59 +386,80 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="exercices-sur-machine">
-<span id="c-convolution-tp"></span><h1>Exercices sur machine<a class="headerlink" href="#exercices-sur-machine" title="Lien vers cette rubrique">#</a></h1>
-<p>Pour chacun des couples de signaux suivants, représentez <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> et le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span>.
-Attention à spécifier l’argument <code class="docutils literal notranslate"><span class="pre">mode=&quot;same&quot;</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">numpy.convolve</span></code>.</p>
-<ul>
-<li><p>Représentez sur l’intervalle <span class="math notranslate nohighlight">\(n \in \{-10,\dots,10\}\)</span> les signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>, et le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span> :</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="intercorrelation">
+<h1>Intercorrélation<a class="headerlink" href="#intercorrelation" title="Lien vers cette rubrique">#</a></h1>
+<p>En plaçant les deux microphones à une distance différente du haut-parleur,
+le son produit par celui-ci sera capté à des instants différents par les deux microphones.
+En mesurant le délai <span class="math notranslate nohighlight">\(t\)</span> entre ces deux instants,
+et connaissant la distance <span class="math notranslate nohighlight">\(d\)</span> entre les deux microphones,
+nous pourrons déduire la vitesse du son <span class="math notranslate nohighlight">\(v\)</span> :</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-    x[n] = \sin(2\pi n/10)
-    \quad\text{et}\quad
-    y[n] =
-    \begin{cases}
-      3 \quad\text{si}\quad n=5 \\
-      0 \quad\text{sinon}
-    \end{cases}
-   \end{split}\]</div>
-</li>
-<li><p>Représentez sur l’intervalle <span class="math notranslate nohighlight">\(n \in \{-10,\dots,10\}\)</span> les signaux <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span>, et le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span> :</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    x[n] =
-    \begin{cases}
-      1 \quad\text{si}\quad n\in\{-1,1\} \\
-      2 \quad\text{si}\quad n=0 \\
-      0 \quad\text{sinon}
-    \end{cases}
-    \quad\text{et}\quad
-    y[n] =
-    \begin{cases}
-      -1 \quad\text{si}\quad n=-1 \\
-      1 \quad\text{si}\quad n=1 \\
-      0 \quad\text{sinon}
-    \end{cases}
- \end{split}\]</div>
-<ul>
-<li><p>Représentez le signal <span class="math notranslate nohighlight">\(x\)</span> <a href="../_static/AEP-2005.csv">AEP-2005.csv</a>
-qui correspond à la consommation électrique de l’est des États-Unis, heure par heure sur un an.
-Représentez également le signal <span class="math notranslate nohighlight">\(y\)</span> défini ci-dessous, ainsi que le produit de convolution <span class="math notranslate nohighlight">\(x*y\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    y[n] =
-    \begin{cases}
-      1/D \quad\text{si}\quad n\in\{0,\dots,D-1\} \\
-      0 \quad\text{sinon}
-    \end{cases}
-  \end{split}\]</div>
-<p>où <span class="math notranslate nohighlight">\(D=24 \times 7\)</span> correspond au nombre d’heures dans une semaine.</p>
-</li>
-</ul>
-<!-- commentaire de 2019-2020 : l'utilisation de "same" et d'un axe temporel comme il faut est toujours un problème. Peut être faut-il y aller franco et leur demander "full", sans axe dans un premier temps. Peut être aussi rajouter dans la correc une illustration avec le résultat de full et same superposés, et différents axes des temps. -->
-<p>Continuez le TP avec l”<a class="reference internal" href="../xcorr/tp.html#c-xcorr-tp"><span class="std std-ref">exercice sur l’intercorrélation</span></a>.</p>
-<div class="toctree-wrapper compound">
+\[v = \frac{d}{t}\]</div>
+<p>Pour mesurer le délai <span class="math notranslate nohighlight">\(t\)</span>, on peut utiliser l’intercorrélation qui permet d’avoir le décalage nécessaire pour que les deux sons captés soient similaires.</p>
+<p>Pour que la méthode fonctionne bien, il faut que l’intercorrélation soit la plus piquée possible.
+Cela implique que le son joué par le haut-parleur ne se répète pas :
+on peut donc utiliser un « clap » ou un bruit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Règle le volume avant acquisition</span>
+<span class="c1"># sound.init_volume()</span>
+
+<span class="c1"># Acquisition</span>
+<span class="n">fe</span> <span class="o">=</span> <span class="mi">44100</span>             <span class="c1"># Fréquence d&#39;échantillonage</span>
+<span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">sound</span><span class="o">.</span><span class="n">play_and_record</span><span class="p">(</span><span class="s2">&quot;whitenoise&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Suppression des premiers échantillons (vraiment utile ?)</span>
+<span class="n">left</span> <span class="o">=</span> <span class="n">left</span><span class="p">[</span><span class="mi">100000</span><span class="p">:]</span>
+<span class="n">right</span> <span class="o">=</span> <span class="n">right</span><span class="p">[</span><span class="mi">100000</span><span class="p">:]</span>
+
+<span class="c1"># Corrélation</span>
+<span class="n">corr</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">correlate</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;full&quot;</span><span class="p">)</span>
+
+<span class="c1"># Vecteurs temps</span>
+<span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>              <span class="c1"># Nombre d&#39;échantillons </span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">)</span><span class="o">/</span><span class="n">fe</span>      <span class="c1"># Vecteur temps des signaux enregistrés</span>
+<span class="n">tx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">)</span><span class="o">/</span><span class="n">fe</span>  <span class="c1"># Vecteur temps de la corrélation</span>
+
+<span class="c1"># Affichage des signaux enregistrés</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">left</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Micro gauche $g$&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Micro droite $d$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Affichage de la corrélation</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">corr</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Intercorrélation $R_</span><span class="si">{gd}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">corr</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Intercorrélation $R_</span><span class="si">{gd}</span><span class="s2"> (zoom)$&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.01</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Mesure de la vitesse du son</span>
+<span class="n">imax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">corr</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">tx</span><span class="p">[</span><span class="n">imax</span><span class="p">])</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;imax : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">imax</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Delta t : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vitesse : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; m/s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8df70a373fec9b662201f3d1409d3dfc6c3802b08aeb8b6027ff613a6ed847dd.png" src="../_images/8df70a373fec9b662201f3d1409d3dfc6c3802b08aeb8b6027ff613a6ed847dd.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="../_images/a505722964005a2f9f194aa6e9f48f3f6d65b59a30312f81d7ef77ecbbb2f1b8.png" src="../_images/a505722964005a2f9f194aa6e9f48f3f6d65b59a30312f81d7ef77ecbbb2f1b8.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>imax : 32236
+Delta t : 0.0014285714285714286
+Vitesse : 350.0 m/s
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
@@ -455,7 +476,7 @@ Représentez également le signal <span class="math notranslate nohighlight">\(y
         },
         kernelOptions: {
             name: "python3",
-            path: "./convolution"
+            path: "./xcorr"
         },
         predefinedOutput: true
     }
@@ -473,20 +494,20 @@ Représentez également le signal <span class="math notranslate nohighlight">\(y
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="td.html"
+       href="tp.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Exercices sur feuille</p>
+        <p class="prev-next-title">Exercices sur machine</p>
       </div>
     </a>
     <a class="right-next"
-       href="tpc2.html"
+       href="../vectoriel/representation-vectorielle.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Produit de convolution</p>
+        <p class="prev-next-title">Représentation vectorielle des signaux</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
