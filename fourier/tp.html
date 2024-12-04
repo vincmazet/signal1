@@ -480,7 +480,7 @@ donc entre les échantillons
 ou <span class="math notranslate nohighlight">\(-N/2\)</span> et <span class="math notranslate nohighlight">\(N/2\)</span> (si <span class="math notranslate nohighlight">\(N\)</span> est impair).</p>
 <p>Pour cela, il faut d’une part redéfinir le vecteur des abscisses
 (la fonction <code class="docutils literal notranslate"><span class="pre">numpy.floor</span></code> renvoie la partie entière qui permet de gérer la parité de <span class="math notranslate nohighlight">\(N\)</span>) :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">-</span> <span class="n">floor</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>et d’autre part utiliser <code class="docutils literal notranslate"><span class="pre">numpy.fft.fftshift</span></code> qui déplace la deuxième moitié d’un vecteur au début de celui-ci :</p>

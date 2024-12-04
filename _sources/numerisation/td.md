@@ -18,7 +18,7 @@
 * Montrez que $x^*$ a pour transformée de Fourier
   
   $$
-  X^*(f) = \sum_k X(f-kf_e).
+  X^*(f) = f_e \sum_k X(f-kf_e).
   $$
   
   La transformée de Fourier de $Ш_T(t)$ est $\frac{1}{T} Ш_{1/T}(f)$.

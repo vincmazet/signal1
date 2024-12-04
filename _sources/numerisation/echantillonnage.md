@@ -41,7 +41,7 @@ Le signal échantillonné $x[n]$ est considéré comme un train d'impulsions $x^
 On peut montrer que la transformée de Fourier de $x^*(t)$ s'écrit :
 
 $$
-X^*(f) = \sum_k X(f-kf_e)
+X^*(f) = f_e \sum_k X(f-kf_e)
 $$
 
 où $f_e=1/T_e$ est la « fréquence d'échantillonnage » (en anglais _sampling frequency_, souvent notée $f_s$).

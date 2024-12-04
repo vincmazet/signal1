@@ -21,7 +21,7 @@ La {numref}`F:quantification:signal` représente un exemple de quantification un
 
 ```{figure} quantification-signal-U.svg
 ---
-width: 400px
+width: 500px
 name: F:quantification:signal
 ---
 Exemple de quantification uniforme par arrondi d'un signal $x(t)$ sur $K=8$ niveaux.
@@ -62,7 +62,7 @@ La différence $\varepsilon(t) = x(t) - x_q(t)$ est appelée « erreur de quant
 
 ```{figure} quantification-erreur-U.svg
 ---
-width: 400px
+width: 500px
 name: F:quantification-erreur
 ---
 Erreur de quantification sur l'exemple précédent (en rouge).
@@ -87,7 +87,7 @@ En téléphonie, la « loi A » permet d'obtenir la quantification représentée
 
 ```{figure} quantification-signal-A.svg
 ---
-width: 400px
+width: 500px
 name: F:quantification:signal-A
 ---
 Exemple de quantification non uniforme d'un signal $x(t)$ sur $K=8$ niveaux.
@@ -95,7 +95,7 @@ Exemple de quantification non uniforme d'un signal $x(t)$ sur $K=8$ niveaux.
 
 ```{figure} quantification-erreur-A.svg
 ---
-width: 400px
+width: 500px
 name: F:quantification-erreur-A
 ---
 Erreur de quantification sur l'exemple précédent (en rouge).

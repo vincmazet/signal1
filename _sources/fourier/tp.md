@@ -73,7 +73,7 @@ Pour cela, il faut d'une part redéfinir le vecteur des abscisses
 (la fonction `numpy.floor` renvoie la partie entière qui permet de gérer la parité de $N$) :
 
 ```
-k = np.arange(N) - floor(N/2)
+k = np.arange(N) - np.floor(N/2)
 ```
 
 et d'autre part utiliser `numpy.fft.fftshift` qui déplace la deuxième moitié d'un vecteur au début de celui-ci :
