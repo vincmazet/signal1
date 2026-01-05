@@ -1,0 +1,132 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+
+version: 1
+
+project:
+
+# ----------------------------------------------------------------------------------------------- #
+
+# Metadata
+
+  id: d3400726-b98c-4ffd-81b7-95528f62c2a8
+  
+  title: Traitement du signal 1
+  description: Cours de traitement du signal de 1re année du diplôme ESN de Télécom Physique Strasbourg
+  keywords:
+    - traitement du signal
+    - produit de convolution
+    - corrélation
+    - transformée de Fourier
+    - Télécom Physique Strasbourg
+    - Université de Strasbourg
+  
+  authors:
+  - name: Vincent Mazet
+    affiliation: Université de Strasbourg
+
+  github: https://github.com/vincmazet/signal1
+ 
+  license: CC-BY-NC-4.0
+    
+  # plugins:
+  #   - src/example.mjs
+  #   - src/remark.mjs
+  
+  exclude:
+    # - notes.md
+    # - hpc/*.ipynb
+    # - '**/ignore.md'
+
+  exports:
+  - format: pdf
+    template: plain_latex_book
+    output: _build/exports/signal1.pdf
+    articles:
+      - elementaire/intro.md
+      - elementaire/classification.md
+      - elementaire/proprietes.md
+      - elementaire/energie-puissance.md
+      - elementaire/td.md
+
+# ----------------------------------------------------------------------------------------------- #
+
+# Table of contents
+  
+  toc:
+
+    - file: intro.md
+
+    - file: elementaire/intro.md
+      children:
+      - file: elementaire/classification.md
+      - file: elementaire/proprietes.md
+      - file: elementaire/energie-puissance.md
+      - file: elementaire/td.md
+        # - file: elementaire/tdc.md
+      # - file: elementaire/tp.md
+        # - file: elementaire/tpc1.md
+    
+    - file: convolution/intro.ipynb
+      children:
+      - file: convolution/td.md
+        # - file: convolution/tdc.md
+      - file: convolution/tp.md
+        # - file: convolution/tpc2.md
+    
+    # - file: xcorr/intro.md #Intercorrélation
+    #   children:
+    #   - file: xcorr/td.md
+        # - file: xcorr/tdc.md
+      # - file: xcorr/tp.md
+        # - file: xcorr/tpc3.md
+    
+    # - file: vectoriel/intro.md #Représentation vectorielle
+    #   children:
+    #   - file: vectoriel/representation-vectorielle.md
+    #   - file: vectoriel/td.md
+    
+    # - file: fourier/intro.md #Analyse de Fourier
+    #   children:
+    #   - file: fourier/fourier.md
+    #   - file: fourier/proprietes.md
+    #   - file: fourier/temps-frequence.md
+    #   - file: fourier/td.md
+    #   - file: fourier/tp.md
+        # - file: fourier/tpc1.md
+        # - file: fourier/tpc2.md
+    
+    # - file: numerisation/intro.md #Numérisation
+    #   children:
+    #   - file: numerisation/numerisation.md
+    #   - file: numerisation/echantillonnage.md
+    #   - file: numerisation/quantification.md
+    #   - file: numerisation/td.md
+    #   - file: numerisation/tp.md
+        # - file: numerisation/tpc1.md
+        # - file: numerisation/tpc2.md
+        # - file: numerisation/tpc3.md
+    
+    - file: annexes/intro.md
+      children:
+      - url: https://moodle.unistra.fr/course/view.php?id=6676
+        title: Moodle
+      - file: annexes/python.ipynb
+      - file: annexes/references.md
+      - file: annexes/licence.md
+
+# ----------------------------------------------------------------------------------------------- #
+
+# Website configuration
+
+site:
+
+  template: book-theme
+  
+  options:
+    favicon: src/favicon.ico
+    logo: src/logo-signal1-B.svg
+    hide_authors: true
+    hide_myst_branding: true
+    style: src/style.css
+
+# ----------------------------------------------------------------------------------------------- #
