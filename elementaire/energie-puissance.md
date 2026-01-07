@@ -22,7 +22,6 @@ $$E = \sum_{n=-\infty}^{+\infty} |x[n]|^2$$
 
 ::::
 
-
 Ces formules sont équivalentes, heureusement ! L'énergie est en fait l'aire sous la courbe du carré du signal, l'aire sous la courbe étant une intégrale ou une somme. Remarquez également que la notation $\mid\cdot\mid$ correspond au module (le signal pouvant être complexe).
 
 ## Puissance d'un signal
@@ -71,4 +70,4 @@ Cela implique également que les signaux de la vie réelle sont à puissance nul
 puisque, d'après la formule de la puissance d'un signal apériodique,
 l'intégrale (finie) est divisée par $2T$ qui tend vers l'infini.
 
-<a class="exercise btn btn-light" href="td.html#exercice-3" role="button">3</a>
+<a class="exercise btn btn-light" href="td#exercice-3" role="button">3</a>

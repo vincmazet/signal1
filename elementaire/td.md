@@ -2,7 +2,6 @@
 # Exercices sur feuille
 
 
-(P:elementaire:exercices:tableau)=
 ## Exercice 1
 
 Complétez le <a href="../_static/classification.pdf">tableau de classification des signaux</a>.

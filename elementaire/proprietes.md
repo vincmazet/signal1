@@ -20,9 +20,11 @@ $$
   \end{cases}
 $$
 
-<div id="dilatation" class="spetsi mathjax_process"></div>
+<!-- <div id="dilatation" class="spetsi mathjax_process"></div>
 <script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
-<script src="https://vincmazet.github.io/spetsi/js/dilatation.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/dilatation.js" type="text/javascript"></script> -->
+
+[**Animation** : changement d'échelle](https://vincmazet.github.io/spetsi/dilatation.html)
 
 
 ## Périodicité

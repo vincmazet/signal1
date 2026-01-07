@@ -42,11 +42,13 @@ project:
     template: plain_latex_book
     output: _build/exports/signal1.pdf
     articles:
-      - elementaire/intro.md
-      - elementaire/classification.md
-      - elementaire/proprietes.md
-      - elementaire/energie-puissance.md
-      - elementaire/td.md
+    - file: intro.md
+    - file: elementaire/intro.md
+    - file: elementaire/classification.md
+    - file: elementaire/signaux-elementaires.ipynb
+    - file: elementaire/proprietes.md
+    - file: elementaire/energie-puissance.md
+    - file: elementaire/td.md
 
 # ----------------------------------------------------------------------------------------------- #
 
@@ -59,6 +61,7 @@ project:
     - file: elementaire/intro.md
       children:
       - file: elementaire/classification.md
+      - file: elementaire/signaux-elementaires.ipynb
       - file: elementaire/proprietes.md
       - file: elementaire/energie-puissance.md
       - file: elementaire/td.md
