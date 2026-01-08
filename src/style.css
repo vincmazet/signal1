@@ -32,3 +32,17 @@ a.exercise::before {
 a.exercise:visited, a.exercise:visited, a.exercise:active {
     color: var(--pst-color-text-base);
 }
+
+/* Hack pour remplacer "Content" par "Sommaire" */
+/* Source : https://www.geeksforgeeks.org/css/how-to-replace-text-with-css/ */
+.myst-outline-header {
+    visibility: hidden;
+    position: relative;
+}
+.myst-outline-header::after {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "Sommaire";
+}
