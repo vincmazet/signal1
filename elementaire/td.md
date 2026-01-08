@@ -1,7 +1,7 @@
-(P:elementaire:exercices)=
 # Exercices sur feuille
 
 
+(S:elementaire:exo:classification)=
 ## Exercice 1
 
 Complétez le tableau de classification des signaux : {download}`classification.pdf`.
@@ -12,6 +12,7 @@ Placez dans le tableau les signaux suivants :
 - l'heure du lever de soleil tous les jours.
 
 
+(S:elementaire:exo:representation)=
 ## Exercice 2
 
 Tracez à la main les signaux suivants :
@@ -24,6 +25,7 @@ $$
 $$
 
 
+(S:elementaire:exo:energie-puissance)=
 ## Exercice 3
 
 Calculez la puissance et l'énergie des signaux suivants :

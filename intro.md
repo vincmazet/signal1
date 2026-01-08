@@ -1,14 +1,6 @@
 # Introduction
 
 
-<a href="./elementaire/td#exercice-1">X</a>
-[](elementaire/td#exercice-1)
-
-[](convolution/td#exercice-1) x
-<a href="./convolution/td#exercice-1">X</a>
-
----
-
 Ce manuel est le support du cours de Traitement du signal de la première année de la formation ESN
 à [Télécom Physique Strasbourg](http://www.telecom-physique.fr/).
 Le cours de deuxième année est accessible dans un [autre manuel](https://vincmazet.github.io/signal2/).

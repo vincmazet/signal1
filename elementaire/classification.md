@@ -41,4 +41,4 @@ Dans la suite du cours, nous adopterons les conventions de notation suivantes :
   et le plus souvent la variable $n\in\mathbb{Z}$, par exemple : $x[n]$.
 
 
-<a class="exercise btn btn-light" href="/elementaire/td#exercice-1" role="button">1</a>
+✏️ [](S:elementaire:exo:classification)

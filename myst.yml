@@ -27,16 +27,18 @@ project:
   github: https://github.com/vincmazet/signal1
  
   license: CC-BY-NC-4.0
-    
-  # plugins:
-  #   - src/example.mjs
-  #   - src/remark.mjs
+
+  # Numérotations
+  numbering:
+    equations: false
   
+  # Fichier à exclure de la compilation
   exclude:
     # - notes.md
     # - hpc/*.ipynb
     # - '**/ignore.md'
 
+  # Exportation dans d'autres formats
   exports:
   - format: pdf
     template: plain_latex_book

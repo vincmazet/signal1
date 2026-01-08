@@ -70,4 +70,5 @@ Cela implique également que les signaux de la vie réelle sont à puissance nul
 puisque, d'après la formule de la puissance d'un signal apériodique,
 l'intégrale (finie) est divisée par $2T$ qui tend vers l'infini.
 
-<a class="exercise btn btn-light" href="/elementaire/td#exercice-3" role="button">3</a>
+
+✏️ [](S:elementaire:exo:energie-puissance)

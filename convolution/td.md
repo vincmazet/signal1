@@ -1,6 +1,7 @@
 # Exercices sur feuille
 
 
+(S:convolution:exo:representation)=
 ## Exercice 1
 
 Représentez les signaux suivants :
@@ -12,7 +13,7 @@ $$
 $$
 
 
-(E:convolution-exo2)=
+(S:convolution:exo:calcul)=
 ## Exercice 2
 
 Calculez le produit de convolution pour les couples de signaux discrets suivants.
@@ -49,11 +50,13 @@ y[n] =
 $$
 
 
+(S:convolution:exo:xx)=
 ## Exercice 3
 
 Calculez le produit de convolution $x*x$ où $x(t) = A$ sur $[-T;T]$ et $0$ ailleurs.
 
 
+(S:convolution:exo:echo)=
 ## Exercice 4
 
 On peut obtenir un écho dans une grande salle vide, une grotte ou en face d'une montagne,
