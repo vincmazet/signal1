@@ -32,3 +32,14 @@ a.exercise::before {
 a.exercise:visited, a.exercise:visited, a.exercise:active {
     color: var(--pst-color-text-base);
 }
+
+
+
+/* https://mystmd.org/guide/website-style */
+/* em {
+    background-color: #eff6ff;
+    border: 1px solid #3b82f6;
+    border-radius: .25rem;
+    padding: .4em;
+    margin-right: 1em;
+} */

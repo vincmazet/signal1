@@ -12,6 +12,7 @@ $$
 $$
 
 
+(E:convolution-exo2)=
 ## Exercice 2
 
 Calculez le produit de convolution pour les couples de signaux discrets suivants.

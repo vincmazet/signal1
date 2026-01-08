@@ -42,7 +42,6 @@ project:
     template: plain_latex_book
     output: _build/exports/signal1.pdf
     articles:
-    - file: intro.md
     - file: elementaire/intro.md
     - file: elementaire/classification.md
     - file: elementaire/signaux-elementaires.ipynb
@@ -73,7 +72,7 @@ project:
       children:
       - file: convolution/td.md
         # - file: convolution/tdc.md
-      - file: convolution/tp.md
+      # - file: convolution/tp.md
         # - file: convolution/tpc2.md
     
     # - file: xcorr/intro.md #Intercorrélation
@@ -130,6 +129,7 @@ site:
     logo: src/logo-signal1-B.svg
     hide_authors: true
     hide_myst_branding: true
+    folders: true
     style: src/style.css
 
 # ----------------------------------------------------------------------------------------------- #

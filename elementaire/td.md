@@ -4,7 +4,7 @@
 
 ## Exercice 1
 
-Complétez le <a href="../_static/classification.pdf">tableau de classification des signaux</a>.
+Complétez le tableau de classification des signaux : {download}`classification.pdf`.
 
 Placez dans le tableau les signaux suivants :
 - la température ambiante en fonction du temps,
