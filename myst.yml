@@ -43,14 +43,11 @@ project:
   exports:
   - format: pdf
     template: plain_latex_book
-    output: _build/exports/signal1.pdf
+    output: _build/exports/signal1-convolution.pdf
     articles:
-    - file: elementaire/intro.md
-    - file: elementaire/classification.md
-    - file: elementaire/signaux-elementaires.ipynb
-    - file: elementaire/proprietes.md
-    - file: elementaire/energie-puissance.md
-    - file: elementaire/td.md
+    - file: convolution/intro.ipynb
+    - file: convolution/td.md
+    
 
 # ----------------------------------------------------------------------------------------------- #
 

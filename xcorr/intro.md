@@ -50,7 +50,7 @@ Un autre exemple d'utilisation de l'intecorrélation est la mesure de la fréque
 :::{figure} sinusoide.svg
 :name: F:intercorrelation:sinusoide
 
-Intercorrélation de $x$ ( une sinusoïde bruitée de fréquence 0,5 Hz) avec un sinusoïde de fréquence variable.
+Intercorrélation de $x$ (une sinusoïde bruitée de fréquence 0,5 Hz) avec un sinusoïde de fréquence variable.
 La corrélation la plus forte est obtenue pour une sinusoïde de 0,5 Hz.
 :::
 
@@ -88,6 +88,7 @@ L'autocorrélation possède quelques propriétés remarquables :
 * L'autocorrélation d'un signal périodique de période $T$ est également périodique de période $T$ (puisqu'en décalant le signal de $T$, il ressemble à nouveau avec lui-même)
 
 
+\
 ✏️ [](S:xcorr:exo:periodique)\
 ✏️ [](S:xcorr:exo:max)\
 ✏️ [](S:xcorr:exo:calcul)\
