@@ -24,7 +24,11 @@ $$
 <script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
 <script src="https://vincmazet.github.io/spetsi/js/dilatation.js" type="text/javascript"></script> -->
 
-[**Animation** : changement d'échelle](https://vincmazet.github.io/spetsi/dilatation.html)
+[🎬 Changement d'échelle](https://vincmazet.github.io/spetsi/dilatation.html)
+
+
+<iframe src="https://vincmazet.github.io/spetsi/dilatation.html">
+</iframe>
 
 
 ## Périodicité

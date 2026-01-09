@@ -34,6 +34,7 @@ project:
   
   # Fichier à exclure de la compilation
   exclude:
+  - .ipynb_checkpoints
     # - notes.md
     # - hpc/*.ipynb
     # - '**/ignore.md'
@@ -77,9 +78,9 @@ project:
       # - file: convolution/tp.md
         # - file: convolution/tpc2.md
     
-    # - file: xcorr/intro.md #Intercorrélation
-    #   children:
-    #   - file: xcorr/td.md
+    - file: xcorr/intro.md
+      children:
+      - file: xcorr/td.md
         # - file: xcorr/tdc.md
       # - file: xcorr/tp.md
         # - file: xcorr/tpc3.md
