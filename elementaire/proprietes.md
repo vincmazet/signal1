@@ -20,15 +20,7 @@ $$
   \end{cases}
 $$
 
-<!-- <div id="dilatation" class="spetsi mathjax_process"></div>
-<script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
-<script src="https://vincmazet.github.io/spetsi/js/dilatation.js" type="text/javascript"></script> -->
-
-<!-- [🎬 Changement d'échelle](https://vincmazet.github.io/spetsi/dilatation.html) -->
-
-
-<iframe src="https://vincmazet.github.io/spetsi/standalone/dilatation.html">
-</iframe>
+<iframe src="https://vincmazet.github.io/spetsi/standalone/dilatation.html"><a href="https://vincmazet.github.io/spetsi/standalone/dilation.html">Animation</a></iframe>
 
 
 ## Périodicité
