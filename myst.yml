@@ -52,7 +52,7 @@ project:
 # ----------------------------------------------------------------------------------------------- #
 
 # Table of contents
-  
+
   toc:
 
     - file: intro.md
@@ -64,28 +64,30 @@ project:
       - file: elementaire/proprietes.md
       - file: elementaire/energie-puissance.md
       - file: elementaire/td.md
-        # - file: elementaire/tdc.md
+        children:
+        - file: elementaire/tdc.md
       # - file: elementaire/tp.md
         # - file: elementaire/tpc1.md
     
     - file: convolution/intro.ipynb
       children:
       - file: convolution/td.md
-        # - file: convolution/tdc.md
+        children:
+        - file: convolution/tdc.md
       # - file: convolution/tp.md
         # - file: convolution/tpc2.md
     
     - file: xcorr/intro.md
       children:
       - file: xcorr/td.md
-        # - file: xcorr/tdc.md
+        children:
+        - file: xcorr/tdc.md
       # - file: xcorr/tp.md
         # - file: xcorr/tpc3.md
     
-    # - file: vectoriel/intro.md #Représentation vectorielle
-    #   children:
-    #   - file: vectoriel/representation-vectorielle.md
-    #   - file: vectoriel/td.md
+    - file: vectoriel/intro.ipynb
+      children:
+      - file: vectoriel/td.md
     
     # - file: fourier/intro.md #Analyse de Fourier
     #   children:
@@ -121,6 +123,8 @@ project:
 # Website configuration
 
 site:
+
+  outline_maxdepth: 2
 
   template: book-theme
   
