@@ -46,3 +46,8 @@ a.exercise:visited, a.exercise:visited, a.exercise:active {
     left: 0;
     content: "Sommaire";
 }
+
+/* Rend les puces des listes de la même couleur que le texte */
+.article{
+    --tw-prose-bullets: var(--tw-prose-body);
+}
