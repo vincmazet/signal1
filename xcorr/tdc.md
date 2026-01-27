@@ -72,6 +72,58 @@ La ressemblance est forcément la plus grande lorsque le décalage est nul.
 
 ## Exercice 3
 
+Cet exercice est très similaire à l'[](S:convolution:exo:xx) du produit de convolution.
+
+Comme $x$ est à support limité (il est nul en dehors de $\{-N,\dots,N\}$),
+et égal à 1 dans l'intervalle,
+alors sont autocorrélation s'écrit :
+
+$$
+R_{x}[m] = \sum_{n=-\infty}^{+\infty} x[n+m] x[n] = \sum_{n=-N}^{N} x[n+m]
+$$
+
+où
+
+$$
+x[n+m] =
+\begin{cases}
+  1 \quad&\text{si } n \in \{-N-m,\dots,N-m\} \\
+  0 \quad&\text{sinon}. \\
+\end{cases}
+$$
+
+Donc le signal à sommer est non nul dans $\{-N-m,\dots,N-m\}$ mais la somme se fait uniquement sur $\{-N,\dots,N\}$.
+Donc le résultat dépend de la valeur de $m$.
+
+* si $m>2N \Leftrightarrow N-m < -N$, alors $x[n+m]$ est toujours nul entre les bornes de la somme et donc $R_x[m]=0$.
+
+* si $0 < m \leq 2N$, alors $-N \leq N-m < N$.
+  Les termes de la somme qui ne sont pas nul sont donc ceux compris entre $-N$ et $N-m$ ; les termes suivants de $N-m+1$ à $N$ sont nuls.
+  Donc :
+  $$
+  R_{x}[m] = \sum_{n=-N}^{N-m} x[n+m] = \sum_{n=-N}^{N-m} 1 = 2N-m+1.
+  $$
+
+* si $-2N \leq m \leq 0$, alors $-N \leq -N-m \leq N$.
+  Les termes de la somme qui ne sont pas nul sont donc ceux compris entre $-N-m$ et $N$ ; les termes précédents de $-N$ à $-N-m-1$ sont nuls.
+  Donc :
+  $$
+  R_{x}[m] = \sum_{n=-N-m}^{N} x[n+m] = \sum_{n=-N-m}^{N} 1 = 2N+m+1.
+  $$
+
+* si $m<-2N \Leftrightarrow -N-m > N$, alors $x[n+m]$ est toujours nul entre les bornes de la somme et donc $R_x[m]=0$.
+
+Finalement, l'autocorrélation est un signal triangle :
+
+$$
+R_{x}[m] =
+\begin{cases}
+   0      \quad&\text{si } m>2N, \\
+   2N-m+1 \quad&\text{si } 0 < m \leq 2N, \\
+   2N+m+1 \quad&\text{si } -2N \leq m \leq 0, \\
+   0      \quad&\text{si } m<-2N.
+\end{cases}
+$$
 
 
 ## Exercice 4
