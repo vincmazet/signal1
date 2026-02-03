@@ -88,6 +88,8 @@ project:
     - file: vectoriel/intro.ipynb
       children:
       - file: vectoriel/td.md
+        children:
+        - file: vectoriel/tdc.md
     
     # - file: fourier/intro.md #Analyse de Fourier
     #   children:
