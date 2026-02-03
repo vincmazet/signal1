@@ -4,7 +4,7 @@
 (S:vectoriel:exo:representation)=
 ## Exercice 1
 
-Représenter les signaux ci-dessous dans $\mathbb{R}^5$ :
+Représentez les signaux ci-dessous dans $\mathbb{R}^5$ :
 
 $$
 \delta[n], \qquad u[n], \qquad \mathrm{rect}\left(\frac{n-2}{3}\right), \qquad \cos\left(\frac{\pi n}{2}\right).
