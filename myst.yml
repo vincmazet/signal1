@@ -91,12 +91,12 @@ project:
         children:
         - file: vectoriel/tdc.md
     
-    # - file: fourier/intro.md #Analyse de Fourier
-    #   children:
-    #   - file: fourier/fourier.md
-    #   - file: fourier/proprietes.md
-    #   - file: fourier/temps-frequence.md
-    #   - file: fourier/td.md
+    - file: fourier/intro.md
+      children:
+      - file: fourier/fourier.md
+      - file: fourier/proprietes.md
+      - file: fourier/temps-frequence.md
+      - file: fourier/td.md
     #   - file: fourier/tp.md
         # - file: fourier/tpc1.md
         # - file: fourier/tpc2.md
