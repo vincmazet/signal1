@@ -165,7 +165,7 @@ On peut être surpris que le spectre présente des fréquences « négatives »
 En fait, il ne s'agit pas de fréquences négatives (cela n'a pas de sens),
 mais d'exponentielles complexes tournant en sens opposé aux exponentielles complexes de la partie à droite de l'axe des ordonnées.
 
-:::```{figure} negative-freqs.png
+:::{figure} negative-freqs.png
 :height: 250px
 :name: F:fourier:freqs-neg
 
