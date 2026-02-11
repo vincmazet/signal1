@@ -138,8 +138,7 @@ Il existe un algorithme très rapide pour la calculer : l'algorithme [FFT](https
 :::
 
 \
-✏️ [](S:fourier:exo:sf-tf-tfd)\
-✏️ [](S:fourier:exo:sf-sin)
+✏️ [](S:fourier:exo:sf-tf-tfd)
 
 ## Représentation
 

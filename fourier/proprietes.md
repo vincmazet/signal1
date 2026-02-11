@@ -101,15 +101,13 @@ $$
 La propriété de dualité est utile pour obtenir la transformée de Fourier d'un signal lorsque celle-ci est compliquée à calculer.
 
 \
+✏️ [](S:fourier:exo:sf-sin)\
 ✏️ [](S:fourier:exo:modulation)\
 ✏️ [](S:fourier:exo:exp)\
-✏️ [](S:fourier:exo:am)\
-✏️ [](S:fourier:exo:dirac)\
-✏️ [](S:fourier:exo:andlau)\
 ✏️ [](S:fourier:exo:1+cos)\
-✏️ [](S:fourier:exo:rect-cos)\
-✏️ [](S:fourier:exo:demodulation)\
-✏️ [](S:fourier:exo:canal+)
+✏️ [](S:fourier:exo:dirac)\
+✏️ [](S:fourier:exo:am)\
+✏️ [](S:fourier:exo:andlau)
 
 
 ## Théorème de Parseval–Plancherel
