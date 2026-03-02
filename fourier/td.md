@@ -153,3 +153,21 @@ name: F:td-fourier:sftf
 * Que représente les axes (et oui, le titre de l'axe des ordonnées n'est pas clair :
   c'est une maladresse des auteurs...) ?
 * Décrivez précisément (en français ou sous forme mathématique) quel est le signal analysé. 
+
+
+(S:fourier:exo:association)=
+## Exercice 10
+
+Associez pour chaque signal temporel (identifié par une lettre) le spectre correspondant (identifié par un
+chiffre), en justifiant chaque association.
+
+Notez que les signaux (temporels ou spectres) sont représentés en
+fonction des échantillons (temporels ou fréquentiels), et que seul le module des spectres est représenté.
+
+```{image} signaux.svg
+:width: 100%
+```
+
+```{image} spectres.svg
+:width: 100%
+```

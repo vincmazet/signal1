@@ -59,14 +59,11 @@ Les figures ci-après représentent les spectrogrammes de quelques signaux.
 `````{tab-set}
 
 ````{tab-item} Sinus à 50 et 200 Hz
+L'ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.
 ```{figure} tf-sin50200.svg
 ---
 width: 800px
 ```
-L'ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur le spectrogramme.
-````
-
-````{tab-item} Sinus à 200 et 50 Hz
 ```{figure} tf-sin20050.svg
 ---
 width: 800px
@@ -75,47 +72,41 @@ L'ordre dans lequel apparaissent les deux sinusoïdes est clairement visible sur
 ````
 
 ````{tab-item} Gaussienne modulée
+L'instant d'apparition de l'oscillation, ainsi que sa fréquence, sont clairement visibles sur le spectrogramme.
 ```{figure} tf-gaussienne.svg
 ---
 width: 800px
 ```
-L'instant d'apparition de l'oscillation, ainsi que sa fréquence, sont clairement visibles sur le spectrogramme.
 ````
 
-````{tab-item} Chirp
-```{figure} tf-chirp.svg
----
-width: 800px
-```
-Un « chirp » est une sinusoïde dont la fréquence évolue en fonction du temps.
-Dans la nature, le chant des oiseaux, les vocalises des cétacés ou les ultrasons émis par les chauve-souris ressemblent à des chirps.
-Les chirps sont également émis par les sonars et les radars.
-````
-
-````{tab-item} Voyelles
-```{figure} tf-aeiou.svg
----
-width: 800px
-```
-Ce graphique représente l'enregistrement des voyelles françaises : elles sont facilement différentiables sur la représentation temps-fréquence.
-````
-
-````{tab-item} Voyelle « i » dite par un homme et une femme
+````{tab-item} Voyelle « i »
+Une homme et une femme disent la voyelle « i » l'un après l'autre. Qui parle en premier ?
 ```{figure} tf-homme-femme.svg
 ---
 width: 800px
 ```
-Une homme et une femme disent la voyelle « i » l'un après l'autre.
-Qui parle en premier ?
 ````
 
 ````{tab-item} Lettre à Élise
+Les notes de musique sont bien visibles sur la représentation temps-fréquence.
+Certains artistes s'amusent également avec cette transformée, comme Aphex Twin sur [ce morceau](https://youtu.be/M9xMuPWAZW8?t=305).
 ```{figure} tf-elise.svg
 ---
 width: 800px
 ```
-Les notes de musique sont bien visibles sur la représentation temps-fréquence.
-Certains artistes s'amusent également avec cette transformée, comme Aphex Twin sur [_Formula_](https://youtu.be/M9xMuPWAZW8?t=305).
+````
+
+````{tab-item} Analyse vibratoire
+Signaux acoustiques de machine tournante avec un roulement à billes sain (en haut) ou présentant un défaut sur la bague externe (en bas)
+([Source](https://www.kaggle.com/datasets/julienjta/engine-acoustic-emissions)).
+```{figure} tf-bearing-normal.svg
+---
+width: 800px
+```
+```{figure} tf-bearing-outer.svg
+---
+width: 800px
+```
 ````
 
 `````
