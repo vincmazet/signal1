@@ -103,7 +103,7 @@ project:
       - file: fourier/proprietes.md
       - file: fourier/temps-frequence.md
       - file: fourier/td.md
-    #   - file: fourier/tp.md
+      - file: fourier/tp.md
         # - file: fourier/tpc1.md
         # - file: fourier/tpc2.md
     

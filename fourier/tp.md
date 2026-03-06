@@ -14,15 +14,15 @@ $$
 
 avec $A=1$ et $T = 1$.
 
-* Tracez avec Python la série de Fourier de ce signal (qui a été calculée en TD),
-  c'est-à-dire le spectre d'amplitude (`numpy.abs`) et de phase (`numpy.angle`) de $y$, pour $k$ allant de $-10$ à $10$.
+* Tracez avec Python le spectre de ce signal pour $k$ allant de $-10$ à $10$,
+  c'est-à-dire le module (`numpy.abs`) et la phase (`numpy.angle`) de la série de Fourier de $y$ (qui a été calculée en TD)
 
 On souhaite maintenant reconstruire le signal temporel en ne considérant que les $K$ premières harmoniques.
 
 * Grâce à la formule de la série de Fourier inverse,
   tracez le signal temporel reconstruit pour une valeur de $K$ fixée (c'est-à-dire pour $k\in\{-K,\dots,K\}$).
   Il peut être utile dans ce cas d'utiliser une boucle `for` sur $k$.
-  Attention, il faut considérer la partie réelle du résultat car le signal obtenu contient une composante imaginaire
+  Attention, il faut considérer la partie réelle du résultat car le signal obtenu peut contenir une composante imaginaire
   due aux erreurs numériques.
 
 * Quel signal obtenez-vous pour $K=0$, puis pour $K=1$ ?
@@ -76,7 +76,7 @@ Pour cela, il faut d'une part redéfinir le vecteur des abscisses
 k = np.arange(N) - np.floor(N/2)
 ```
 
-et d'autre part utiliser `numpy.fft.fftshift` qui déplace la deuxième moitié d'un vecteur au début de celui-ci :
+et d'autre part utiliser `numpy.fft.fftshift` qui déplace la deuxième moitié d'un vecteur au début de celui-ci, par exemple :
 
 $$
 v = [6\,5\,4\,3\,2\,1]
@@ -99,5 +99,24 @@ est $f = k/(N \, T_e)$.
   
 ### Application
 
-* Chargez le signal <a href="../_static/inconnu.csv">inconnu.csv</a> ($T_e=0,1$ ms) et tracez sa TFD pour déterminer quelle est la
+* Chargez le signal {download}`inconnu.csv` ($T_e=0,1$ ms) et tracez sa TFD pour déterminer quelle est la
   fréquence principale de ce signal.
+
+
+## Représentation temps-fréquence
+
+Le fichier {download}`gamme.wav` est un enregistrement d'une gamme musicale au piano.
+Nous allons chercher quelles sont les notes jouées.
+
+* Chargez (`scipy.io.wavfile.read`) et affichez le signal.
+
+* Vérifiez sur la TFD qu'il n'est pas facile de trouver la partition musicale correspondante.
+
+La représentation temps-fréquence du signal permet de retrouver très simplement la partition musicale.
+Par exemple, la fonction `matplotlib.pyplot.specgram` permet d'afficher le spectrogramme d'un signal.
+
+* Affichez le spectrogramme du signal en conservant les paramètres par défaut.
+
+* Étudiez l'influence des paramètres principaux de la fonction `matplotlib.pyplot.specgram` pour comprendre leur signification.
+
+* Déterminez alors les notes jouées à partir de leur fréquence.
