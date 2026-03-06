@@ -67,7 +67,9 @@ project:
         children:
         - file: elementaire/tdc.md
       - file: elementaire/tp.ipynb
-        # - file: elementaire/tpc1.md
+        children:
+        - file: elementaire/tpc.ipynb
+          title: 🖍️ Correction
     
     - file: convolution/intro.ipynb
       children:
@@ -75,7 +77,9 @@ project:
         children:
         - file: convolution/tdc.md
       - file: convolution/tp.md
-        # - file: convolution/tpc2.md
+        children:
+        - file: convolution/tpc.ipynb
+          title: 🖍️ Correction
     
     - file: xcorr/intro.md
       children:
@@ -83,7 +87,9 @@ project:
         children:
         - file: xcorr/tdc.md
       - file: xcorr/tp.md
-        # - file: xcorr/tpc3.md
+        children:
+        - file: xcorr/tpc.ipynb
+          title: 🖍️ Correction
     
     - file: vectoriel/intro.ipynb
       children:
