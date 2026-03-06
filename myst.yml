@@ -110,11 +110,10 @@ project:
         # - file: fourier/tpc2.md
         # - file: fourier/tpc3.md
     
-    # - file: numerisation/intro.md #Numérisation
-    #   children:
-    #   - file: numerisation/numerisation.md
-    #   - file: numerisation/echantillonnage.md
-    #   - file: numerisation/quantification.md
+    - file: numerisation/intro.md
+      children:
+      - file: numerisation/echantillonnage.md
+      - file: numerisation/quantification.md
     #   - file: numerisation/td.md
     #   - file: numerisation/tp.md
         # - file: numerisation/tpc1.md
