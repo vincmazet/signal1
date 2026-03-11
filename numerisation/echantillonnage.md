@@ -184,10 +184,11 @@ Lorsque la condition ci-avant n'est pas respectée, et donc que $f_e < 2f_\mathr
 On parle de « repliement spectral » (en anglais : _aliasing_).
 L'animation ci-dessous simule l'effet du repliement spectral sur une sinusoïde dont on peut régler la période d'échantillonnage.
 
-<div id="aliasing" class="spetsi mathjax_process"></div>
+<!--<div id="aliasing" class="spetsi mathjax_process"></div>
 <script src="https://vincmazet.github.io/spetsi/js/spetsi.js" type="text/javascript"></script>
-<script src="https://vincmazet.github.io/spetsi/js/aliasing.js" type="text/javascript"></script>
+<script src="https://vincmazet.github.io/spetsi/js/aliasing.js" type="text/javascript"></script>-->
 
+<iframe src="https://vincmazet.github.io/spetsi/standalone/aliasing.html"><a href="https://vincmazet.github.io/spetsi/standalone/aliasing.html">Animation</a></iframe>
 
 Le repliement spectral peut apparaître sur tout signal numérique, s'il est mal échantillonné.
 Les exemples ci-dessous illustrent l'effet du repliement spectral sur différents signaux.
