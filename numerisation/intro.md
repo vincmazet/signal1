@@ -1,4 +1,4 @@
-(C  :numerisation)=
+(C:numerisation)=
 # Numérisation d'un signal
 
 La plupart des signaux d'origine physique sont analogiques (amplitudes et temps continus).
