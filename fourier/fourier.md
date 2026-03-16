@@ -45,17 +45,21 @@ $$
 Parfois, la série de Fourier de signaux réels est définie comme l'ensemble des coefficients $a_k$ et $b_k$ tels que :
 
 $$
+\begin{align*}
                                   a_0 &= \frac{1}{T} \int_0^T x(t) dt \\
 \forall k \in\mathbb{N}^*, \qquad a_k &= \frac{2}{T} \int_0^T x(t) \cos(2 \pi k t / T) dt \\
 \forall k \in\mathbb{N}^*, \qquad b_k &= \frac{2}{T} \int_0^T x(t) \sin(2 \pi k t / T) dt
+\end{align*}
 $$
 
 La relation entre ces coefficients $a_k$ et $b_k$ avec l'expression précédente de la série de Fourier est :
 
 $$
+\begin{align*}
 \text{si}\, k<0\,:\qquad X[k] &= \frac{a_{-k}+jb_{-k}}{2} \\
 \text{si}\, k=0\,:\qquad X[0] &= a_0 \\
 \text{si}\, k>0\,:\qquad X[k] &= \frac{a_k-jb_k}{2}
+\end{align*}
 $$
 
 et la formule de la série de Fourier inverse devient :
@@ -71,7 +75,7 @@ C'est donc plus simple en complexe ! 😜
 :::
 
 \
-✏️ [](S:fourier:exo:sf-tf-tfd)
+✏️ [](#S:fourier:exo:sf-tf-tfd)
 
 
 ## Transformée de Fourier
@@ -99,7 +103,7 @@ Cette formule est la transformée de Fourier inverse.
 :::
 
 \
-✏️ [](S:fourier:exo:sf-tf-tfd)
+✏️ [](#S:fourier:exo:sf-tf-tfd)
 
 
 ## Série de Fourier discrète
@@ -138,7 +142,7 @@ Il existe un algorithme très rapide pour la calculer : l'algorithme [FFT](https
 :::
 
 \
-✏️ [](S:fourier:exo:sf-tf-tfd)
+✏️ [](#S:fourier:exo:sf-tf-tfd)
 
 ## Représentation
 

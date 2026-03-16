@@ -6,9 +6,11 @@
 ## Exercice 1
 
 $$
+\begin{align*}
   X(f) &= \frac{A}{2} \mathrm{sinc}\left(\frac{k}{2}\right) \\
   Y(f) &= AT \mathrm{sinc}(ft) \\
   Z(t) &= A e^{j\pi k / 2N} \frac{ \sin\left(\pi k/2\right) }{ \sin\left(\pi k/2N\right) }
+\end{align*}
 $$
 
 ## Exercice 2
@@ -25,16 +27,20 @@ Le signal $x(t) = \sin(2\pi f_0 t + \varphi)$ est périodique de période $T_0 =
 et sa série de Fourier est égale à :
 
 $$
+\begin{align*}
   X[k] &= \frac{1}{T_0} \int_{T_0} x(t) e^{-j2\pi kt/T_0} dt \\
        &= \frac{1}{2jT_0} \int_{T_0} e^{-j2\pi f_0 t(1-k)} e^{j\varphi} dt - \frac{1}{2jT_0} \int_{T_0} e^{-j2\pi f_0 t(1+k)} e^{j\varphi} dt \\
+\end{align*}
 $$
 
 Il faut distinguer trois cas, en fonction de la valeur de $k$ :
 
 $$
+\begin{align*}
   &\text{si } k=1 :  &\quad X[1]  &= \frac{1}{2} e^{j(\varphi-\pi/2)}, \\
   &\text{si } k=-1 : &\quad X[-1] &= \frac{1}{2} e^{-j(\varphi-\pi/2)}, \\
   &\text{sinon} :    &\quad X[k]  &= 0
+\end{align*}
 $$
 
 
@@ -43,11 +49,13 @@ $$
 En notant $X(f) = \mathcal{F}[x(t)]$ la transformée de Fourier de $x(t)$ et en utilisant les formules d'Euler :
 
 $$
+\begin{align*}
 \mathcal{F}\big[ x(t)\times\cos(2\pi f_0 t) \big]
 &= \int x(t) \cos(2\pi f_0 t) e^{-j2\pi ft} dt \\
 &= \int x(t) \frac{1}{2} \left( e^{j2\pi f_0 t} + e^{-j2\pi f_0 t} \right) e^{-j2\pi ft} dt \\
 &= \frac{1}{2} \int x(t) e^{- j2\pi (f-f_0) t} dt + \frac{1}{2} \int x(t) e^{- j2\pi (f+f_0) t} dt \\
 &= \frac{1}{2} \big[ X(f-f_0) X(f+f_0) \big]
+\end{align*}
 $$
 
 ## Exercice 4

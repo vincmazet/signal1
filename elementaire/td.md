@@ -18,10 +18,12 @@ Placez dans le tableau les signaux suivants :
 Tracez à la main les signaux suivants :
 
 $$
+\begin{align*}
   w(t) &= 3 \, \mathrm{sin}\!\left(8\pi t + \pi\right),&\qquad
   x(t) &= \frac{1}{2} \mathrm{sinc}\!\left(\frac{t}{2}\right),\\
   y[n] &= \sin(\pi n),&\qquad
   z[n] &= \mathrm{rect}\!\left(\frac{n}{4}-\frac{1}{2}\right) - \delta[n-2]
+\end{align*}
 $$
 
 

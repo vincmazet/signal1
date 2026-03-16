@@ -13,7 +13,7 @@
 
 1. Énergies :
     $$
-    \|x\|^2 &= 71,\qquad \|y\|^2 &= 63,\qquad \|z\|^2 &= 41
+    \|x\|^2 = 71,\qquad \|y\|^2 = 63,\qquad \|z\|^2 = 41
     $$
 
 2. Produits scalaires :
@@ -42,16 +42,20 @@ La distance la plus petite étant entre $x$ et $u_1$, cela signifie que $x$ est 
 
 1. Vecteurs de la base $W$ :
    $$
+   \begin{align*}
    w_0 &= \begin{bmatrix}   \frac{1}{\sqrt{3}}  &  \frac{1}{\sqrt{3}}                       &  \frac{1}{\sqrt{3}}                       \end{bmatrix},\\
    w_1 &= \begin{bmatrix}   \frac{1}{\sqrt{3}}  &  \frac{1}{\sqrt{3}} e^{-j\frac{2\pi}{3}}  &  \frac{1}{\sqrt{3}} e^{-j\frac{4\pi}{3}}  \end{bmatrix},\\
    w_2 &= \begin{bmatrix}   \frac{1}{\sqrt{3}}  &  \frac{1}{\sqrt{3}} e^{-j\frac{4\pi}{3}}  &  \frac{1}{\sqrt{3}} e^{-j\frac{8\pi}{3}}  \end{bmatrix}.
+   \end{align*}
    $$
 
 1. La projection $x'$ de $x$ consiste à déterminer les échantillons du signal $x'$ en calculant le produit scalaire entre $x$ et chaque signal de la base.
    $$
+   \begin{align*}
     x'[0] &= \langle x,w_0 \rangle = 4 \sqrt{3},\\
     x'[1] &= \langle x,w_1 \rangle = \frac{1}{\sqrt{3}} \left(  3 + 4 e^{j\frac{2\pi}{3}} + 5 e^{-j\frac{4\pi}{3}}  \right),\\
     x'[2] &= \langle x,w_2 \rangle = \frac{1}{\sqrt{3}} \left(  3 + 4 e^{j\frac{4\pi}{3}} + 5 e^{-j\frac{8\pi}{3}}  \right).
+    \end{align*}
    $$
 
    Le calcul de l'énergie de $x'$ donne $\|x'\|^2 = 50$ : il y a donc conservation de l'énergie lors de la projection d'un signal dans une base orthonormée.

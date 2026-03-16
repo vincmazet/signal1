@@ -91,7 +91,7 @@ $$
 
 Chaque échantillon du spectre peut être relié à une fréquence particulière,
 à condition de connaître la « période d'échantillonnage » $T_e$ entre deux échantillons du signal temporel.
-On peut montrer (cf. {ref}`P:echantillonnage`) que la fréquence $f$ correspondant à l'échantillon $k$
+On peut montrer (cf. @C:echantillonnage) que la fréquence $f$ correspondant à l'échantillon $k$
 est $f = k/(N \, T_e)$.
 
 * Tracez le module et la phase de $Z$ centrée et avec un axe des abscisses gradué en fréquences,

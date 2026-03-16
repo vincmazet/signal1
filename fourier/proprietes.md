@@ -57,17 +57,21 @@ La translation dans un domaine correspond à une multiplication par une exponent
 * Translation en temporel :
 
   $$
+  \begin{align*}
   &\text{SF :}\qquad  &x(t-t_0) \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k t_0 / T} \\
   &\text{TF :}\qquad  &x(t-t_0) \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f) e^{-j2\pi f t_0} \\
   &\text{SFD :}\qquad &x[n-n_0] \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k] e^{-j2\pi k n_0 / N}
+  \end{align*}
   $$
 
 * Translation en fréquentiel :
 
   $$
+  \begin{align*}
   &\text{SF :}\qquad  &x(t) e^{+j2\pi k_0 t / T} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0] \\
   &\text{TF :}\qquad  &x(t) e^{+j2\pi f_0 t} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X(f-f_0) \\
   &\text{SFD :}\qquad &x(t) e^{+j2\pi k_0 n / N} \quad&\xrightarrow{\;\mathcal{F}\;}\quad X[k-k_0]
+  \end{align*}
   $$
   
   La multiplication par une exponentielle complexe correspond à une « modulation » en temporel
@@ -101,13 +105,13 @@ $$
 La propriété de dualité est utile pour obtenir la transformée de Fourier d'un signal lorsque celle-ci est compliquée à calculer.
 
 \
-✏️ [](S:fourier:exo:sf-sin)\
-✏️ [](S:fourier:exo:modulation)\
-✏️ [](S:fourier:exo:exp)\
-✏️ [](S:fourier:exo:1+cos)\
-✏️ [](S:fourier:exo:dirac)\
-✏️ [](S:fourier:exo:am)\
-✏️ [](S:fourier:exo:andlau)
+✏️ [](#S:fourier:exo:sf-sin)\
+✏️ [](#S:fourier:exo:modulation)\
+✏️ [](#S:fourier:exo:exp)\
+✏️ [](#S:fourier:exo:1+cos)\
+✏️ [](#S:fourier:exo:dirac)\
+✏️ [](#S:fourier:exo:am)\
+✏️ [](#S:fourier:exo:andlau)
 
 
 ## Théorème de Parseval–Plancherel
@@ -116,9 +120,11 @@ Le théorème de Parseval–Plancherel signifie qu'il y a conservation de l'éne
 un signal temporel et sa transformation de Fourier ont la même énergie.
 
 $$
+\begin{align*}
 &\text{SF :}\qquad  &\frac{1}{T} \int_T |x(t)|^2 dt &= \sum_{k=-\infty}^{+\infty} |X[k]|^2 \\
 &\text{TF :}\qquad  &\int_{-\infty}^{+\infty} |x(t)|^2 dt &= \int_{\infty}^{+\infty} |X(f)|^2 df \\
 &\text{SFD :}\qquad &\sum_{n=0}^{N-1} |x[n]|^2 &= \frac{1}{N} \sum_{k=0}^{N-1} |X[k]|^2
+\end{align*}
 $$
 
 ## Conditions de Dirichlet

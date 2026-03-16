@@ -60,7 +60,6 @@ La corrélation la plus forte est obtenue pour une sinusoïde de 0,5 Hz.
 L'autocorrélation est l'intercorrélation d'un signal avec lui-même.
 
 ::::{grid} 1 1 1 1
-:gutter: 3
 
 :::{card}
 :header: Signaux à temps continu
@@ -89,7 +88,7 @@ L'autocorrélation possède quelques propriétés remarquables :
 
 
 \
-✏️ [](S:xcorr:exo:periodique)\
-✏️ [](S:xcorr:exo:max)\
-✏️ [](S:xcorr:exo:calcul)\
-✏️ [](S:xcorr:exo:mur)
+✏️ [](#S:xcorr:exo:periodique)\
+✏️ [](#S:xcorr:exo:max)\
+✏️ [](#S:xcorr:exo:calcul)\
+✏️ [](#S:xcorr:exo:mur)

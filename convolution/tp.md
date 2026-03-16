@@ -48,5 +48,5 @@ $$
   
   où $D=24 \times 7$ correspond au nombre d'heures dans une semaine.
 
-Continuez le TP avec l'[exercice sur l'intercorrélation](C:xcorr:tp).
+Continuez le TP avec l'[exercice sur l'intercorrélation](#C:xcorr:tp).
 

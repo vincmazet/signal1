@@ -134,11 +134,10 @@ project:
 
 site:
 
-  outline_maxdepth: 2
-
   template: book-theme
   
   options:
+    outline_maxdepth: 2
     favicon: src/favicon.ico
     logo: src/logo-signal1-B.svg
     hide_authors: true

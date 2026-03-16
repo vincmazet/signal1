@@ -18,7 +18,7 @@ Ainsi, l'_échantillonnage_ consiste à transformer un signal non échantillonn�
 De même, la _quantification_ consiste à transformer un signal à valeurs continues
 en un signal à valeurs discrètes.
 La combinaison de ces deux opérations est appelée _numérisation_.
-Nous étudierons dans les pages correspondantes (@P:echantillonnage et @P:quantification)
+Nous étudierons dans les pages correspondantes (@C:echantillonnage et @C:quantification)
 quelles sont les conditions qui permettent de ne pas trop dégrader le signal
 et quelles sont les conséquences sur le signal numérique.
 
@@ -41,4 +41,4 @@ Dans la suite du cours, nous adopterons les conventions de notation suivantes :
   et le plus souvent la variable $n\in\mathbb{Z}$, par exemple : $x[n]$.
 
 
-✏️ [](S:elementaire:exo:classification)
+✏️ [](#S:elementaire:exo:classification)

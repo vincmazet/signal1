@@ -161,4 +161,4 @@ Avec cette transformée, la résolution en temps et en fréquence varie en fonct
  -->
 
 \
-✏️ [](S:fourier:exo:dtmf)
+✏️ [](#S:fourier:exo:dtmf)

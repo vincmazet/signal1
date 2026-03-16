@@ -71,4 +71,4 @@ puisque, d'après la formule de la puissance d'un signal apériodique,
 l'intégrale (finie) est divisée par $2T$ qui tend vers l'infini.
 
 
-✏️ [](S:elementaire:exo:energie-puissance)
+✏️ [](#S:elementaire:exo:energie-puissance)

@@ -72,7 +72,7 @@ La ressemblance est forcément la plus grande lorsque le décalage est nul.
 
 ## Exercice 3
 
-Cet exercice est très similaire à l'[](S:convolution:exo:xx) du produit de convolution.
+Cet exercice est très similaire à l'[](#S:convolution:exo:xx) du produit de convolution.
 
 Comme $x$ est à support limité (il est nul en dehors de $\{-N,\dots,N\}$),
 et égal à 1 dans l'intervalle,
@@ -129,6 +129,7 @@ $$
 ## Exercice 4
 
 $$
+\begin{align*}
 R_x(\tau) &= \int x(t+\tau) x(t) dt \\
           &= \int \big[s(t+\tau) + a\,s(t+\tau-d)\big] \big[s(t) + a\,s(t-d)\big] dt \\
           &= \int s(t+\tau) s(t) dt
@@ -141,6 +142,7 @@ R_x(\tau) &= \int x(t+\tau) x(t) dt \\
              + a^2 \int s(u+\tau) s(u)\big] du \\
           &= R_s(\tau) dt + a R_s(\tau+d) + a R_s(\tau-d) + a^2 R_s(\tau) \\
           &= (1+a^2) R_s(\tau) dt + a R_s(\tau+d) + a R_s(\tau-d) \\
+\end{align*}
 $$
 
 Comme l'autocorrélation est maximale en 0, alors :
