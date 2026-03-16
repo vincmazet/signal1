@@ -17,7 +17,7 @@ $$
 
 où $\lfloor\cdot\rfloor$ est la [partie entière](https://www.bibmath.net/dico/index.php?action=affiche&quoi=./p/partieentiere.html).
 
-La {numref}`F:quantification:signal` représente un exemple de quantification uniforme par arrondi pour $K=8$ niveaux de quantification et $q=0,3$.
+La {numref}`F:quantification:signal` représente un exemple de quantification uniforme par arrondi pour $K=8$ niveaux de quantification et $q=0,25$.
 
 ```{figure} quantification-signal-U.svg
 ---
@@ -91,6 +91,7 @@ width: 500px
 name: F:quantification:signal-A
 ---
 Exemple de quantification non uniforme d'un signal $x(t)$ sur $K=8$ niveaux.
+On voit clairement que l'erreur est faible lorsque le signal est d'amplitude faible.
 ```
 
 ```{figure} quantification-erreur-A.svg

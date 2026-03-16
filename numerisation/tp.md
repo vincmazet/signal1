@@ -6,7 +6,7 @@ En musique, la note _la_ correspond à une sinusoïde de fréquence 440 Hz.
 
 * Représentez la note _la_ sur 100 ms en réglant le pas de temps pour obtenir une courbe qui soit jolie.
   Quelle fréquence d'échantillonnage correspond au pas de temps choisi ?
-  Affichez la TFD du signal : y a-t-il repliement spectral ?
+  Affichez ensuite la TFD du signal : y a-t-il repliement spectral ?
 
 * Représentez la note _la_ sur 100 ms avec une fréquence d'échantillonnage de 1000 Hz.
   Affichez la TFD du signal : y a-t-il repliement spectral ?
@@ -14,28 +14,11 @@ En musique, la note _la_ correspond à une sinusoïde de fréquence 440 Hz.
 * Représentez la note _la_ sur 100 ms avec une fréquence d'échantillonnage de 700 Hz.
   Affichez la TFD du signal : y a-t-il repliement spectral ?
   Quelle est la conséquence sur le signal sonore numérisé ?
-  
-## Représentation temps-fréquence
 
-Le fichier <a href="../_static/gamme.wav">gamme.wav</a> est un enregistrement d'une gamme musicale au piano.
-Nous allons chercher quelles sont les notes jouées.
-
-* Chargez (`scipy.io.wavfile.read`) et affichez le signal.
-
-* Vérifiez sur la TFD qu'il n'est pas facile de trouver la partition musicale correspondante.
-
-La représentation temps-fréquence du signal permet de retrouver très simplement la partition musicale.
-Par exemple, la fonction `matplotlib.pyplot.specgram` permet d'afficher le spectrogramme d'un signal.
-
-* Affichez le spectrogramme du signal en conservant les paramètres par défaut.
-
-* Étudiez l'influence des paramètres principaux de la fonction `matplotlib.pyplot.specgram` pour comprendre leur signification.
-
-* Déterminez alors les notes jouées à partir de leur fréquence.
 
 ## Interpolation
 
-Le fichier <a href="../_static/8820Hz.csv">8820Hz.csv</a> contient un signal échantillonné à 8 820 Hz.
+Le fichier {download}`8820Hz.csv` contient un signal échantillonné à 8 820 Hz.
 La première colonne correspond aux échantillons temporels, et la seconde colonne aux amplitudes du signal.
 
 * Affichez ce signal, noté $x$, en mettant en évidence les échantillons,

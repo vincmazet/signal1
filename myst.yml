@@ -115,7 +115,7 @@ project:
       - file: numerisation/echantillonnage.md
       - file: numerisation/quantification.md
       - file: numerisation/td.md
-    #   - file: numerisation/tp.md
+      - file: numerisation/tp.md
         # - file: numerisation/tpc1.md
         # - file: numerisation/tpc2.md
         # - file: numerisation/tpc3.md
